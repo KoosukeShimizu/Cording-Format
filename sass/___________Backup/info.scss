@@ -1,0 +1,131 @@
+@charset "UTF-8";
+// -------------------------------
+//   ∧＿＿∧    .｡*ﾟ+.*.｡
+// （´・ω・`）< Mixins
+//  クラスで書き出されないもの限定。
+//  page.scssにも流用するもの
+// -------------------------------
+@import "inc/base/bourbon/bourbon";
+@import "inc/base/config";
+@import "inc/base/mixins";
+
+@import "inc/module/hover";
+@import "inc/module/button";
+@import "inc/module/icon";
+@import "inc/module/list";
+@import "inc/module/card";
+// @import 'inc/module/media';
+@import "inc/module/table";
+@import "inc/module/accordion";
+@import "inc/module/tab";
+@import "inc/module/avatar";
+@import "inc/module/trim";
+@import "inc/module/editor";
+@import "inc/module/tag";
+
+///////////////////////////////////
+///////////////////////////////////
+///////////////////////////////////
+// -------------------------------
+//   ∧＿＿∧    .｡*ﾟ+.*.｡
+// （´・ω・`）< page
+// -------------------------------
+// （´・ω・`）< mission
+// -------------------------------
+.mission {
+  &-ttl {
+    font-size: 1.6rem;
+    text-align: center;
+    margin-bottom: $g-l;
+  }
+  margin-bottom: $g-l;
+  @include mq(tab, min) {
+    margin-bottom: $g-xl;
+  }
+}
+
+// （´・ω・`）< feature
+// -------------------------------
+.feature {
+  // background: $c-bg-secondary;
+  box-shadow: 0 0 20px rgba(black,.08) ;
+  padding: $g-l 6%;
+  border-radius: 20px;
+  max-width: 600px;
+  margin: auto;
+  // box-shadow: 0 0 20px 0 rgba(black, .05);
+  // @include flexbox(flex,null,wrap,center,null,null);
+  &-item {
+    // border: 1px solid #000;
+    max-width: 500px;
+    margin: auto;
+    // padding: $g-s;
+    &:not(:last-child) {
+      margin-bottom: $g-l;
+    }
+  }
+  &-ttl {
+    text-align: center;
+    font-size: 1.6rem;
+    margin-bottom: $g-m;
+    letter-spacing: 0.1em;
+    width: 100%;
+  }
+  &-heading {
+    font-size: 1.6rem;
+    margin-bottom: $g-m;
+    text-align: center;
+    letter-spacing: 0.1em;
+  }
+  &-order {
+    $size: 44px;
+    background-image: linear-gradient(
+      135deg,
+      $c-secondary 0%,
+      $c-secondary 50%,
+      #70b6ed 50%,
+      #70b6ed 100%
+    );
+    color: white;
+    font-size: 2.8rem;
+    display: block;
+    @include size($size $size);
+    border-radius: 18px;
+    text-align: center;
+    line-height: $size;
+    margin: 0 auto $g-m;
+  }
+  &-img {
+    margin-bottom: $g-m;
+    border: 8px solid white;
+    box-shadow: $shadow;
+    border-radius: 20px;
+    line-height: 0;
+    overflow: hidden;
+
+    img {
+      width: 100%;
+    }
+  }
+  &-txt {
+    margin-bottom: $g-m;
+  }
+
+  @include mq(tab, min) {
+    padding: $g-xl 6%;
+    margin-bottom: $g-xl;
+    &-ttl {
+      font-size: 1.8rem;
+      margin-bottom: $g-l;
+    }
+
+    &-heading {
+      font-size: 1.6rem;
+      margin-bottom: $g-m;
+    }
+
+    &-txt {
+      margin-bottom: $g-l;
+    }
+  }
+}

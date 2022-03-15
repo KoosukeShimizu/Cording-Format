@@ -1,0 +1,54 @@
+// 色相変更 color: adjust-hue($base-color, 60deg);
+// 彩度上げ color: saturate($base-color, 15%);
+// 彩度下げ color: desaturate($base-color, 15%);
+// 輝度上げ color: lighten($base-color, 15%);
+// 輝度下げ color: darken($base-color, 15%);
+// 透明度 color: rgba($base-color, 0.8);
+// 色反転 color: invert($base-color);
+// グレースケール color: grayscale($base-color);
+// 補色 color: complement($base-color);
+// 混色 color: mix(#fff, #000);
+
+%hover{
+  @media (hover: hover) {
+    &:hover {
+      opacity: .7;
+    }
+  }
+  &-normal{
+    @media (hover: hover) {
+      &:hover {
+        opacity: .8;
+      }
+    }
+
+  }
+  &-text{
+    @media (hover: hover) {
+      &:hover{
+        // color: complement($c-link);
+        text-decoration: underline;
+      }
+    }
+  }
+  &-card {
+    @media (hover: hover) {
+      &:hover {
+        //  background: complement($c-secondary);
+         background: rgba(white, .3);
+        // border: 3px solid #000;
+        // @include transform(scale(1.1));
+      }
+    }
+  }
+  &-tab {
+    @media (hover: hover) {
+      &:hover {
+        //  background: complement($c-secondary);
+        background: $c-gray95;
+        // border: 3px solid #000;
+        // @include transform(scale(1.1));
+      }
+    }
+  }
+}

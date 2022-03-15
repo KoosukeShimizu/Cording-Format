@@ -1,0 +1,28 @@
+// @import '../base/config';
+%avatar {
+  position: relative;
+  border-radius: 50%;
+  background: $c-gray90;
+  position: relative;
+  overflow: hidden;
+  width: 60px;
+  height: 60px;
+  @include flexbox(flex, null, wrap, center, center, null);
+
+  &:before {
+    font-family: 'Font Awesome 5 Free';
+    font-weight: 400;
+    content: '\f007';
+    color: white;
+    font-size: 1.6rem;
+  }
+
+  img {
+    @include position(absolute, 50% null null 50%);
+    @include transform(translate(-50%, -50%));
+    min-width: 100%;
+    min-height: 100%;
+    max-height: 100%;
+    max-width: 1000px
+  }
+}

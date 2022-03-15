@@ -1,0 +1,45 @@
+.c-list {
+  &-disc {
+    padding-left: 2em;
+    list-style: disc;
+  }
+  &-decimal {
+    padding-left: 2em;
+    list-style: decimal;
+  }
+  &-circle {
+    padding-left: 2em;
+    list-style: circle;
+  }
+}
+
+.c-list {
+  &__item {
+    display: flex;
+    border-bottom: 1px solid $c-border;
+    padding: $gt20;
+  }
+  &__link {
+    display: block;
+    width: 100%;
+    // border: 1px solid #000;
+  }
+  &__thumb{
+    aspect-ratio: 4 / 3;
+    width: min(30%,180px);
+  }
+  &__body{
+    padding: $gt10;
+  }
+  &__title{
+    font-size: $fz18;
+    line-height: 1.4;
+  }
+  &__text{
+    font-size: $fz16;
+    line-height: 1.4;
+  }
+  &__date{
+    font-size: $fz14;
+  }
+}

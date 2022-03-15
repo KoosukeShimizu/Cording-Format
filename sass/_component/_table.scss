@@ -1,0 +1,30 @@
+.c-table {
+  width: 100%;
+  tbody {
+    tr {
+      &:not(:last-child){
+        border-bottom: 1px solid $c-border;
+      }
+
+      &:last-child {
+        margin-bottom: 0;
+        padding-bottom: 0;
+        border: none;
+      }
+
+      th, td {
+        // display: block;
+        text-align: left;
+        // width: 100%;
+        line-height: 1.8;
+        padding: $gt30 10px;
+      }
+
+      th {
+        font-weight: bold;
+        margin-bottom: 16px;
+        font-size: 1.6rem;
+      }
+    }
+  }
+}

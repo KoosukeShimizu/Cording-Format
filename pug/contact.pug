@@ -1,0 +1,315 @@
+//-========================
+//- サイト共通設定
+//-========================
+include _includes/_config
+//- block vars
+//-========================
+//- ページ設定
+//-========================
+- var root = './'//ルートパスの指定
+- var key = 'contact'//条件分岐に使用
+- var index = 'false'//ページインデックスの有無
+- var ogp = 'true'//OGPの有無
+- var analytics = 'true'//GAタグの有無
+//-========================
+//- ページメタ情報
+//- ここに入力した内容で上書きされます
+//- 記入無しでサイト共通内容が反映されます
+//-========================
+- var pageTitle = 'お問い合わせ確認'//meta title内容
+- var pageDescription = ''//meta description内容
+- var pageKeywords = ''//meta keyword内容
+- var pageOgUrl = ''//OG用 URL
+- var pageOgTitle = 'お問い合わせ確認｜_サイト名_'//OG用 title
+- var pageOgDescription = ''//OG用 description
+- var pageOgImage = ''//OGImage
+//-========================
+//- パンくず/構造化データ生成
+//-========================
+- var pageSlug= "contact"//ページのスラッグ※末尾に「/」必須
+- var parentSlug= ""//ページが3階層目の場合、親ページのスラッグ※末尾に「/」必須
+- var parentTitle= ""//ページが3階層目の場合、親ページの名前
+//-========================
+//- ライブラリ読み込み
+//-========================
+- var fontawesome = 'false'// fontawesome読み込み
+- var slick = 'false'// slick読み込み ※block append js以下に発火用記述必須
+- var swiper = 'false'// swiper読み込み ※block append js以下に発火用記述必須
+- var magnificpopup = 'false'// magnificpopup読み込み ※block append js以下に発火用記述必須
+- var accordion = 'false'
+//-
+//-
+//-
+//-========================
+//- PAGE SOURCE
+//-========================
+doctype html
+html(lang='ja')
+  include _includes/_head
+  //---------------------------------
+  //- UNIQUE CSS
+  //- ページ独自に使用するスタイル
+  //---------------------------------
+  block append css
+    //- link(rel='stylesheet' type='text/css' href='../assets/css/###.css?ver=1.0.0')
+    //- style(type='text/css').
+      .class{}
+  include _includes/_analytics
+  body
+    include _includes/_analytics_body
+    .l-wrapper
+      include _includes/_header
+      include _includes/_module/_breadcrumb
+      main.l-main
+        //-========================
+        //-========================
+        //- PAGE CONTENTS START
+        //- 編集はここから
+        //-========================
+        // PageContents
+        article.p-contact
+          .c-head-page
+            h1.c-head-page__title お問い合わせ
+            .c-head-page__subtitle contact
+            .c-head-page__intro _サイト名_のお問い合わせのページです。ご利用に関する内容の他、取材に関するお問い合わせも受け付けております。#[br]お問い合わせいただいた内容につきましては、担当者より後日ご連絡させていただきます。下記にあるお問い合わせに関するご注意事項をご確認の上、下記フォームよりお問い合わせください。
+
+          // section START
+          section.l-section.p-contact-form
+            .l-container-sm
+              //- h2.c-h2-deco お問い合わせフォーム
+              form(method="post" action=root+"confirm"+extention enctype='multipart/form-data')
+                h3.c-h3 お客様情報
+                .c-form
+                  .c-form__item
+                    .c-form__label お名前#[span.c-form__require 必須]
+                    .c-form__body
+                      input.c-form__input(type="text" id="name" name="name" placeholder="例：山田 花子" autocomplete="name" required)
+                      .c-form__error お名前を入力してください
+
+                  .c-form__item
+                    .c-form__label ふりがな#[span.c-form__require 必須]
+                    .c-form__body
+                      input.c-form__input(type="text" id="name_kana" name="name_kana" placeholder="例：やまだ はなこ" required)
+                      .c-form__note ※全角ひらがな
+                      .c-form__error ふりがなを入力してください
+
+                  .c-form__item
+                    .c-form__label メールアドレス#[span.c-form__require 必須]
+                    .c-form__body
+                      input.c-form__input(type="email" id="email" name="email" placeholder="例：example@domain.com" autocomplete="email" required)
+                      .c-form__note ※半角英数
+                      .c-form__error メールアドレスを入力してください
+
+                  .c-form__item
+                    .c-form__label 電話番号#[span.c-form__require 必須]
+                    .c-form__body
+                      input.c-form__input.is-inline(type="tel" id="tel" name="tel" placeholder="例：03-1234-5678" autocomplete="tel" required)
+                      .c-form__note ※半角数字
+                      .c-form__error 電話番号を入力してください
+                  
+                  .c-form__item
+                    .c-form__label 性別#[span.c-form__require 必須]
+                    .c-form__body
+                      label.c-form__radio
+                        input(type="radio" name="gender" id="" value="男性" required)
+                        span 男性
+                      label.c-form__radio
+                        input(type="radio" name="gender" id="" value="女性")
+                        span 女性
+                      .c-form__error 性別を選択してください
+                  
+                  .c-form__item
+                    .c-form__label 生年月日#[span.c-form__require 必須]
+                    .c-form__body
+                      select.c-form__select.is-inline(name="bd-year" autocomplete="bd-year" required)
+                        option(value="") ----
+                        - for( var n=1960; n<= 2022; n++)
+                          option(value=n + "") #{n}
+                      span 年
+                      select.c-form__select.is-inline(name="bday-month" autocomplete="bday-month" required)
+                        option(value="") --
+                        - for( var n=1; n<= 12; n++)
+                          option(value=n + "") #{n}
+                      span 月
+                      select.c-form__select.is-inline(name="bday-day" autocomplete="bday-day" required)
+                        option(value="") --
+                        - for( var n=1; n<= 31; n++)
+                          option(value=n + "") #{n}
+                      span 日
+                      .c-form__error 生年月日を選択してください
+
+
+
+                  //- 住所自動入力対応
+                  .h-adr
+                    //- 自動入力用で必須
+                    input.p-country-name(type="hidden" value="Japan")
+                    .c-form__item
+                      .c-form__label 郵便番号#[span.c-form__require 必須]
+                      .c-form__body
+                        span 〒
+                        input.c-form__input.p-postal-code.is-inline(type="text" id="postal-code" name="postal-code" placeholder="例：123-4567" autocomplete="postal-code" size="8" maxlength="8" required)
+                        .c-form__note ※半角数字
+                        .c-form__error 郵便番号を入力してください
+
+                    
+                    .c-form__item
+                      .c-form__label 都道府県#[span.c-form__require 必須]
+                      .c-form__body
+                        select.c-form__select.p-region-id.is-inline(id="address-level1" name="address-level1" autocomplete="address-level1" required)
+                          option(value="") 選択してください
+                          optgroup(label='北海道・東北地方')
+                            option(value='1') 北海道
+                            option(value='2') 青森県
+                            option(value='3') 岩手県
+                            option(value='4') 秋田県
+                            option(value='5') 宮城県
+                            option(value='6') 山形県
+                            option(value='7') 福島県
+                          optgroup(label='関東地方')
+                            option(value='8') 栃木県
+                            option(value='9') 群馬県
+                            option(value='10') 茨城県
+                            option(value='11') 埼玉県
+                            option(value='12') 東京都
+                            option(value='13') 千葉県
+                            option(value='14') 神奈川県
+                          optgroup(label='中部地方')
+                            option(value='15') 山梨県
+                            option(value='16') 長野県
+                            option(value='17') 新潟県
+                            option(value='18') 富山県
+                            option(value='19') 石川県
+                            option(value='20') 福井県
+                            option(value='21') 静岡県
+                            option(value='22') 岐阜県
+                            option(value='23') 愛知県
+                          optgroup(label='近畿地方')
+                            option(value='24') 三重県
+                            option(value='25') 滋賀県
+                            option(value='26') 京都府
+                            option(value='27') 大阪府
+                            option(value='28') 兵庫県
+                            option(value='29') 奈良県
+                            option(value='30') 和歌山県
+                          optgroup(label='四国地方')
+                            option(value='31') 徳島県
+                            option(value='32') 香川県
+                            option(value='33') 愛媛県
+                            option(value='34') 高知県
+                          optgroup(label='中国地方')
+                            option(value='35') 鳥取県
+                            option(value='36') 島根県
+                            option(value='37') 岡山県
+                            option(value='38') 広島県
+                            option(value='39') 山口県
+                          optgroup(label='九州・沖縄地方')
+                            option(value='40') 福岡県
+                            option(value='41') 佐賀県
+                            option(value='42') 長崎県
+                            option(value='43') 大分県
+                            option(value='44') 熊本県
+                            option(value='45') 宮崎県
+                            option(value='46') 鹿児島県
+                            option(value='47') 沖縄県
+                          //- option(value="") 選択してください
+                          //- - var list = ["北海道","青森県","岩手県","宮城県","秋田県","山形県","福島県","茨城県","栃木県","群馬県","埼玉県","千葉県","東京都","神奈川県","新潟県","富山県","石川県","福井県","山梨県","長野県","岐阜県","静岡県","愛知県","三重県","滋賀県","京都府","大阪府","兵庫県","奈良県","和歌山県","鳥取県","島根県","岡山県","広島県","山口県","徳島県","香川県","愛媛県","高知県","福岡県","佐賀県","長崎県","熊本県","大分県","宮崎県","鹿児島県","沖縄県"]
+                          //-   each item in list
+                          //-     option(value="item") #{item}
+                      //- input.c-form__input.p-region(type="text" id="address-level1" name="address-level1" placeholder="例：" autocomplete="address-level1" required)
+                      .c-form__error 都道府県を選択してください
+
+                    .c-form__item
+                      .c-form__label 市区町村#[span.c-form__require 必須]
+                      .c-form__body
+                        input.c-form__input.p-locality(type="text" id="address-level2" name="address-level2" placeholder="" autocomplete="address-level2" required)
+                        .c-form__error 市区町村を入力してください
+                    .c-form__item
+                      .c-form__label 市区町村以降#[span.c-form__require 必須]
+                      .c-form__body
+                        input.c-form__input.p-street-address.p-extended-address(type="text" id="address-level3" name="address-level3" placeholder="" autocomplete="address-level3" required)
+                        .c-form__error 市区町村以降を入力してください
+                    .c-form__item
+                      .c-form__label 建物名など
+                      .c-form__body
+                        input.c-form__input(type="text" id="address-level4" name="address-level4" placeholder="" autocomplete="address-level4")
+
+
+                  .c-form__item
+                    .c-form__label お問い合わせ種別#[span.c-form__require 必須]
+                    .c-form__body
+                      select.c-form__select(id="" name="" required)
+                          option(value="") 選択してください
+                          - var list = ["ご意見・ご要望", "ご予約について", "取材について"]
+                            each item in list
+                              option(value="item") #{item}
+                      .c-form__error お問い合わせ種別を入力してください
+                  
+                  .c-form__item
+                    .c-form__label ご連絡可能時間#[span.c-form__require 必須]
+                    .c-form__body
+                      label.c-form__checkbox
+                        input(type="checkbox" name="period" id="" value="午前中" required)
+                        span 午前中（10時〜12時）
+                      label.c-form__checkbox
+                        input(type="checkbox" name="period" id="" value="午後")
+                        span 午後（13時〜15時）
+                      label.c-form__checkbox
+                        input(type="checkbox" name="period" id="" value="夕方")
+                        span 夕方（16時時〜18時）
+                      label.c-form__checkbox
+                        input(type="checkbox" name="period" id="" value="夜")
+                        span 夜（19時〜21時）
+                      .c-form__note ※複数選択可
+                      .c-form__error ご連絡可能時間を選択してください
+
+                  .c-form__item
+                    .c-form__label お問い合わせ内容#[span.c-form__require 必須]
+                    .c-form__body
+                      textarea.c-form__textarea(id ="comment" name='comment' rows='10' placeholder='お問い合わせ内容を具体的にお知らせください。')
+                      .c-form__error お問い合わせ内容を入力してください
+
+                  .c-form__item.c-form__group.u-text-center
+                    .c-form__label プライバシポリシーへの同意#[span.c-form__require 必須]
+                    .c-form__body
+                      label.c-form__checkbox
+                        input(type="checkbox" name="period" id="" value="午前中" required)
+                        span プライバシーポリシーを確認し、同意しました。
+                      .c-form__error プライバシーポリシーに同意してください
+
+                  p.c-form__comment お問い合わせが大変混みあっておりますため、ご連絡までお時間がかかることがございます。予めご了承を頂けますと幸いです。
+
+                  .c-form__submit
+                    button.c-button-submit(type="submit" id="submit") 入力内容を確認する
+
+              .c-panel-contact
+                p.c-panel-contact__text
+                  | お電話でのお問い合わせは
+                  br.u-sp-display
+                  | 下記番号からお願い致します
+                address
+                  a(href='tel:03-123-456') 03-123-456
+                p.c-note ※受付時間 平日 9:00〜21:00
+          // section END
+        // /pageContents
+
+        //-========================
+        //- PAGE CONTENTS END
+        //- 編集はここまで
+        //-========================
+        //-========================
+      //- include _includes/_sidebar
+      include _includes/_footer
+      //- include _includes/_module/_floatbox
+    include _includes/_script
+    //---------------------------------
+    //- UNIQUE SCRIPT
+    //- ページ独自に使用するJS
+    //---------------------------------
+    block append js
+      script(src="https://yubinbango.github.io/yubinbango/yubinbango.js")
+      //- script(type='text/javascript').
+        $(function () {
+          %scripts%
+        });
+    include _includes/_schema

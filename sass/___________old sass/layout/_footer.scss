@@ -1,0 +1,128 @@
+///////////////////////////////////
+///////////////////////////////////
+///////////////////////////////////
+///////////////////////////////////
+///////////////////////////////////
+///////////////////////////////////
+///////////////////////////////////
+///////////////////////////////////
+///////////////////////////////////
+///////////////////////////////////
+// -------------------------------
+//   ∧＿＿∧    .｡*ﾟ+.*.｡
+// （´・ω・`）< Footer Section
+// -------------------------------
+
+.l-footer {
+  text-align: center;
+  width: 100%;
+  transition: all 0.3s ease;
+  background: $c-footer;
+  color: white;
+  line-height: 1.6em;
+  position: relative;
+  @include mq(tab, max, true) {
+    padding: 30px 0px 20px 0px;
+  }
+  @include mq(tab, min) {
+    padding: 60px 0px 40px 0px;
+  }
+}
+
+.footerLogo {
+  width: 120px;
+  margin: 0 auto $g-m;
+}
+
+.footerNav {
+  @include flexbox(flex, null, wrap, center, center, null);
+  font-size: 1.1rem;
+  margin-bottom: $g-l;
+  &-item {
+    padding: 2px 8px;
+    @include mq(sp, max, true) {
+      width: calc(100% / 3);
+    }
+  }
+  @include mq(sp, max, true) {
+    background: black;
+  }
+}
+
+.socialNav {
+  @include flexbox(flex, null, wrap, center, center, null);
+  font-size: 3rem;
+  @include mq(tab, min) {
+    font-size: 2.4rem;
+  }
+  &-item {
+    padding: 0 $g-s;
+  }
+}
+
+.floatBox {
+  width: calc(100% - 60px);
+  padding: 0 8px;
+  margin-bottom: 8px;
+  text-align: center;
+  z-index: 8000;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  &.is-bottom {
+    position: absolute;
+  }
+  &.is-bottom,
+  &.is-view {
+    position: absolute;
+    transform: scale(1);
+    opacity: 1;
+  }
+  &.down {
+    opacity: 0;
+    transform-origin: bottom;
+    transform: scale(0);
+  }
+  &.up {
+    opacity: 1;
+  }
+}
+// @include mq(sp,min){
+//   width: calc(100% - 100px);
+// }
+
+.pagetop {
+  background: rgba(0, 0, 0, 0.8);
+  color: white;
+  line-height: 40px;
+  width: 40px;
+  height: 40px;
+  border-radius: 50% 50% 0 0;
+  text-align: center;
+  position: fixed;
+  right: 16px;
+  bottom: 0;
+  padding-top: 10px;
+  @include mq(tab, min) {
+    // line-height: 40px;
+    // width: 80px;
+    // height: 70px;
+    // border-radius: 50% 50% 0 0;
+    // text-align: center;
+    // position: fixed;
+    // right: 40px;
+    // bottom: 0;
+  }
+}
+
+.copyright {
+  text-align: center;
+  font-size: 1.1rem;
+  padding: 8px 0 0;
+  font-weight: 400;
+  margin-top: -10px;
+}
+
+.copyright > .fa-copyright:before {
+  padding: 0 4px;
+}

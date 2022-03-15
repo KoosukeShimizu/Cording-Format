@@ -1,0 +1,24 @@
+//  page-head
+// -------------------------------
+.c-head-page {
+  padding: $gt80 $gt10 0;
+  margin: auto;
+  text-align: center;
+  width: min(95%,1200px);
+  &__title {
+    font-size: $fz40;
+    line-height: 1;
+    margin-bottom: $gt20;
+  }
+  &__subtitle {
+    font-size: $fz20;
+    text-transform: uppercase;
+    margin-bottom: $gt20;
+  }
+  &__intro {
+    font-size: $fz20;
+    display: inline-block;
+    text-align: left;
+    margin: $gt20 auto;
+  }
+}

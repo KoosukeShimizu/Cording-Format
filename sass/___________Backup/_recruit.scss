@@ -1,0 +1,350 @@
+.p-recruit {
+
+  &-greeting {
+    margin: 120px 0 160px;
+
+    @include mq_down(md) {
+      margin: vw(96) 0;
+    }
+
+    &__img {
+      margin: 68px auto;
+      text-align: center;
+
+      @include mq_down(md) {
+        margin: vw(24) auto;
+      }
+
+      img {
+        object-fit: cover;
+        width: 342px;
+
+        @include mq_down(md) {
+          width: vw(216);
+        }
+      }
+    }
+
+    &__contents {
+
+      &_wrap {
+        margin-bottom: 20px;
+
+        @include mq_down(md) {
+          margin-bottom: vw(16);
+        }
+
+        &:last-child {
+          margin-bottom: 0;
+        }
+
+        p {
+          line-height: 2;
+        }
+      }
+    }
+  }
+
+  &-list {
+    &__contents {
+      text-align: center;
+      @include flexbox();
+      @include flexnaka();
+      @include flexcenter();
+      margin-top: 64px;
+
+      @include mq_down(md) {
+        margin-top: vw(40);
+      }
+
+      &_inner {
+        width: 320px;
+        margin: 0 24px;
+
+        @include mq_down(md) {
+          width: 100%;
+          margin: 0 0 vw(24);
+
+          &:last-child {
+            margin: 0;
+          }
+        }
+      }
+    }
+  }
+
+  &-requirement {
+    margin: 120px 0 160px;
+
+    @include mq_down(md) {
+      margin: vw(96) 0;
+    }
+
+    &__title {
+      margin-bottom: 64px;
+      @include mq_down(md) {
+        margin-bottom: vw(40);
+      }
+    }
+
+    &__inner {
+      margin-bottom: 160px;
+      @include mq_down(md) {
+        margin-bottom: vw(96);
+      }
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+
+      &_title {
+        margin-bottom: 56px;
+
+        @include mq_down(md) {
+          margin-bottom: vw(32);
+        }
+      }
+
+      &_contents {
+        margin-bottom: 56px;
+
+        @include mq_down(md) {
+          margin-bottom: vw(40);
+        }
+      }
+
+      &_contact {
+
+        &_box {
+          border-radius: 12px;
+          border: 1px solid $c-border;
+          padding: 40px;
+          margin-bottom: 40px;
+          text-align: center;
+
+          @include mq_down(md) {
+            border-radius: vw(16);
+            padding: vw(16);
+            margin-bottom: vw(24);
+          }
+          img {
+            width: 96px;
+            margin-bottom: 16px;
+
+            @include mq_down(md) {
+              width: vw(56);
+              margin-bottom: vw(12);
+            }
+          }
+
+          p {
+            @include mq_down(md) {
+              text-align: left;
+            }
+          }
+        }
+
+        &_link {
+          text-align: center;
+        }
+      }
+    }
+  }
+
+  &-interview {
+    margin-bottom: 160px;
+
+    @include mq_down(md) {
+      margin-bottom: vw(96);
+    }
+
+    &__title {
+      margin-bottom: 64px;
+
+      @include mq_down(md) {
+        margin-bottom: vw(32);
+      }
+    }
+
+    &__contents {
+
+      &_img {
+        margin: 64px 0;
+        width: 100%;
+        position: relative;
+        text-align: center;
+
+        @include mq_down(md) {
+          margin: vw(32) 0 vw(64);
+        }
+
+        & > .back {
+          position: absolute;
+          width: 560px;
+          top: 80%;
+          left: 56%;
+          transform: rotate(10deg) translate(-50%, -50%);
+          opacity: .5;
+
+          @include mq_down(md) {
+            width: vw(348);
+            top: 98%;
+            left: 60%;
+          }
+        }
+
+        & > .img {
+          width: 230px;
+
+          @include mq_down(md) {
+            width: vw(182);
+          }
+        }
+      }
+
+      &_wrap {
+        border-bottom: 1px solid rgba($c-border, .5);
+        margin-bottom: 48px;
+        padding-bottom: 48px;
+
+        @include mq_down(md) {
+          margin-bottom: vw(32);
+          padding-bottom: vw(32);
+        }
+        &:last-child {
+          padding-bottom: 0;
+          margin-bottom: 0;
+          border-bottom: 0;
+        }
+
+        h3 {
+          font-size: 1.8rem;
+          font-weight: bold;
+          margin-bottom: 20px;
+
+          @include mq_down(md) {
+            margin-bottom: vw(20);
+            font-size: vw(15);
+          }
+        }
+
+        p {
+          line-height: 2;
+        }
+      }
+    }
+  }
+
+  &-faq {
+    margin-bottom: 160px;
+    @include mq_down(md) {
+      margin-bottom: vw(96);
+    }
+
+    &__title {
+      margin-bottom: 64px;
+
+      @include mq_down(md) {
+        margin-bottom: vw(40);
+      }
+    }
+
+    &__contents {
+
+      &_wrap {
+        border-bottom: 1px solid rgba($c-border, .5);
+        margin-bottom: 48px;
+        padding-bottom: 48px;
+
+        @include mq_down(md) {
+          margin-bottom: vw(24);
+          padding-bottom: vw(24);
+        }
+
+        &:last-child {
+          margin-bottom: 0;
+          padding-bottom: 0;
+          border-bottom: 0;
+        }
+
+      }
+
+    }
+
+    .p-faq-box {
+  
+      &__question, &__answer {
+        @include flexbox();
+
+        &_icon {
+          width: 40px;
+          height: 40px;
+          border-radius: 50%;
+          font-size: 1.8rem;
+          line-height: 38px;
+          color: #fff;
+          text-align: center;
+          font-weight: bold;
+
+          @include mq_down(md) {
+            width: 28px;
+            height: 28px;
+            line-height: 28px;
+            font-size: 1.3rem;
+          }
+
+          &.question {
+            background-color: $green_1;
+          }
+          &.answer {
+            background-color: $orange_1;
+          }
+        }
+    
+        &_text {
+          width: calc(100% - 40px);
+          padding-left: 16px;
+
+          @include mq_down(md) {
+            width: calc(100% - 28px);
+            padding-left: vw(10);
+          }
+        }
+      }
+
+      &__question {
+        margin-bottom: 24px;
+        @include flexcenter();
+
+        @include mq_down(md){
+          @include flexstart();
+        }
+
+        &_text {
+          font-weight: bold;
+          font-size: 1.8rem;
+          line-height: 1.8;
+        }
+      }
+
+      &__answer {
+        @include flexstart();
+      }
+    }
+
+  }
+
+  &-contact {
+    &__box {
+      margin-bottom: 48px;
+
+      @include mq_down(md) {
+        margin-bottom: vw(32);
+      }
+    }
+
+    &__link {
+      text-align: center;
+    }
+  }
+}

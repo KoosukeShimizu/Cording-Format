@@ -1,0 +1,30 @@
+header.l-header
+  .l-header__inner
+    .l-header__logo
+      a(href=root+""): img(src=root+imgPath+"common/siteLogo.svg" loading="lazy" alt=siteName)
+    
+    unless key==='confirm' 
+      .l-header-subnavi
+        ul.l-header-subnavi__list
+          //- li.l-header-subnavi__item
+            a(href=root+'faq'+extention) よくあるご質問
+          li.l-header-subnavi__item
+            a(href=root+'company'+extention) 運営会社情報
+          //- li.l-header-subnavi__item
+            a(href=root+'#'+extention) 採用情報
+      .l-header-cta
+        a.c-button-head(href=root+'contact'+extention) お問い合わせ
+        
+      button(type="button").l-header-globalNavi__toggle.js-globalNavi-toggle #[span]#[span]
+    
+      // /GlovalNavi START
+      nav.l-header-globalNavi
+        
+        .l-header-globalNavi__inner.js-globalNavi-body
+          ul.l-header-globalNavi__list
+            li.l-header-globalNavi__item: a(class=(key === 'home') ? "is-current" : "" href=root+ "") #[span home]
+            li.l-header-globalNavi__item: a(class=(key === 'gallery') ? "is-current" : "" href=root+ "gallery"+extention) #[span ギャラリー]
+            li.l-header-globalNavi__item: a(class=(key === 'news') ? "is-current" : "" href=root+ "news"+extention) #[span お知らせ]
+            li.l-header-globalNavi__item: a(class=(key === 'article') ? "is-current" : "" href=root+ "article"+extention) #[span ブログ]
+            li.l-header-globalNavi__item: a(class=(key === 'faq') ? "is-current" : "" href=root+ "faq"+extention) #[span よくある質問]
+      // /GlovalNavi END

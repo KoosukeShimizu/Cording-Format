@@ -1,0 +1,19 @@
+.p-bg-freezia {
+
+  img {
+    width: 100%;
+    position: absolute;
+    top: -420px;
+    right: -440px;
+    transform: rotate(-15deg);
+    opacity: .5;
+
+    @include mq_down(md) {
+      width: vw(520);
+      top: vw(-120);
+      right: vw(-230);
+      transform: rotate(-9deg);
+
+    }
+  }
+}

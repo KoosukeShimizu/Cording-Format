@@ -1,0 +1,37 @@
+@charset "UTF-8";
+// -------------------------------
+//   ∧＿＿∧    .｡*ﾟ+.*.｡
+// （´・ω・`）< Mixins
+//  クラスで書き出されないもの限定。
+//  page.scssにも流用するもの
+// -------------------------------
+@import "inc/base/bourbon/bourbon";
+@import "inc/base/config";
+@import "inc/base/mixins";
+
+@import "inc/module/hover";
+@import "inc/module/button";
+@import "inc/module/icon";
+@import "inc/module/list";
+@import "inc/module/card";
+// @import 'inc/module/media';
+@import "inc/module/table";
+@import "inc/module/accordion";
+@import "inc/module/tab";
+@import "inc/module/avatar";
+@import "inc/module/trim";
+@import "inc/module/editor";
+@import "inc/module/tag";
+
+///////////////////////////////////
+///////////////////////////////////
+///////////////////////////////////
+// -------------------------------
+//   ∧＿＿∧    .｡*ﾟ+.*.｡
+// （´・ω・`）< page
+// -------------------------------
+
+// .page{
+// //  border: 1px solid #000; 
+//  padding: 4%;
+// }

@@ -1,0 +1,13 @@
+//  panel
+// -------------------------------
+.c-panel-contact {
+  text-align: center;
+  padding: $gt40;
+  background: white;
+  border-radius: 10px;
+  width: min(80%,600px);
+  margin: $gt40 auto;
+  &__phone{
+    font-size: $fz40;
+  }
+}

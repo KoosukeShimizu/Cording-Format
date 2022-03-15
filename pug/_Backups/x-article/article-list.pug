@@ -1,0 +1,112 @@
+extend ../_includes/_layout.pug
+block vars
+  include ../_includes/_config
+  - var noindex= "true";
+  - var colmun= "single";
+  - var root= "../";
+  - var parentDir= "";
+  //- - var status= "";
+  - var key= "article";
+  - var pageUrl= "article-list.html";
+  - var pageTitle = "活動実績"
+  - var pageDescription = ""
+  - var pageKeywords = ""
+  //- - var page = pages[key];
+  //- - var pageCategory= "";
+  - var bodyClass= "";
+//- /////////////////////
+append css
+  link(rel="stylesheet", href=root+cssPath+"article.css")
+append js
+  script(type="application/ld+json").
+    {
+      "@context": "http://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [{
+        "@type": "ListItem",
+        "position": 1,
+        "item": {
+          "@id": "#{siteUrl}",
+          "name": "#{siteName}"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "item": {
+          "@id": "#{siteUrl}#{pageUrl}",
+          "name": "#{pageTitle}"
+        }
+      }]
+    }
+//- /////////////////////
+block breadcrumb
+  nav.breadcrumb
+    ol(itemscope itemtype="http://schema.org/BreadcrumbList")
+      li.top(itemscope itemprop="itemListElement" itemtype="http://schema.org/ListItem")
+        a(itemprop="item" href=root+""): span(itemprop="name") トップページ
+        meta(itemprop="position" content="1")
+      li(itemscope itemprop="itemListElement" itemtype="http://schema.org/ListItem")
+        a(itemprop="item" href=root+pageUrl): span(itemprop="name") #{pageTitle}
+        meta(itemprop="position" content="2")
+//- /////////////////////
+//- /////////////////////
+//- /////////////////////
+block main
+  article.page
+    .page-head
+      h1.page-ttl #{pageTitle}#[br]#[span.page-subttl #{key}]
+
+    //- .comingsoon coming soon...
+    .page-body
+      ul.articleList
+        li.articleList-item
+          a(href="article-detail.html").articleList-thumb
+            img(src=root+imgPath+"common/dummy.jpg" loading="lazy" alt="")
+            //- img(src=root+imgPath+"common/dummy.jpg" loading="lazy" alt="")
+          .articleList-body
+            time.articleList-time( datetime="2020-10-30") 2020-10-30
+            //- span.tag.tag-primary アートメイク講習
+            .articleList-ttl: a(href="article-detail.html") タイトルが入りますタイトルが入りますタイトルが入りますタイトルが入りますタイトルが入りますタイトルが入りますタイトルが入ります
+
+        li.articleList-item
+          a(href="article-detail.html").articleList-thumb
+            img(src=root+imgPath+"common/dummy.jpg" loading="lazy" alt="")
+          .articleList-body
+            time.articleList-time( datetime="2020-10-30") 2020-10-30
+            //- span.tag.tag-primary アートメイク講習
+            .articleList-ttl: a(href="article-detail.html") タイトルが入りますタイトルが入りますタイトルが入りますタイトルが入りますタイトルが入りますタイトルが入りますタイトルが入ります
+
+        li.articleList-item
+          a(href="article-detail.html").articleList-thumb
+            img(src=root+imgPath+"common/dummy.jpg" loading="lazy" alt="")
+          .articleList-body
+            time.articleList-time( datetime="2020-10-30") 2020-10-30
+            //- span.tag.tag-primary アートメイク講習
+            .articleList-ttl: a(href="article-detail.html") タイトルが入ります
+
+        li.articleList-item
+          a(href="article-detail.html").articleList-thumb
+            img(src=root+imgPath+"common/dummy.jpg" loading="lazy" alt="")
+          .articleList-body
+            time.articleList-time( datetime="2020-10-30") 2020-10-30
+            //- span.tag.tag-primary アートメイク講習
+            .articleList-ttl: a(href="article-detail.html") タイトルが入ります
+        li.articleList-item
+          a(href="article-detail.html").articleList-thumb
+            img(src=root+imgPath+"common/dummy.jpg" loading="lazy" alt="")
+          .articleList-body
+            time.articleList-time( datetime="2020-10-30") 2020-10-30
+            //- span.tag.tag-primary アートメイク講習
+            .articleList-ttl: a(href="article-detail.html") タイトルが入ります
+
+
+      nav.pager
+        a.pager-prev(href="#")
+        ol.pager-num
+          li: a.is-current(href="#") 1
+          li: a(href="#") 2
+          li: a(href="#") 3
+          li: a(href="#") 4
+          li: a(href="#") 5
+        a.pager-next(href="#")

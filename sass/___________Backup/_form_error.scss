@@ -1,0 +1,52 @@
+/* --------------------------------------------------
+フォームのエラー
+-------------------------------------------------- */
+
+/**
+* エラーメッセージ
+**/
+.c-form__error {
+  display: block;
+  padding: 0;
+  margin: 0;
+  margin-top: 12px;
+  font-size: 1.4rem;
+  color: $c-danger;
+
+  @include mq_down(md) {
+    margin-top: vw(12);
+    font-size: 1.1rem;
+  }
+}
+
+.is-error {
+  input,
+  button,
+  textarea,
+  select {
+    border: 1px solid $c-danger;
+  }
+
+  .c-form__select {
+    input,
+    button,
+    textarea,
+    select {
+      border: 1px solid $c-danger;
+    }
+  }
+}
+
+.c-form__error-message {
+  padding: 0;
+  margin: 0;
+  margin-top: 12px;
+  font-size: 1.6rem;
+  text-align: center;
+  color: $c-danger;
+
+  @include mq_down(md) {
+    margin-top: vw(12);
+    font-size: 1.3rem;
+  }
+}

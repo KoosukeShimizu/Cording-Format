@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="robots" content="noindex">
+    <meta name="robots" content="nofollow">
+    <meta name="robots" content="noarchive">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,shrink-to-fit=no">
+    <title>開発用サイトマップ</title>
+    <style>
+      body{background:#f5f5f5;font-family: sans-serif;font-size:14px;}.l-main{max-width:640px;}h1,h2,h2,h4,h5,h6 {margin: 0; font-size:16px;}h1{margin:40px 0;}h2,h3{background:#aaa;color:#fff;display:inline-block;padding:2px 10px;border-radius:3px;}h3{background:#000;margin:30px 0 0px;}ul{list-style:none;padding:0 0 0 1em;}li{padding:8px 0;position:relative;}li a{display:block;}small{color:#999;}.divider{border-top:4px double #bbb;}li >span{position:absolute;top:0;right:10px;}pre{padding:4px 10px;margin:0;color:#999;}li>ul{background:#eee;padding:16px;margin:8px 0;}li:not(:last-child){border-bottom:2px dotted #bbb;}details{background:#fff; padding:8px 16px;border-radius:10px;margin-bottom:20px;}summary{padding:8px;outline:0;cursor:pointer;}.disable{pointer-event:none;color:#999;text-decoration:line-through;}
+      
+    </style>
+  </head>
+  <body>
+    <main class="l-main">
+      <h1>コーディングチェック｜%プロジェクト名%</h1>
+      <h2>基本情報</h2>
+      <pre>URL：https://####.jp
+メールアドレス：info@####.jp
+
+</pre>
+      <h2>更新情報/申し送り</h2>
+      <pre>mixin整理
+ドロップダウン
+カードのcolカウント対応
+デフォアイコンのサイズ調整
+コンポーネントファイルをできるだけ纏める
+※target="_blank"にアイコンを付ける
+フォントサイズ指定のガイドライン
+フォームに下記を追加する
+    <input type="color">：色を選択
+    <input type="date">：年月日を選択
+    <input type="datetime-local">：年月日と時刻を選択
+    <input type="email">：メールアドレス入力欄
+    <input type="hidden">：隠しデータ
+    <input type="month">：年月を選択
+    <input type="number">：数値の入力欄
+    <input type="password">：パスワード入力欄
+    <input type="range">：スライダーで数値を選択
+    <input type="search">：検索キーワードの入力欄
+    <input type="tel">：電話番号の入力欄
+    <input type="text">：テキスト入力欄
+    <input type="time">：時刻を選択
+    <input type="url">：URLの入力欄
+    <input type="week">：年と週を選択
+    <input type="file">：ファイルアップロード
+    <input type="search">：検索
+
+</pre>
+      <h3>頻出ページ</h3>
+      <ul>
+        <li><a href="__build/index.html">トップページ</a><small>└ index</small>
+          <pre>フォーマット：frontpage
+第一階層</pre>
+        </li>
+        <li><a href="__build/gallery.html">ギャラリー</a><small>└ gallery</small>
+          <pre>フォーマット：page</pre>
+        </li>
+        <li><a href="__build/faq.html">よくある質問</a><small>└ faq</small>
+          <pre>フォーマット：page</pre>
+        </li>
+        <li><a href="__build/privacy.html">プライバシーポリシー</a><small>└ privacy</small>
+          <pre>フォーマット：page</pre>
+        </li>
+        <li><a href="__build/company.html">会社概要</a><small>└ company</small>
+          <pre>フォーマット：page</pre>
+        </li>
+        <li><a href="__build/terms.html">利用規約</a><small>└ terms</small>
+          <pre>フォーマット：page</pre>
+        </li>
+        <li><a href="__build/contact.html">お問い合わせ</a><small>└ contact</small>
+          <pre>フォーマット：page</pre>
+        </li>
+        <li><a href="__build/confirm.html">お問い合わせ｜確認ページ</a><small>└ confirm</small>
+          <pre>フォーマット：page
+離脱防止、ナビゲーション削除</pre>
+        </li>
+        <li><a href="__build/thanks.html">お問い合わせ｜サンクスページ</a><small>└ thanks</small>
+          <pre>フォーマット：page</pre>
+        </li>
+        <li><a href="__build/news.html">お知らせ一覧ページ</a><small>└ news</small>
+          <pre>フォーマット：archive
+第二階層</pre>
+        </li>
+        <li><a href="__build/news_xxx.html">お知らせ詳細ページ</a><small>└ news_xxx</small>
+          <pre>フォーマット：single
+第三階層</pre>
+        </li>
+        <li><a href="__build/article.html">記事一覧ページ</a><small>└ article</small>
+          <pre>フォーマット：archive
+第二階層</pre>
+        </li>
+        <li><a href="__build/article_xxx.html">記事詳細ページ</a><small>└ article_xxx</small>
+          <pre>フォーマット：single
+第三階層</pre>
+        </li>
+      </ul>
+      <h3>コンポーネント</h3>
+      <ul>
+        <li><a href="__build/component/form.html">フォーム</a><small>└ component/form</small>
+          <pre></pre>
+        </li>
+      </ul>
+      <details>
+        <summary>設計／ルール</summary>
+        <ul>
+          <li>css設計はFLOCSSをベースとする
+            <ul>
+              <li>Foundation - reset/normalize/base（ベース部分）</li>
+              <li>Layout - header/main/sidebar/footer（レイアウト）</li>
+              <li>Object
+                <ul>
+                  <li>Component - grid/button/form/media（再利用可能なパーツ）「__」は使わない</li>
+                  <li>Module - grid/button/form/media（再利用可能なパーツの集合体）</li>
+                  <li>Project - articles/ranking/promo（プロジェクト独自で再利用できないもの）</li>
+                  <li>Utility - clearfix/display/margin（調整用）</li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <li>各ページのスタイルは、common.css + ページcss（frontpage.cssなど）の組み合わせとし、不要なスタイルを読み込まないようにする（表示スピード対策）</li>
+          <li>セレクターにスタイルを設定しない。スタイルは全てクラスに設定すること</li>
+          <li>img要素にはwidth/heightを記載する（表示スピード対策）</li>
+          <li>img要素、iframe要素には「loading="lazy"」を記載する（表示スピード対策）</li>
+          <li>img要素の「alt」</li>
+          <li>アイコンは使用頻度の高いものをSVGで予め入れてあります。色を変えたいときはエディタで開いてカラーコードを変更してください</li>
+        </ul>
+      </details>
+      <details>
+        <summary>開発支援ツール</summary>
+        <ul>
+          <li><a href="https://caniuse.com/" target="_blank">caniuse / セレクタのブラウザサポート状況確認</a></li>
+          <li><a href="https://pagespeed.web.dev/?utm_source=psi&amp;utm_medium=redirect" target="_blank">スピードインサイト</a></li>
+          <li><a href="https://developers.facebook.com/tools/debug/" target="_blank">OGPバリデーション</a></li>
+          <li><a href="https://cards-dev.twitter.com/validator" target="_blank">Twitterカードバリデーション</a></li>
+          <li><a href="https://cdnjs.com/libraries" target="_blank">各種ライブラリのCDNまとめ</a></li>
+          <li><a href="https://html2jade.org/" target="_blank">HTMLからPUGへの変換</a></li>
+          <li><a href="https://css2sass.herokuapp.com/" target="_blank">CSSからSCSSへの変換</a></li>
+          <li><a href="https://syncer.jp/js-minifier" target="_blank">JS Minifier化</a></li>
+          <li><a href="https://syncer.jp/css-minifier" target="_blank">CSS Minifier化</a></li>
+          <li><a href="https://lab.syncer.jp/Tool/CSS-PrettyPrint/" target="_blank">CSS コード整形</a></li>
+          <li><a href="https://lab.syncer.jp/Tool/JavaScript-PrettyPrint/" target="_blank">JS コード整形</a></li>
+          <li><a href="https://lab.syncer.jp/Tool/HTML-PrettyPrint/" target="_blank">HTML コード整形</a></li>
+          <li><a href="https://lab.syncer.jp/Tool/Webp-Converter/" target="_blank">WEBPコンバーター</a></li>
+          <li><a href="https://syncer.jp/url-shortener" target="_blank">短縮URL作成</a></li>
+          <li><a href="https://www.itti.jp/web-design/microdata-json-ld/#chapter-1" target="_blank">構造化データあれこれまとめ</a></li>
+        </ul>
+      </details>
+    </main>
+  </body>
+</html>

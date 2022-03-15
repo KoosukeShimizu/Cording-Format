@@ -1,0 +1,46 @@
+/* --------------------------------------------------
+フォームの入力画面
+-------------------------------------------------- */
+
+.p-entry {
+
+  &-intro {
+    margin: 120px 0;
+
+    @include mq_down(md) {
+      margin: vw(96) 0;
+    }
+
+    p {
+      margin-bottom: 24px;
+
+      @include mq_down(md) {
+        margin-bottom: vw(24);
+      }
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+}
+
+.p-entry-form {
+  padding: 0;
+  margin: 0 auto;
+  margin-bottom: 120px;
+  max-width: 815px;
+  position: relative;
+
+  @include mq_down(md) {
+    margin-bottom: vw(96);
+  }
+
+  &__title {
+    margin-bottom: 72px;
+
+    @include mq_down(md) {
+      margin-bottom: vw(40);
+    }
+  }
+}

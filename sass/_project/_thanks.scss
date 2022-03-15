@@ -1,0 +1,28 @@
+/* --------------------------------------------------
+サンクスページ
+-------------------------------------------------- */
+// .p-thanks {
+//   max-width: 600px;
+// }
+.p-thanks-head {
+  margin: $gt80 0;
+  text-align: center;
+  &__title {
+    font-size: $fz40;
+    font-weight: 500;
+    line-height: 1.5;
+  }
+}
+
+.p-thanks-message {
+  display: block;
+  padding: 0;
+  margin: 0 auto $gt120;
+}
+
+.p-thanks-totop {
+  display: block;
+  padding: 0;
+  margin: $gt60 auto 0;
+  text-align: center;
+}

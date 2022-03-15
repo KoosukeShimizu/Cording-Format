@@ -1,0 +1,21 @@
+.c-top-title {
+  &__en {
+    height: 88px;
+
+    @include mq_down(md) {
+      height: vw(52);
+    }
+  }
+
+  &__description {
+    margin-top: 32px;
+    font-size: 1.8rem;
+    letter-spacing: .08em;
+    line-height: 2;
+
+    @include mq_down(md) {
+      margin-top: vw(16);
+      line-height: 1.8;
+    }
+  }
+}

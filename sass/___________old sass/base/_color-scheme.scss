@@ -1,0 +1,46 @@
+// （´・ω・`）< colorscheme
+// http: //unformedbuilding.com/articles/generating-color-scheme-with-sass/
+// -------------------------------
+$c-scheme-base: $c-primary; // 基本とする色
+$hue-step: 30deg; // 色相回転の基準角度
+
+// 補色
+$c-complementary: adjust-hue($c-scheme-base, 180deg);
+
+// Analogous
+$c-analogous-primary: $c-scheme-base;
+$c-analogous-secondary-A: adjust-hue($c-scheme-base, -$hue-step);
+$c-analogous-secondary-B: adjust-hue($c-scheme-base, $hue-step);
+
+// Split Complementary
+$c-split-complementary-primary: $c-scheme-base;
+$c-split-complementary-secondary-A: adjust-hue($c-complementary, -$hue-step);
+$c-split-complementary-secondary-B: adjust-hue($c-complementary, $hue-step);
+
+// Triadic
+$c-triadic-primary: $c-scheme-base;
+$c-triadic-secondary-A: adjust-hue($c-scheme-base, -120deg);
+$c-triadic-secondary-B: adjust-hue($c-scheme-base, 120deg);
+
+// Tetradic
+$c-tetradic-primary: $c-scheme-base;
+$c-tetradic-primary-complemantary: $c-complementary;
+$c-tetradic-secondary: adjust-hue($c-scheme-base, -$hue-step * 2);
+$c-tetradic-secondary-complemantary: adjust-hue($c-tetradic-secondary, 180deg);
+
+$colors: $c-scheme-base $c-complementary $c-analogous-primary $c-analogous-secondary-A $c-analogous-secondary-B $c-split-complementary-primary $c-split-complementary-secondary-A $c-split-complementary-secondary-B $c-triadic-primary $c-triadic-secondary-A $c-triadic-secondary-B $c-tetradic-primary $c-tetradic-primary-complemantary $c-tetradic-secondary $c-tetradic-secondary-complemantary;
+
+$selectors: base complementary analogous-primary analogous-secondary-A analogous-secondary-B split-complementary-primary split-complementary-secondary-A split-complementary-secondary-B triadic-primary triadic-secondary-A triadic-secondary-B tetradic-primary tetradic-primary-complemantary tetradic-secondary tetradic-secondary-complemantary;
+
+@for $i from 1 through length($colors) {
+  $selector: nth($selectors, $i);
+  $color: nth($colors, $i);
+
+  .#{$selector} {
+    background-color: $color;
+
+    &:before {
+      content: "#{$color}";
+    }
+  }
+}

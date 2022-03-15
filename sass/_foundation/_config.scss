@@ -1,0 +1,133 @@
+/* --------------------------------------------------
+カラー指定
+-------------------------------------------------- */
+//  background colors
+// -------------------------------
+$c-bg-primary: #f5f5f5;
+$c-bg-secondary: white;
+$c-bg-tertiary: #f5f5f5;
+
+//  font colors
+// -------------------------------
+$c-font-primary: #000;
+$c-font-secondary: #ccc;
+$c-font-link: #26b2d5; //#1592E6;
+
+//  border colors
+// -------------------------------
+$c-border: rgba(black, 0.1);
+
+//  main colors
+// -------------------------------
+$c-primary: #2053c0;
+$c-secondary: #49a184;
+$c-tertiary: #f1cc64;
+
+$c-accent: #d14836;
+$c-danger: #b92828;
+$c-important: #e54444;
+$c-success: #20b30c;
+$c-disabled: #b9b9b9;
+
+//  bland colors
+// -------------------------------
+$c-facebook: #0870d8;
+$c-twitter: #12b7e8;
+$c-line: #3fb752; //00B900
+$c-instagram: #262626; //3f729b
+$c-google: #dd4b39;
+$c-pintarest: #cb2027;
+$c-youtube: #cd201f;
+
+//  gray scale colors
+// -------------------------------
+$c-gray: #c4c4c4; //defalt
+$c-gray5: #0d0d0d;
+$c-gray10: #1a1a1a;
+$c-gray15: #262626;
+$c-gray20: #333;
+$c-gray25: #404040;
+$c-gray30: #4d4d4d;
+$c-gray35: #595959;
+$c-gray40: #666;
+$c-gray45: #737373;
+$c-gray50: #7f7f7f;
+$c-gray55: #8c8c8c;
+$c-gray60: #999;
+$c-gray65: #a6a6a6;
+$c-gray70: #b3b3b3;
+$c-gray75: #bfbfbf;
+$c-gray80: #ccc;
+$c-gray85: #d9d9d9;
+$c-gray90: #e5e5e5;
+$c-gray95: #f2f2f2;
+
+// （´・ω・`）< Fontsize
+// -------------------------------
+$fz12: clamp(1.1rem, calc((12 / 375 * 70vw)), 1.2rem);
+$fz14: clamp(1.2rem, calc((14 / 375 * 70vw)), 1.4rem);
+$fz16: clamp(1.3rem, calc((16 / 375 * 70vw)), 1.6rem);
+$fz18: clamp(1.4rem, calc((18 / 375 * 70vw)), 1.8rem);
+$fz20: clamp(1.8rem, calc((20 / 375 * 70vw)), 2rem);
+$fz22: min(calc((22 / 375 * 70vw)), 2.2rem);
+$fz24: min(calc((24 / 375 * 70vw)), 2.4rem);
+$fz26: min(calc((26 / 375 * 70vw)), 2.6rem);
+$fz28: min(calc((28 / 375 * 70vw)), 2.8rem);
+$fz30: min(calc((30 / 375 * 70vw)), 3rem);
+$fz32: min(calc((32 / 375 * 70vw)), 3.2rem);
+$fz34: min(calc((34 / 375 * 70vw)), 3.4rem);
+$fz36: min(calc((36 / 375 * 70vw)), 3.6rem);
+$fz38: min(calc((38 / 375 * 70vw)), 3.8rem);
+$fz40: min(calc((40 / 375 * 70vw)), 4rem);
+$fz42: min(calc((42 / 375 * 70vw)), 4.2rem);
+$fz44: min(calc((44 / 375 * 70vw)), 4.4rem);
+$fz46: min(calc((46 / 375 * 70vw)), 4.6rem);
+$fz48: min(calc((48 / 375 * 70vw)), 4.8rem);
+$fz50: min(calc((50 / 375 * 70vw)), 5rem);
+$fz52: min(calc((52 / 375 * 70vw)), 5.2rem);
+$fz54: min(calc((54 / 375 * 70vw)), 5.4rem);
+$fz56: min(calc((56 / 375 * 70vw)), 5.6rem);
+$fz58: min(calc((58 / 375 * 70vw)), 5.8rem);
+
+
+// （´・ω・`）< Width
+// -------------------------------
+// $w:;
+
+// （´・ω・`）< Gutter
+// -------------------------------
+$gt10: min(calc((10 / 375 * 50vw)), 10px);
+$gt20: min(calc((20 / 375 * 50vw)), 20px);
+$gt30: min(calc((30 / 375 * 50vw)), 30px);
+$gt40: min(calc((40 / 375 * 50vw)), 40px);
+$gt50: min(calc((50 / 375 * 50vw)), 50px);
+$gt60: min(calc((60 / 375 * 50vw)), 60px);
+$gt70: min(calc((70 / 375 * 50vw)), 70px);
+$gt80: min(calc((80 / 375 * 50vw)), 80px);
+$gt90: min(calc((90 / 375 * 50vw)), 90px);
+$gt100: min(calc((100 / 375 * 50vw)), 100px);
+$gt110: min(calc((110 / 375 * 50vw)), 110px);
+$gt120: min(calc((120 / 375 * 50vw)), 120px);
+$gt130: min(calc((130 / 375 * 50vw)), 130px);
+$gt140: min(calc((140 / 375 * 50vw)), 140px);
+$gt150: min(calc((150 / 375 * 50vw)), 150px);
+$gt160: min(calc((160 / 375 * 50vw)), 160px);
+$gt170: min(calc((170 / 375 * 50vw)), 170px);
+$gt180: min(calc((180 / 375 * 50vw)), 180px);
+$gt190: min(calc((190 / 375 * 50vw)), 190px);
+$gt200: min(calc((200 / 375 * 50vw)), 200px);
+
+// （´・ω・`）< Ratio Setting
+// -------------------------------
+$r-gold: calc((5 / 8) * 100%);
+$r-gold2: calc((5 / 12) * 100%);
+$r-silver: calc((5 / 7) * 100%);
+$r-bronz: calc((3 / 9) * 100%);
+
+// （´・ω・`）< others
+// -------------------------------
+$img_path: "../img/";
+$transition: all 0.3s ease;
+$radius: 5px;
+$shadow: 0px 2px 6px 0px rgba(black, 0.1);
+$border: 1px solid $c-border;

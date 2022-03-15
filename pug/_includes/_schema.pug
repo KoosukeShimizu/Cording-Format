@@ -1,0 +1,159 @@
+//- home以外のときに設置
+unless key==='home'
+  // パンくずリストの構造化データ
+  //- 親ページがある場合（第3階層目のページ）
+  if parentSlug
+    script(type='application/ld+json').
+      {
+      "@context": "http://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [{
+        "@type": "ListItem",
+        "position": 1,
+        "item": {
+          "name": "ホーム"
+          "item": "#{siteUrl}",
+        }
+      },{
+        "@type": "ListItem",
+        "position": 2,
+        "item": {
+          "name": "#{parentTitle}"
+          "item": "#{siteUrl}#{parentSlug}",
+        }
+      },{
+        "@type": "ListItem",
+        "position": 3,
+        "item": {
+          "name": "#{pageTitle}"
+          "item": "#{siteUrl}#{parentSlug}#{pageSlug}",
+        }
+      }]
+      }
+  //- 親ページがない場合（第2階層目のページ）
+  else
+    script(type='application/ld+json').
+      {
+      "@context": "http://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [{
+        "@type": "ListItem",
+        "position": 1,
+        "item": {
+          "name": "ホーム"
+          "item": "#{siteUrl}",
+        }
+      },{
+        "@type": "ListItem",
+        "position": 2,
+        "item": {
+          "name": "#{pageTitle}"
+          "item": "#{siteUrl}#{pageSlug}",
+        }
+      }]
+      }
+
+//- // 記事の構造化データ
+//- script(type='application/ld+json').
+//-   {
+//-     "@context": "https://schema.org",
+//-     "@type": "Article",
+//-     "headline": "",
+//-     "image": "",  
+//-     "author": {
+//-       "@type": "",
+//-       "name": ""
+//-     },  
+//-     "publisher": {
+//-       "@type": "Organization",
+//-       "name": "",
+//-       "logo": {
+//-         "@type": "ImageObject",
+//-         "url": ""
+//-       }
+//-     },
+//-     "datePublished": ""
+//-   }
+
+//- // FAQの構造化データ
+//- script(type='application/ld+json').
+//-   {
+//-     "@context": "https://schema.org",
+//-     "@type": "FAQPage",
+//-     "mainEntity": [{
+//-       "@type": "Question",
+//-       "name": "",
+//-       "acceptedAnswer": {
+//-         "@type": "Answer",
+//-         "text": ""
+//-       }
+//-     },{
+//-       "@type": "Question",
+//-       "name": "",
+//-       "acceptedAnswer": {
+//-         "@type": "Answer",
+//-         "text": ""
+//-       }
+//-     },{
+//-       "@type": "Question",
+//-       "name": "",
+//-       "acceptedAnswer": {
+//-         "@type": "Answer",
+//-         "text": ""
+//-       }
+//-     }]
+//-   }
+
+//- // Websiteの構造化データ
+//- script(type='application/ld+json').
+//-   {
+//-     "@context": "https://schema.org/",
+//-     "@type": "WebSite",
+//-     "name": "#{siteName}",
+//-     "url": "#{siteUrl}",
+//-     "potentialAction": {
+//-       "@type": "SearchAction",
+//-       "target": "{search_term_string}",
+//-       "query-input": "required name=search_term_string"
+//-     }
+//-   }
+
+// 組織情報の構造化データ
+//-  @type属性は組織によって変更
+script(type='application/ld+json').
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "#{siteName}",
+    "url": "#{siteUrl}",
+    "logo": "#{siteLogo}",
+    "email" : #{email},
+    "telephone": #{telephone},
+    "address": {
+      "@type": "PostalAddress",
+      "addressCountry" : "JP",
+      "postalCode" : #{postalCode},
+      "addressRegion" : #{addressRegion},
+      "addressLocality": #{addressLocality},
+      "streetAddress": #{streetAddress},
+    },
+    "sameAs": [
+      "#{facebookUrl}",
+      "#{twitterUrl}",
+      "#{instagramUrl}",
+      "#{lineUrl}",
+      "#{youtubeUrl}",
+    ]
+  }
+
+
+//- その他下記構造化データが存在しています
+//- 適宜使用しましょう
+//- ・ローカルビジネス
+//- ・イベント
+//- ・How-to 
+//- ・Job-posting 
+//- ・Person
+//- ・Product
+//- ・Recipe
+//- ・Video

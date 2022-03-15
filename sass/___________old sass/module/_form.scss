@@ -1,0 +1,700 @@
+@import '../base/config';
+
+///////////////////////////////////
+///////////////////////////////////
+///////////////////////////////////
+///////////////////////////////////
+// （´・ω・`）< FORM BASE
+// -------------------------------
+%form-base {
+  cursor: pointer;
+  display: inline-block;
+  padding: $g-s $g-s;
+  vertical-align: middle;
+  @include appearance(none);
+  width: 100%;
+  font-size: inherit;
+  color: inherit;
+  margin-bottom: 0;
+  background: white;
+  border: 1px solid $c-border;
+  border-radius: $radius;
+
+  &:focus {
+    outline: 0;
+  }
+
+  &[disabled] {
+    cursor: not-allowed;
+    color: $c-gray50;
+    pointer-events: none;
+  }
+
+  &[readonly] {
+    cursor: default;
+    pointer-events: none;
+    background: $c-gray95;
+    background: none;
+    border-radius: 0;
+    border: none;
+    border-bottom: 1px solid rgba(black,.5);
+  }
+
+  //   // &:focus:invalid {
+  //   //   border-color: #e9322d;
+  //   //   color: #b94a48;
+  //   // }
+
+  //   &:-webkit-autofill {
+  //     // background-color: rgb(250, 255, 189);
+  //     background: inherit;
+  //     background-image: none;
+  //     // color: rgb(0, 0, 0);
+  //     color: inherit;
+  //   }
+}
+
+
+// （´・ω・`）< input
+// -------------------------------
+input {
+  @extend %form-base;
+
+  // （´・ω・`）< radio & checkbox
+  // -------------------------------
+  &[type="radio"],
+  &[type="checkbox"] {
+    display: none;
+
+    +label {
+      padding: $g-s;
+      color: #999;
+      cursor: pointer;
+      display: inline-block;
+      vertical-align: middle;
+      border: 1px solid #ccc;
+      margin: 0 $g-s $g-s 0;
+      border-radius: $radius;
+      background: white;
+
+      &:before {
+        margin-right: 4px;
+        color: inherit;
+        width: 1em;
+        text-align: center;
+        display: inline-block;
+      }
+    }
+
+    &:checked {
+      +label {
+        color: $c-primary;
+        border-color: $c-primary;
+        box-shadow: 0px 0px 0px 2px $c-primary inset;
+
+        &:before {
+          color: $c-primary;
+        }
+      }
+    }
+
+    &:disabled {
+      +label {
+        color: #999;
+        border-color: #999;
+        background: rgba(#999, .5);
+
+        &:before {
+          color: #999;
+        }
+      }
+    }
+  }
+
+  // （´・ω・`）< radio
+  // -------------------------------
+  &[type="radio"] {
+    +label {
+      &:nth-of-type(even) {
+        margin-right: 0;
+      }
+
+      &:before {
+        font-family: 'Font Awesome 5 Free';
+        font-weight: 400;
+        content: '\f111';
+      }
+    }
+
+    &:checked {
+      +label {
+        &:before {
+          content: '\f192';
+          font-weight: 900;
+          color: $c-primary;
+        }
+      }
+    }
+
+    &:disabled {
+      +label {
+        &:before {
+          content: '\f00d';
+          font-weight: 900;
+          color: #999;
+        }
+      }
+    }
+  }
+
+  // （´・ω・`）< checkbox
+  // -------------------------------
+  &[type="checkbox"] {
+    +label {
+      &:before {
+        font-family: 'Font Awesome 5 Free';
+        font-weight: 900;
+        content: '\f0c8';
+      }
+    }
+
+    &:checked {
+      +label {
+        &:before {
+          content: '\f14a';
+          font-weight: 900;
+        }
+      }
+    }
+  }
+
+  // （´・ω・`）< number&date
+  // -------------------------------
+  &[type="number"],
+  &[type="date"] {
+
+    //   -moz-appearance: textfield;
+    &::-webkit-outer-spin-button,
+    &::-webkit-inner-spin-button {
+      -webkit-appearance: none;
+      // margin: 0;
+    }
+  }
+
+  // （´・ω・`）< password
+  // -------------------------------
+  input[type="password"] {
+    &:before {
+      font-family: 'Font Awesome 5 Free';
+      font-weight: 900;
+      content: '\f06e';
+      display: inline-block;
+      font-size: 150%;
+    }
+
+  }
+
+  .password {
+    position: relative;
+  }
+
+  .password-view {
+    $size: 40px;
+    @include position(absolute, 50% $g-s null null);
+    @include transform(translateY(-50%));
+    // background: $c-gray;
+    // border-radius: 50%;
+    display: inline-block;
+    @extend %icon-base;
+    cursor: pointer;
+    padding: 0;
+    margin: 0;
+    color: $c-gray80;
+    @include size($size);
+    line-height: $size;
+    font-size: 1.8rem;
+    // background: #000;
+    text-align: center;
+
+    &:before {
+      font-weight: 900;
+      content: '\f06e'
+    }
+
+    &.is-view {
+      &:before {
+        font-weight: 900;
+        content: '\f070'
+      }
+    }
+  }
+
+  // （´・ω・`）< file
+  // -------------------------------
+  &[type=file] {
+    display: none;
+  }
+}
+
+
+// （´・ω・`）< select
+// -------------------------------
+select {
+  @extend %form-base;
+
+  &::-ms-expand {
+    display: none;
+  }
+
+  &:-moz-focusring {
+    color: transparent;
+    text-shadow: 0 0 0 #828c9a;
+  }
+}
+
+.form-select {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  margin-right: 2px;
+
+  &:before {
+    @include position(absolute, 50% $g-s null null);
+    font-family: 'Font Awesome 5 Free';
+    font-weight: 900;
+    content: '\f0d7';
+    display: block;
+    color: $c-gray;
+    line-height: 0;
+    pointer-events: none;
+  }
+}
+
+// （´・ω・`）< textarea
+// -------------------------------
+textarea {
+  @extend %form-base;
+  min-height: 12em;
+  resize: vertical;
+  min-height: 10em;
+  resize: vertical;
+  line-height: 1.4;
+  padding: $g-m;
+}
+
+
+
+
+
+
+
+
+
+
+///////////////////////////////////
+///////////////////////////////////
+///////////////////////////////////
+///////////////////////////////////
+// （´・ω・`）< FORM STYLE
+// -------------------------------
+
+.form {
+  width: 100%;
+  &-wrap {
+    @include flexbox(flex, null, wrap, center, center, null);
+    padding: $g-s 0 0 0;
+    margin: auto;
+    width: 95%;
+    max-width: 500px;
+  }
+
+  &-item {
+    width: 100%;
+    position: relative;
+    // display: block;
+    // background: #000;
+
+    &:not(:last-child) {
+      margin-bottom: $g-m;
+    }
+  }
+
+  &-ttl {
+    width: 100%;
+    display: inline-block;
+    font-weight: 700;
+    margin-bottom: $g-xs;
+
+    &.is-required {
+      position: relative;
+
+      &:after {
+        $size: 14px;
+        text-align: center;
+        content: "＊";
+        color: red;
+        font-size: 1.1rem;
+        font-weight: 400;
+        display: inline-block;
+        padding: 0;
+        vertical-align: top;
+      }
+    }
+  }
+
+
+  &-body {
+    @include flexbox(flex, null, wrap, null, center, null);
+    width: 100%;
+
+    &.tel {
+      >input {
+        max-width: 4em;
+      }
+
+      span {
+        color: #ccc;
+        font-size: 10px;
+        margin: 0px;
+      }
+    }
+
+    &.age {
+      >input {
+        max-width: 5em;
+        margin-right: 4px;
+      }
+    }
+
+    &.daytime {
+      @include flexbox(null, null, wrap, null, null, null);
+
+      input[type=number] {
+        width: 3em;
+        padding-right: 0;
+        padding-left: 8px;
+      }
+
+      input[type=time] {
+        width: 6.5em;
+        padding-right: 0;
+        padding-left: 8px;
+      }
+
+      span {
+        font-size: 1.2rem;
+        margin: 0 4px;
+
+      }
+    }
+  }
+
+  &-notes,
+  &-note {
+    font-size: 1.2rem;
+    text-align: left;
+    margin-bottom: $g-m;
+    display: block;
+
+    a {
+      text-decoration: underline;
+    }
+  }
+
+  &-caution{
+    color: red;
+    margin-bottom: $g-m;
+  }
+
+  &-horizontal {
+    @include flexbox(flex, null, wrap, space-between, center, null);
+  }
+
+  &-caption {
+    padding: $g-xs 0;
+    text-align: center;
+    margin-bottom: $g-l;
+    border-top: 1px solid $c-border;
+    border-bottom: 1px solid $c-border;
+  }
+
+
+
+  &-span {
+    min-width: 2em;
+    max-width: 6em;
+    font-size: 1.2rem;
+    text-align: center;
+  }
+
+  &-passView {
+    $size: 30px;
+    display: inline-block;
+    cursor: pointer;
+    padding: 0;
+    margin-right: $g-s;
+    color: $c-gray80;
+    @include size($size);
+    line-height: $size;
+    font-size: 1.8rem;
+    vertical-align: middle;
+    font-family: 'Font Awesome 5 Free';
+
+    &:after {
+      font-weight: 900;
+      content: '\f06e'
+    }
+
+    &.is-view {
+      &:after {
+        font-weight: 900;
+        content: '\f070'
+      }
+    }
+  }
+
+
+  &-file {
+    // overflow: hidden;
+    // font-size: 0;
+    // margin: 0 auto $g-m;
+    // width: 100%;
+    // height: 300px;
+    // background: $c-gray95;
+    // background: url("#{$img_path}common/profile-main.png") no-repeat center center /cover;
+    position: relative;
+    // @extend %icon-base;
+  }
+
+  &-file-preview {
+    background: rgba(#000000, .2);
+    // border: 1px solid $c-accent;
+    line-height: 0;
+    // max-height: 400px;
+    // &:before {
+    //   @include position(absolute, 50% null null 50%);
+    //   @include transform(translate(-50%, -50%));
+    //   z-index: 0;
+    //   font-weight: 900;
+    //   content: '\f007';
+    //   font-size: 13rem;
+    //   color: rgba(white, .5);
+    // }
+    // &:after {
+    //   @include position(absolute, 50% null null 50%);
+    //   @include transform(translate(-50%, -50%));
+    //   z-index: 0;
+    //   font-weight: 900;
+    //   content: '\f007';
+    //   font-size: 13rem;
+    //   color: rgba(white, .5);
+    // }
+  }
+
+  &-addFile {
+    display: block;
+    background: $c-accent;
+    color: white;
+    font-weight: 700;
+    text-align: center;
+    padding: $g-m;
+    cursor: pointer;
+    @extend %hover-normal;
+  }
+}
+
+
+
+.indent {
+  width: 100%;
+  padding-left: 1em;
+  margin-bottom: 8px;
+
+  .form-ttl {
+    margin-left: -1em;
+  }
+}
+
+.doui {
+  background: white;
+  padding: 16px 16px 24px;
+  border-radius: 10px;
+  border: 3px solid $c-accent;
+
+  .form-ttl {
+    margin-bottom: $g-m;
+  }
+
+  p {
+    margin-bottom: $g-m;
+  }
+}
+
+
+
+
+
+
+// （´・ω・`）< btn
+// -------------------------------
+// .form-btnGroup{
+//   padding: $g-m $g-s $g-s;
+
+// }
+// .btn-submit {
+//   @extend %btnFormat1;
+//   background: $c-accent;
+//   color: #fff;
+// }
+// .btn-send {
+//   @extend %btnFormat1;
+//   background: $c-accent;
+//   color: #fff;
+//   width: 65%;
+// }
+// .btn-back {
+//   @extend %btnFormat1;
+//   background: $c-disabled;
+//   color: #fff;
+//   width: 30%;
+//   margin-right: 3%;
+// }
+// .btnArea {
+//   @include flexbox(flex, null, null, center, null, null);
+
+//   //   width: calc((100% - #{$g-s}) / 2);
+//   //   max-width: 500px;
+
+//   &-submit {
+//     margin: $g-l 0;
+
+//     >[class*="btn-"] {
+//       width: 100%;
+//     }
+//   }
+
+//   &-confirm {
+//     @include flexbox(flex, null, null, center, null, null);
+//     margin: $g-l 0;
+
+//     >[class*="btn-"] {
+//       margin: 0 $g-xs;
+//     }
+//   }
+
+//   &-finish {
+//     margin-top: $g-xl;
+
+//     >[class*="btn-"] {
+//       width: 100%;
+
+//       &:not(:last-child) {
+//         margin-bottom: $g-s;
+//       }
+//     }
+//   }
+// }
+
+// （´・ω・`）< calendar
+// -------------------------------
+.calendar {
+  background: white;
+  border-radius: 10px;
+  width: 100%;
+  padding: 10px;
+
+  .js-calendar {
+    width: 100%;
+    border-bottom: 1px solid $c-border;
+    margin-bottom: $g-m;
+  }
+
+  .form-ttl{
+    margin-bottom: $g-m;
+    font-size: 1.2rem;
+  }
+
+  .pignose-calendar {
+    width: 100%;
+    max-width: 1000px;
+    box-shadow: none;
+    border: 0px solid #000;
+
+    .pignose-calendar-top {
+      background: none;
+      border: none;
+      box-shadow: none;
+    }
+
+    .pignose-calendar-header {
+      background: #f5f5f5;
+    }
+    .pignose-calendar-unit.pignose-calendar-unit-active a{
+      box-shadow: none;
+    }
+  }
+}
+
+.time-pick {
+  margin: auto;
+  @include flexbox(flex, null, wrap, null, null, null);
+
+  li {
+    padding: 2px;
+    width: 50%;
+
+    label {
+      width: 100%;
+    }
+
+    @include mq(sp, min) {
+      width: calc(100% / 3);
+    }
+  }
+
+  input[type="radio"] {
+    &.is-few {
+      +label {
+        color: orange;
+        border-color: orange;
+        &:before {
+          content: '\f071';
+          font-weight: 900;
+          color: orange;
+        }
+      }
+    }
+    &:before {
+      font-family: 'Font Awesome 5 Free';
+      font-weight: 400;
+      content: '\f111';
+    }
+
+
+  &:checked {
+    +label {
+      color: $c-primary;
+      border-color:$c-primary;
+      &:before {
+        content: '\f192';
+        font-weight: 900;
+        color: $c-primary;
+      }
+    }
+  }
+
+  &:disabled {
+    +label {
+      background: white;
+      border-color: $c-gray90;
+      color: $c-gray90;
+
+      &:before {
+        content: '\f00d';
+        font-weight: 900;
+        color: $c-gray90;
+      }
+    }
+  }
+}
+}

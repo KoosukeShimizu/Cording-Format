@@ -1,0 +1,41 @@
+// Footer
+footer.l-footer
+  // Pagetop
+  .l-footer-pagetop
+    button.js-pagetop(type="button")
+      img(src=root+imgPath+"common/icons/arrow/angle-up-solid.svg" loading="lazy" alt='pagetop')
+  // /Pagetop
+
+  .l-footer__inner
+    .l-footer__logo: a(href=siteUrl): img(src=root+imgPath+"common/siteLogo-footer.svg" loading="lazy" alt=siteName)
+
+    //- 確認完了画面以外で表示
+    unless key === 'confirm'
+      nav.l-footer-social
+        ul.l-footer-social__list
+          if fontawesome==='true'
+            li.l-footer-social__item: a(href=instagramUrl target="_blank") #[i.fab.fa-instagram]
+            li.l-footer-social__item: a(href=facebookUrl target="_blank") #[i.fab.fa-facebook]
+            li.l-footer-social__item: a(href=twitterUrl target="_blank") #[i.fab.fa-twitter]
+            li.l-footer-social__item: a(href=lineUrl target="_blank") #[i.fab.fa-line]
+            li.l-footer-social__item: a(href=youtubeUrl target="_blank") #[i.fab.fa-youtube]
+          else
+            li.l-footer-social__item: a(href=instagramUrl target="_blank") #[img(src=root+imgPath+"common/icons/bland/instagram-brands.svg" loading="lazy" alt='instagram')]
+            li.l-footer-social__item: a(href=facebookUrl target="_blank") #[img(src=root+imgPath+"common/icons/bland/facebook-f-brands.svg" loading="lazy" alt='facebook')]
+            li.l-footer-social__item: a(href=twitterUrl target="_blank") #[img(src=root+imgPath+"common/icons/bland/twitter-brands.svg" loading="lazy" alt='twitter')]
+            li.l-footer-social__item: a(href=lineUrl target="_blank") #[img(src=root+imgPath+"common/icons/bland/line-brands.svg" loading="lazy" alt='line')]
+            li.l-footer-social__item: a(href=youtubeUrl target="_blank") #[img(src=root+imgPath+"common/icons/bland/youtube-brands.svg" loading="lazy" alt='youtube')]
+
+      nav.l-footer-navi
+        ul.l-footer_navi__list
+          li.l-footer_navi__item: a(href=root+"terms"+extention) 利用規約
+          li.l-footer_navi__item: a(href=root+"privacy"+extention) プライバシーポリシー
+          li.l-footer_navi__item: a(href=root+"company"+extention) 運営会社情報
+          li.l-footer_navi__item: a(href=root+"contact"+extention) お問い合わせ
+
+  if fontawesome==='true'
+    .l-footer-copyright #[i.far.fa-copyright] #{copyright}
+  else
+    .l-footer-copyright #[img.l-footer-copyright__mark(src=root+imgPath+"common/icons/copyright-regular.svg" loading="lazy" alt='copyright')] #{copyright}
+    //- .l-footer-copyright #[span ©] #{copyright}
+// /Footer

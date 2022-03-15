@@ -1,0 +1,105 @@
+.p-csr {
+  &-intro {
+    margin: 120px 0;
+    @include mq_down(md) {
+      margin: vw(96) 0;
+    }
+    p {
+      margin-bottom: 24px;
+
+      @include mq_down(md) {
+        margin-bottom: vw(24);
+      }
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  &-declaration {
+
+    &__title {
+      margin-bottom: 56px;
+
+      @include mq_down(md) {
+        margin-bottom: vw(40);
+      }
+    }
+
+    &__contents {
+      margin-bottom: 120px;
+
+      @include mq_down(md) {
+        margin-bottom: vw(96);
+      }
+
+      h3 {
+        margin: 96px 0 56px;
+
+        @include mq_down(md) {
+          margin: vw(40) 0 vw(32);
+        }
+
+        &:first-child {
+          margin-top: 0;
+        }
+      }
+
+      p {
+        margin-bottom: 24px;
+
+        @include mq_down(md) {
+          margin-bottom: vw(24);
+        }
+  
+        &:last-child {
+          margin-bottom: 0;
+        }
+      }
+
+      .c-img {
+
+        &__positive_off {
+          margin-top: 56px;
+          text-align: center;
+
+          @include mq_down(md) {
+            margin-top: vw(40);
+          }
+          img {
+            min-width: 470px;
+            padding: 28px 30px;
+            background-color: #fff;
+
+            @include mq_down(md) {
+              min-width: auto;
+              padding: vw(16);
+              width: 100%;
+            }
+          }
+        }
+        &__team_beyond_member {
+          margin-top: 56px;
+          text-align: center;
+          
+          @include mq_down(md) {
+            margin-top: vw(40);
+          }
+          img {
+            min-width: 530px;
+            padding: 43px 0;
+            background-color: #fff;
+
+            @include mq_down(md) {
+              min-width: auto;
+              width: 100%;
+              padding: vw(24) 0;
+            }
+          }
+        }
+      }
+    }
+  }
+
+}

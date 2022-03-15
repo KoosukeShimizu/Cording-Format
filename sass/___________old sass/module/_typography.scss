@@ -1,0 +1,72 @@
+@import '../base/config';
+///////////////////////////////////
+///////////////////////////////////
+///////////////////////////////////
+///////////////////////////////////
+///////////////////////////////////
+///////////////////////////////////
+// -------------------------------
+//   ∧＿＿∧    .｡*ﾟ+.*.｡
+// （´・ω・`）< Typography
+// -------------------------------
+.heading {
+  font-weight: bold;
+  margin-bottom: $g-xs;
+  text-align: justify;
+}
+
+.intro {
+  margin-bottom: .8em;
+}
+
+.description {
+  margin-bottom: .8em;
+}
+
+.lead {
+  margin: 2em 0;
+}
+
+.text {
+  margin-bottom: .8em;
+  text-align: left;
+  line-height: 1.8;
+}
+
+.note {
+  font-size: 80%;
+}
+
+.alert {
+  font-size: 80%;
+  color: red;
+}
+
+.strong,
+.b,
+.em {
+  font-weight: bold;
+  font-weight: 600;
+}
+
+.strong {
+  font-size: 150%;
+  color: $c-accent;
+}
+
+.b {
+  font-size: 150%;
+}
+
+.em {
+  font-size: 120%;
+}
+
+.mark {
+  background: yellow;
+}
+
+.date {
+  font-size: 1.2rem;
+  color: $c-gray50;
+}

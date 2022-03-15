@@ -1,0 +1,17 @@
+.c-form__input {
+  border-radius: 5px;
+  border: 1px solid rgba($c-border, 0.25);
+  background-color: white;
+  padding: 24px;
+  max-width: 408px;
+  width: 100%;
+
+  @include mq_down(md) {
+    border-radius: vw(16);
+    padding: vw(22) vw(16);
+  }
+}
+
+.c-form__radio {
+  all: set;
+}

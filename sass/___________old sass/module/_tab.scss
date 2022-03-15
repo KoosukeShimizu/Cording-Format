@@ -1,0 +1,110 @@
+// -------------------------------
+//   ∧＿＿∧    .｡*ﾟ+.*.｡
+// （´・ω・`）< title
+// -------------------------------
+%tab {
+  &-base {
+    .tab-toggle {
+      @include flexbox(flex, null, wrap, center, center, null);
+
+      .tab-btn {
+        text-align: center;
+        cursor: pointer;
+        letter-spacing: 0;
+        margin: 0;
+        @extend %hover-tab;
+
+        &.is-active {
+          background: $c-primary;
+          color: #fff;
+          cursor: none;
+          pointer-events: none;
+        }
+      }
+    }
+
+    .tab-contents {
+      .tab-item {
+        display: none;
+
+        &.is-active {
+          display: block;
+        }
+      }
+    }
+  }
+
+  &-typeA {
+    @extend %tab-base;
+    margin-bottom: $g-l;
+
+    .tab-toggle {
+      background: white;
+      border: 1px solid #000;
+      margin-bottom: $g-l;
+
+      .tab-btn {
+        padding: $g-s 0;
+
+        &:not(:last-child) {
+          border-right: 1px solid #000;
+        }
+
+        &.is-active {
+          background: #000;
+          color: white;
+        }
+      }
+    }
+  }
+}
+
+// .tab {
+
+//   .tab-toggle {
+//     @include flexbox(flex, null, null, center, center, null);
+//     // border-bottom: 1px solid $c-border;
+
+//     .tab-btn {
+//       width: calc(100% / #{$tabCount});
+//       text-align: center;
+//       padding: $g-xs $g-s;
+//       background: $c-gray90;
+//       border-radius: 40px;
+//       cursor: pointer;
+
+//       &:not(:last-child) {
+//         margin-right: $g-s;
+//       }
+
+//       &.is-active {
+//         background: $c-primary;
+//         color: #fff;
+//         cursor: none;
+//         pointer-events: none;
+//       }
+
+//     }
+//   }
+
+//   .tab-contents {
+//     // border-bottom: 1px solid $c-border;
+//     padding: $g-m $g-s;
+//     margin-bottom: 30px;
+//     text-align: left;
+
+//     .tab-item {
+//       &:not(.is-active) {
+//         display: none;
+//       }
+//     }
+
+//     .is-active {
+//       display: block;
+//     }
+
+//     @include mq(tab, min) {
+//       padding: 30px 20px;
+//     }
+//   }
+// }

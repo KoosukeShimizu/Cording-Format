@@ -1,0 +1,263 @@
+%list {
+  &-base {
+    >li {
+      >a {
+        display: block;
+        position: relative;
+        @extend %hover;
+      }
+    }
+  }
+
+  &-typeA {
+    @extend %list-base;
+    border-top: 1px solid $c-border;
+
+    >li {
+      background: white;
+
+      // &:not(:last-child) {
+      //   border-bottom: 1px solid $c-border;
+      // }
+      border-bottom: 1px solid $c-border;
+
+      a {
+        padding: $g-m;
+        color: $c-link;
+      }
+    }
+  }
+
+  &-typeB {//+arrow
+    @extend %list-typeA;
+    border-radius: $radius;
+    overflow: hidden;
+    >li {
+      a {
+        &:after {
+          @include position(absolute, 50% 15px null null);
+          @include transform(translateY(-50%));
+          font-family: 'Font Awesome 5 Free';
+          font-weight: 900;
+          content: '\f054';
+        }
+      }
+    }
+  }
+  &-typeC {//+thumb +arrow
+    @extend %list-typeB;
+    >li {
+      a {
+        @include flexbox(flex,null,wrap,null,center,null);
+      }
+      .thumb{
+        width: 40px;
+        height: 40px;
+        background: $c-gray90;
+      }
+      .textArea{
+        width: calc(100%-50px);
+        padding: 0 $g-s 0 $g-m;
+      }
+    }
+  }
+  &-typeD {
+    @extend %list-typeA;
+    >li {
+      padding: $g-m;
+      border-radius: $radius;
+      overflow: hidden;
+      margin-bottom: $g-m;
+      border-bottom: none;
+      position: relative;
+    }
+    .date {
+      margin-bottom: $g-s;
+    }
+
+    .heading {
+      margin-bottom: $g-m;
+      font-size: 1.4rem;
+    }
+
+    .text {
+      margin-bottom: 0;
+    }
+  }
+}
+
+
+
+
+// -------------------------------
+//   ∧＿＿∧    .｡*ﾟ+.*.｡
+// （´・ω・`）< list style
+// -------------------------------
+// %list_marks {
+//   $markSize: calc(1em + 5px);
+//   padding-left: 1.5em;
+//   margin: 0;
+
+//   >li {
+//     vertical-align: baseline;
+//     position: relative;
+//     padding-left: 0em;
+
+//     &:before {
+//       @include position(absolute, #{$markSize} null null -1.5em);
+//       transform: translateY(-50%);
+//       text-align: center;
+//       width: $markSize;
+//       height: $markSize;
+//       line-height: 1;
+//       display: inline-block;
+//     }
+//   }
+// }
+
+%listMarkBase {
+  padding-left: 1.3em;
+
+  li {
+    margin-bottom: $g-m;
+
+    >ul {
+      margin-top: $g-m;
+    }
+  }
+}
+
+// .list {
+
+//   // （´・ω・`）< bacic style
+//   // ------------------
+//   &-disc {
+//     @extend %listMarkBase;
+//     list-style: disc;
+//   }
+
+//   &-circle {
+//     @extend %listMarkBase;
+
+//     list-style: circle;
+//   }
+
+//   &-square {
+//     @extend %listMarkBase;
+
+//     list-style: square;
+//   }
+
+//   &-decimal {
+//     @extend %listMarkBase;
+
+//     list-style: decimal;
+//   }
+
+//   &-upper-alpha {
+//     @extend %listMarkBase;
+
+//     list-style: upper-alpha;
+//   }
+
+//   &-lower-alpha {
+//     @extend %listMarkBase;
+
+//     list-style: lower-alpha;
+//   }
+
+//   &-upper-roman {
+//     @extend %listMarkBase;
+
+//     list-style: upper-roman;
+//   }
+
+//   &-lower-roman {
+//     @extend %listMarkBase;
+
+//     list-style: lower-roman;
+//   }
+
+//   &-decimal-leading-zero {
+//     @extend %listMarkBase;
+//     list-style: decimal-leading-zero;
+//   }
+
+
+  // （´・ω・`）< custom style
+  // ------------------
+  // &-dot {
+  //   @extend %list_marks;
+  //   >li {
+  //     &:before {
+  //       font-family: 'Font Awesome 5 Free';
+  //       font-weight: 900;
+  //       content: '\f22d';
+  //       padding: 2px;
+  //     }
+  //   }
+  // }
+
+
+  // &-num {
+  //   @extend %listMarkBase;
+
+  //   >li {
+  //     position: relative;
+  //     padding-left: 0em;
+  //     counter-increment: num;
+
+  //     &:before {
+  //       content: counter(num);
+  //       padding: 2px;
+  //       background: $c-secondary;
+  //       border-radius: 3px;
+  //       color: #fff;
+  //       @include position(absolute, #{$markSize} null null -1.5em);
+  //       transform: translateY(-50%);
+  //       text-align: center;
+  //       width: $markSize;
+  //       height: $markSize;
+  //       line-height: 1;
+  //       display: inline-block;
+  //     }
+
+  //     &.nav_current {
+  //       &:before {
+  //         background: $c-secondary;
+  //       }
+  //     }
+  //   }
+  // }
+
+  // -num2 {
+  //   @extend %list_marks;
+
+  //   >li {
+  //     counter-increment: num2;
+  //     margin-top: 20px;
+
+  //     &:before {
+  //       content: counter(num2);
+  //       padding: 2px;
+  //       border-radius: 3px;
+  //       color: #fff;
+  //       font-size: 1.2rem;
+  //     }
+  //   }
+  // }
+
+  // &-check {
+  //   @extend %list_marks;
+
+  //   >li {
+  //     &:before {
+  //       color: $c-accent;
+  //       font-family: 'Font Awesome 5 Free';
+  //       font-weight: 900;
+  //       content: '\f00c';
+  //       // padding: 2px;
+  //     }
+  //   }
+  // }
+// }

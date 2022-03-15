@@ -1,0 +1,113 @@
+@charset "UTF-8";
+// -------------------------------
+//   ∧＿＿∧    .｡*ﾟ+.*.｡
+// （´・ω・`）< Mixins
+//  クラスで書き出されないもの限定。
+//  page.scssにも流用するもの
+// -------------------------------
+@import "inc/base/bourbon/bourbon";
+@import "inc/base/config";
+@import "inc/base/mixins";
+
+@import "inc/module/hover";
+@import "inc/module/button";
+@import "inc/module/icon";
+@import "inc/module/list";
+@import "inc/module/card";
+// @import 'inc/module/media';
+@import "inc/module/table";
+@import "inc/module/accordion";
+@import "inc/module/tab";
+@import "inc/module/avatar";
+@import "inc/module/trim";
+@import "inc/module/editor";
+@import "inc/module/tag";
+
+///////////////////////////////////
+///////////////////////////////////
+///////////////////////////////////
+// -------------------------------
+//   ∧＿＿∧    .｡*ﾟ+.*.｡
+// （´・ω・`）< page
+// -------------------------------
+.faq {
+  // @include flexbox(flex, null, wrap, center, stretch, null);
+  &-wrap {
+    @include box-white();
+  }
+  // &-item {
+  //   @include box-white();
+  //   width: 100%;
+  //   margin: $g-s;
+  // }
+  // &-order {
+  //   font-family: $serif;
+  //   font-size: 4rem;
+  //   line-height: 1;
+  //   margin-bottom: $g-m;
+  // }
+  &-ttl {
+    // position: relative;
+    text-align: center;
+    margin-bottom: $g-l;
+    line-height: 1.4;
+    @include mq(sp, max, true) {
+      font-size: 5vw;
+    }
+    @include mq(sp, min) {
+      font-size: 2.2rem;
+    }
+  }
+  &-q {
+    text-align: left;
+    margin-bottom: $g-m;
+    position: relative;
+    line-height: 1.4;
+    @include mq(tab, max, true) {
+      padding-left: 35px;
+    }
+    @include mq(tab, min) {
+      padding-left: 45px;
+    }
+
+    // @include flexbox(flex,null,wrap,null,center,null);
+  }
+  .ico-q {
+    position: absolute;
+    background: $c-primary;
+    color: white;
+    font-family: $serif;
+    text-align: center;
+    display: inline-block;
+    border-radius: 5px;
+
+    @include mq(tab, max, true) {
+      font-size: 20px;
+      line-height: 26px;
+      height: 30px;
+      width: 30px;
+      margin-right: $g-s;
+      top: -5px;
+      left: 0px;
+    }
+    @include mq(tab, min) {
+      font-size: 30px;
+      line-height: 33px;
+      height: 40px;
+      width: 40px;
+      margin-right: $g-m;
+      top: -5px;
+      left: -10px;
+    }
+  }
+  &-a {
+    background: #eee;
+    padding: $g-m;
+    border-radius: 3px;
+    line-height: 1.4;
+    & + .faq-q {
+      // background: #000;
+      margin-top: $g-xl;
+    }
+  }
+}

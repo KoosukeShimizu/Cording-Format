@@ -1,0 +1,43 @@
+/* --------------------------------------------------
+Typography
+-------------------------------------------------- */
+
+/**
+* 文字色
+**/
+
+.u-c-pink {
+  color: $c-secondary;
+}
+
+.u-c-red {
+  color: $c-danger;
+}
+
+.u-c-brown {
+  color: $c-primary;
+}
+
+
+/**
+* 太字
+**/
+.u-fw-bold {
+  font-weight: bold;
+}
+
+
+/**
+* テキスト配置
+**/
+.u-text-center {
+  text-align: center;
+}
+
+.u-text-right {
+  text-align: right;
+}
+
+.u-text-left {
+  text-align: left;
+}

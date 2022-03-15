@@ -1,0 +1,177 @@
+%list_card {
+  li {
+    background: white;
+    >a{
+      width: 100%;
+    }
+    @include flexbox(flex, null, wrap, center, null, null);
+    margin-bottom: $g-m;
+    position: relative;
+    .thumb{
+      background: #eee;
+      width: 100%;
+      height: 0;
+      padding-bottom: 65%;
+      overflow: hidden;
+      position: relative;
+      img{
+        @include position(absolute, 50% null null 50%);
+        @include transform(translate(-50%, -50%));
+        // filter: grayscale(1)
+      }
+    }
+    time{
+      background: $c-accent;
+      color: #fff;
+      font-size: 1.2rem;
+      font-weight: 600;
+      padding: 2px 5px;
+    }
+    .list-body{
+      // background: #fff;
+      padding: $g-s;
+      width: 100%;
+    }
+    &.is-hover,:hover{
+      .thumb {
+        img{
+          @include transform(translate(-50%, -50%)scale(1.1))
+          // filter: grayscale(0)
+        }
+      }
+    }
+  }
+
+
+  @include mq(sp, min) {
+    @include flexbox(flex, null, wrap, null, null, null);
+
+    li {
+      width: calc((100% - #{$g-m}) / 2);
+
+      &:nth-child(odd) {
+        margin-right: $g-m;
+      }
+    }
+  }
+
+  @include mq(tab, min) {
+    li {
+      width: calc((100% - #{$g-m}*2) / 3);
+      margin-right: $g-m;
+
+      &:nth-child(3n) {
+        margin-right: 0;
+      }
+    }
+  }
+}
+
+
+
+
+
+
+.list_decimal{
+  padding-left: 1.5em;
+  text-align: left;
+  >li{
+    list-style: decimal;
+  }
+}
+.list_disc{
+  padding-left: 1.5em;
+  text-align: left;
+  >li{
+    list-style: disc;
+  }
+}
+
+
+
+
+%list_marks{
+  $markSize:calc(1em + 5px);
+  padding-left: 1.5em;
+  margin: 0;
+  >li {
+    vertical-align: baseline;
+    position: relative;
+    padding-left: 0em;
+
+    &:before {
+      @include position(absolute, #{$markSize} null null -1.5em);
+      transform:translateY(-50%);
+      text-align: center;
+      width: $markSize;
+      height: $markSize;
+      line-height: 1;
+      display: inline-block;
+    }
+  }
+}
+
+
+.list_num{
+  @extend %list_marks;
+  >li{
+    counter-increment:num;
+    &:before{
+      content: counter(num);
+      padding: 2px;
+      background: $c-secondary;
+      border-radius: 3px;
+      color: #fff;
+    }
+    &.nav_current{
+      &:before{
+        background: $c-secondary;
+      }
+    }
+  }
+}
+
+
+
+.list_num-solid{
+  @extend %list_marks;
+  >li{
+    counter-increment:num2;
+    margin-top: 20px;
+    &:before{
+      content: counter(num2);
+      padding: 2px;
+      border-radius:3px;
+      color: #fff;
+      font-size: 1.2rem;
+    }
+  }
+}
+
+
+.list_dot{
+  @extend %list_marks;
+  >li{
+    &:before{
+      font-family: 'Font Awesome 5 Free';
+      font-weight: 900;//sold(fas):900//regular(far):400//light(fal):300//Brands(fab):400
+      content: '\f22d';//f22d//f101
+      padding: 2px;
+    }
+  }
+}
+
+
+.list_check {
+  @extend %list_marks;
+  >li {
+    &:before {
+      color: $c-accent;
+      font-family: 'Font Awesome 5 Free';
+      font-weight: 900; //sold(fas):900//regular(far):400//light(fal):300//Brands(fab):400
+      content: '\f00c'; //f22d//f101
+      // padding: 2px;
+    }
+  }
+}
+

@@ -1,0 +1,47 @@
+.p-notfound {
+  max-width: 800px;
+  width: 100%;
+  margin: 200px auto;
+
+  @include mq_down(md) {
+    margin: vw(100) auto;
+  }
+
+  @include mq_down(md) {
+    padding: 0 vw(40);
+  }
+  &__inner {
+    img {
+      height: 100px;
+
+      @include mq_down(md) {
+        height: vw(50);
+      }
+    }
+
+    h1 {
+      font-weight: bold;
+      font-size: 4rem;
+      margin: 20px 0 32px;
+      line-height: 1.5;
+
+      @include mq_down(md) {
+        font-size: vw(28);
+      }
+    }
+    
+    p {
+      
+    }
+  }
+}
+
+// <section class="p-notfound">
+// <div class="p-notfound__en">
+//   <img src="<?php echo get_template_directory_uri(); ?>/assets/img/en/sorry.png" alt="英語：Sorry">
+// </div>
+// <div class="p-notfound__text">
+//   <h1>お探しのページは見つかりませんでした。</h1>
+//   <p>あなたがお探しのページは、一時的にアクセスができない状況にあるか移動もしくは削除されたため見つけることができません。お手数ですが、TOPから再度アクセスしてください。</p>
+// </div>
+// </section>

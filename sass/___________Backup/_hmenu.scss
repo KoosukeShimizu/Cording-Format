@@ -1,0 +1,27 @@
+.c-hmenu {
+  li {
+    display: inline-block;
+    padding-right: 12px;
+    &:last-child {
+      padding-right: 0;
+    }
+    a {
+      padding: 12px 24px;
+      border-radius: 24px;
+      border: 1px solid $c-border;
+
+      @include mq_up(md) {
+        transition: .5s all;
+        &:hover {
+          opacity: .5;
+        }
+      }
+
+      @include mq_down(md) {
+        font-size: vw(12);
+        padding: vw(8) vw(14);
+        border-radius: vw(20);
+      }
+    }
+  }
+}

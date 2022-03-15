@@ -1,0 +1,70 @@
+///////////////////////////////////
+///////////////////////////////////
+///////////////////////////////////
+///////////////////////////////////
+///////////////////////////////////
+///////////////////////////////////
+///////////////////////////////////
+///////////////////////////////////
+///////////////////////////////////
+///////////////////////////////////
+//====================================
+//   ∧＿＿∧    .｡*ﾟ+.*.｡*ﾟ+.*.｡｡*ﾟ+.*.｡
+// （´・ω・`）< Layout Setting
+//  ( つ旦つﾟ  +.*.｡｡*ﾟ+.*.｡.｡*ﾟ+.*.｡*ﾟ+.
+//====================================
+html,
+body {
+  // overflow-x: hidden;
+  height: 100%;
+  min-height: 100%;
+  margin: 0;
+}
+html {
+  font-size: 62.5%; //1rem=10px
+}
+
+body {
+  font-family: $ff-base;
+  font-size: $fz16;
+  line-height: 1.5;
+  font-weight: 400;
+  color: white;
+  background: $c-bg-primary;
+  color: $c-font-primary;
+  vertical-align: baseline;
+  position: relative;
+
+  // &:before{
+  //   @include position(fixed, 0 null null 0);
+  //   width: 100%;
+  //   height: 100%;
+  //   opacity: .6;
+  // }
+  // @include mq(sp,min){
+  //   font-size: $fz-root;
+  //   &:before{
+  //     content: "";
+  //     background: url("#{$img_path}common/bg-body-pc.jpg") repeat center top /1800px ;
+  //   }
+  // }
+  // @include mq(sp,max,true){
+  //   font-size: 1.4rem;
+  //   &:before{
+  //     content: "";
+  //     background: url("#{$img_path}common/bg-body-sp.jpg") repeat center top /cover;
+  //   }
+  // }
+  
+
+  // -moz-font-feature-settings: "palt";
+  // -webkit-font-feature-settings: "palt";
+  // font-feature-settings: "palt";
+  -webkit-font-smoothing: subpixel-antialiased;
+  -moz-osx-font-smoothing: unset;
+
+  @media only screen and(-webkit-min-device-pixel-ratio: 2), (min-resolution: 2dppx) {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+}

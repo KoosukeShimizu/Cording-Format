@@ -1,0 +1,19 @@
+/* --------------------------------------------------
+PC/SP折り返し切り替え
+-------------------------------------------------- */
+
+.u-sp-br {
+  display: block;
+
+  @include mq(sp,max) {
+    display: inline;
+  }
+}
+
+.u-pc-br {
+  display: inline;
+
+  @include mq(sp,min) {
+    display: block;
+  }
+}

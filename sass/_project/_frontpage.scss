@@ -1,0 +1,99 @@
+.p-home-hero {
+  width: min(95%,815px);
+  margin: 0 auto;
+  text-align: center;
+  &__mainCopy{
+    width: min(90%,400px);
+    // border: 1px solid #000;
+    margin: 0 auto $gt40;
+  }
+  &__mainVidual{
+    max-width: 500px;
+    // border: 1px solid #000;
+    margin: 0 auto $gt40;
+  }
+  &__subCopy{
+    max-width: 400px;
+    // border: 1px solid #000;
+    margin: 0 auto;
+  }
+}
+
+
+.p-home-news {
+  width: min(95%,815px);
+  margin: 0 auto;
+  text-align: center;
+  &__list{
+    width: min(80%,400px);
+    margin: auto;
+    // display: flex;
+    // flex-wrap: wrap;
+    // justify-content: center;
+
+    // gap: 20px;
+  }
+  &__item{
+    // width: clamp(140px,50%,300px);
+    font-size: $fz14;
+    text-align: left;
+    letter-spacing: 0;
+    margin-bottom: $gt40;
+  }
+}
+
+.p-home-service {
+  width: min(95%,815px);
+  margin: 0 auto;
+  text-align: center;
+  &__list{
+    width: min(90%,400px);
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    // gap: 20px;
+  }
+  &__item{
+    // width: min(30%,300px);
+    width: calc(100% / 3);
+    padding: 2%;
+  }
+}
+
+
+.p-home-works {
+  width: min(95%,815px);
+  margin: 0 auto;
+  text-align: center;
+  &__list{
+    width: min(90%,400px);
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    // gap: 20px;
+  }
+  &__item{
+    // width: min(30%,300px);
+    width: calc(100% / 2);
+    padding: 2%;
+  }
+}
+
+
+
+
+
+.p-home-company {
+  width: min(85%,600px);
+  margin: 0 auto;
+  // text-align: center;
+  }
+
+
+.p-home-contact {
+  width: min(85%,500px);
+  margin: 0 auto;
+  // text-align: center;
+}

@@ -1,0 +1,52 @@
+// -------------------------------
+// grid system
+// -------------------------------
+.row{
+  @if $grid-style-flex{
+    display: flex;
+    flex-wrap: wrap;
+  }@else {
+    @extend .clearfix;
+  }
+}
+@for $i from 1 through 12 {
+  .col#{$i} {
+    @if $grid-style-flex{
+      width: 100%;
+    }@else {
+      float: left;
+    }
+    width: 100% / 12 * $i;
+  }
+}
+//====================================================================
+// Project Style ■■ TAB ■■■
+//====================================================================
+
+@include mq(tab, max){
+  @for $i from 1 through 12 {
+    .tab-col#{$i} {
+      @if $grid-style-flex{
+        width: 100%;
+      }@else {
+        float: left;
+      }
+      width: 100% / 12 * $i;
+    }
+  }
+}
+//====================================================================
+// Project Style ■■ SP ■■■
+//====================================================================
+@include mq(sp, max){
+  @for $i from 1 through 12 {
+    .sp-col#{$i} {
+      @if $grid-style-flex{
+        width: 100%;
+      }@else {
+        float: left;
+      }
+      width: 100% / 12 * $i;
+    }
+  }
+};

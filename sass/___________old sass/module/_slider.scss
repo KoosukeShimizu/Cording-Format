@@ -1,0 +1,280 @@
+// $swiperSize:52px;
+// .swiper{
+//   &-container{
+//     height: 100%;
+//     height: calc(#{$swiperSize} * 3);
+//     position: relative;
+//     // border: 1px solid #000;
+//     &:before{
+//       content: "";
+//       width: 100%;
+//       height: $swiperSize;
+//       // background: yellow;
+//       border-top: 1px solid #000;
+//       border-bottom: 1px solid #000;
+//       // border-radius: 10px;
+//       display: block;
+//       @include position(absolute,calc(50% - #{$swiperSize} / 2) null null 0);
+//       // @include transform(translateY(-50%));
+//     }
+//   }
+//   &-wrapper{
+//     margin: 0;
+//   }
+//   &-slide{
+//     // background: gray;
+//     color: $c-gray80;
+//     font-size: 2rem;
+//     text-align: center;
+//     // border: 1px solid red;
+//     @include flexbox(flex,null,wrap,center,center,null);
+//     max-height: $swiperSize;
+//   }
+//   &-slide-active{
+//     // background: red;
+//     color: $c-font-primary;
+//     font-weight: 700;
+//   }
+// }
+// .datepick{
+//   @include flexbox(flex,null,wrap,center,center,null);
+//   // height: 100px;
+//   >.swiper-container{
+//     width: calc(100% / 3 - #{$g-xs});
+//     &:not(:last-child){
+//       margin-right: $g-xs;
+//     }
+//   }
+// }
+
+// .addSelect{
+//   @include flexbox(flex, null, wrap, center, center, null);
+
+//   // height: 100px;
+//   >.swiper-container {
+//     width: calc(100% / 2 - #{$g-xs});
+
+//     &:not(:last-child) {
+//       margin-right: $g-xs;
+//     }
+//   }
+// }
+
+
+
+// // .slider {
+// //   display: none;
+// // }
+
+// // .slider.slick-initialized {
+// //   display: block;
+// // }
+
+.slick-slider {
+  margin-top: 0;
+  display: none;
+
+  &.slick-initialized {
+    display: block;
+  }
+}
+
+// ///////////////////////////////////
+// ///////////////////////////////////
+// ///////////////////////////////////
+// ///////////////////////////////////
+// ///////////////////////////////////
+// // -------------------------------
+// //   ∧＿＿∧    .｡*ﾟ+.*.｡
+// // （´・ω・`）< Arrow
+// // -------------------------------
+.slick-arrow {
+  $arrowSize: 40px;
+  // background: rgba(black, .3);
+  @include position(absolute, 50% null null null);
+  margin-top: calc(-#{$arrowSize}/2);
+  z-index: 1000;
+  font-size: 0;
+  padding: 0;
+  width: $arrowSize;
+  height: $arrowSize;
+  cursor: pointer;
+
+  &:after {
+    font-family: 'Font Awesome 5 Free';
+    font-weight: 900; //sold(fas):900//regular(far):400//light(fal):300//Brands(fab):400
+    font-size: 3rem;
+    line-height: 1em;
+    color: white;
+    line-height: $arrowSize;
+    display: inline-block;
+    padding: 0;
+  }
+
+  &.is-hover {
+    background: red;
+  }
+
+  &.slick-prev {
+    left: -40px;
+
+    &:after {
+      content: '\f104';
+    }
+  }
+
+  &.slick-next {
+    right: -40px;
+
+    &:after {
+      content: '\f105';
+    }
+  }
+}
+
+// // .js_slide-prev,
+// // .js_slide-next {
+// //   @include position(absolute, 50% null null null);
+// //   @include transform(translateY(-50%));
+// //   background: rgba($c-primary, .6);
+// //   border-radius: 5px;
+// //   // @extend %stripe;
+// //   // @include stripe(rgba(black, .3), rgba(black, .1) , 5px)
+// //   color: white;
+// //   // @include size(2em null);
+// //   z-index: 100;
+// //   font-size: 2rem;
+// //   letter-spacing:.1em;
+// //   padding: 10px;
+// //   text-align: center;
+// //   cursor: pointer;
+// //   @include flexbox(flex, null, null, center, center, null);
+// //   &:before {
+// //     font-family: 'Font Awesome 5 Free';
+// //     width: 100%;
+// //     text-align: center;
+// //   }
+// //   span{
+// //     @include transform(rotate(90deg));
+// //     background: black;
+// //     display: inline-block;
+// //     padding: 0 5px;
+// //     display: none;
+// //   }
+// //   &.is-hover{
+// //     background: rgba(red, .8);
+// //   }
+// // }
+
+// // .js_slide-prev {
+// //   @include position(null, null null null -8px);
+// //   // border-radius: 0 5px 5px 0;
+// //   &:before {
+// //     font-weight: 900; //sild(fas):900//regular(far):400//light(fal):300//Brands(fab):400
+// //     content: '\f104'; //f105//f101
+// //     display: block;
+// //   }
+
+// // }
+
+// // .js_slide-next {
+// //   @include position(null, null -8px null null);
+// //   // border-radius: 5px 0 0 5px;
+// //   &:before {
+// //     font-weight: 900; //sild(fas):900//regular(far):400//light(fal):300//Brands(fab):400
+// //     content: '\f105'; //f105//f101
+// //     display: block;
+// //   }
+// // }
+// ///////////////////////////////////
+// ///////////////////////////////////
+// ///////////////////////////////////
+// ///////////////////////////////////
+// ///////////////////////////////////
+// // -------------------------------
+// //   ∧＿＿∧    .｡*ﾟ+.*.｡
+// // （´・ω・`）< Dots
+// // -------------------------------
+// .slick-dots {
+//   @include flexbox(null, null, wrap, center, center, null);
+//   text-align: center;
+//   font-size: 0;
+//   padding: $g-s 0;
+
+//   li {
+//     width: 40px;
+//     height: 2px;
+//     display: inline-block;
+
+//     &:not(:last-child) {
+//       margin-right: 4px;
+//     }
+
+//     button {
+//       width: 100%;
+//       height: 100%;
+//       background: rgba(white, .5);
+//       cursor: pointer;
+//     }
+
+//     &.slick-active {
+//       button {
+//         background: $c-accent;
+//       }
+//     }
+//   }
+// }
+.slick-dots {
+  display: flex !important;
+  @include flexbox(null, null, wrap, space-between, center, null);
+  position: relative;
+  max-width: 400px;
+  // width: auto;
+  margin: 0 auto $g-m;
+  text-align: center;
+  display: inline-block;
+
+  &:after {
+    width: calc(100% - 20px);
+    @include position(absolute, 50% null null 10px);
+    height: 0;
+    border-top: 4px dotted $c-gray;
+    content: "";
+    z-index: 0;
+  }
+  li {
+    display: inline-block;
+    position: relative;
+    z-index: 1;
+    $size: 44px;
+    @include size($size $size);
+    background: white;
+    font-size: 2rem;
+    font-weight: 600;
+    color: $c-disabled;
+    padding: 4px 0 0 0;
+    text-align: center;
+    line-height: $size;
+    border-radius: 50%;
+    &:before {
+      content: "STEP";
+      display: block;
+      font-size: 1rem;
+      line-height: 1;
+      width: 100%;
+      @include position(absolute, 6px null null 0);
+    }
+
+    button {
+      width: 100%;
+      height: 100%;
+      // background: rgba(white, .5);
+      cursor: pointer;
+    }
+
+    &.slick-active {
+      background: $c-accent;
+            color: white;
+    }
+  }
+}

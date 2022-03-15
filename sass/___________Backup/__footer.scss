@@ -1,0 +1,82 @@
+//  footer
+// -------------------------------
+.l-footer {
+  width: 100%;
+  border-top: 1px solid $c-border;
+  text-align: center;
+  padding: $gt60 0;
+  &__inner{
+    width: min(95%,1024px);
+    margin: auto;
+  }
+  &__logo{
+    width: min(30%,120px);
+    aspect-ratio: 148 / 58; //ロゴサイズを入力
+    margin: auto;
+    background: url("#{$img_path}common/siteLogo.svg") no-repeat center center /contain;
+    // border: 1px solid #000;
+    overflow: hidden;
+    text-indent: -100vw;
+    margin-bottom: $gt40;
+    // color: transparent;
+  }
+}
+
+//  footer-pagetop
+// -------------------------------
+.l-footer-pagetop{
+  width: 20px;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  line-height: 1;
+  // background: white;
+}
+
+//  footer-social
+// -------------------------------
+.l-footer-social{
+  width: 100%;
+  &__list{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+  }
+  &__item{
+    width: min(10%,40px);
+    margin: 10px;
+  }
+}
+
+//  footer-navi
+// -------------------------------
+.l-footer-navi{
+  margin-bottom: 40px;
+  &__list{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &__item{
+    width: 20%;
+  }
+
+}
+
+//  footer-copyright
+// -------------------------------
+.l-footer-copyright{
+  width: 100%;
+  display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    font-size: $fz12;
+  &__mark{
+    width: min(3vw,16px);
+    line-height: 1;
+    margin-right: 10px;
+  }
+}

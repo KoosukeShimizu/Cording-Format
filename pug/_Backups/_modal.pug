@@ -1,0 +1,173 @@
+if key === "home" || key === "category" || key === "post" || key === "profile"
+  // / モーダル｜投稿オプション
+  #modal-list-option.mfp-hide
+    .modal
+      .modal-head
+        h2.modal-ttl 投稿オプション
+        button.btn-close.modal-close ✕
+      .modal-body
+        a.btn-primary.js-modal(href="#modal-reply") 返信する
+        a.btn-primary.js-modal(href="#modal-quoteReply") 引用して返信する
+        a.btn-primary.js-modal(href="#modal-post-edit") 投稿を編集
+        a.btn-disabled.js-modal(href="#modal-post-delete") 投稿を削除
+        a.btn-disabled.js-modal(href="#modal-post-report") 通報
+
+
+  // / モーダル｜投稿通報
+  #modal-post-report.mfp-hide
+    .modal
+      .modal-head
+        h2.modal-ttl 投稿の通報
+        button.btn-close.modal-close ✕
+      .modal-body
+        p.modal-lead この投稿を通報しますか？
+      .modal-foot
+        a.btn-primary.js-modal(href="#modal-post-report-done") この投稿を通報する
+
+  #modal-post-report-done.mfp-hide
+    .modal
+      .modal-head
+        h2.modal-ttl 投稿の通報
+      .modal-body
+        p.modal-lead 通報を受け付けました
+      .modal-foot
+        button.btn-primary.modal-close OK
+
+  // / モーダル｜投稿削除
+  #modal-post-delete.mfp-hide
+    .modal
+      .modal-head
+        h2.modal-ttl 投稿の削除
+        button.btn-close.modal-close ✕
+      .modal-body
+        p.modal-lead この投稿を削除しますか？#[br]この処理は取り消せません。
+      .modal-foot
+        a.btn-primary.js-modal(href="#modal-post-delete-done") この投稿を削除する
+
+  #modal-post-delete-done.mfp-hide
+    .modal
+      .modal-head
+        h2.modal-ttl 投稿の削除
+      .modal-body
+        p.modal-lead 削除が完了しました
+      .modal-foot
+        button.btn-primary.modal-close OK
+else
+
+
+
+if key === "home" || key === "category" || key === "post"
+  // / モーダル｜返信
+  #modal-reply.mfp-hide
+    .modal
+      .modal-head
+        h2.modal-ttl この投稿への返信
+        button.btn-close.modal-close ✕
+      .modal-body
+        .modalPost
+          figure.modalPost-avatar: a(href=root+"member-profile.html"): img(src=root+imgPath+"avatar.jpg" alt="アバター")
+          .modalPost-head
+            p.modalPost-user: a(href=root+"member-profile.html") 投稿 太郎
+          p.modalPost-text この文章はダミーテキストです。この文章はダミーテキストです。
+        .modalPostUnit
+          form.modalPostUnit-form(action=root+"" method="post")
+            .modalPostUnit-inputWrap
+              textarea.modalPostUnit-input.js-auto-resize(id="reply-text" name="reply-text" placeholder="内容を入力" required)
+              figure.postUnit-preview.js-inputFile2-preview
+            .modalPostUnit-controller
+              if key === "category"
+                p.modalPostUnit-to 投稿先：このカテゴリーへの投稿
+              else
+                p.modalPostUnit-to 投稿先：この投稿への返信
+              label.modalPostUnit-file(for="file-reply"): input.js-inputFile2(type="file" id="file-reply" name="file-reply")
+              button.modalPostUnit-send(type="submit")
+
+
+  // / モーダル｜引用返信
+  #modal-quoteReply.mfp-hide
+    .modal
+      .modal-head
+        h2.modal-ttl この投稿を引用して返信
+        button.btn-close.modal-close ✕
+      .modal-body
+        .modalPost
+          figure.modalPost-avatar: a(href=root+"member-profile.html"): img(src=root+imgPath+"avatar.jpg" alt="アバター")
+          .modalPost-head
+            p.modalPost-user: a(href=root+"member-profile.html") 投稿 太郎
+          p.modalPost-text この文章はダミーテキストです。この文章はダミーテキストです。
+        .modalPostUnit
+          form.modalPostUnit-form(action=root+"" method="post")
+            .modalPostUnit-inputWrap
+              textarea.modalPostUnit-input.js-auto-resize(id="quoteReply-text" name="quoteReply-text" placeholder="内容を入力" required)
+              figure.postUnit-preview.js-inputFile3-preview
+            .modalPostUnit-controller
+              if key === "category"
+                p.modalPostUnit-to 投稿先：このカテゴリーへの投稿
+              else
+                p.modalPostUnit-to 投稿先：この投稿への返信
+              label.modalPostUnit-file(for="file-quoteReply"): input.js-inputFile3(type="file" id="file-quoteReply" name="file-quoteReply")
+              button.modalPostUnit-send(type="submit")
+
+  // / モーダル｜編集
+  #modal-post-edit.mfp-hide
+    .modal
+      .modal-head
+        h2.modal-ttl この投稿を編集する
+        button.btn-close.modal-close ✕
+      .modal-body
+        .modalPost
+          figure.modalPost-avatar: a(href=root+"member-profile.html"): img(src=root+imgPath+"avatar.jpg" alt="アバター")
+          .modalPost-head
+            p.modalPost-user: a(href=root+"member-profile.html") 投稿 太郎
+          p.modalPost-text この文章はダミーテキストです。この文章はダミーテキストです。
+        .modalPostUnit
+          form.modalPostUnit-form(action=root+"" method="post")
+            .modalPostUnit-inputWrap
+              textarea.modalPostUnit-input.js-auto-resize(id="edit-text" name="edit-text" placeholder="内容を入力" required) この文章はダミーテキストです。文字サイズや行間などを確認するために入れています。
+              figure.postUnit-preview.js-inputFile4-preview
+            .modalPostUnit-controller
+              if key === "category"
+                p.modalPostUnit-to 投稿先：このカテゴリーへの投稿
+              else
+                p.modalPostUnit-to 投稿先：この投稿への返信
+              label.modalPostUnit-file(for="file-edit"): input.js-inputFile4(type="file" id="file-edit" name="file-edit")
+              button.modalPostUnit-send(type="submit")
+else
+
+
+
+if key === "myprofile"
+  // / モーダル｜プロフィール編集
+  #modal-profile-edit.mfp-hide
+    .modal
+      .modal-head
+        h2.modal-ttl プロフィール編集
+        button.btn-close.modal-close ✕
+      .modal-body
+        .modalProfileEdit
+          form(action= "", method="post")
+            .modalProfileEdit-avatar-wrap
+              figure.modalProfileEdit-avatar.js-inputFile-preview: img(src=root+imgPath+"avatar.jpg" alt="イメージ")
+              label.modalProfileEdit-button(for="file"): input.js-inputFile(type="file" id="file" name="file")
+            p.modalProfileEdit-name
+              label.label(for="text") お名前
+              input(type="text" id="text" name="text" placeholder="" required value="鈴木 次郎")
+            p.modalProfileEdit-text
+              label.label(for="profile-text") 自己紹介文
+              textarea(id="profile-text" name="profile-text" placeholder="内容を入力")
+            .btnArea
+              button.btn-primary(type="submit") 更新する
+else
+
+
+
+if key === "notice"
+  #modal-notice.mfp-hide
+    .modal
+      .modal-head
+        h2.modal-ttl 通知設定
+      .modal-body
+        p.modal-lead 通知設定を変更しました
+      .modal-foot
+        button.btn-primary.modal-close OK
+else

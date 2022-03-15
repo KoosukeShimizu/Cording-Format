@@ -1,0 +1,50 @@
+//  breadcrumb
+// -------------------------------
+.c-breadcrumb {
+  overflow-x: auto;
+  padding: 0 16px;
+  width: 100%;
+  font-size: $fz14;
+  background-color: #eee;
+  &__list {
+    overflow-x: auto;
+    white-space: nowrap;
+    -webkit-overflow-scrolling: touch;
+    margin: 5px;
+    // max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    // border: 1px solid #000;
+    padding: $gt10 $gt20;
+    // color: white;
+    line-height: 1;
+  }
+  &__item {
+    display: inline-block;
+    line-height: 1;
+    // margin: 1px 10px 0px 0px;
+    &:not(:last-child){
+      &:after {
+        display: inline-block;
+        content: '/';
+        margin: 0 $gt10;
+      }
+    }
+    a {
+      // border-bottom: 1px solid $c-gray70;
+      line-height: 1;
+      vertical-align: middle;
+      // padding: 2px 0;
+      &:hover{
+        opacity: .7;
+      }
+    }
+    &:last-child{
+      a{
+        pointer-events: none;
+        opacity: .5;
+        // border-color: transparent;
+      }
+    }
+  }
+}

@@ -1,0 +1,65 @@
+.
+  //- URL最適化（www無しに統一）
+  RewriteEngine on
+  RewriteCond %{HTTP_HOST} ^www\.example\.com$
+  RewriteRule ^(.*)$ http://example.com/$1 [R=301,L]
+
+  //- URL最適化（index.htmlなしに統一）
+  RewriteCond %{THE_REQUEST} ^.*/index.html
+  RewriteRule ^(.*)index.html$ http://example.com/$1 [R=301,L]
+  
+  //- URL最適化（php拡張子なし）
+  RewriteCond %{REQUEST_FILENAME} !-d
+  RewriteCond %{REQUEST_FILENAME} !-f
+  RewriteCond %{REQUEST_FILENAME}\.php -f
+  RewriteRule ^(.*)$ $1.php [L]
+  //- URL最適化（html拡張子なし）
+  RewriteCond %{REQUEST_FILENAME} !-d
+  RewriteCond %{REQUEST_FILENAME} !-f
+  RewriteCond %{REQUEST_FILENAME}\.html -f
+  RewriteRule ^(.*)$ $1.html [L]
+  //- URL最適化（html拡張子なしを正規表現とする）
+  RewriteCond %{THE_REQUEST} ^.*\.(php|html)
+  RewriteRule ^(.*)\.(php|html)$ http://www.example.com/$1 [R=301]
+
+  //- ファイル一覧表示回避
+  Options -Indexes
+
+  //- 301リダイレクト
+  Redirect permanent / https://example.jp/
+  RewriteEngine on
+  RewriteRule ^old.html$ http://example.com/new.html [R=301,L]
+
+  //- Basic認証
+  Deny from all
+  AuthType Basic
+  AuthUserFile /フルパス/.htpasswd
+  AuthName “Please enter your ID and password”
+  AuthType Basic
+  require valid-user
+
+  //- IP制限（許可）
+  order deny,allow
+  deny from all
+  allow from 許可するIPアドレス
+
+  //- IP制限（拒否）
+  order allow,deny
+  allow from all
+  deny from 拒否したいIPアドレス
+
+  //- IP制限（特定ファイル限定）
+  <files test-file.html>
+      order deny,allow
+      deny from all
+      allow from 許可するIPアドレス
+  </files>
+
+
+  //- gzip圧縮
+  SetOutputFilter DEFLATE
+  BrowserMatch ^Mozilla/4 gzip-only-text/html
+  BrowserMatch ^Mozilla/4\.0[678] no-gzip
+  BrowserMatch \bMSI[E] !no-gzip !gzip-only-text/html
+  SetEnvIfNoCase Request_URI \.(?:gif|jpe?g|png|ico)$ no-gzip dont-vary
+  Header append Vary User-Agent env=!dont-vary

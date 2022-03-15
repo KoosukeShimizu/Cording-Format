@@ -1,0 +1,12 @@
+.p-header {
+  @include flexbox();
+  @include flexhashi();
+  @include flexcenter();
+  max-width: 1164px;
+  padding: 32px;
+  margin: 0 auto;
+
+  @include mq_down(md) {
+    padding: vw(24);
+  }
+}

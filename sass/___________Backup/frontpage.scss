@@ -1,0 +1,88 @@
+@charset "UTF-8";
+// -------------------------------
+//   ∧＿＿∧    .｡*ﾟ+.*.｡
+// （´・ω・`）< Mixins
+//  クラスで書き出されないもの限定。
+//  page.scssにも流用するもの
+// -------------------------------
+@import "inc/base/bourbon/bourbon";
+@import "inc/base/config";
+@import "inc/base/mixins";
+
+@import "inc/module/hover";
+@import "inc/module/button";
+@import "inc/module/icon";
+@import "inc/module/list";
+@import "inc/module/card";
+// @import 'inc/module/media';
+@import "inc/module/table";
+@import "inc/module/accordion";
+@import "inc/module/tab";
+@import "inc/module/avatar";
+@import "inc/module/trim";
+@import "inc/module/editor";
+@import "inc/module/tag";
+
+///////////////////////////////////
+///////////////////////////////////
+///////////////////////////////////
+// -------------------------------
+//   ∧＿＿∧    .｡*ﾟ+.*.｡
+// （´・ω・`）< page
+// -------------------------------
+.content-bg {
+  // background: #000;
+  width: 100%;
+  height: 50%;
+}
+.globalNav {
+  padding-top: 90px;
+  @include mq(tab, min) {
+    padding-top: 70px;
+  }
+}
+.topCatch {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  text-align: right;
+  font-weight: 100;
+  font-size: 1.8rem;
+  font-size: $fz18;
+  letter-spacing: 0.3em;
+  z-index: 100;
+  max-width: 80%;
+  span {
+    font-size: 10px;
+    letter-spacing: 0.1em;
+    line-height: 1.4;
+    display: inline-block;
+  }
+}
+.topLogo {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 100;
+}
+.topNews {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  z-index: 100;
+}
+.topBnr {
+  position: absolute;
+  right: 80px;
+  bottom: 0;
+  z-index: 100;
+  
+  @include mq(tab,max,true){
+    bottom:40px;
+    right: 30px;
+    img{
+      height: auto;
+    }
+  }
+}

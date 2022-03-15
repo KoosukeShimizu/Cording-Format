@@ -1,0 +1,141 @@
+%accordion {
+  &-base {
+    dt {
+      cursor: pointer;
+      position: relative;
+      padding-right: 2rem;
+      overflow: hidden;
+
+      &:after {
+        font-family: 'Font Awesome 5 Free';
+        font-weight: 900;
+        content: '\f067';
+        @include position(absolute, 50% 10px null null);
+        @include transform(translateY(-50%));
+      }
+
+      &.is-open {
+        &:after {
+          content: '\f068';
+        }
+      }
+    }
+
+    dd {
+      display: none;
+      padding: 0;
+    }
+  }
+
+  &-A {
+    @extend %accordion-base;
+    border-bottom: 1px solid $c-border;
+
+    dt {
+      background: white;
+      padding: $g-m;
+      border-top: 1px solid $c-border;
+      // &:not(:last-of-type){
+      //   border-top: 1px solid $c-border;
+      // }
+      // &.is-open{
+      //   border: none;
+      // }
+    }
+
+    dd {
+      margin-bottom: $g-m;
+      // border-bottom: 1px solid $c-border;
+    }
+  }
+}
+
+
+
+
+// .js_accordion {
+
+//   dt,
+//   dd {
+//     // letter-spacing: .1rem;
+//     line-height: 1.4;
+//   }
+
+//   dt {
+//     background: rgba(#fff, 0.1);
+//     display: block;
+//     text-align: left;
+//     border-bottom: 1px solid #eee;
+//     cursor: pointer;
+//     padding: 10px;
+//     color: $c-primary;
+//     position: relative;
+//     padding-right: 20px;
+//     padding-left: 3.5em;
+//     // margin-top: 20px;
+//     // border-left: 2px solid transparent;
+//     counter-increment: nums;
+//     overflow: hidden;
+
+//     @include flexbox(flex, null, wrap, null, null, null) &:before {
+//       content: '0'counter(nums);
+//       background: $c-secondary;
+//       // border-bottom:1px solid red;
+//       // font-size: 1.4rem;
+//       @include size(3em 6em) color: white;
+//       font-weight: 600;
+//       // font-size: 2rem;
+//       @include position(absolute, 50% null null 0);
+//       @include transform(translate(0px, -50%));
+//       display: inline-block;
+//       line-height: 1;
+//       @include flexbox(flex, null, null, center, center, null)
+//     }
+
+//     &:nth-of-type(n+10) {
+//       &:before {
+//         content: counter(nums);
+//       }
+//     }
+
+
+//     &:after {
+//       font-family: 'Font Awesome 5 Free';
+//       font-weight: 900;
+//       color: $c-secondary;
+//       content: '\f067';
+//       display: block;
+//       @include position(absolute, 50% 5px null null);
+//       @include transform(translateY(-50%))
+//     }
+
+//     &.open {
+//       &:after {
+//         content: '\f068';
+//       }
+//     }
+
+//     &.is-hover {
+//       color: $c-secondary;
+//       border-left: 2px solid $c-secondary;
+//     }
+
+//     @include mq(tab, min) {
+//       // padding: 20px;
+//       // padding-right: 30px;
+//       // font-size: 1.4rem;
+//     }
+//   }
+
+//   dd {
+//     margin-left: 0;
+
+//     text-align: left;
+//     display: none;
+//     padding: 10px 10px 20px;
+
+//     @include mq(tab, min) {
+//       padding: 20px;
+//     }
+//   }
+// }

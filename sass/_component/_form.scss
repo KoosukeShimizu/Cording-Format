@@ -1,0 +1,212 @@
+//  基本設定
+// -------------------------------
+%form-core {
+  outline: none;
+  cursor: pointer;
+  &:focus {
+    outline: 0;
+  }
+  &[disabled] {
+    cursor: not-allowed;
+    pointer-events: none;
+  }
+  &[readonly] {
+    cursor: default;
+    pointer-events: none;
+    background: transparent;
+    border-bottom: 1px solid $c-border;
+  }
+}
+
+%form-style-a {
+  border-radius: 5px;
+  // border: 1px solid rgba($c-border, 0.25);
+  background-color: white;
+  padding: $gt20;
+}
+
+%form-style-b {
+  span {
+    display: inline-block;
+    line-height: 1;
+    vertical-align: middle;
+    // border: 1px solid #000;
+    margin-bottom: $gt20;
+    &:before {
+      width: 24px;
+      height: 24px;
+      display: inline-block;
+      content: "";
+      line-height: 1;
+      vertical-align: middle;
+      transform: translateY(-10%);
+    }
+  }
+}
+
+//  セレクター
+// -------------------------------
+.c-form {
+  &__input {
+    @extend %form-core;
+    @extend %form-style-a;
+    width: 100%;
+  }
+
+  &__select {
+    @extend %form-core;
+    @extend %form-style-a;
+    background: url("#{$img_path}common/icons/form/caret-down-solid.svg") no-repeat right $gt20 center / 10px, #fff;
+    padding-right: $gt50;
+    width: 100%;
+    // position: relative;
+    // &:after{
+    //   background: url("#{$img_path}common/icons/form/circle-regular.svg") no-repeat center center / contain;
+    // }
+    // width: 100%;
+  }
+  &__textarea {
+    @extend %form-core;
+    @extend %form-style-a;
+    width: 100%;
+  }
+  &__radio {
+    @extend %form-core;
+    @extend %form-style-b;
+    span {
+      margin-right: 1em;
+      &:before {
+        background: url("#{$img_path}common/icons/form/circle-regular.svg") no-repeat center center / contain;
+        margin-right: 0.5em;
+      }
+    }
+    input[type="radio"] {
+      &:checked {
+        + span {
+          &:before {
+            background: url("#{$img_path}common/icons/form/circle-dot-solid.svg") no-repeat center center / contain;
+          }
+        }
+      }
+    }
+  }
+
+  &__checkbox {
+    @extend %form-core;
+    @extend %form-style-b;
+    span {
+      margin-right: 1em;
+      &:before {
+        background: url("#{$img_path}common/icons/form/square-regular.svg") no-repeat center center / contain;
+        margin-right: 0.5em;
+      }
+    }
+    input[type="checkbox"] {
+      &:checked {
+        + span {
+          &:before {
+            background: url("#{$img_path}common/icons/form/square-check-solid.svg") no-repeat center center / contain;
+          }
+        }
+      }
+    }
+  }
+}
+
+//  その他パーツ
+// -------------------------------
+.c-form {
+  &__require {
+    background: $c-danger;
+    color: white;
+    font-size: $fz12;
+    margin-left: $gt10;
+    width: 3.5em;
+    text-align: center;
+    display: inline-block;
+    border-radius: 3px;
+  }
+  &__comment {
+    display: block;
+    padding: 0;
+    margin: 0 auto $gt40;
+  }
+  &__note {
+    color: $c-gray60;
+  }
+  &__error {
+    display: block;
+    padding: 0 0 0 2.5em;
+    margin: 0;
+    margin-top: $gt10;
+    font-size: $fz14;
+    color: $c-danger;
+    background: url("#{$img_path}common/icons/circle-exclamation-solid.svg") no-repeat left $gt10 center /16px;
+    text-align: left;
+  }
+}
+
+//  レイアウトなど
+// -------------------------------
+.c-form {
+  &__item {
+    margin-bottom: $gt60;
+  }
+  &__label {
+    font-size: $fz20;
+    // font-weight: 700;
+    margin-bottom: $gt20;
+  }
+  &__body {
+    position: relative;
+  }
+  &__group {
+    border: 1px solid #000;
+    border-radius: 4px;
+    padding: $gt40 $gt20;
+  }
+  &__submit {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+.is-inline {
+  width: auto;
+  min-width: 25%;
+  margin-right: 0.5em;
+}
+
+/* --------------------------------------------------
+フォーム：placeholder
+-------------------------------------------------- */
+
+/* 各ベンダープレフィックスが取れた標準版！！(http://caniuse.com/#search=placeholder-shown) */
+:placeholder-shown {
+  color: rgba($c-gray30, 0.5);
+  opacity: 1;
+}
+
+/* Google Chrome, Safari, Opera 15+, Android, iOS */
+::-webkit-input-placeholder {
+  color: rgba($c-border, 0.5);
+  opacity: 1;
+}
+
+/* Firefox 18- */
+:-moz-placeholder {
+  color: rgba($c-border, 0.5);
+  opacity: 1;
+}
+
+/* Firefox 19+ */
+::-moz-placeholder {
+  color: rgba($c-border, 0.5);
+  opacity: 1;
+}
+
+/* IE 10+ */
+:-ms-input-placeholder {
+  color: rgba($c-border, 0.5);
+  opacity: 1;
+}

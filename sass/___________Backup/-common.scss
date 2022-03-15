@@ -1,0 +1,502 @@
+@charset "UTF-8";
+// -------------------------------
+//   ∧＿＿∧    .｡*ﾟ+.*.｡
+// （´・ω・`）< Mixins
+//  クラスで書き出されないもの限定。
+//  page.scssにも流用するもの
+// -------------------------------
+@import "inc/base/bourbon/bourbon";
+@import "inc/base/config";
+@import "inc/base/mixins";
+
+@import "inc/module/hover";
+@import "inc/module/button";
+// @import "inc/module/icon";
+// @import "inc/module/list";
+// @import "inc/module/card";
+// @import 'inc/module/media';
+@import "inc/module/table";
+// @import "inc/module/accordion";
+// @import "inc/module/tab";
+// @import "inc/module/avatar";
+// @import "inc/module/trim";
+// @import "inc/module/editor";
+// @import "inc/module/tag";
+
+@import url("https://fonts.googleapis.com/css2?family=Alatsi&display=swap");
+
+$ff-base: -apple-system, BlinkMacSystemFont, Roboto, "Segoe UI", "Helvetica Neue", HelveticaNeue, YuGothic, "Yu Gothic Medium", "Yu Gothic", Verdana, Meiryo, sans-serif;
+$serif: "Crimson Pro", "Noto Serif JP", serif;
+$heading-sub: "Alatsi", sans-serif;
+
+@import "reset.css";
+///////////////////////////////////
+///////////////////////////////////
+///////////////////////////////////
+//====================================
+//   ∧＿＿∧    .｡*ﾟ+.*.｡*ﾟ+.*.｡｡*ﾟ+.*.｡
+// （´・ω・`）< Layout Setting
+//  ( つ旦つﾟ  +.*.｡｡*ﾟ+.*.｡.｡*ﾟ+.*.｡*ﾟ+.
+//====================================
+html,
+body {
+  // overflow-x: hidden;
+  height: 100%;
+  min-height: 100%;
+  margin: 0;
+}
+html {
+  font-size: 62.5%; //1rem=10px
+}
+
+body {
+  font-family: $ff-base;
+  font-size: 1.6rem;
+  font-size: $fz16;
+  line-height: 1.5;
+  font-weight: 200;
+  color: white;
+  background: $c-bg-secondary;
+  color: $c-font-primary;
+  vertical-align: baseline;
+  position: relative;
+  font-feature-settings: "palt";
+  -webkit-font-smoothing: subpixel-antialiased;
+  -moz-osx-font-smoothing: unset;
+  @media only screen and(-webkit-min-device-pixel-ratio: 2), (min-resolution: 2dppx) {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+}
+
+// @import "inc/base/base";
+.l-wrap {
+  position: relative;
+  // margin-bottom: -27px;
+  height: 100%;
+}
+.l-content {
+  // background: #000;
+  height: 100%;
+  min-height: 100%;
+  position: relative;
+}
+.l-header {
+  // background: #000;
+  text-align: right;
+}
+.siteLogo {
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  background: url("#{$img_path}logo-w2.svg") no-repeat left center / contain;
+  font-size: 0;
+  line-height: 1;
+  // @include transition($transition);
+  // position: relative;
+  z-index: 99999;
+  a {
+    display: block;
+    width: 100%;
+    height: 100%;
+  }
+  @include mq(tab, max, true) {
+    width: 80px;
+    height: 66px;
+  }
+  @include mq(tab, min) {
+    width: 120px;
+    height: 100px;
+    // height: 44px;
+    // padding: 0 $g-s;
+    // margin: 0 $g-m;
+  }
+}
+// .is-nav-open{
+//   .siteLogo{
+//     transform: translateZ(100px);
+//     // transform: rotate(10deg);
+//   }
+// }
+
+.content-bg {
+  // background: #000;
+  width: 100%;
+  height: 40vh;
+  // min-height: 200px;
+  // border-bottom: 1px solid rgba(white, 0.5);
+  position: relative;
+  overflow: hidden;
+  &:before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    content: "";
+    width: 100%;
+    height: 100%;
+    background: rgba($c-bg-secondary, 0.5);
+    z-index: 10;
+  }
+  &:after {
+    position: absolute;
+    top: 0;
+    left: 0;
+    content: "";
+    width: 100%;
+    height: 100%;
+    background-color: rgba(#000000, 0.4);
+    background-image: -webkit-gradient(linear, 0 0, 0 100%, color-stop(0.5, transparent), color-stop(0.5, transparent), to(transparent)), -webkit-gradient(linear, 0 0, 100% 0, color-stop(0.5, transparent), color-stop(0.5, transparent), to(transparent));
+    // background-image: -webkit-gradient(linear, 0 0, 0 100%, color-stop(0.5, transparent), color-stop(0.5, rgba(#000000,.1)), to(rgba(#000000,.1))), -webkit-gradient(linear, 0 0, 100% 0, color-stop(0.5, transparent), color-stop(0.5, rgba(#000000,.1)), to(rgba(#000000,.1)));
+    background-size: 3px 3px;
+  }
+  .bgVideo {
+    width: 100%;
+    height: 100%;
+    filter: saturate(0%) contrast(100%) // blur(2px)
+      // hue-rotate(210deg)
+      // invert(100%)
+      opacity(100%);
+    object-fit: cover;
+    // opacity: .5;
+  }
+}
+// @import "inc/layout/header";
+@import "inc/layout/nav";
+// @import "inc/layout/contents";
+
+// （´・ω・`）< page
+// -------------------------------
+.page {
+  padding: 80px 14% 6% 4%;
+  padding: $mb80 14% 6% 4%;
+  // &-head {
+  // margin-bottom: $g-xl;
+  // margin-bottom: min(#{$g-xl}, 10vw);
+  // }
+  &-key {
+    position: absolute;
+    top: 0;
+    left: 1.2em;
+    transform: rotate(90deg);
+    transform-origin: left top;
+    font-size: 2.4rem;
+    font-size: $fz24;
+    text-transform: uppercase;
+    font-family: $heading-sub;
+    letter-spacing: 0.5em;
+    z-index: 100;
+    // font-weight: 200;
+    // font-weight: normal;
+    // writing-mode: vertical-lr;
+  }
+  &-ttl {
+    // font-family: $serif;
+    font-weight: 400;
+    font-size: 5rem;
+    font-size: min(5rem, 9vw);
+    letter-spacing: 0.15em;
+    line-height: 1;
+    position: relative;
+    display: inline-block;
+    margin: 0 0 60px 30px;
+    margin: 0 0 $mb60 $mb30;
+    z-index: 20;
+    &:before {
+      content: "";
+      width: 13vw;
+      max-width: 60px;
+      height: 1px;
+      transform: skewX(-45deg);
+      background: $c-primary;
+      @include position(absolute, calc(50% - 2px) calc(100% + 16px) null null);
+    }
+  }
+  &-intro {
+    margin-bottom: 60px;
+    margin-bottom: $mb60;
+  }
+  @include mq(tab, min) {
+    padding-right: 200px;
+  }
+}
+
+// （´・ω・`）< section
+// -------------------------------
+.section {
+  max-width: 900px;
+  &:not(:last-child) {
+    // background: #000;
+    margin-bottom: 80px;
+    margin-bottom: $mb80;
+  }
+  &-title {
+    font-size: 3rem;
+    font-size: $fz30;
+    font-weight: 100;
+    letter-spacing: 0.1em;
+    margin-bottom: 30px;
+    margin-bottom: $mb30;
+  }
+}
+.heading {
+  font-size: 2.2rem;
+  font-size: $fz22;
+  margin-bottom: 20px;
+  margin-bottom: $mb20;
+}
+.text {
+  line-height: 1.8;
+  letter-spacing: 0.05em;
+  margin-bottom: 20px;
+  margin-bottom: $mb20;
+}
+.right {
+  text-align: right;
+  display: block;
+}
+.img {
+  margin-bottom: 20px;
+  margin-bottom: $mb20;
+  img {
+    height: auto;
+  }
+}
+
+// （´・ω・`）< table
+// -------------------------------
+.table {
+  @extend %table-base;
+  line-height: 1.8;
+  letter-spacing: 0.05em;
+  max-width: 960px;
+  @include mq(tab, min) {
+    th,
+    td {
+      border-top: 1px dashed rgba(white, 0.3);
+      border-bottom: 1px dashed rgba(white, 0.3);
+      padding: 20px;
+      padding: $mb20;
+
+      // letter-spacing: .05;
+    }
+    th {
+      width: 30%;
+      border-top: 1px solid rgba(white, 0.5);
+      border-bottom: 1px solid rgba(white, 0.5);
+    }
+  }
+
+  @include mq(tab, max, true) {
+    border-top: 1px solid rgba(white, 0.1);
+
+    th,
+    td {
+      display: list-item;
+      padding: 0;
+      list-style: none;
+      font-weight: 200;
+    }
+    th {
+      margin-bottom: 20px;
+      margin-bottom: $mb20;
+      font-size: 2.4rem;
+      font-size: $fz24;
+      font-weight: 100;
+      padding-top: 40px;
+      padding-top: $mb40;
+    }
+    td {
+      // text-indent: 1em;
+      padding-left: 1em;
+      padding-bottom: 40px;
+      padding-bottom: $mb40;
+      // margin-bottom: $mb40;
+      border-bottom: 1px solid rgba(white, 0.1);
+    }
+  }
+}
+// （´・ω・`）< list
+// -------------------------------
+.list {
+  list-style: none;
+  padding: 0;
+  li {
+    margin-bottom: 80px;
+    margin-bottom: $mb80;
+  }
+  .heading {
+    padding-left: 1em;
+    text-indent: -1em;
+  }
+  .text {
+    padding-left: 1.5em;
+  }
+}
+// @import "inc/layout/footer";
+.l-footer {
+  position: fixed;
+  bottom: 0;
+  right: 1.4em;
+  transform: rotate(90deg);
+  transform-origin: right bottom;
+  // font-size: $fz30;
+  // text-transform: uppercase;
+  // font-family: $heading-sub;
+  letter-spacing: 0.3em;
+  font-size: 1.2rem;
+  font-size: $fz12;
+}
+
+///////////////////////////////////
+///////////////////////////////////
+///////////////////////////////////
+///////////////////////////////////
+///////////////////////////////////
+///////////////////////////////////
+///////////////////////////////////
+///////////////////////////////////
+///////////////////////////////////
+///////////////////////////////////
+///////////////////////////////////
+///////////////////////////////////
+///////////////////////////////////
+///////////////////////////////////
+///////////////////////////////////
+///////////////////////////////////
+///////////////////////////////////
+///////////////////////////////////
+///////////////////////////////////
+///////////////////////////////////
+// -------------------------------
+//   ∧＿＿∧    .｡*ﾟ+.*.｡
+// （´・ω・`）< Mudule
+// -------------------------------
+// @import 'inc/module/link';
+// @import "inc/module/pager";
+// @import "inc/module/breadcrumb";
+// @import "inc/module/typograph";
+// @import 'inc/module/dropdown';
+// @import 'inc/module/form';
+// @import 'inc/module/modal';
+// @import 'inc/slick-custom';
+// @import 'inc/mfp-custom';
+// @import "inc/module/adjust";
+@include mq(tab, min) {
+  .is-tab,
+  .is-sp {
+    display: none !important;
+    visibility: hidden;
+  }
+  .is-pc {
+    display: block !important;
+    visibility: visible;
+  }
+}
+@include mq(tab, max) {
+  .is-pc,
+  .is-sp {
+    display: none !important;
+    visibility: hidden;
+  }
+  .is-tab {
+    display: block !important;
+    visibility: visible;
+  }
+}
+@include mq(sp, max) {
+  .is-pc,
+  .is-sp {
+    display: none !important;
+    visibility: hidden;
+  }
+  .is-sp {
+    display: block !important;
+    visibility: visible;
+  }
+}
+// （´・ω・`）< link
+// -------------------------------
+.link {
+  &-inline {
+    color: $c-link;
+    @extend %hover-text;
+  }
+}
+// （´・ω・`）< button
+// -------------------------------
+.btn {
+  &-wrap {
+    @include flexbox(flex, null, wrap, null, null, null);
+  }
+
+  &-primary {
+    @extend %btnFormat1;
+    background: rgba(black, 0.1);
+    color: white;
+    border: 1px solid white;
+    width: 100%;
+    margin: 0 4px 16px;
+    &:hover {
+      background: $c-gray95;
+      color: #444;
+    }
+  }
+
+  // &-secondary {
+  //   @extend %btnFormat1;
+  //   // @extend %btn-arrow;
+  //   box-shadow: 0 0 3px 0 rgba(black, 0.3);
+  //   background: $c-gray95;
+  //   color: #444;
+  //   border-bottom: 4px solid darken($c-accent, 10%);
+  // }
+
+  // &-accent {
+  //   @extend %btnFormat1;
+  //   background: $c-accent;
+  //   color: #fff;
+  //   border-bottom: 4px solid darken($c-accent, 10%);
+  // }
+  // .btn-accent {
+  //   background: #fff;
+  //   color: #d1b47b;
+  //   font-size: 1.35rem;
+  //   font-weight: 400;
+  //   position: relative;
+  //   border: solid 1px #d1b47b;
+  // }
+
+  // .btn-accent:hover {
+  //   background: #d1b47b;
+  //   color: #fff;
+  //   border: solid 1px #d1b47b;
+  // }
+
+  // .btn-accent::after {
+  //   font-family: "Font Awesome 5 free";
+  //   font-weight: 700;
+  //   position: absolute;
+  //   top: 50%;
+  //   font-size: 1.1rem;
+  //   right: 25px;
+  //   content: "\f054";
+  //   -webkit-transform: translateY(-50%);
+  //   -ms-transform: translateY(-50%);
+  //   transform: translateY(-50%);
+  // }
+  // .btn-accent:hover::after {
+  //   right: 22px;
+  // }
+  // &-disable {
+  //   @extend %btnFormat1;
+  //   // @extend %btn-arrow;
+  //   // box-shadow: 0 0 3px 0 rgba(black, .3);
+  //   // background: $c-gray95;
+  //   background: none;
+  //   color: #444;
+  //   // border-bottom: 4px solid $c-gray90;
+  // }
+}
+// .slick-slide {
+//   height: auto !important;
+// }

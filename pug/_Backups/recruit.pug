@@ -1,0 +1,89 @@
+extend ./_includes/_layout.pug
+block vars
+  include ./_includes/_config
+  - var noindex= "false";
+  - var colmun= "single";
+  - var root= "./";
+  - var parentDir= "";
+  //- - var status= "";
+  - var key= "recruit";
+  - var pageUrl= "recruit.html";
+  - var pageTitle = "採用情報"
+  - var pageDescription = "みなさんこんにちは、合同会社コロンディーの採用情報ページです。"
+  - var pageKeywords = ""
+  //- - var page = pages[key];
+  //- - var pageCategory= "";
+  - var bodyClass= "";
+//- /////////////////////
+append css
+  //- link(rel="stylesheet", href=root+cssPath+"page.css")
+  //- link(rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css")
+//- /////////////////////
+append js
+  //- script(type="application/ld+json").
+    {
+      "@context": "http://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [{
+        "@type": "ListItem",
+        "position": 1,
+        "item": {
+          "@id": "#{siteUrl}",
+          "name": "#{siteName}"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "item": {
+          "@id": "#{siteUrl}#{pageUrl}",
+          "name": "#{pageTitle}"
+        }
+      }]
+    }
+//- /////////////////////
+block breadcrumb
+  //- nav.breadcrumb
+    ol(itemscope itemtype="http://schema.org/BreadcrumbList")
+      li.top(itemscope itemprop="itemListElement" itemtype="http://schema.org/ListItem")
+        a(itemprop="item" href=root+""): span(itemprop="name") #{siteName}
+        meta(itemprop="position" content="1")
+      li(itemscope itemprop="itemListElement" itemtype="http://schema.org/ListItem")
+        a(itemprop="item" href=root+pageUrl): span(itemprop="name") #{pageTitle}
+        meta(itemprop="position" content="2")
+//- /////////////////////
+//- /////////////////////
+//- /////////////////////
+//- /////////////////////
+//- /////////////////////
+//- /////////////////////
+block main
+  .content-bg
+    video.bgVideo(src=root+"assets/video/video16.mp4" type="video/mp4" muted autoplay playsinline loop) 
+      img(src=root+"assets/video/video16.mp4" alt="")
+  article.page
+    .page-head
+      h1.page-ttl #{pageTitle}
+      //- p.page-intro あああ
+
+    //- .comingsoon coming soon...
+    .page-body
+      section.section
+        h2.section-title 当社の強み
+        ul.list 
+          li
+            h3.heading ❶ 大手企業複数者と取引があり、安定した企業成長が可能
+            p.text 当社は創業から大手企業と取引を行なっています。#[br]#[br]そのため#[strong 継続的に安定した受注を受けることができ、売り上げが安定]しています。また、一社に対して長い支援をすることで、企業内の語・隠語や社風にも適応できます。#[br]#[br]その結果、よりクライアントともコミュニケーションが円滑になる上、クライアント企業の課題を正確に把握することができ、クライアント企業からの高い評価に繋がっています。
+          li
+            h3.heading ❷ 広告業界20年以上のベテラン役員。社員が多い
+            p.text 当社では、代表の高橋を含めて#[strong 役員、社員の広告に関するスキルとノウハウが高いことが強み]となっています。特にハンズオン型で支援をする場合は一人でクライアント企業に常駐して支援をするため、ここのスキルやノウハウが企業財産となっています。#[br]#[br]また、スキル向上のために定期的に支援状況や課題の検討会、他社での成功例の共有をする場を設けており、会社としてスキル向上のための仕組みを構築しています。
+          li
+            h3.heading ❸ マスコミ・プロモーションメディア・インターネット広告の幅広いスキルが取得可能
+            p.text 当社のクライアントはテレビ関係企業、イベント制作企業、インターネット系企業など様々な企業があるため、流行りの#[strong web広告だけでなく、テレビやラジオCM、イベント・看板による広告など幅広く支援]することができます。#[br]#[br]そのため、クライアントの規模や広告により訴求したい相手に応じて最適な広告宣伝手法を提案することができます。
+      section.section
+        h2.section-title 募集職種
+        p.text 現在明確に募集している職種は以下となります。#[br]また、募集していない職種でも、随時発展をしていくために、様々な方々のエントリーをお待ちしています。
+        .btn-wrap
+          a.btn-primary(href="recruit-cd.html") コンテンツディレクター
+          a.btn-primary(href="recruit-wd.html") ウェブディレクター
+          a.btn-primary(href="recruit-ap.html") アカウントプランナー

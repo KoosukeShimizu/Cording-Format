@@ -1,0 +1,159 @@
+%button-core {
+  //ボタン基本構造
+  outline: none;
+  cursor: pointer;
+  display: inline-block;
+  text-align: center;
+  text-decoration: none;
+  transition: $transition;
+  -webkit-user-drag: none;
+  user-select: none;
+  vertical-align: baseline;
+  letter-spacing: 0.1em;
+  line-height: 1;
+}
+%button-style-primary {
+  //第一ボタンスタイル
+  border-radius: 4px;
+  padding: 1.2em 0em;
+  width: 75%;
+  max-width: 400px;
+  font-size: $fz20;
+}
+%button-style-secondary {
+  //第二ボタンスタイル
+  border-radius: 4px;
+
+  padding: 1.2em 0em;
+  width: 100%;
+  // max-width: 400px;
+  font-size: $fz14;
+}
+
+.c-button {
+  &-primary {
+    @extend %button-core;
+    @extend %button-style-primary;
+    background: $c-primary;
+    border: 2px solid $c-primary;
+    color: white;
+    @include hover {
+      background: lighten($c-primary, 40%);
+      color: $c-primary;
+    }
+  }
+  &-secondary {
+    @extend %button-core;
+    @extend %button-style-primary;
+    background: $c-secondary;
+    border: 2px solid $c-secondary;
+    color: white;
+    @include hover {
+      background: lighten($c-secondary, 40%);
+      color: $c-secondary;
+    }
+  }
+  &-tertiary {
+    @extend %button-core;
+    @extend %button-style-primary;
+    background: $c-tertiary;
+    border: 2px solid $c-tertiary;
+    color: white;
+    @include hover {
+      background: lighten($c-tertiary, 40%);
+      color: $c-tertiary;
+    }
+  }
+  &-head {
+    @extend %button-core;
+    @extend %button-style-secondary;
+    background: $c-accent;
+    border: 2px solid $c-accent;
+    color: white;
+    @include hover {
+      background: lighten($c-accent, 40%);
+      color: $c-accent;
+    }
+  }
+  &-submit {
+    @extend %button-core;
+    @extend %button-style-primary;
+    background: $c-accent;
+    border: 2px solid $c-accent;
+    color: white;
+    @include hover {
+      background: lighten($c-accent, 10%);
+      color: $c-accent;
+    }
+  }
+  &-back {
+    @extend %button-core;
+    @extend %button-style-primary;
+    background: transparent;
+    border: 2px solid $c-primary;
+    color: $c-primary;
+    @include hover {
+      background: $c-primary;
+      color: white;
+    }
+  }
+}
+
+// .c-linkbtn {
+//   box-shadow: 0 0 16px rgba($c-border, .05);
+//   max-width: 320px;
+//   width: 100%;
+//   line-height: 1.5;
+//   font-family: 'Zen Kaku Gothic New', sans-serif;
+//   font-size: 1.8rem;
+//   color: #fff;
+//   display: inline-block;
+//   font-weight: bold;
+//   border-radius: 56px;
+//   padding: 35px 0;
+//   cursor: pointer;
+
+//   @include mq_down(md) {
+//     font-size: vw(15);
+//     padding: vw(30) vw(32);
+//     line-height: 1.5;
+//     border-radius: vw(44);
+//   }
+
+//   &-brown {
+//     background-color: $c-primary;
+
+//     @include mq_up(md) {
+//       transition: $transition;
+//       &:hover {
+//         box-shadow: 0 0 20px rgba($c-border, .09);
+//         background-color: darken($c-primary, 10%);
+//       }
+//     }
+//   }
+
+//   &-pink {
+//     background-color: $c-secondary;
+
+//     @include mq_up(md) {
+//       transition: $transition;
+//       &:hover {
+//         background-color: darken($c-secondary, 10%);
+//       }
+//     }
+//   }
+
+//   &-white {
+//     color: $c-primary;
+//     background-color: white;
+//     border: 1px solid $c-primary;
+
+//     @include mq_up(md) {
+//       transition: $transition;
+
+//       &:hover {
+//         background-color: darken(white, 10%);
+//       }
+//     }
+//   }
+// }

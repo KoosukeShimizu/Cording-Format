@@ -1,0 +1,19 @@
+/* --------------------------------------------------
+PC/SP表示切り替え
+-------------------------------------------------- */
+
+.u-sp-display {
+  display: block;
+
+  @include mq(sp,max) {
+    display: none;
+  }
+}
+
+.u-pc-display {
+  display: none;
+
+  @include mq(sp,min) {
+    display: block;
+  }
+}

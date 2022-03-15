@@ -1,0 +1,98 @@
+@charset "UTF-8";
+// -------------------------------
+//   ∧＿＿∧    .｡*ﾟ+.*.｡
+// （´・ω・`）< Mixins
+//  クラスで書き出されないもの限定。
+//  page.scssにも流用するもの
+// -------------------------------
+@import "inc/base/bourbon/bourbon";
+@import "inc/base/config";
+@import "inc/base/mixins";
+
+@import "inc/module/hover";
+@import "inc/module/button";
+@import "inc/module/icon";
+@import "inc/module/list";
+@import "inc/module/card";
+// @import 'inc/module/media';
+@import "inc/module/table";
+@import "inc/module/accordion";
+@import "inc/module/tab";
+@import "inc/module/avatar";
+@import "inc/module/trim";
+@import "inc/module/editor";
+@import "inc/module/tag";
+
+///////////////////////////////////
+///////////////////////////////////
+///////////////////////////////////
+// -------------------------------
+//   ∧＿＿∧    .｡*ﾟ+.*.｡
+// （´・ω・`）< page
+// -------------------------------
+
+// （´・ω・`）< faq
+// -------------------------------
+.interview {
+  @include flexbox(flex, null, wrap, center, stretch, null);
+  &-item {
+    @include box-white();
+    width: 100%;
+    margin: $g-s;
+  }
+  &-ttl {
+    color: $c-accent;
+    font-weight: 700;
+    position: relative;
+    font-family: $serif;
+    margin-bottom: $g-l;
+    line-height: 1.4;
+    @include mq(sp, max, true) {
+      font-size: 5vw;
+    }
+    @include mq(sp, min) {
+      font-size: 2.4rem;
+    }
+  }
+  &-name{
+    font-weight: 700;
+    font-size: 1.6rem;
+  }
+  &-thumb{
+    width: 80px;
+    padding: 10px;
+    margin: auto auto $g-m;
+    position: relative;
+    // &:before{
+    //   width: 100px;
+    //   height: 100px;
+    //   content: "";
+    //   background: $c-accent;
+    //   position: absolute;
+    //   border-radius: 50%;
+    //   z-index: 0;
+    // }
+    img{
+      position: relative;
+      z-index: 1;
+    }
+  }
+}
+.comment{
+  &-ttl{
+    font-weight: 700;
+    color: #999;
+    margin-bottom: $g-xs;
+    &:before{
+      font-family: "Font Awesome 5 Free";
+      font-weight: 900;
+      content: "\f35a";
+      margin-right: $g-s;
+    }
+  }
+  &-txt{
+    & + .comment-ttl {
+      margin-top: $g-l;
+    }
+  }
+}

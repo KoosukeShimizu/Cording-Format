@@ -1,0 +1,50 @@
+.c-h1 {
+  font-size: $fz56;
+  font-weight: bold;
+  line-height: 1.47;
+  letter-spacing: .24em;
+}
+
+.c-h2 {
+  font-size: $fz36;
+  font-weight: bold;
+  line-height: 1.5;
+  letter-spacing: .16em;
+  &-deco{
+    text-align: center;
+    width: 100%;
+    font-size: $fz36;
+    margin-bottom: $gt60;
+    &:before{
+      content: "";
+      width: min(30%,150px);
+      aspect-ratio: 3 / 1;
+      background: url("#{$img_path}common/mark_black.svg") no-repeat center center /contain;
+      display: block;
+      margin: 0 auto $gt40;
+    }
+  }
+}
+
+.c-h3 {
+  font-weight: bold;
+  font-size: $fz24;
+  line-height: 1.17;
+  letter-spacing: .16em;
+  margin: 0 0 $gt40;
+  &-deco {
+    width: 100%;
+    font-size: $fz24;
+    display: inline-block;
+    padding: $gt20 0;
+    border-top: $c-border solid 1px;
+    border-bottom: $c-border solid 1px;
+    margin: $gt60 0 $gt20;
+  }
+}
+
+.c-lead{
+  font-size: $fz20;
+  margin-bottom: $gt40;
+  text-align: center;
+}

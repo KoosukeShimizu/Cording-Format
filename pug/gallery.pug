@@ -1,0 +1,135 @@
+//-========================
+//- サイト共通設定
+//-========================
+include _includes/_config
+//- block vars
+//-========================
+//- ページ設定
+//-========================
+- var root = './'//ルートパスの指定
+- var key = 'gallery' //条件分岐に使用
+- var index = 'true'//ページインデックスの有無
+- var ogp = 'true'//OGPの有無
+- var analytics = 'true'//GAタグの有無
+//-========================
+//- ページメタ情報
+//- ここに入力した内容で上書きされます
+//- 記入無しでサイト共通内容が反映されます
+//-========================
+- var pageTitle = 'ギャラリー'//meta title内容
+- var pageDescription = '_サイト名_のギャラリー一覧ページです。'//meta description内容
+- var pageKeywords = ''//meta keyword内容
+- var pageOgUrl = ''//OG用 URL
+- var pageOgTitle = 'ギャラリー｜_サイト名_'//OG用 title
+- var pageOgDescription = '_サイト名_のギャラリー一覧ページです。'//OG用 description
+- var pageOgImage = ''//OGImage
+//-========================
+//- パンくず/構造化データ生成
+//-========================
+- var pageSlug= "gallery"//ページのスラッグ※末尾に「/」必須
+- var parentSlug= ""//ページが3階層目の場合、親ページのスラッグ※末尾に「/」必須
+- var parentTitle= ""//ページが3階層目の場合、親ページの名前
+//-========================
+//- ライブラリ読み込み
+//-========================
+- var fontawesome = 'false'// fontawesome読み込み
+- var slick = 'false'// slick読み込み ※block append js以下に発火用記述必須
+- var swiper = 'false'// swiper読み込み ※block append js以下に発火用記述必須
+- var magnificpopup = 'true'// magnificpopup読み込み ※block append js以下に発火用記述必須
+- var accordion = 'false'
+//-
+//-
+//-
+//-========================
+//- PAGE SOURCE
+//-========================
+doctype html
+html(lang='ja')
+  include _includes/_head
+  //---------------------------------
+  //- UNIQUE CSS
+  //- ページ独自に使用するスタイル
+  //---------------------------------
+  block append css
+    //- link(rel='stylesheet' type='text/css' href='../assets/css/###.css?ver=1.0.0')
+    //- style(type='text/css').
+      .class{}
+  include _includes/_analytics
+  body
+    include _includes/_analytics_body
+    .l-wrapper
+      include _includes/_header
+      include _includes/_module/_breadcrumb
+      main.l-main
+        //-========================
+        //-========================
+        //- PAGE CONTENTS START
+        //-========================
+        // PageContents
+        article.p-gallery
+          .c-head-page
+            h1.c-head-page__title ギャラリー
+            .c-head-page__subtitle gallery
+
+          // section START
+          section.l-section.p-gallery-list
+            .l-container
+              .c-card
+                .c-card__item
+                  a.c-card__link(href=root+'article_xxx'+extention)
+                    figure.c-card__thumb
+                      img(src=root+imgPath+"common/dummy-xs.png" loading="lazy"  width="160" height="120" alt="")
+                    .c-card__body
+                      time.c-card__date(datetime='2022-1-1') 2022.1.1
+                      .c-card__title ブログタイトルが入ります。
+                .c-card__item
+                  a.c-card__link(href=root+'article_xxx'+extention)
+                    figure.c-card__thumb
+                      img(src=root+imgPath+"common/dummy-xs.png" loading="lazy"  width="160" height="120" alt="")
+                    .c-card__body
+                      time.c-card__date(datetime='2022-1-1') 2022.1.1
+                      .c-card__title ブログタイトルが入ります。
+                .c-card__item
+                  a.c-card__link(href=root+'article_xxx'+extention)
+                    figure.c-card__thumb
+                      img(src=root+imgPath+"common/dummy-xs.png" loading="lazy"  width="160" height="120" alt="")
+                    .c-card__body
+                      time.c-card__date(datetime='2022-1-1') 2022.1.1
+                      .c-card__title ブログタイトルが入ります。
+                .c-card__item
+                  a.c-card__link(href=root+'article_xxx'+extention)
+                    figure.c-card__thumb
+                      img(src=root+imgPath+"common/dummy-xs.png" loading="lazy"  width="160" height="120" alt="")
+                    .c-card__body
+                      time.c-card__date(datetime='2022-1-1') 2022.1.1
+                      .c-card__title ブログタイトルが入ります。
+                .c-card__item
+                  a.c-card__link(href=root+'article_xxx'+extention)
+                    figure.c-card__thumb
+                      img(src=root+imgPath+"common/dummy-xs.png" loading="lazy"  width="160" height="120" alt="")
+                    .c-card__body
+                      time.c-card__date(datetime='2022-1-1') 2022.1.1
+                      .c-card__title ブログタイトルが入ります。
+          // section END
+
+          include _includes/_module/_pager
+        // /pageContents
+        //-========================
+        //- PAGE CONTENTS END
+        //-========================
+        //-========================
+      //- include _includes/_sidebar
+      include _includes/_footer
+      //- include _includes/_module/_floatbox
+    include _includes/_script
+    //---------------------------------
+    //- UNIQUE SCRIPT
+    //- ページ独自に使用するJS
+    //---------------------------------
+    block append js
+      //- script(src="../assets/js/xxx.js?ver=1.0.0")
+      //- script(type='text/javascript').
+        $(function () {
+          %scripts%
+        });
+    include _includes/_schema

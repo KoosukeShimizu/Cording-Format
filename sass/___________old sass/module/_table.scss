@@ -1,0 +1,248 @@
+///////////////////////////////////
+///////////////////////////////////
+///////////////////////////////////
+///////////////////////////////////
+// （´・ω・`）< Format
+// -------------------------------
+%table-base {
+  border-collapse: collapse;
+  margin-bottom: $g-m;
+  width: 100%;
+  th,
+  td {
+    padding: $g-m $g-s;
+    vertical-align: top;
+    letter-spacing: 0;
+  }
+  th {
+    text-align: left;
+  }
+  td {
+    text-align: left;
+  }
+}
+
+%table-A {
+  @extend %table-base;
+  border-top: 1px solid $c-border;
+  border-bottom: 1px solid $c-border;
+
+  tr {
+    &:not(:last-child) {
+      border-bottom: 1px solid $c-border;
+    }
+  }
+  th,
+  td {
+    padding: $g-m $g-s;
+    vertical-align: middle;
+    letter-spacing: 0;
+  }
+
+  th {
+    text-align: center;
+  }
+
+  td {
+    text-align: left;
+  }
+}
+
+// //
+// // Tables
+// // --------------------------------------------------
+// $table-bg:rgba(#fff,0);
+// $table-bg-accent:blue;
+// $body-bg:black;
+// $table-cell-padding:10px;
+// $table-condensed-cell-padding:10px;
+// $text-muted:inherit;
+// $line-height-computed:10px;
+// $line-height-base:1.4;
+// $table-border-color:#eee;//rgba(#000,0.2);
+// $table-bg-hover:yellow;
+
+// table {
+//
+//   border-right: 1px solid $table-border-color;
+// }
+// caption {
+//   padding: $g-s 0;
+//   color: $text-muted;
+//   text-align: left;
+// }
+// th {
+//   text-align: left;
+//   font-weight: normal;
+//   background: $c-secondary;
+//   color: white;
+//   width: 7em;
+//   @include mq(tab,min){
+//     width: 13em;
+//   }
+// }
+// td{
+//   text-align: left;
+//   >span{
+//     color: #FFF;
+//   }
+// }
+
+// .table {
+//   width: 100%;
+//   max-width: 100%;
+//   margin-bottom: $line-height-computed;
+//   border-bottom: 1px solid $table-border-color;
+//   > thead,
+//   > tbody,
+//   > tfoot {
+//     > tr {
+//       > th,
+//       > td {
+//         padding: $table-cell-padding  10px;
+//         line-height: $line-height-base;
+//         vertical-align: top;
+//         border-top: 1px solid $table-border-color;
+//       }
+//     }
+//   }
+
+//   > thead > tr > th {
+//     vertical-align: top;
+//     border-bottom: 2px solid $table-border-color;
+//   }
+//   > caption + thead,
+//   > colgroup + thead,
+//   > thead:first-child {
+//     > tr:first-child {
+//       > th,
+//       > td {
+//         border-top: 0;
+//       }
+//     }
+//   }
+//   > tbody + tbody {
+//     border-top: 2px solid $table-border-color;
+//   }
+//   > tbody > tr > th {
+//     // border-right: 1px solid $table-border-color;
+//   }
+//   .table {
+//     background-color: $body-bg;
+//   }
+// }
+
+// .table-condensed {
+//   > thead,
+//   > tbody,
+//   > tfoot {
+//     > tr {
+//       > th,
+//       > td {
+//         padding: $table-condensed-cell-padding;
+//       }
+//     }
+//   }
+// }
+
+// .table-bordered {
+//   border: 1px solid $table-border-color;
+//   > thead,
+//   > tbody,
+//   > tfoot {
+//     > tr {
+//       > th,
+//       > td {
+//         border: 1px solid $table-border-color;
+//       }
+//     }
+//   }
+//   > thead > tr {
+//     > th,
+//     > td {
+//       border-bottom-width: 2px;
+//     }
+//   }
+// }
+
+// .table-striped {
+//   > tbody > tr:nth-child(odd) {
+//     background-color: $table-bg-accent;
+//   }
+// }
+
+// .table-hover {
+//   > tbody > tr:hover {
+//     background-color: $table-bg-hover;
+//   }
+// }
+
+// table col[class*="col-"] {
+//   position: static;
+//   float: none;
+//   display: table-column;
+// }
+// table {
+//   td,
+//   th {
+//     &[class*="col-"] {
+//       position: static;
+//       float: none;
+//       display: table-cell;
+//     }
+//   }
+// }
+
+// .table-responsive {
+//   overflow-x: auto;
+//   min-height: 0.01%;
+
+//   @include mq(tab, max){
+//     width: 100%;
+//     margin-bottom: ($line-height-computed * 0.75);
+//     overflow-y: hidden;
+//     -ms-overflow-style: -ms-autohiding-scrollbar;
+//     border: 1px solid $table-border-color;
+//     > .table {
+//       margin-bottom: 0;
+//       > thead,
+//       > tbody,
+//       > tfoot {
+//         > tr {
+//           > th,
+//           > td {
+//             white-space: nowrap;
+//           }
+//         }
+//       }
+//     }
+
+//     > .table-bordered {
+//       border: 0;
+//       > thead,
+//       > tbody,
+//       > tfoot {
+//         > tr {
+//           > th:first-child,
+//           > td:first-child {
+//             border-left: 0;
+//           }
+//           > th:last-child,
+//           > td:last-child {
+//             border-right: 0;
+//           }
+//         }
+//       }
+//       > tbody,
+//       > tfoot {
+//         > tr:last-child {
+//           > th,
+//           > td {
+//             border-bottom: 0;
+//           }
+//         }
+//       }
+//     }
+//   }
+
+// }

@@ -1,0 +1,282 @@
+@charset "UTF-8";
+// -------------------------------
+//   ∧＿＿∧    .｡*ﾟ+.*.｡
+// （´・ω・`）< Mixins
+//  クラスで書き出されないもの限定。
+//  page.scssにも流用するもの
+// -------------------------------
+@import "inc/base/bourbon/bourbon";
+@import "inc/base/config";
+@import "inc/base/mixins";
+
+@import "inc/module/hover";
+@import "inc/module/button";
+@import "inc/module/icon";
+@import "inc/module/list";
+@import "inc/module/card";
+// @import 'inc/module/media';
+@import "inc/module/table";
+@import "inc/module/accordion";
+@import "inc/module/tab";
+@import "inc/module/avatar";
+@import "inc/module/trim";
+@import "inc/module/editor";
+@import "inc/module/tag";
+
+///////////////////////////////////
+///////////////////////////////////
+///////////////////////////////////
+// -------------------------------
+//   ∧＿＿∧    .｡*ﾟ+.*.｡
+// （´・ω・`）< page
+// -------------------------------
+
+// （´・ω・`）< access
+// -------------------------------
+.access {
+  &-wrap {
+    padding-bottom: $g-l;
+  }
+  &-item {
+    max-width: 600px;
+    margin: auto;
+    text-align: center;
+    // background: $c-bg-secondary;
+    box-shadow: 0 0 20px rgba(black, 0.08);
+    padding: $g-l 6%;
+    border-radius: 20px;
+
+    &:not(:last-child) {
+      margin-bottom: $g-l;
+    }
+    @include mq(tab, min) {
+      padding: $g-l;
+    }
+  }
+
+  &-ttl {
+    font-size: 1.4rem;
+    margin: 0 auto $g-m;
+    width: auto;
+    text-align: center;
+    letter-spacing: 0.1em;
+    background: #eee;
+    display: inline-block;
+    // color: #7B6D53;
+    width: 11em;
+    border-radius: 3px;
+  }
+  &-tel {
+    font-size: 2.8rem;
+    text-align: left;
+    vertical-align: middle;
+    line-height: 1;
+    margin-bottom: $g-s;
+    text-align: center;
+    margin: 0 auto $g-m -20px;
+    // max-width: 460px;
+    // font-size: 30px;
+    &:before {
+      $size: 36px;
+      font-family: "Font Awesome 5 Free";
+      font-weight: 900;
+      content: "\f095";
+      border: 1px solid $c-font-primary;
+      @include size($size $size);
+      font-size: 1.8rem;
+      display: inline-block;
+      text-align: center;
+      line-height: $size;
+      border-radius: 50%;
+      margin-right: $g-s;
+      margin-left: $g-s;
+    }
+  }
+
+  &-table {
+    @extend %table-base;
+    font-size: 1.4rem;
+    // margin-bottom: $g-m;
+    margin: 0 auto $g-m;
+    tr {
+      border-bottom: 1px solid rgba(#000000, 0.1);
+    }
+  }
+
+  &-img {
+    margin: 0 auto $g-l;
+    border: 8px solid white;
+    box-shadow: $shadow;
+    border-radius: 20px;
+    line-height: 0;
+    overflow: hidden;
+
+    img {
+      width: 100%;
+    }
+  }
+
+  @include mq(tab, min) {
+    padding: $g-xl 6%;
+    margin-bottom: $g-xl;
+
+    &-ttl {
+      font-size: 1.6rem;
+      margin-bottom: $g-m;
+    }
+  }
+}
+
+// （´・ω・`）< clinic
+// -------------------------------
+.clinic {
+  text-align: center;
+  margin-bottom: $g-l;
+  &Slider {
+    margin-bottom: $g-m;
+    &-item {
+      border: 8px solid white;
+      box-shadow: $shadow;
+      border-radius: 20px;
+      line-height: 0;
+      overflow: hidden;
+      margin: $g-xs;
+      img {
+        width: 100%;
+      }
+    }
+  }
+  &-desc {
+    margin-bottom: $g-l;
+  }
+  &-ttl {
+    font-size: 1.4rem;
+    margin: 0 auto $g-l;
+    width: auto;
+    text-align: center;
+    letter-spacing: 0.1em;
+    background: #eee;
+    display: inline-block;
+    // color: #7B6D53;
+    width: 11em;
+    border-radius: 3px;
+  }
+  &-tel {
+    @extend .access-tel;
+    text-align: center;
+    margin: 0 auto $g-m -20px;
+    // max-width: 460px;
+    font-size: 30px;
+  }
+  &-table {
+    @extend %table-base;
+    font-size: 1.4rem;
+    margin: 0 auto $g-m;
+    tr {
+      border-bottom: 1px solid rgba(#000000, 0.1);
+    }
+    // max-width: 460px;
+  }
+  &-map {
+    border: 8px solid white;
+    box-shadow: $shadow;
+    border-radius: 20px;
+    line-height: 0;
+    overflow: hidden;
+    iframe {
+      width: 100%;
+      height: 60vw;
+      max-height: 400px;
+    }
+  }
+}
+
+// （´・ω・`）< doctor
+// -------------------------------
+.doctor {
+  text-align: center;
+  // margin-bottom: $g-m;
+  &-ttl {
+    @extend .clinic-ttl;
+  }
+  &-img {
+    width: 120px;
+    margin: 0 auto $g-m;
+    border-radius: 10px;
+    overflow: hidden;
+  }
+}
+
+// （´・ω・`）< root
+// -------------------------------
+.root {
+  text-align: center;
+  margin-bottom: $g-l;
+  &-ttl {
+    @extend .clinic-ttl;
+  }
+  &-select{
+    border-top: 1px solid #eee;
+    &:last-of-type{
+      // background: #000;
+      border-bottom: 1px solid #eee;
+      margin-bottom: $g-m;
+    }
+    // margin-bottom: $g-m;
+    // background: #f5f5f5;
+    &-ttl{
+      padding: $g-m 0;
+      color: $c-link;
+      @extend %hover;
+      cursor: pointer;
+    }
+  }
+  // &-img {
+  //   width: 120px;
+  //   margin: 0 auto $g-m;
+  //   border-radius: 10px;
+  //   overflow: hidden;
+  // }
+  // &-txt{
+  //   font-size: ;
+  // }
+  &-map {
+    padding-left: 20px;
+    margin-top: 0px;
+    // width: calc(100% - 20px);
+    // background: #000;
+    &-img{
+      margin-bottom: $g-s;
+      img{border-radius: 5px;}
+    }
+    &-item {
+      text-align: left;
+      position: relative;
+      padding: 0px 0px 40px 30px;
+      min-height: 4em;
+      &:not(:last-child) {
+        border-left: 1px solid #000;
+      }
+    }
+    &-txt{
+      font-size: 1.4rem;
+      &:not(:last-of-type){
+        // background: #000;
+        margin-bottom: $g-m;
+      }
+    }
+    &-num {
+      position: absolute;
+      left: -20px;
+      top: -10px;
+      background: #000;
+      color: white;
+      width: 40px;
+      height: 40px;
+      line-height: 40px;
+      border-radius: 50%;
+      display: inline-block;
+      text-align: center;
+    }
+  }
+}

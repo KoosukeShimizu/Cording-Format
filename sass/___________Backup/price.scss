@@ -1,0 +1,80 @@
+@charset "UTF-8";
+// -------------------------------
+//   ∧＿＿∧    .｡*ﾟ+.*.｡
+// （´・ω・`）< Mixins
+//  クラスで書き出されないもの限定。
+//  page.scssにも流用するもの
+// -------------------------------
+@import "inc/base/bourbon/bourbon";
+@import "inc/base/config";
+@import "inc/base/mixins";
+
+@import "inc/module/hover";
+@import "inc/module/button";
+@import "inc/module/icon";
+@import "inc/module/list";
+@import "inc/module/card";
+// @import 'inc/module/media';
+@import "inc/module/table";
+@import "inc/module/accordion";
+@import "inc/module/tab";
+@import "inc/module/avatar";
+@import "inc/module/trim";
+@import "inc/module/editor";
+@import "inc/module/tag";
+
+///////////////////////////////////
+///////////////////////////////////
+///////////////////////////////////
+// -------------------------------
+//   ∧＿＿∧    .｡*ﾟ+.*.｡
+// （´・ω・`）< page
+// -------------------------------
+// .tab{
+//   @extend %tab-base;
+// }
+// （´・ω・`）< price
+// -------------------------------
+.courseList {
+  @include flexbox(flex, null, wrap, center, stretch, null);
+  &-item {
+    @include box-white();
+    width: 100%;
+    // max-width: 450px;
+    // padding: $g-m;
+    margin: $g-s;
+  }
+  &-order {
+    font-family: $serif;
+    font-size: 4rem;
+    line-height: 1;
+    margin-bottom: $g-m;
+  }
+  &-ttl {
+    position: relative;
+    margin-bottom: $g-l;
+    line-height: 1.4;
+    @include mq(sp, max, true) {
+      font-size: 5vw;
+    }
+    @include mq(sp, min) {
+      font-size: 2.2rem;
+    }
+    small {
+      background: #000;
+      color: white;
+      padding: 0 $g-s;
+    }
+  }
+  &-txt {
+    margin-bottom: $g-l;
+    text-align: left;
+  }
+  &-price {
+    text-align: right;
+    font-size: 1.8rem;
+    color: rgba($c-accent, 1);
+    line-height: 1.4;
+    margin-bottom: $g-l;
+  }
+}

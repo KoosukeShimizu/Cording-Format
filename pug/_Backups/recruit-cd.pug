@@ -1,0 +1,100 @@
+extend ./_includes/_layout.pug
+block vars
+  include ./_includes/_config
+  - var noindex= "false";
+  - var colmun= "single";
+  - var root= "./";
+  - var parentDir= "";
+  //- - var status= "";
+  - var key= "recruit";
+  - var pageUrl= "recruit-cd.html";
+  - var pageTitle = "採用情報"
+  - var pageDescription = "みなさんこんにちは、合同会社コロンディーのコンテンツディレクターの募集ページです。"
+  - var pageKeywords = ""
+  //- - var page = pages[key];
+  //- - var pageCategory= "";
+  - var bodyClass= "";
+//- /////////////////////
+append css
+  //- link(rel="stylesheet", href=root+cssPath+"page.css")
+  //- link(rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css")
+//- /////////////////////
+append js
+  //- script(type="application/ld+json").
+    {
+      "@context": "http://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [{
+        "@type": "ListItem",
+        "position": 1,
+        "item": {
+          "@id": "#{siteUrl}",
+          "name": "#{siteName}"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "item": {
+          "@id": "#{siteUrl}#{pageUrl}",
+          "name": "#{pageTitle}"
+        }
+      }]
+    }
+//- /////////////////////
+block breadcrumb
+  //- nav.breadcrumb
+    ol(itemscope itemtype="http://schema.org/BreadcrumbList")
+      li.top(itemscope itemprop="itemListElement" itemtype="http://schema.org/ListItem")
+        a(itemprop="item" href=root+""): span(itemprop="name") #{siteName}
+        meta(itemprop="position" content="1")
+      li(itemscope itemprop="itemListElement" itemtype="http://schema.org/ListItem")
+        a(itemprop="item" href=root+pageUrl): span(itemprop="name") #{pageTitle}
+        meta(itemprop="position" content="2")
+//- /////////////////////
+//- /////////////////////
+//- /////////////////////
+//- /////////////////////
+//- /////////////////////
+//- /////////////////////
+block main
+  .content-bg
+    video.bgVideo(src=root+"assets/video/video16.mp4" type="video/mp4" muted autoplay playsinline loop) 
+      img(src=root+"assets/video/video16.mp4" alt="")
+  article.page
+    .page-head
+      h1.page-ttl #{pageTitle}
+      //- p.page-intro あああ
+
+    //- .comingsoon coming soon...
+    .page-body
+      section.section
+        h2.section-title コンテンツディレクターの募集
+        //- figure.img: img(src=root+imgPath+"bnr-cd@2x.png" loading="lazy" alt="コンテンツディレクターの募集" width="600" height="337")
+        p.text ユーザーとの最適なコミュニケーションを設計・実行する#[br]#[br]ウェブコンテンツ、動画コンテンツのディレクターとして活躍していただきます。コンテンツ制作のディレクションが主の業務となりますが、ただ言われた通りの成果物を作るのではなく、ユーザーとの最適なコミュニケーションを考慮した上で適切なアウトプットが求められます。
+
+      table.table
+        tr
+          th 職 種
+          td コンテンツディレクター#[br]#[br] #[b 【必須要件 】]#[br]ー D2C、単品通販モデルなどの戦略設計から集客・運営代行などの経験がある（3年以上）#[br]ー Google Analyticsなどの解析ツールを活用した経験がある（3年以上）#[br]#[br]#[b 【歓迎要件 】]#[br]ー 広告代理店でのコンサルタント経験がある#[br]ー プログラミングスキルを保有している#[br]ー 統計解析スキルを保有している#[br]ー 事業会社でマーケティングの責任者を務めた経験がある#[br]#[br]#[b 【求める人物像】]#[br]ー プロセス重視ではなく成果主義であること#[br]ー レベルの高いメンバーと切磋琢磨することができる#[br]ー 実績として掲載できる過去事例があること#[br]ー クライアントやパートナー、仲間と成功体験を積むことが好きな方#[br]
+        tr
+          th 給 与
+          td 600万円〜1000万円 #[br]※前職の給料をベースに、ステイ、もしくはアップのみで提示しています
+        tr
+          th 雇用形態
+          td 正社員・業務委託
+        tr
+          th 募集地域・勤務地
+          td 〒168-0081 東京都杉並区#[br]※出勤義務なし、フルテレワーク可#[br]※但し、月に1度の全体会議には実際に出席すること
+        tr
+          th 就業時間
+          td 10:00～19:00#[br]※完全フレックス制
+        tr
+          th 待遇・福利厚生
+          td #[b 【各種保険】]#[br]ー 健康保険#[br]ー 厚生年金#[br]ー 雇用保険#[br]ー 労災保険完備#[br]#[br]#[b 【諸手当】]#[br]通勤手当#[br]#[br]#[b 【福利厚生】]#[br]たくさんコンテンツを消費しよう制度#[br]月2万円まで映画・本・ゲームなどコンテンツ消費であれば自由に経費を使用可能#[br]#[br]#[b 【その他】]#[br]ー 半期に一度個人の実績に応じてインセンティブ支給#[br]ー 出社義務なし（月1回全社打合せ参加あり）#[br]
+        tr
+          th 休 暇
+          td 完全週休2日制（土・日）#[br]祝日#[br]年末年始休暇#[br]年次有給休暇
+        tr
+          th エントリー
+          td エントリーはメールにてお願いいたします

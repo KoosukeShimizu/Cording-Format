@@ -1,0 +1,109 @@
+extend ../_includes/_layout.pug
+block vars
+  include ../_includes/_config
+  - var noindex= "true";
+  - var colmun= "single";
+  - var root= "../";
+  - var parentDir= "";
+  //- - var status= "";
+  - var key= "news";
+  - var pageUrl= "news-list.html";
+  - var pageTitle = "お知らせ"
+  - var pageDescription = ""
+  - var pageKeywords = ""
+  //- - var page = pages[key];
+  //- - var pageCategory= "";
+  - var bodyClass= "";
+//- /////////////////////
+append css
+  link(rel="stylesheet", href=root+cssPath+"article.css")
+append js
+  script(type="application/ld+json").
+    {
+      "@context": "http://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [{
+        "@type": "ListItem",
+        "position": 1,
+        "item": {
+          "@id": "#{siteUrl}",
+          "name": "#{siteName}"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "item": {
+          "@id": "#{siteUrl}#{pageUrl}",
+          "name": "#{pageTitle}"
+        }
+      }]
+    }
+//- /////////////////////
+block breadcrumb
+  nav.breadcrumb
+    ol(itemscope itemtype="http://schema.org/BreadcrumbList")
+      li.top(itemscope itemprop="itemListElement" itemtype="http://schema.org/ListItem")
+        a(itemprop="item" href=root+""): span(itemprop="name") トップページ
+        meta(itemprop="position" content="1")
+      li(itemscope itemprop="itemListElement" itemtype="http://schema.org/ListItem")
+        a(itemprop="item" href=root+pageUrl): span(itemprop="name") #{pageTitle}
+        meta(itemprop="position" content="2")
+//- /////////////////////
+//- /////////////////////
+//- /////////////////////
+block main
+  article.page
+    .page-head
+      h1.page-ttl #{pageTitle}#[br]#[span.page-subttl #{key}]
+
+    //- .comingsoon coming soon...
+
+    .page-body
+      ul.newsList
+        li.newsList-item
+          time.newsList-time( datetime="2020-03-03") 2020-03-03
+          a(href=root+"news/news-detail.html")
+            p.newsList-ttl お知らせタイトルが入りますお知らせタイトルが入りますお知らせタイトルが入りますお知らせタイトルが入りますお知らせタイトルが入ります
+        li.newsList-item
+          a(href=root+"news/news-detail.html")
+            time.newsList-time( datetime="2020-03-03") 2020-03-03
+            p.newsList-ttl お知らせタイトルが入りますお知らせタイトルが入りますお知らせタイトルが入りますお知らせタイトルが入りますお知らせタイトルが入ります
+        li.newsList-item
+          a(href=root+"news/news-detail.html")
+            time.newsList-time( datetime="2020-03-03") 2020-03-03
+            p.newsList-ttl お知らせタイトルが入りますお知らせタイトルが入りますお知らせタイトルが入りますお知らせタイトルが入りますお知らせタイトルが入ります
+        li.newsList-item
+          a(href=root+"news/news-detail.html")
+            time.newsList-time( datetime="2020-03-03") 2020-03-03
+            p.newsList-ttl お知らせタイトルが入りますお知らせタイトルが入りますお知らせタイトルが入りますお知らせタイトルが入りますお知らせタイトルが入ります
+        li.newsList-item
+          a(href=root+"news/news-detail.html")
+            time.newsList-time( datetime="2020-03-03") 2020-03-03
+            p.newsList-ttl お知らせタイトルが入りますお知らせタイトルが入りますお知らせタイトルが入りますお知らせタイトルが入りますお知らせタイトルが入ります
+        li.newsList-item
+          a(href=root+"news/news-detail.html")
+            time.newsList-time( datetime="2020-03-03") 2020-03-03
+            p.newsList-ttl お知らせタイトルが入りますお知らせタイトルが入りますお知らせタイトルが入りますお知らせタイトルが入りますお知らせタイトルが入ります
+        li.newsList-item
+          a(href=root+"news/news-detail.html")
+            time.newsList-time( datetime="2020-03-03") 2020-03-03
+            p.newsList-ttl お知らせタイトルが入りますお知らせタイトルが入りますお知らせタイトルが入りますお知らせタイトルが入りますお知らせタイトルが入ります
+        li.newsList-item
+          a(href=root+"news/news-detail.html")
+            time.newsList-time( datetime="2020-03-03") 2020-03-03
+            p.newsList-ttl お知らせタイトルが入りますお知らせタイトルが入りますお知らせタイトルが入りますお知らせタイトルが入りますお知らせタイトルが入ります
+        li.newsList-item
+          a(href=root+"news/news-detail.html")
+            time.newsList-time( datetime="2020-03-03") 2020-03-03
+            p.newsList-ttl お知らせタイトルが入りますお知らせタイトルが入りますお知らせタイトルが入りますお知らせタイトルが入りますお知らせタイトルが入ります
+
+      nav.pager
+        a.pager-prev(href="#")
+        ol.pager-num
+          li: a.is-current(href="#") 1
+          li: a(href="#") 2
+          li: a(href="#") 3
+          li: a(href="#") 4
+          li: a(href="#") 5
+        a.pager-next(href="#")
