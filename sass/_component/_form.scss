@@ -56,12 +56,12 @@
   &__select {
     @extend %form-core;
     @extend %form-style-a;
-    background: url("#{$img_path}common/icons/form/caret-down-solid.svg") no-repeat right $gt20 center / 10px, #fff;
+    background: url("#{$img_path}common/icons/form/caret-down.svg") no-repeat right $gt20 center / 10px, #fff;
     padding-right: $gt50;
     width: 100%;
     // position: relative;
     // &:after{
-    //   background: url("#{$img_path}common/icons/form/circle-regular.svg") no-repeat center center / contain;
+    //   background: url("#{$img_path}common/icons/form/circle.svg") no-repeat center center / contain;
     // }
     // width: 100%;
   }
@@ -76,7 +76,7 @@
     span {
       margin-right: 1em;
       &:before {
-        background: url("#{$img_path}common/icons/form/circle-regular.svg") no-repeat center center / contain;
+        background: url("#{$img_path}common/icons/form/circle.svg") no-repeat center center / contain;
         margin-right: 0.5em;
       }
     }
@@ -84,7 +84,7 @@
       &:checked {
         + span {
           &:before {
-            background: url("#{$img_path}common/icons/form/circle-dot-solid.svg") no-repeat center center / contain;
+            background: url("#{$img_path}common/icons/form/circle-dot.svg") no-repeat center center / contain;
           }
         }
       }
@@ -97,7 +97,7 @@
     span {
       margin-right: 1em;
       &:before {
-        background: url("#{$img_path}common/icons/form/square-regular.svg") no-repeat center center / contain;
+        background: url("#{$img_path}common/icons/form/square.svg") no-repeat center center / contain;
         margin-right: 0.5em;
       }
     }
@@ -105,7 +105,7 @@
       &:checked {
         + span {
           &:before {
-            background: url("#{$img_path}common/icons/form/square-check-solid.svg") no-repeat center center / contain;
+            background: url("#{$img_path}common/icons/form/square-check.svg") no-repeat center center / contain;
           }
         }
       }
@@ -141,7 +141,7 @@
     margin-top: $gt10;
     font-size: $fz14;
     color: $c-danger;
-    background: url("#{$img_path}common/icons/circle-exclamation-solid.svg") no-repeat left $gt10 center /16px;
+    background: url("#{$img_path}common/icons/circle-exclamation.svg") no-repeat left $gt10 center /16px;
     text-align: left;
   }
 }
@@ -161,7 +161,7 @@
     position: relative;
   }
   &__group {
-    border: 1px solid #000;
+    border: 1px solid $c-border;
     border-radius: 4px;
     padding: $gt40 $gt20;
   }

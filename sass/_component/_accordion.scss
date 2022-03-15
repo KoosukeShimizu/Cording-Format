@@ -14,7 +14,7 @@
       display: block;
       width: 16px;
       height: 16px;
-      background: url("#{$img_path}common/icons/plus-solid.svg") no-repeat center center /contain;
+      background: url("#{$img_path}common/icons/plus.svg") no-repeat center center /contain;
       position: absolute;
       right: $gt10;
       top: 50%;
@@ -23,7 +23,7 @@
 
     &.is-open {
       &:after {
-        background: url("#{$img_path}common/icons/minus-solid.svg") no-repeat center center /contain;
+        background: url("#{$img_path}common/icons/minus.svg") no-repeat center center /contain;
       }
     }
   }

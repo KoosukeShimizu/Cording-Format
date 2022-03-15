@@ -6,7 +6,7 @@
   text-align: center;
   padding: $gt60 0;
   &__inner{
-    width: min(95%,1024px);
+    width: min(100%,1024px);
     margin: auto;
   }
   &__logo{
@@ -37,6 +37,7 @@
 // -------------------------------
 .l-footer-social{
   width: 100%;
+  margin: 0 auto $gt40;
   &__list{
     display: flex;
     flex-wrap: wrap;
@@ -45,9 +46,12 @@
   }
   &__item{
     width: min(10%,40px);
+    height: min(calc(40 / 375 * 100vw), 40px);
     margin: 10px;
     a{
       padding: 0;
+      line-height: 1;
+      aspect-ratio: 1 / 1;
       &:after{
         display: none;
       }
@@ -64,9 +68,17 @@
     flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
+    border-top: 1px solid $c-border;
   }
   &__item{
-    width: 20%;
+    width: 50%;
+    border-bottom: 1px solid $c-border;
+    &:nth-child(odd){
+      border-right: 1px solid $c-border;
+    }
+    a{
+      padding: $gt20;
+    }
   }
 
 }
