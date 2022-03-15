@@ -1,9 +1,9 @@
 // PCのみホバーを設定
 //=====================
 @mixin hover {
-  &:focus {
-    @content;
-  }
+  // &:focus {
+  //   @content;
+  // }
   @media (hover: hover) {
     &:hover {
       @content;

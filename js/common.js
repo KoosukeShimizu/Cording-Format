@@ -58,20 +58,6 @@ $(function () {
 
 
 
-   //スティッキーヘッダー
-  //======================
-  $( window ).scroll( function () {
-    if( $( window ).scrollTop() > 40 ) {
-      // 40px蛻�せ繧ｯ繝ｭ繝ｼ繝ｫ縺励◆繧�
-      $( '#ji-header' ).addClass( 'js-scroll-fixed' );
-      $( 'body' ).addClass( 'js-scroll-fixed' );
-    } else {
-      $( '#ji-header' ).removeClass( 'js-scroll-fixed' );
-      $( 'body' ).removeClass( 'js-scroll-fixed' );
-    }
-  });
-
-
    //アコーディオン
   //======================
   $(".js-accordion dt").on("click", function() {
@@ -79,6 +65,18 @@ $(function () {
     $(this).next().slideToggle();
     return false;
   });
+
+
+   //ドロップダウン
+  //======================
+  $(".js-dropdown-content").hide();
+  $(".js-dropdown-toggle").on("click", function () {
+    $(this).toggleClass("is-open");
+    // $(this).next().toggleClass("is-open");
+    $(this).next(".js-dropdown-content").slideToggle();
+    return false;
+  });
+
 
 //タブ
   //======================

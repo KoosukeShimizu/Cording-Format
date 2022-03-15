@@ -46,6 +46,12 @@
   &__item{
     width: min(10%,40px);
     margin: 10px;
+    a{
+      padding: 0;
+      &:after{
+        display: none;
+      }
+    }
   }
 }
 
