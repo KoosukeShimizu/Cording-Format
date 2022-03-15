@@ -78,7 +78,17 @@
     }
     a{
       padding: $gt20;
+      display: block;
     }
+  }
+  @include mq(sp,min){
+    &__list{
+      border-left: 1px solid $c-border;
+      border-right: 1px solid $c-border;
+    }
+    // &__item{
+    //   width: 25%;
+    // }
   }
 
 }

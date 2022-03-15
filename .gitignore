@@ -1,5 +1,7 @@
-/.DS_Store
-/sass/___________Backup/
-/sass/___________old sass/
-/pug/_Backups/
+.DS_Store*
+___________Backup js/
+___________Backup Pug/
+___________Backup sass/
+___________oldCordingTemplate/
+___________old sass/
 .ht*
