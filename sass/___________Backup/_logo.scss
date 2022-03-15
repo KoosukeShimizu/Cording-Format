@@ -1,9 +1,0 @@
-.c-logo {
-  img {
-    height: 56px;
-
-    @include mq_down(md) {
-      height: vw(36);
-    }
-  }
-}
