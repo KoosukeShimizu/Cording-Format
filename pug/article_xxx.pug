@@ -76,22 +76,12 @@ html(lang='ja')
             figure.p-article__mv
               img(src=root+imgPath+"common/dummy-l.png" loading="lazy"  width="" height="" alt="")
 
-            .p-article__content
-              details.c-toc
-                summary.c-toc__title 目次
-                ul.c-toc__list
-                  li.c-toc__item
-                    a(href="#") h2タイトル
-                  li.c-toc__item
-                    a(href="#") h2タイトル
-                    ul.c-toc-child
-                      li.c-toc-child__item
-                        a(href="#") h3タイトル
-                      li.c-toc-child__item
-                        a(href="#") h3タイトル
-                  li.c-toc__item
-                    a(href="#") h2タイトル
+            details.c-toc
+              summary.c-toc__title 目次
+              #js-toc
 
+
+            .p-article__content
               // CMS EDIT CONTENT START
               // ここからはCMSで入力された内容が反映されます。
               //  .p-single-content配下はセレクタにスタイルを設定し、クラス付与無しで見た目が整うようにしてください。
@@ -101,6 +91,7 @@ html(lang='ja')
             
               p こちらはテキストの見た目だけ変更するタグです#[small これは細目テキスト（small）です]#[br]#[b これは太字テキスト（b）です]#[br]#[i これは斜体テキスト（i）です]#[br]#[u これは下線テキスト（u）です]#[br]#[s これは打ち消しテキスト（u）です]#[br]#[mark これはマーカーテキスト（mark）です]#[br]#[a(href="#") これはリンクテキスト（a）です]
 
+               h2 大見出しスタイル２（h2）
               p こちらはテキストの意味を表すタグです#[strong これは強調テキスト（strong）です]#[br] #[em これは強調テキスト（em）です]#[br] #[small これは細目テキスト（small）です]#[br]#[address これは連絡先や問合せ先を表すテキスト（address）です]#[br]#[del これは文字の削除（del）を表すテキストです]#[br]#[ins これは文字の追加を表すテキスト（ins）です]#[br]#[mark これはマーカーテキスト（mark）です]#[br]#[a(href="#") これはリンクテキスト（a）です]
 
               code.
@@ -164,7 +155,7 @@ html(lang='ja')
     //- ページ独自に使用するJS
     //---------------------------------
     block append js
-      //- script(src="../assets/js/xxx.js?ver=1.0.0")
+      script(src=root+jsPath+"article.min.js?ver=1.0.0")
       //- script(type='text/javascript').
         $(function () {
           %scripts%
