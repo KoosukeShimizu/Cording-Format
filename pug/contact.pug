@@ -73,12 +73,19 @@ html(lang='ja')
             .c-head-page__subtitle contact
             .c-head-page__intro _サイト名_のお問い合わせのページです。ご利用に関する内容の他、取材に関するお問い合わせも受け付けております。#[br]お問い合わせいただいた内容につきましては、担当者より後日ご連絡させていただきます。下記にあるお問い合わせに関するご注意事項をご確認の上、下記フォームよりお問い合わせください。
 
+
+          
           // section START
           section.l-section.p-contact-form
             .l-container-sm
+              .c-step 
+                ul.c-step__list 
+                  li.c-step__item.is-current #[span.c-step__order step1] #[br]情報のご入力
+                  li.c-step__item #[span.c-step__order step2] #[br]入力内容のご確認
+                  li.c-step__item #[span.c-step__order step3] #[br]送信完了
               //- h2.c-h2-deco お問い合わせフォーム
               form(method="post" action=root+"confirm"+extention enctype='multipart/form-data')
-                h3.c-h3 お客様情報
+                //- h3.c-h3 お客様情報
                 .c-form
                   .c-form__item
                     .c-form__label お名前#[span.c-form__require 必須]
@@ -96,7 +103,7 @@ html(lang='ja')
                   .c-form__item
                     .c-form__label メールアドレス#[span.c-form__require 必須]
                     .c-form__body
-                      input.c-form__input(type="email" id="email" name="email" placeholder="例：example@domain.com" autocomplete="email" required)
+                      input.c-form__input(type="email" id="email" name="email" placeholder="例：example@mail.com" autocomplete="email" required)
                       .c-form__note ※半角英数
                       .c-form__error メールアドレスを入力してください
 
@@ -266,7 +273,7 @@ html(lang='ja')
                   .c-form__item
                     .c-form__label お問い合わせ内容#[span.c-form__require 必須]
                     .c-form__body
-                      textarea.c-form__textarea(id ="comment" name='comment' rows='10' placeholder='お問い合わせ内容を具体的にお知らせください。')
+                      textarea.c-form__textarea.js-autoresize(id ="comment" name='comment'  placeholder='お問い合わせ内容を具体的にお知らせください。')
                       .c-form__error お問い合わせ内容を入力してください
 
                   .c-form-agree
@@ -309,10 +316,14 @@ html(lang='ja')
     //- ページ独自に使用するJS
     //---------------------------------
     block append js
-      script(src="https://yubinbango.github.io/yubinbango/yubinbango.js")
+      //- script(src="https://yubinbango.github.io/yubinbango/yubinbango.js")
+      script(src=root+jsPath+"yubinbango.js")
+      script(src=root+jsPath+"jquery.autoKana.js")
       script(src=root+jsPath+"form.min.js?ver=1.0.0")
-      //- script(type='text/javascript').
-        $(function () {
-          %scripts%
+      script(type='text/javascript').
+        $(function() {
+          $.fn.autoKana("#name", "#name_kana", {
+            hiragana: true
+          });
         });
     include _includes/_schema

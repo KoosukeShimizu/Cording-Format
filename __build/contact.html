@@ -87,8 +87,14 @@
           <!-- section START-->
           <section class="l-section p-contact-form">
             <div class="l-container-sm">
+              <div class="c-step"> 
+                <ul class="c-step__list"> 
+                  <li class="c-step__item is-current"><span class="c-step__order">step1</span> <br>情報のご入力</li>
+                  <li class="c-step__item"><span class="c-step__order">step2</span> <br>入力内容のご確認</li>
+                  <li class="c-step__item"><span class="c-step__order">step3</span> <br>送信完了</li>
+                </ul>
+              </div>
               <form method="post" action="./confirm.html" enctype="multipart/form-data">
-                <h3 class="c-h3">お客様情報</h3>
                 <div class="c-form">
                   <div class="c-form__item">
                     <div class="c-form__label">お名前<span class="c-form__require">必須</span></div>
@@ -108,7 +114,7 @@
                   <div class="c-form__item">
                     <div class="c-form__label">メールアドレス<span class="c-form__require">必須</span></div>
                     <div class="c-form__body">
-                      <input class="c-form__input" type="email" id="email" name="email" placeholder="例：example@domain.com" autocomplete="email" required>
+                      <input class="c-form__input" type="email" id="email" name="email" placeholder="例：example@mail.com" autocomplete="email" required>
                       <div class="c-form__note">※半角英数</div>
                       <div class="c-form__error">メールアドレスを入力してください</div>
                     </div>
@@ -389,7 +395,7 @@
                   <div class="c-form__item">
                     <div class="c-form__label">お問い合わせ内容<span class="c-form__require">必須</span></div>
                     <div class="c-form__body">
-                      <textarea class="c-form__textarea" id="comment" name="comment" rows="10" placeholder="お問い合わせ内容を具体的にお知らせください。"></textarea>
+                      <textarea class="c-form__textarea js-autoresize" id="comment" name="comment" placeholder="お問い合わせ内容を具体的にお知らせください。"></textarea>
                       <div class="c-form__error">お問い合わせ内容を入力してください</div>
                     </div>
                   </div>
@@ -456,8 +462,16 @@
     <!-- SCRIPTS-->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js?ver=1.0.0"></script>
     <script src="./assets/js/common.min.js?ver=1.0.0"></script>
-    <script src="https://yubinbango.github.io/yubinbango/yubinbango.js"></script>
+    <script src="./assets/js/yubinbango.js"></script>
+    <script src="./assets/js/jquery.autoKana.js"></script>
     <script src="./assets/js/form.min.js?ver=1.0.0"></script>
+    <script type="text/javascript">
+      $(function() {
+        $.fn.autoKana("#name", "#name_kana", {
+          hiragana: true
+        });
+      });
+    </script>
     <!-- パンくずリストの構造化データ-->
     <script type="application/ld+json">
       {

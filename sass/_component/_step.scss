@@ -1,0 +1,40 @@
+.c-step{
+  // width: min(95%, 1024px);
+  margin: 0 auto $gt40;
+  border: 1px solid $c-border;
+  &__list{
+    display: flex;
+  }
+  &__item{
+    width: 100%;
+    text-align: center;
+    padding: $gt10 0;
+    background: $c-gray90;
+    &:not(:last-child){
+      border-right: 1px solid $c-border;
+    }
+
+  }
+  &__order{
+    text-transform: uppercase;
+    display: inline-block;
+    border: 1px solid $c-border;
+    font-size: $fz14;
+    font-weight: 700;
+    border-radius: 20px;
+    padding: .4em 1em;
+    line-height: 1;
+    margin-bottom: .5em;
+    background: white;
+    color: $c-gray70;
+  }
+  .is-current{
+    background: $c-primary;
+    color: white;
+    .c-step__order{
+      background: white;
+      color: $c-primary;
+      border: transparent;
+    }
+  }
+}

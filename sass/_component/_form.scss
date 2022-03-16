@@ -4,7 +4,7 @@
   outline: none;
   cursor: pointer;
   &:focus {
-    outline: 0;
+    outline: solid 2px $c-primary;
   }
   &[disabled] {
     cursor: not-allowed;
@@ -14,13 +14,16 @@
     cursor: default;
     pointer-events: none;
     background: transparent;
+    border: none;
     border-bottom: 1px solid $c-border;
+    font-size: $fz24;
+    padding-top: 0;
   }
 }
 
 %form-style-a {
   border-radius: 5px;
-  // border: 1px solid rgba($c-border, 0.25);
+  border: 1px solid rgba($c-border, 0.1);
   background-color: white;
   padding: $gt20;
 }
@@ -165,6 +168,10 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    [class^="c-button"]{
+      margin: 0 $gt10  $gt20;
+
+    }
   }
 }
 

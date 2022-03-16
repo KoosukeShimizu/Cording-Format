@@ -12,6 +12,18 @@ $(function () {
   });
 });
 
+// テキストエリアリサイズ
+//================
+$(function () {
+  var $textarea = $('.js-autoresize');
+  var lineHeight = parseInt($textarea.css('lineHeight'));
+  $textarea.on('input', function (e) {
+    var lines = ($(this).val() + '\n').match(/\n/g).length;
+    $(this).height(lineHeight * lines);
+  });
+});
+
+
 
 //passwordView
 $(".password-view").click(function () {
@@ -128,13 +140,5 @@ $(function () {
   });
 });
 
-//autoresize
-$(function () {
-  var $textarea = $('.js-auto-resize');
-  var lineHeight = parseInt($textarea.css('lineHeight'));
-  $textarea.on('input', function (e) {
-    var lines = ($(this).val() + '\n').match(/\n/g).length;
-    $(this).height(lineHeight * lines);
-  });
-});
+
 

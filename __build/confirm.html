@@ -67,61 +67,61 @@
           <!-- section START-->
           <section class="l-section p-confirm">
             <div class="l-container-sm">
-              <h2 class="c-h2-deco">ご入力内容</h2>
+              <div class="c-step"> 
+                <ul class="c-step__list"> 
+                  <li class="c-step__item"><span class="c-step__order">step1</span> <br>情報のご入力</li>
+                  <li class="c-step__item is-current"><span class="c-step__order">step2</span> <br>入力内容のご確認</li>
+                  <li class="c-step__item"><span class="c-step__order">step3</span> <br>送信完了</li>
+                </ul>
+              </div>
               <form method="post" action="./thanks.html" enctype="multipart/form-data">
                 <div class="c-form">
                   <div class="c-form__item">
                     <div class="c-form__label">お名前<span class="c-form__require">必須</span></div>
                     <div class="c-form__body">
-                      <input class="c-form__input" type="text" id="name" name="name" value="" readonly>
+                      <input class="c-form__input" type="text" id="name" name="name" value="山田 花子" readonly>
                     </div>
                   </div>
                   <div class="c-form__item">
                     <div class="c-form__label">ふりがな<span class="c-form__require">必須</span></div>
                     <div class="c-form__body">
-                      <input class="c-form__input" type="text" id="name_kana" name="name_kana" value="" readonly>
+                      <input class="c-form__input" type="text" id="name_kana" name="name_kana" value="やまだ はなこ" readonly>
                     </div>
                   </div>
                   <div class="c-form__item">
                     <div class="c-form__label">メールアドレス<span class="c-form__require">必須</span></div>
                     <div class="c-form__body">
-                      <input class="c-form__input" type="text" id="email" name="email" value="" readonly>
+                      <input class="c-form__input" type="text" id="email" name="email" value="example@mail.com" readonly>
                     </div>
                   </div>
                   <div class="c-form__item">
                     <div class="c-form__label">電話番号<span class="c-form__require">必須</span></div>
                     <div class="c-form__body">
-                      <input class="c-form__input" type="text" id="tel" name="tel" value="" readonly>
+                      <input class="c-form__input" type="text" id="tel" name="tel" value="09012345678" readonly>
                     </div>
                   </div>
                   <div class="c-form__item">
                     <div class="c-form__label">性別<span class="c-form__require">必須</span></div>
                     <div class="c-form__body">
-                      <input class="c-form__input" type="text" id="gender" name="gender" value="" readonly>
-                    </div>
-                  </div>
-                  <div class="c-form__item">
-                    <div class="c-form__label">電話番号<span class="c-form__require">必須</span></div>
-                    <div class="c-form__body">
-                      <input class="c-form__input" type="text" id="tel" name="tel" value="" readonly>
+                      <input class="c-form__input" type="text" id="gender" name="gender" value="女性" readonly>
                     </div>
                   </div>
                   <div class="c-form__item">
                     <div class="c-form__label">生年月日<span class="c-form__require">必須</span></div>
                     <div class="c-form__body">
-                      <input class="c-form__input" type="text" id="birthday" name="birthday" value="" readonly>
+                      <input class="c-form__input" type="text" id="birthday" name="birthday" value="2000年1月1日" readonly>
                     </div>
                   </div>
                   <div class="c-form__item">
                     <div class="c-form__label">郵便番号<span class="c-form__require">必須</span></div>
                     <div class="c-form__body">
-                      <input class="c-form__input" type="text" id="postal-code" name="postal-code" value="" readonly>
+                      <input class="c-form__input" type="text" id="postal-code" name="postal-code" value="1234567" readonly>
                     </div>
                   </div>
                   <div class="c-form__item">
                     <div class="c-form__label">都道府県<span class="c-form__require">必須</span></div>
                     <div class="c-form__body">
-                      <input class="c-form__input" type="text" id="addres" name="addres" value="" readonly>
+                      <input class="c-form__input" type="text" id="addres" name="addres" value="東京都渋谷区恵比寿◎-△-□" readonly>
                     </div>
                   </div>
                   <div class="c-form__item">
@@ -133,19 +133,18 @@
                   <div class="c-form__item">
                     <div class="c-form__label">ご連絡可能時間<span class="c-form__require">必須</span></div>
                     <div class="c-form__body">
-                      <input class="c-form__input" type="text" id="period" name="period" value="" readonly>
+                      <input class="c-form__input" type="text" id="period" name="period" value="午前中, 夕方" readonly>
                     </div>
                   </div>
                   <div class="c-form__item">
                     <div class="c-form__label">お問い合わせ内容<span class="c-form__require">必須</span></div>
                     <div class="c-form__body">
-                      <textarea class="c-form__textarea" id="comment" name="comment" rows="10" value="お問い合わせ内容を具体的にお知らせください。" readonly></textarea>
+                      <textarea class="c-form__textarea js-autoresize" id="comment" name="comment" readonly>料金について教えて下さい</textarea>
                     </div>
                   </div>
-                  <p class="c-form__comment">お問い合わせが大変混みあっておりますため、ご連絡までお時間がかかることがございます。予めご了承を頂けますと幸いです。</p>
                   <div class="c-form__submit">
-                    <button class="c-button-submit" type="submit" id="submit">入力内容を確認する</button>
                     <button class="c-button-back" type="button" onclick="history.back()">戻る</button>
+                    <button class="c-button-submit" type="submit" id="submit">上記内容で送信する</button>
                   </div>
                 </div>
               </form>

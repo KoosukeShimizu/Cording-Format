@@ -38,8 +38,8 @@
     border: 2px solid $c-primary;
     color: white;
     @include hover {
-      background: lighten($c-primary, 40%);
-      color: $c-primary;
+      background: lighten($c-primary, 10%);
+      // color: $c-primary;
     }
   }
   &-secondary {
@@ -49,8 +49,8 @@
     border: 2px solid $c-secondary;
     color: white;
     @include hover {
-      background: lighten($c-secondary, 40%);
-      color: $c-secondary;
+      background: lighten($c-secondary, 20%);
+      // color: $c-secondary;
     }
   }
   &-tertiary {
@@ -60,8 +60,8 @@
     border: 2px solid $c-tertiary;
     color: white;
     @include hover {
-      background: lighten($c-tertiary, 40%);
-      color: $c-tertiary;
+      background: lighten($c-tertiary, 20%);
+      // color: $c-tertiary;
     }
   }
   &-head {
@@ -72,7 +72,7 @@
     color: white;
     @include hover {
       background: lighten($c-accent, 40%);
-      color: $c-accent;
+      // color: $c-accent;
     }
   }
   &-submit {
@@ -83,7 +83,7 @@
     color: white;
     @include hover {
       background: lighten($c-accent, 10%);
-      color: $c-accent;
+      // color: $c-accent;
     }
     &[disabled] {
       background: $c-disable;
@@ -100,8 +100,8 @@
     border: 2px solid $c-primary;
     color: $c-primary;
     @include hover {
-      background: $c-primary;
-      color: white;
+      background: lighten($c-primary, 50%);
+      // color: white;
     }
   }
 }
