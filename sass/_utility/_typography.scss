@@ -5,17 +5,29 @@ Typography
 /**
 * 文字色
 **/
-
-.u-c-pink {
+.u-c-primary {
+  color: $c-primary;
+}
+.u-c-secondary {
   color: $c-secondary;
 }
-
-.u-c-red {
+.u-c-tertiary {
+  color: $c-tertiary;
+}
+.u-c-accent {
+  color: $c-accent;
+}
+.u-c-danger {
   color: $c-danger;
 }
-
-.u-c-brown {
-  color: $c-primary;
+.u-c-important {
+  color: $c-important;
+}
+.u-c-success {
+  color: $c-success;
+}
+.u-c-disable {
+  color: $c-disable;
 }
 
 

@@ -2,7 +2,7 @@
 PC/SP折り返し切り替え
 -------------------------------------------------- */
 
-.u-sp-br {
+.u-br-sp {
   display: block;
 
   @include mq(sp,max) {
@@ -10,7 +10,7 @@ PC/SP折り返し切り替え
   }
 }
 
-.u-pc-br {
+.u-br-pc {
   display: inline;
 
   @include mq(sp,min) {

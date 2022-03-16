@@ -2,7 +2,7 @@
 PC/SP表示切り替え
 -------------------------------------------------- */
 
-.u-sp-display {
+.u-display-sp {
   display: block;
 
   @include mq(sp,max) {
@@ -10,7 +10,7 @@ PC/SP表示切り替え
   }
 }
 
-.u-pc-display {
+.u-display-pc {
   display: none;
 
   @include mq(sp,min) {
