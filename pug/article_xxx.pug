@@ -76,7 +76,7 @@ html(lang='ja')
             figure.p-article__mv
               img(src=root+imgPath+"common/dummy-l.png" loading="lazy"  width="" height="" alt="")
 
-            details.c-toc
+            details.c-toc(open)
               summary.c-toc__title 目次
               #js-toc
 
@@ -90,39 +90,41 @@ html(lang='ja')
               p これは通常テキスト（p）です
             
               p こちらはテキストの見た目だけ変更するタグです#[small これは細目テキスト（small）です]#[br]#[b これは太字テキスト（b）です]#[br]#[i これは斜体テキスト（i）です]#[br]#[u これは下線テキスト（u）です]#[br]#[s これは打ち消しテキスト（u）です]#[br]#[mark これはマーカーテキスト（mark）です]#[br]#[a(href="#") これはリンクテキスト（a）です]
+              h3 中見出しスタイル（h3）
+              
 
-               h2 大見出しスタイル２（h2）
+              h2 大見出しスタイル２（h2）
               p こちらはテキストの意味を表すタグです#[strong これは強調テキスト（strong）です]#[br] #[em これは強調テキスト（em）です]#[br] #[small これは細目テキスト（small）です]#[br]#[address これは連絡先や問合せ先を表すテキスト（address）です]#[br]#[del これは文字の削除（del）を表すテキストです]#[br]#[ins これは文字の追加を表すテキスト（ins）です]#[br]#[mark これはマーカーテキスト（mark）です]#[br]#[a(href="#") これはリンクテキスト（a）です]
 
-              code.
-                <h2>codeタグの役割</h2>
-                <p>これはコード記述用（code）です<p>
-                <div>この中にかかれたコードは変換されません</div>
-              
-              pre.
-                これは入力内容を
-                そのまま表示する用（pre）タグです。
-                改行位置などそのまま反映されます。
+                code.
+                  <h2>codeタグの役割</h2>
+                  <p>これはコード記述用（code）です<p>
+                  <div>この中にかかれたコードは変換されません</div>
+                
+                pre.
+                  これは入力内容を
+                  そのまま表示する用（pre）タグです。
+                  改行位置などそのまま反映されます。
 
-              blockquote.
-                p これは引用文（blockquote）です引用文です引用文です引用文です引用文です
-                p 引用元：#[a(href="#" target="_blank") 引用記事タイトル | 引用サイト]
+                blockquote.
+                  p これは引用文（blockquote）です引用文です引用文です引用文です引用文です
+                  p 引用元：#[a(href="#" target="_blank") 引用記事タイトル | 引用サイト]
 
-              img(src=root+imgPath+"common/dummy-m.png" loading="lazy" alt="")
+                img(src=root+imgPath+"common/dummy-m.png" loading="lazy" alt="")
 
-              h3 中見出しスタイル（h3）
-              ul
-                li これはリストタグです。これはリストタグです。
-                li これはリストタグです。これはリストタグです。
-                li これはリストタグです。これはリストタグです。
-                li これはリストタグです。これはリストタグです。
+                h3 中見出しスタイル（h3）
+                ul
+                  li これはリストタグです。これはリストタグです。
+                  li これはリストタグです。これはリストタグです。
+                  li これはリストタグです。これはリストタグです。
+                  li これはリストタグです。これはリストタグです。
 
-              h4 小見出しスタイル（h4）
-              ol
-                li これは順序タグです。これは順序タグです。
-                li これは順序タグです。これは順序タグです。
-                li これは順序タグです。これは順序タグです。
-                li これは順序タグです。これは順序タグです。
+                h3 中見出しスタイル（h3）
+                ol
+                  li これは順序タグです。これは順序タグです。
+                  li これは順序タグです。これは順序タグです。
+                  li これは順序タグです。これは順序タグです。
+                  li これは順序タグです。これは順序タグです。
 
               table
                 colgroup
@@ -140,7 +142,7 @@ html(lang='ja')
                     td テーブルコンテンツテーブルコンテンツ
               // CMS EDIT CONTENT END
 
-          include _includes/_module/_pager
+          //- include _includes/_module/_pager
         // /pageContents
         //-========================
         //- PAGE CONTENTS END

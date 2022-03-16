@@ -35,11 +35,11 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
     // 要素がh3タグの場合
-    if(value.tagName === 'H3') {
-      var ul = document.createElement('ol');
+    if (value.tagName === 'H3') {
+      var ol = document.createElement('ol');
       var li = document.createElement('li');
       var a = document.createElement('a');
-      ul.classList.add("c-toc__child");
+      ol.classList.add("c-toc__child");
       li.classList.add("c-toc__h3");
       a.classList.add("c-toc__link");
 
@@ -51,10 +51,12 @@ document.addEventListener('DOMContentLoaded', function () {
       a.innerHTML = value.textContent;
       a.href = '#' + value.id;
       li.appendChild(a)
-      ul.appendChild(li);
+      // ol.appendChild(li);
 
       // 最後の<li>の中に要素を追加する
-      lastLi.appendChild(ul);
+      lastLi.appendChild(li);
+      
+      contentsList.appendChild(ol);
     }
   });
 

@@ -31,15 +31,15 @@
   }
   &__list{
     margin-top: $gt10;
-    counter-reset: li;
+    counter-reset: h2;
   }
   &__h2{
     // border-bottom: 1px solid #000;
     padding-left: 1.5em;
     position: relative;
     &:before{
-      counter-increment: li;
-      content: counter(li);
+      counter-increment: h2;
+      content: counter(h2);
       position: absolute;
       left: 0;
       top: calc(#{$gt10} - 0.25em);
@@ -55,14 +55,14 @@
     
   }
   &__child{
-    counter-reset: li2;
+    counter-reset: h3;
   }
   &__h3{
     padding-left: 2.5em;
     position: relative;
     &:before{
-      counter-increment: li2;
-      content: counter(li) "-" counter(li2);
+      counter-increment: h3;
+      content: counter(h2) "-" counter(h3);
       position: absolute;
       left: 0;
       top: calc(#{$gt10} - 0.25em);
@@ -76,6 +76,7 @@
   //   margin: 0;
   // }
 }
+
 
 .c-toc-child {
   margin: 0;
