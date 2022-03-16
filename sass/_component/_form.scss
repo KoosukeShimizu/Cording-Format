@@ -126,10 +126,11 @@
     display: inline-block;
     border-radius: 3px;
   }
-  &__comment {
-    display: block;
+  &__text {
+    display: inline-block;
     padding: 0;
-    margin: 0 auto $gt40;
+    margin: 0 auto $gt20;
+    text-align: left;
   }
   &__note {
     color: $c-gray60;
@@ -141,7 +142,7 @@
     margin-top: $gt10;
     font-size: $fz14;
     color: $c-danger;
-    background: url("#{$img_path}common/icons/circle-exclamation.svg") no-repeat left $gt10 center /16px;
+    background: url("#{$img_path}common/icons/circle-exclamation.svg") no-repeat left $gt10 center / 16px;
     text-align: left;
   }
 }
@@ -160,23 +161,44 @@
   &__body {
     position: relative;
   }
-  &__group {
-    border: 1px solid $c-border;
-    border-radius: 4px;
-    padding: $gt40 $gt20;
-  }
   &__submit {
     display: flex;
     justify-content: center;
     align-items: center;
   }
 }
+
 .is-inline {
   width: auto;
   min-width: 25%;
   margin-right: 0.5em;
 }
 
+.c-form-agree {
+  border: 2px solid $c-danger;
+  border-radius: 4px;
+  padding: $gt40 $gt20 $gt20;
+  text-align: center;
+  margin-bottom: $gt40;
+  &__title{
+    font-size: $fz20;
+    font-weight: 700;
+    color: $c-danger;
+    margin-bottom: $gt30;
+  }
+  &__text{
+    margin-bottom: $gt20;
+  }
+  &__body{
+    margin-bottom: $gt30;
+  }
+  &__list{
+    text-align: left;
+    display: inline-block;
+    margin: auto;
+    list-style: disc;
+  }
+}
 /* --------------------------------------------------
 フォーム：placeholder
 -------------------------------------------------- */

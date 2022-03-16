@@ -1,3 +1,18 @@
+// 同意ボタン
+//================
+$(function () {
+  $(".js-agree-target").attr("disabled", "disabled");
+
+  $(".js-agree").click(function() {
+    if ($(this).prop("checked")) {
+      $(".js-agree-target").removeAttr("disabled", "disabled");
+    } else {
+      $(".js-agree-target").attr("disabled", "disabled");
+    }
+  });
+});
+
+
 //passwordView
 $(".password-view").click(function () {
   // iconの切り替え
@@ -122,3 +137,4 @@ $(function () {
     $(this).height(lineHeight * lines);
   });
 });
+

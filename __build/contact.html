@@ -393,18 +393,21 @@
                       <div class="c-form__error">お問い合わせ内容を入力してください</div>
                     </div>
                   </div>
-                  <div class="c-form__item c-form__group u-text-center">
-                    <div class="c-form__label">プライバシポリシーへの同意<span class="c-form__require">必須</span></div>
-                    <div class="c-form__body">
-                      <label class="c-form__checkbox">
-                        <input type="checkbox" name="period" id="" value="午前中" required><span>プライバシーポリシーに同意します。</span>
-                      </label>
-                      <div class="c-form__error">プライバシーポリシーに同意してください</div>
+                  <div class="c-form-agree">
+                    <div class="c-form-agree__title">同意事項</div>
+                    <div class="c-form-agree__text">当フォームのご利用には、下記事項のご確認とご同意が必要です。</div>
+                    <div class="c-form-agree__body">
+                      <ul class="c-form-agree__list">
+                        <li>ご連絡までお時間がかかることがございます。</li>
+                        <li>プライバシーポリシーに同意してください。</li>
+                      </ul>
                     </div>
+                    <label class="c-form__checkbox">
+                      <input class="js-agree" type="checkbox" name="" id="agree" value="" required><span>上記に同意します</span>
+                    </label>
                   </div>
-                  <p class="c-form__comment">お問い合わせが大変混みあっておりますため、ご連絡までお時間がかかることがございます。予めご了承を頂けますと幸いです。</p>
                   <div class="c-form__submit">
-                    <button class="c-button-submit" type="submit" id="submit">入力内容を確認する</button>
+                    <button class="c-button-submit js-agree-target" type="submit" id="submit">入力内容を確認する</button>
                   </div>
                 </div>
               </form>
@@ -454,6 +457,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js?ver=1.0.0"></script>
     <script src="./assets/js/common.min.js?ver=1.0.0"></script>
     <script src="https://yubinbango.github.io/yubinbango/yubinbango.js"></script>
+    <script src="./assets/js/form.min.js?ver=1.0.0"></script>
     <!-- パンくずリストの構造化データ-->
     <script type="application/ld+json">
       {

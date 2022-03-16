@@ -85,6 +85,13 @@
       background: lighten($c-accent, 10%);
       color: $c-accent;
     }
+    &[disabled] {
+      background: $c-disable;
+      border: 2px solid $c-disable;
+      color: white;
+      pointer-events: none;
+      cursor: default;
+    }
   }
   &-back {
     @extend %button-core;

@@ -269,18 +269,20 @@ html(lang='ja')
                       textarea.c-form__textarea(id ="comment" name='comment' rows='10' placeholder='お問い合わせ内容を具体的にお知らせください。')
                       .c-form__error お問い合わせ内容を入力してください
 
-                  .c-form__item.c-form__group.u-text-center
-                    .c-form__label プライバシポリシーへの同意#[span.c-form__require 必須]
-                    .c-form__body
-                      label.c-form__checkbox
-                        input(type="checkbox" name="period" id="" value="午前中" required)
-                        span プライバシーポリシーに同意します。
-                      .c-form__error プライバシーポリシーに同意してください
-
-                  p.c-form__comment お問い合わせが大変混みあっておりますため、ご連絡までお時間がかかることがございます。予めご了承を頂けますと幸いです。
+                  .c-form-agree
+                    .c-form-agree__title 同意事項
+                    .c-form-agree__text 当フォームのご利用には、下記事項のご確認とご同意が必要です。
+                    .c-form-agree__body
+                      ul.c-form-agree__list
+                        li ご連絡までお時間がかかることがございます。
+                        li プライバシーポリシーに同意してください。
+                    label.c-form__checkbox
+                      input.js-agree(type="checkbox" name="" id="agree" value="" required)
+                      span 上記に同意します
+                  
 
                   .c-form__submit
-                    button.c-button-submit(type="submit" id="submit") 入力内容を確認する
+                    button.c-button-submit.js-agree-target(type="submit" id="submit") 入力内容を確認する
 
               .c-panel-contact
                 p.c-panel-contact__text
@@ -308,6 +310,7 @@ html(lang='ja')
     //---------------------------------
     block append js
       script(src="https://yubinbango.github.io/yubinbango/yubinbango.js")
+      script(src=root+jsPath+"form.min.js?ver=1.0.0")
       //- script(type='text/javascript').
         $(function () {
           %scripts%
