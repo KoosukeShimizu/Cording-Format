@@ -7,16 +7,9 @@
   &-intro {
     margin: 120px 0;
 
-    @include mq_down(md) {
-      margin: vw(96) 0;
-    }
 
     p {
       margin-bottom: 24px;
-
-      @include mq_down(md) {
-        margin-bottom: vw(24);
-      }
 
       &:last-child {
         margin-bottom: 0;
@@ -32,15 +25,8 @@
   max-width: 815px;
   position: relative;
 
-  @include mq_down(md) {
-    margin-bottom: vw(96);
-  }
 
   &__title {
     margin-bottom: 72px;
-
-    @include mq_down(md) {
-      margin-bottom: vw(40);
-    }
   }
 }

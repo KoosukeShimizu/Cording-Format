@@ -19,6 +19,12 @@
     font-size: $fz24;
     padding-top: 0;
   }
+  @include mq(tab,min){
+    &[readonly] {
+      border-bottom: none;
+      padding: 0;
+    }
+  }
 }
 
 %form-style-a {
@@ -148,6 +154,7 @@
     background: url("#{$img_path}common/icons/circle-exclamation.svg") no-repeat left $gt10 center / 16px;
     text-align: left;
   }
+  
 }
 
 //  レイアウトなど
@@ -170,7 +177,31 @@
     align-items: center;
     [class^="c-button"]{
       margin: 0 $gt10  $gt20;
-
+    }
+  }
+  @include mq(tab,min){
+    &__item {
+      display: flex;
+      flex-wrap: wrap;
+      margin: 0;
+      border: 1px solid #eee;
+    }
+    &__label {
+      font-size: $fz20;
+      width: 30%;
+      padding: $gt20;
+      background: #f5f5f5;
+      margin: 0;
+    }
+    &__body {
+      position: relative;
+      width: 70%;
+      padding: $gt20;
+      background: white;
+      margin: 0;
+    }
+    &__submit {
+      margin-top: $gt40;
     }
   }
 }
@@ -186,7 +217,7 @@
   border-radius: 4px;
   padding: $gt40 $gt20 $gt20;
   text-align: center;
-  margin-bottom: $gt40;
+  margin: $gt40;
   &__title{
     font-size: $fz20;
     font-weight: 700;
