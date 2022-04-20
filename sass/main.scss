@@ -2,6 +2,7 @@
 // ==================================================
 // Foundation
 // ==================================================
+
 @import "./_foundation/breakpoint"; // ブレイクポイント
 @import "./_foundation/function"; // px→vw変換
 @import "./_foundation/mixin"; // 関数
@@ -12,18 +13,6 @@
 // @import "./_foundation/variable";        // その他変数管理
 @import "./_foundation/typography"; // フォント管理
 @import "./_foundation/base"; // ベース設定
-
-// ==================================================
-// Utility
-// 微調整用
-// 接頭語： .u-
-// ==================================================
-@import "./_utility/display";
-@import "./_utility/image";
-@import "./_utility/typography";
-@import "./_utility/zindex";
-@import "./_utility/br";
-@import "./_utility/js";
 
 // ==================================================
 // Layout
@@ -76,3 +65,24 @@
 @import "./_project/contact";
 @import "./_project/confirm";
 @import "./_project/thanks";
+
+// ==================================================
+// Library
+// 外部ライブラリ調整用
+// ==================================================
+@import "./_library/mfp";
+@import "./_library/slick";
+@import "./_library/swiper";
+
+
+// ==================================================
+// Utility
+// 微調整用
+// 接頭語： .u-
+// ==================================================
+@import "./_utility/display";
+@import "./_utility/image";
+@import "./_utility/typography";
+@import "./_utility/zindex";
+@import "./_utility/br";
+@import "./_utility/js";
