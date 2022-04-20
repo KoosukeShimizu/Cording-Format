@@ -2,7 +2,6 @@
 // ==================================================
 // Foundation
 // ==================================================
-
 @import "./_foundation/breakpoint"; // ブレイクポイント
 @import "./_foundation/function"; // px→vw変換
 @import "./_foundation/mixin"; // 関数
@@ -16,6 +15,8 @@
 
 // ==================================================
 // Utility
+// 微調整用
+// 接頭語： .u-
 // ==================================================
 @import "./_utility/display";
 @import "./_utility/image";
@@ -26,6 +27,7 @@
 
 // ==================================================
 // Layout
+// 接頭語： .l-
 // ==================================================
 @import "./_layout/header";
 @import "./_layout/main";
@@ -33,13 +35,9 @@
 // @import "./_layout/sidebar";
 
 // ==================================================
-// object - module
-// ==================================================
-@import "./_component/breadcrumb";
-@import "./_component/pager";
-
-// ==================================================
-// component
+// object-component
+// 再利用可能な最小パーツ
+// 接頭語： .c-
 // ==================================================
 @import "./_component/typography";
 @import "./_component/button";
@@ -47,20 +45,34 @@
 @import "./_component/list";
 @import "./_component/media";
 @import "./_component/card";
-@import "./_component/panel";
-@import "./_component/accordion";
-@import "./_component/dropdown";
 
-@import "./_component/form";
-@import "./_component/step";
-@import "./_component/toc";
+
+// ==================================================
+// object - module
+// 再利用可能な中規模パーツ用
+// 接頭語： .c-
+// ==================================================
+@import "./_module/page";
+@import "./_module/single";
+@import "./_module/toc";
+@import "./_module/archive";
+@import "./_module/form";
+@import "./_module/step";
+
+@import "./_module/breadcrumb";
+@import "./_module/pager";
+@import "./_module/accordion";
+@import "./_module/dropdown";
+
+@import "./_module/panel";
 
 // ==================================================
 // Project
+// 再利用不可なページコンテンツ用
+// 場合によっては別cssとして切り分け可能
+// 接頭語： .p-
 // ==================================================
 @import "./_project/frontpage";
-@import "./_project/page";
-@import "./_project/article";
 @import "./_project/contact";
 @import "./_project/confirm";
 @import "./_project/thanks";
