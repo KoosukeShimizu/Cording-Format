@@ -35,7 +35,6 @@
 // ==================================================
 // object - module
 // ==================================================
-@import "./_component/page-head";
 @import "./_component/breadcrumb";
 @import "./_component/pager";
 
@@ -60,6 +59,7 @@
 // Project
 // ==================================================
 @import "./_project/frontpage";
+@import "./_project/page";
 @import "./_project/article";
 @import "./_project/contact";
 @import "./_project/confirm";
