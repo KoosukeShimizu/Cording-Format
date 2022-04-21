@@ -1,100 +1,38 @@
-$(function () {
-  //グローバルナビゲーション
-  //======================
-  var navToggle = $('.js-globalNavi-toggle'),
-      navTarget = $('.js-globalNavi-body'),
-      body = $(document.body);
-
-  navTarget.removeClass('is-open');
-  navToggle.removeClass('is-open');
-
-  navToggle.click(function () {
-    navTarget.toggleClass('is-open');
-    $(this).toggleClass('is-open');
-    $('html').toggleClass('is-scroll-off');
-    event.stopPropagation();
-  });
-
-  //ハンバーガー解除
-  $('.side-close').click(function () {
-    navTarget.toggleClass('is-open');
-    $(this).toggleClass('is-open');
-    $('html').removeClass('is-scroll-off');
-    event.stopPropagation();
-  });
-
-  $(window).resize(function () {
-    var x = $(window).width();
-    var y = 900;
-    if (x <= y) {} else {
-      navTarget.removeClass('is-open');
-      navToggle.removeClass('is-open');
-      $('html').removeClass('is-scroll-off');
-    }
-  });
-
-//スムーススクロール
-  //======================
-  $('a[href^="#"]').click(function() {
-    let speed = 400;
-    let type = 'swing';
-    let href= $(this).attr("href");
-    let target = $(href == "#index" ? 'html' : href);
-    let position = target.offset().top;
-    $('body,html').animate({scrollTop:position}, speed, type);
-    return false;
-  });
-
-
-  //ページトップ
-  //======================
-  var window_cash = $( window );
-  $( '.js-pagetop' ).on( 'click', function() {
-    var speed = 600;
-    $( 'html, body' ).animate( { scrollTop: 0 }, speed, 'swing' );
-    return false;
-  });
+// Layout
+//======================
+import './_includes/_layout/_nav.js';
+import './_includes/_layout/_smoothScroll.js';
+import './_includes/_layout/_pageTop.js';
 
 
 
 
-   //アコーディオン
-  //======================
-  $(".js-accordion dt").on("click", function() {
-    $(this).toggleClass("is-open");
-    $(this).next().slideToggle();
-    return false;
-  });
+// Module
+//======================
+import './_includes/_module/_accordion.js';
+// import './_includes/_module/_dropdown.js';
+// import './_includes/_module/_tab.js';
+import './_includes/_module/_toc.js';
 
 
-   //ドロップダウン
-  //======================
-  $(".js-dropdown-content").hide();
-  $(".js-dropdown-toggle").on("click", function () {
-    $(this).toggleClass("is-open");
-    // $(this).next().toggleClass("is-open");
-    $(this).next(".js-dropdown-content").slideToggle();
-    return false;
-  });
 
-
-//タブ
-  //======================
-  $( '.jc-tab' ).on( 'click', function() {
-    $( this ).addClass( 'js-active' ).siblings( '.js-active' ).removeClass( 'js-active' );
-    var target = $( this ).data( 'target' );
-    $( target ).addClass( 'js-active' ).siblings( '.js-active' ).removeClass( 'js-active' );
-    return false;
-  });
-
-});
+// Form
+//======================
+// import './_includes/_form/_form-agree.js';
+// import './_includes/_form/_form-branch.js';
+// import './_includes/_form/_form-error.js';
+// import './_includes/_form/_form-file.js';
+// import './_includes/_form/_form-password.js';
+// import './_includes/_form/_form-postal.js';
+// import './_includes/_form/_form-select.js';
+// import './_includes/_form/_form-textarea.js';
 
 
 
 
-
-
-
-
-
-
+// Library / trigger
+//======================
+// import './_includes/_library/_inview.js';
+// import './_includes/_library/_mfp.js';
+// import './_includes/_library/_slick.js';
+// import './_includes/_library/_swiper.js';
