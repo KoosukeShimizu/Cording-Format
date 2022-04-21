@@ -35,7 +35,7 @@
   }
   &__item{
     // width: clamp(140px,50%,300px);
-    font-size: $fz14;
+    font-size: fz(12,14);
     text-align: left;
     letter-spacing: 0;
     margin-bottom: gt(20,40);
