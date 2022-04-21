@@ -1,3 +1,5 @@
+// （´・ω・`）< button-core
+// -------------------------------
 %button-core {
   //ボタン基本構造
   outline: none;
@@ -12,6 +14,9 @@
   letter-spacing: 0.1em;
   line-height: 1;
 }
+
+// （´・ω・`）< button-style-primary
+// -------------------------------
 %button-style-primary {
   //第一ボタンスタイル
   border-radius: 4px;
@@ -20,6 +25,9 @@
   max-width: 400px;
   font-size: fz(16,20);
 }
+
+// （´・ω・`）< button-style-secondary
+// -------------------------------
 %button-style-secondary {
   //第二ボタンスタイル
   border-radius: 4px;
@@ -30,6 +38,11 @@
   font-size: fz(11,14);
 }
 
+
+
+
+// （´・ω・`）< button-style
+// -------------------------------
 .c-button {
   &-primary {
     @extend %button-core;
@@ -39,7 +52,6 @@
     color: white;
     @include hover {
       background: lighten($c-primary, 10%);
-      // color: $c-primary;
     }
   }
   &-secondary {
@@ -50,7 +62,6 @@
     color: white;
     @include hover {
       background: lighten($c-secondary, 20%);
-      // color: $c-secondary;
     }
   }
   &-tertiary {
@@ -61,7 +72,6 @@
     color: white;
     @include hover {
       background: lighten($c-tertiary, 20%);
-      // color: $c-tertiary;
     }
   }
   &-head {
@@ -72,7 +82,6 @@
     color: white;
     @include hover {
       background: lighten($c-accent, 40%);
-      // color: $c-accent;
     }
   }
   &-submit {
@@ -83,7 +92,6 @@
     color: white;
     @include hover {
       background: lighten($c-accent, 10%);
-      // color: $c-accent;
     }
     &[disabled] {
       background: $c-disable;
@@ -101,7 +109,6 @@
     color: $c-primary;
     @include hover {
       background: lighten($c-primary, 50%);
-      // color: white;
     }
   }
 }

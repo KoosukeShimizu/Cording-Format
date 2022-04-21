@@ -1,0 +1,7 @@
+// （´・ω・`）< button-wrapper
+// -------------------------------
+.c-block {
+  &-button {
+    @include flexbox(flex, null, wrap, center, center, null);
+  }
+}
