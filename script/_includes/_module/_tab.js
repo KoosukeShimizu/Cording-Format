@@ -1,7 +1,7 @@
 //タブ
 //======================
-var tabToggle = $('.js-tab-toggle .tab-btn');
-var tabCont = $('.js-tab-contents .tab-item');
+let tabToggle = $('.js-tab-toggle .tab-btn');
+let tabCont = $('.js-tab-contents .tab-item');
 
 tabToggle.click(function () {
   tabToggle.removeClass('is-active');

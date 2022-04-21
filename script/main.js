@@ -10,7 +10,7 @@ import './_includes/_layout/_pageTop.js';
 // Module
 //======================
 import './_includes/_module/_accordion.js';
-// import './_includes/_module/_dropdown.js';
+import './_includes/_module/_dropdown.js';
 // import './_includes/_module/_tab.js';
 import './_includes/_module/_toc.js';
 

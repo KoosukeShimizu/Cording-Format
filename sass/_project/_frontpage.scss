@@ -1,31 +1,78 @@
-.p-home-hero {
-  width: min(95%,815px);
-  margin: 0 auto;
-  text-align: center;
-  &__mainCopy{
-    width: min(90%,400px);
-    // border: 1px solid #000;
-    margin: 0 auto gt(20,40);
+// （´・ω・`）< TOP / Global
+// -------------------------------
+.p-home {
+  &__title {
+    font-size: fz(22);
+    line-height: 1.2;
+    font-weight: 700;
+    text-align: center;
   }
-  &__mainVidual{
-    max-width: 500px;
-    // border: 1px solid #000;
-    margin: 0 auto gt(20,40);
+  &__subtitle {
+    font-size: fz(12, 20);
+    font-weight: 700;
+    text-transform: uppercase;
+    text-align: center;
+    margin-bottom: gt(20);
   }
-  &__subCopy{
-    max-width: 400px;
-    // border: 1px solid #000;
-    margin: 0 auto;
+  &__image {
+    margin: 0 auto gt(20);
+    display: block;
+    text-align: center;
   }
 }
 
-
-.p-home-news {
-  width: min(95%,815px);
+// （´・ω・`）< TOP / Hero
+// -------------------------------
+.p-home-hero {
+  // width: min(100%, 815px);
   margin: 0 auto;
   text-align: center;
-  &__list{
-    width: min(80%,400px);
+  background: #ccc;
+  min-height: min(120vw, 600px);
+  @include flexbox(flex, null, wrap, center, center, null);
+  &__inner {
+    width: min(95%, 1024px);
+    margin: auto;
+  }
+  &__mainCopy {
+    width: min(90%);
+    font-size: fz(30);
+    font-weight: 900;
+    line-height: 1.2;
+    margin: 0 auto gt(20, 40);
+  }
+  // &__mainVidual {
+  //   display: block;
+  //   max-width: 300px;
+  //   margin: 0 auto gt(20, 40);
+  //   // img{
+  //   //   max-width: 100%;
+  //   // }
+  // }
+  &__text {
+    font-size: fz(16, 24);
+    margin: 0 auto gt(20, 40);
+  }
+}
+
+// （´・ω・`）< TOP / Aセクション
+// -------------------------------
+.p-home-a{
+  background: #f5f5f5;
+}
+
+// （´・ω・`）< TOP / Bセクション
+// -------------------------------
+.p-home-b{
+  background: white;
+}
+
+.p-home-news {
+  width: min(95%, 815px);
+  margin: 0 auto;
+  text-align: center;
+  &__list {
+    width: min(80%, 400px);
     margin: auto;
     // display: flex;
     // flex-wrap: wrap;
@@ -33,67 +80,61 @@
 
     // gap: 20px;
   }
-  &__item{
+  &__item {
     // width: clamp(140px,50%,300px);
-    font-size: fz(12,14);
+    font-size: fz(12, 14);
     text-align: left;
     letter-spacing: 0;
-    margin-bottom: gt(20,40);
+    margin-bottom: gt(20, 40);
   }
 }
 
 .p-home-service {
-  width: min(95%,815px);
+  width: min(95%, 815px);
   margin: 0 auto;
   text-align: center;
-  &__list{
-    width: min(90%,400px);
+  &__list {
+    width: min(90%, 400px);
     margin: auto;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     // gap: 20px;
   }
-  &__item{
+  &__item {
     // width: min(30%,300px);
     width: calc(100% / 3);
     padding: 2%;
   }
 }
 
-
 .p-home-works {
-  width: min(95%,815px);
+  width: min(95%, 815px);
   margin: 0 auto;
   text-align: center;
-  &__list{
-    width: min(90%,400px);
+  &__list {
+    width: min(90%, 400px);
     margin: auto;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     // gap: 20px;
   }
-  &__item{
+  &__item {
     // width: min(30%,300px);
     width: calc(100% / 2);
     padding: 2%;
   }
 }
 
-
-
-
-
 .p-home-company {
-  width: min(85%,600px);
+  width: min(85%, 600px);
   margin: 0 auto;
   // text-align: center;
-  }
-
+}
 
 .p-home-contact {
-  width: min(85%,500px);
+  width: min(85%, 500px);
   margin: 0 auto;
   // text-align: center;
 }

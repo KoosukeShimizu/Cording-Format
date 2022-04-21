@@ -69,34 +69,41 @@ html(lang='ja')
         article.p-home
           // hero START
           section#hero.l-section.p-home-hero
-            h1.p-home-hero__mainCopy メインキャッチコピーが入ります
-            .p-home-hero__text ヒーローセクションの文言が入ります。
-            picture.p-home-hero__mainVidual
-              source(srcset=root+imgPath+"top/mainvidual-pc.png" media="(min-width: 640px)" width="1200" height="900" )
-              img(loading="lazy" src=root+imgPath+"top/mainvidual-sp.png" width="420" height="315" alt="メインビジュアル")
-            .c-button-wrapper
-              a.c-button-primary(href=root+"#"+extention) プライマリ ボタン
+            .p-home-hero__inner
+              h1.p-home-hero__mainCopy メインキャッチコピー
+              .p-home-hero__text ヒーローセクションの文言が入ります。
+              //- picture.p-home-hero__mainVidual
+                source(srcset=root+imgPath+"top/mainvidual-pc.png" media="(min-width: 640px)" width="1200" height="900" )
+                img(loading="lazy" src=root+imgPath+"top/mainvidual-sp.png" width="420" height="315" alt="メインビジュアル")
+              .c-button-wrapper
+                a.c-button-primary(href=root+"#"+extention) プライマリ ボタン
           // hero END
 
+
           // section a START
-          section.l-section.p-home-aaa
+          section.l-section.p-home-a
             .l-container
-              h2.c-h2-deco AAAセクション
-              .c-lead セクションAのリード文言が入ります
-              .p-home-aaa__body
-                .c-text セクションAのコンテンツがここに入ります
-                button.c-button-secondary.js-dropdown-toggle.c-dropdown-toggle(type="button") ドロップダウン
-                .js-dropdown-content
-                  p ドロップダウンコンテンツ１
+              h2.p-home__title セクションA
+              .p-home__subtitle section a
+              .p-home__body
+                picture.p-home__image
+                  source(srcset=root+imgPath+"common/dummy-l.png" media="(min-width: 640px)" width="800" height="600" )
+                  img(loading="lazy" src=root+imgPath+"common/dummy-s.png" width="420" height="315" alt="メインビジュアル")
+              
+                .c-text あのイーハトーヴォのすきとおった風、夏でも底に冷たさをもつ青いそら、うつくしい森で飾られたモリーオ市、郊外のぎらぎらひかる草の波。 またそのなかでいっしょになったたくさんのひとたち、ファゼーロとロザーロ、羊飼のミーロや、顔の赤いこどもたち、地主のテーモ、山猫博士のボーガント・デス
+
+                button.js-dropdown.c-dropdown(type="button") ドロップダウンスイッチ
+                .js-dropdown-target.c-dropdown-target
+                  p ドロップダウンコンテンツ１#[br]ドロップダウンを発火させるボタンには.js-dropdownを付与#[br]表示させるコンテンツは.js-dropdown-targetに記載してください。#[br]ボタンスタイルにしたいなどの場合は、他のコンポーネント/プロジェクトスタイルと組み合わせてください。
           // section a END
 
 
           // section b START
-          section.l-section.p-home-bbb
+          section.l-section.p-home-b
             .l-container
-              h2.c-h2-deco BBBセクション
-              .c-lead セクションBのリード文言が入ります
-              .p-home-bbb__body
+              h2.p-home__title セクションB
+              .p-home__subtitle section b
+              .p-home__body
                 .c-text セクションBのコンテンツがここに入ります
                 .c-button-wrapper
                   a.c-button-primary(href=root+"#"+extention) ターシャリ ボタン
