@@ -4,13 +4,13 @@ unless key==='home'
   nav.c-breadcrumb
     ol.c-breadcrumb__list
       li.c-breadcrumb__item
-        a(href=siteUrl): span #{siteName}
+        a(href=siteUrl) ホーム
       unless parentSlug
         li.c-breadcrumb__item
-          a(href=siteUrl+pageSlug): span #{pageTitle}
+          a(href=siteUrl+pageSlug) #{pageTitle}
       else
         li.c-breadcrumb__item
-          a(href=siteUrl+parentSlug): span #{parentTitle}
+          a(href=siteUrl+parentSlug) #{parentTitle}
         li.c-breadcrumb__item
-          a(href=siteUrl+pageSlug): span #{pageTitle}
+          a(href=siteUrl+pageSlug) #{pageTitle}
   // /Breadcrumb
