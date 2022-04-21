@@ -2,13 +2,13 @@
   width: 100%;
   border: 1px solid $c-border;
   border-radius: 3px;
-  padding: $gt30;
+  padding: gt(5,30);
   list-style: none;
   transition:$transition;
   &__title{
     text-align: center;
     cursor: pointer;
-    font-size: $fz22;
+    font-size: fz(18,22);
     position: relative;
     &:after {
       content: "";
@@ -17,7 +17,7 @@
       height: 16px;
       background: url("#{$img_path}common/icons/plus.svg") no-repeat center center /contain;
       position: absolute;
-      right: $gt10;
+      right: gt(5,10);
       top: 50%;
       transform: translate(-50%, -50%);
     }
@@ -30,7 +30,7 @@
     }
   }
   &__list{
-    margin-top: $gt10;
+    margin-top: gt(5,10);
     counter-reset: h2;
   }
   &__h2{
@@ -42,16 +42,16 @@
       content: counter(h2);
       position: absolute;
       left: 0;
-      top: calc(#{$gt10} - 0.25em);
+      top: calc(gt(10) - 0.25em);
       font-weight: 700;
       opacity: .3;
-      font-size: $fz20;
+      font-size: fz(18,20);
       // line-height: 1;
     }
   }
   &__link{
     display: block;
-    padding: $gt10 0;
+    padding: gt(5,10) 0;
     
   }
   &__child{
@@ -65,10 +65,10 @@
       content: counter(h2) "-" counter(h3);
       position: absolute;
       left: 0;
-      top: calc(#{$gt10} - 0.25em);
+      top: calc(gt(10) - 0.25em);
       font-weight: 700;
       opacity: .3;
-      font-size: $fz20;
+      font-size: fz(18,20);
     }
 
   }

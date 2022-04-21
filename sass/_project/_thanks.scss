@@ -5,7 +5,7 @@
 //   max-width: 600px;
 // }
 .p-thanks-head {
-  margin: $gt80 0;
+  margin: gt(40,80) 0;
   text-align: center;
   &__title {
     font-size: $fz40;
@@ -17,12 +17,12 @@
 .p-thanks-message {
   display: block;
   padding: 0;
-  margin: 0 auto $gt120;
+  margin: 0 auto gt(40,120);
 }
 
 .p-thanks-totop {
   display: block;
   padding: 0;
-  margin: $gt60 auto 0;
+  margin: gt(40,60) auto 0;
   text-align: center;
 }

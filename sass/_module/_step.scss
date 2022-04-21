@@ -4,7 +4,7 @@
   $baseColor: $c-gray90;
   $activeColor: $c-primary;
   // width: min(95%, 1024px);
-  margin: 0 auto $gt40;
+  margin: 0 auto gt(20,40);
   border: 1px solid $c-border;
   &__list {
     @include flexbox(flex, null, wrap, null, null, null);

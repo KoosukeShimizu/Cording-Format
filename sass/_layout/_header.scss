@@ -16,7 +16,6 @@
     align-items: center;
     position: relative;
     // @include mq(tab,max){
-    //   padding-bottom:$gt20;
     // }
   }
   &__logo {
@@ -25,7 +24,7 @@
     background: url("#{$img_path}common/siteLogo.svg") no-repeat center center / contain;
     overflow: hidden;
     text-indent: -100vw;
-    margin: $gt20;
+    margin: gt(10,20);
   }
 }
 
@@ -50,17 +49,17 @@
 // -------------------------------
 .l-header-cta {
   width: min(30%, 260px);
-  margin-right: $gt20;
+  margin-right: gt(10,20);
   &__button {
     width: auto;
     background: #000;
     color: white;
-    padding: $gt10;
+    padding: gt(10);
     display: block;
     text-align: center;
   }
   @include mq(tab,max){
-    margin:0 $gt20 0 auto;
+    margin:0 gt(10,20) 0 auto;
   }
 }
 
@@ -84,15 +83,15 @@
   //   }
   // }
   @include mq(tab, min) {
-    // margin-top: $gt20;
+    // margin-top: gt(10,20);
     border-top: 1px solid $c-border;
   }
 
   &__toggle {
     position: relative;
     // top: -50px;
-    // right: $gt20;
-    margin-right:$gt20;
+    // right: gt(10,20);
+    margin-right:gt(10,20);
     transition: $transition;
     height: 30px;
     width: 40px;
@@ -174,11 +173,11 @@
     text-transform: uppercase;
     list-style: none;
     text-align: center;
-    padding: $gt20 $gt10;
+    padding: gt(10,20) gt(10);
     @include mq(tab, min) {
       width: calc(100% / 5);
       text-align: center;
-      padding: $gt20 $gt10;
+      padding: gt(10,20) gt(10);
     }
   }
 }
