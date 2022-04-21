@@ -1,40 +1,83 @@
-.c-step{
+.c-step {
+  $stepHeight: 60px;
+  $stepHeightPc: 90px;
+  $baseColor: $c-gray90;
+  $activeColor: $c-primary;
   // width: min(95%, 1024px);
   margin: 0 auto $gt40;
   border: 1px solid $c-border;
-  &__list{
-    display: flex;
+  &__list {
+    @include flexbox(flex, null, wrap, null, null, null);
   }
-  &__item{
-    width: 100%;
+  &__item {
+    width: calc(100% / 3);
+    height: $stepHeight;
     text-align: center;
-    padding: $gt10 0;
-    background: $c-gray90;
-    &:not(:last-child){
-      border-right: 1px solid $c-border;
+    @include flexbox(flex, column, null, center, center, null);
+    // padding: gt(4) 0;
+    background: $baseColor;
+    position: relative;
+    letter-spacing: 0.05em;
+    font-size: fz(12, 18);
+    &:not(:last-child) {
+      // border-right: 1px solid $c-border;
+      &:after,
+      &:before {
+        content: "";
+        @include position(absolute, 0 null null 100%);
+        display: block;
+        width: 0;
+        height: 0;
+        border: calc(#{$stepHeight} / 2) solid transparent;
+        z-index: 10;
+      }
+      &:before {
+        @include position(absolute, 0 null null 0);
+      }
     }
-
   }
-  &__order{
+  &__order {
     text-transform: uppercase;
     display: inline-block;
     border: 1px solid $c-border;
     font-size: $fz14;
     font-weight: 700;
     border-radius: 20px;
-    padding: .4em 1em;
+    padding: 0.4em 1em;
     line-height: 1;
-    margin-bottom: .5em;
+    margin-bottom: 0.2em;
     background: white;
     color: $c-gray70;
   }
-  .is-current{
-    background: $c-primary;
+  .is-current {
+    background: $activeColor;
     color: white;
-    .c-step__order{
+    .c-step__order {
       background: white;
-      color: $c-primary;
+      color: $activeColor;
       border: transparent;
+    }
+    &:not(:last-child) {
+      &:after {
+        border-left: calc(#{$stepHeight} / 5) solid $activeColor;
+      }
+    }
+    &:not(:first-child) {
+      padding-left: 3%;
+      &:before {
+        border-left: calc(#{$stepHeight} / 5) solid $baseColor;
+      }
+    }
+  }
+  @include mq(sp, min) {
+    &__item {
+      height: calc(#{$stepHeight} * 1.5);
+      &:not(:last-child) {
+        &:after,
+        &:before {
+          border: calc(#{$stepHeight} * 1.5 / 2) solid transparent;
+        }
+      }
     }
   }
 }
