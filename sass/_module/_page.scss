@@ -3,7 +3,7 @@
 -------------------------------------------------- */
 .c-page {
   &__head {
-    padding: gt(40) 0 gt(20);
+    padding: gt(60,100) 0 gt(20);
     margin: auto;
   }
   &__title {
@@ -12,7 +12,7 @@
     line-height: 1;
     letter-spacing: 0.05em;
     margin-bottom: gt(4);
-    text-transform: capitalize;
+    text-transform:capitalize;
   }
   &__subtitle {
     font-size: fz(11);
@@ -21,10 +21,10 @@
     margin-bottom: gt(20);
   }
   &__intro {
-    font-size: fz(14, 22);
+    font-size: fz(14,22);
     // font-size: 16px;
     display: inline-block;
     text-align: left;
-    margin: 0 auto;
+    margin:  0 auto;
   }
 }

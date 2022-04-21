@@ -18,7 +18,7 @@
   padding: 1.2em 0em;
   width: 75%;
   max-width: 400px;
-  font-size: $fz20;
+  font-size: fz(16,20);
 }
 %button-style-secondary {
   //第二ボタンスタイル
@@ -27,7 +27,7 @@
   padding: 1.2em 0em;
   width: 100%;
   // max-width: 400px;
-  font-size: $fz14;
+  font-size: fz(11,14);
 }
 
 .c-button {

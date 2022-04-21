@@ -12,17 +12,17 @@
     aspect-ratio: 4 / 3;
   }
   &__body{
-    padding: $gt10;
+    padding: gt(5,10);
   }
   &__title{
-    font-size: $fz14;
+    font-size: fz(11,14);
     line-height: 1.4;
   }
   &__text{
-    font-size: $fz14;
+    font-size: fz(11,14);
     line-height: 1.4;
   }
   &__date{
-    font-size: $fz12;
+    font-size: fz(10,12);
   }
 }

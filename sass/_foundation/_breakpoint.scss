@@ -1,75 +1,10 @@
-// /**
-// * min-width
-// **/
-// $breakpoint-up: (
-//   "xs": "screen and (min-width: 321px)",
-//   "sm": "screen and (min-width: 481px)",
-//   "md": "screen and (min-width: 769px)",
-//   "lg": "screen and (min-width: 993px)",
-//   "xl": "screen and (min-width: 1201px)"
-// ) !default;
-
-
-// /**
-// * max-width
-// **/
-// $breakpoint-down: (
-//   "xs": "screen and (max-width: 320px)",
-//   "sm": "screen and (max-width: 480px)",
-//   "md": "screen and (max-width: 768px)",
-//   "lg": "screen and (max-width: 992px)",
-//   "xl": "screen and (max-width: 1200px)"
-// ) !default;
-
-// @mixin mq-up($breakpoint) {
-
-//   @media #{map-get($breakpoint-up, $breakpoint)} {
-//     @content;
-//   }
-// }
-
-// @mixin mq-down($breakpoint) {
-
-//   @media #{map-get($breakpoint-down, $breakpoint)} {
-//     @content;
-//   }
-// }
-
-// //使用例
-// // .foo {
-// //   color: blue;
-// //   @include mq_up(lg) { // lgより大きい場合
-// //     color: yellow;
-// //   }
-// //   @include mq_down(md) { // mdより小さい場合
-// //     color: red;
-// //   }
-// // }
-
-
-
-$mq-breakpoints: ('sp': 480px, 'tab': 768px, 'pc': 992px, 'cinema': 1200px, );
-
-@mixin mq($breakpoint: tab, $rule: min, $subtraction: false) {
+$mq-breakpoints: ('mb': 320px, 'sp': 480px, 'tab': 768px, 'pc': 992px, 'cinema': 1200px, );
+@mixin mq($breakpoint: tab, $rule: min) {
   $breakpoint: map_get($mq-breakpoints, $breakpoint);
-
   @if $rule==max  {
     $breakpoint: $breakpoint - 1;
   }
-
   @media screen and (#{$rule}-width: $breakpoint) {
     @content;
   }
 }
-
-//使用例
-// .foo {
-//   color: blue;
-//   @include mq(tab,min) { // lgより大きい場合
-//     color: yellow;
-//   }
-//   @include mq(tab,max,true) { // mdより小さい場合
-//     color: red;
-//   }
-// }
-

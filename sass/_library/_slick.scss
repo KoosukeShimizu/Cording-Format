@@ -135,7 +135,7 @@
   @include flexbox(null, null, wrap, center, center, null);
   text-align: center;
   font-size: 0;
-  padding: $g-s 0;
+  padding: gt(10) 0;
 
   li {
     width: 40px;

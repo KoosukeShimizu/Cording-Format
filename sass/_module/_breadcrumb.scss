@@ -2,48 +2,49 @@
 // -------------------------------
 .c-breadcrumb {
   overflow-x: auto;
-  padding: 0 16px;
   width: 100%;
-  font-size: $fz14;
+  font-size: fz(12, 16);
   background-color: #eee;
   &__list {
     overflow-x: auto;
     white-space: nowrap;
     -webkit-overflow-scrolling: touch;
-    margin: 5px;
-    // max-width: 1200px;
-    margin-left: auto;
-    margin-right: auto;
-    // border: 1px solid #000;
-    padding: $gt10 $gt20;
-    // color: white;
+    margin: 0 auto;
+    padding: gt(4) gt(16);
     line-height: 1;
+    font-weight: 500;
+    letter-spacing: 0;
+    position: relative;
   }
   &__item {
     display: inline-block;
-    line-height: 1;
-    // margin: 1px 10px 0px 0px;
+    padding: 0;
     &:not(:last-child){
       &:after {
+        vertical-align: middle;
         display: inline-block;
-        content: '/';
-        margin: 0 $gt10;
+        content: '';
+        width: 0px;
+        height: 1.5em;
+        border-right: 1px solid $c-gray80;
+        margin: 0 gt(4) 0 gt(8);
+        transform: rotate(-20deg);
       }
     }
+
     a {
-      // border-bottom: 1px solid $c-gray70;
       line-height: 1;
       vertical-align: middle;
-      // padding: 2px 0;
-      &:hover{
+      position: relative;
+      opacity: .3;
+      @include hover {
         opacity: .7;
       }
     }
-    &:last-child{
-      a{
+    &:last-child {
+      a {
         pointer-events: none;
-        opacity: .5;
-        // border-color: transparent;
+        opacity: 1;
       }
     }
   }

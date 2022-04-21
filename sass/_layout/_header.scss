@@ -15,7 +15,7 @@
     justify-content: space-between;
     align-items: center;
     position: relative;
-    // @include mq(tab,max,true){
+    // @include mq(tab,max){
     //   padding-bottom:$gt20;
     // }
   }
@@ -41,7 +41,7 @@
     width: auto;
     margin: 0 10px;
   }
-  @include mq(tab,max,true){
+  @include mq(tab,max){
     display:none;
   }
 }
@@ -59,7 +59,7 @@
     display: block;
     text-align: center;
   }
-  @include mq(tab,max,true){
+  @include mq(tab,max){
     margin:0 $gt20 0 auto;
   }
 }

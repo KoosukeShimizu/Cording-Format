@@ -4,20 +4,20 @@
   width: 100%;
   border-top: 1px solid $c-border;
   text-align: center;
-  padding: $gt60 0;
-  &__inner{
-    width: min(100%,1024px);
+  padding: gt(30,60) 0;
+  &__inner {
+    width: min(100%, 1024px);
     margin: auto;
   }
-  &__logo{
-    width: min(30%,120px);
+  &__logo {
+    width: min(30%, 120px);
     aspect-ratio: 148 / 58; //ロゴサイズを入力
     margin: auto;
-    background: url("#{$img_path}common/siteLogo.svg") no-repeat center center /contain;
+    background: url("#{$img_path}common/siteLogo-footer.svg") no-repeat center center / contain;
     // border: 1px solid #000;
     overflow: hidden;
     text-indent: -100vw;
-    margin-bottom: $gt40;
+    margin-bottom: gt(20,40);
     // color: transparent;
   }
 }
@@ -35,24 +35,24 @@
 
 //  footer-social
 // -------------------------------
-.l-footer-social{
+.l-footer-social {
   width: 100%;
-  margin: 0 auto $gt40;
-  &__list{
+  margin: 0 auto gt(20,40);
+  &__list {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
   }
-  &__item{
-    width: min(10%,40px);
+  &__item {
+    width: min(10%, 40px);
     height: min(calc(40 / 375 * 100vw), 40px);
     margin: 10px;
-    a{
+    a {
       padding: 0;
       line-height: 1;
       aspect-ratio: 1 / 1;
-      &:after{
+      &:after {
         display: none;
       }
     }
@@ -61,28 +61,25 @@
 
 //  footer-navi
 // -------------------------------
-.l-footer-navi{
+.l-footer-navi {
   margin-bottom: 40px;
-  &__list{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    align-items: center;
+  &__list {
+    @include flexbox(flex,null,wrap,space-between,center,null);
     border-top: 1px solid $c-border;
   }
-  &__item{
+  &__item {
     width: 50%;
     border-bottom: 1px solid $c-border;
-    &:nth-child(odd){
+    &:nth-child(odd) {
       border-right: 1px solid $c-border;
     }
-    a{
-      padding: $gt20;
+    a {
+      padding: gt(10,20);
       display: block;
     }
   }
-  @include mq(sp,min){
-    &__list{
+  @include mq(sp, min) {
+    &__list {
       border-left: 1px solid $c-border;
       border-right: 1px solid $c-border;
     }
@@ -90,21 +87,18 @@
     //   width: 25%;
     // }
   }
-
 }
 
 //  footer-copyright
 // -------------------------------
-.l-footer-copyright{
+.l-footer-copyright {
   width: 100%;
-  display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    font-size: $fz12;
-  &__mark{
-    width: min(3vw,16px);
+  @include flexbox(flex,null,wrap,center,center,null);
+  font-weight: 500;
+  font-size: fz(10, 12);
+  &__mark {
+    width: min(3vw, 14px);
     line-height: 1;
-    margin-right: 10px;
+    margin-right: 8px;
   }
 }

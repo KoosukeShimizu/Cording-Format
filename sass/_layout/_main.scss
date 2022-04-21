@@ -7,7 +7,7 @@
 //  main
 // -------------------------------
 .l-main {
-  background: #f5f5f5;
+  // background: #f5f5f5;
   padding: 0 0 100px 0;
   // overflow: hidden;
 }
@@ -15,32 +15,32 @@
 // -------------------------------
 .l-section {
   position: relative;
-  padding: $gt80 0;
+  padding: gt(40,80) 0;
   // overflow: hidden;
 }
 //  section
 // -------------------------------
 .l-container {
-  width: min(95%,960px);
+  width: min(90%,960px);
   margin: auto;
   &-xs{
-    width: min(95%,580px);
+    width: min(90%,580px);
     margin: auto;
   }
   &-sm{
-    width: min(95%,760px);
+    width: min(90%,760px);
     margin: auto;
   }
   &-md{
-    width: min(95%,960px);
+    width: min(90%,960px);
     margin: auto;
   }
   &-lg{
-    width: min(95%,1200px);
+    width: min(90%,1200px);
     margin: auto;
   }
   &-xl{
-    width: min(95%,1400px);
+    width: min(90%,1400px);
     margin: auto;
   }
 }

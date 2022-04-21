@@ -5,7 +5,7 @@
   &__title {
     cursor: pointer;
     position: relative;
-    padding: $gt20;
+    padding: gt(10,20);
     overflow: hidden;
     border-top: 1px solid $c-border;
 
@@ -16,7 +16,7 @@
       height: 16px;
       background: url("#{$img_path}common/icons/plus.svg") no-repeat center center /contain;
       position: absolute;
-      right: $gt10;
+      right: gt(5,10);
       top: 50%;
       transform: translate(-50%, -50%);
     }
@@ -32,6 +32,6 @@
     display: none;
     padding: 0;
     background: #eee;
-    padding: $gt20;
+    padding: gt(10,20);
   }
 }

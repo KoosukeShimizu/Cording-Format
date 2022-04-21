@@ -1,5 +1,7 @@
+//  mfp
+// -------------------------------
 .mfp-bg{
-  // background: #FFF;
+  background: #FFF;
 }
 .mfp-iframe-holder{
   padding-top: 100px;
@@ -37,7 +39,7 @@
   }
 
   &-body {
-    padding: $g-l $g-l $g-s;
+    padding: gt(10);
     min-height: 100px;
     text-align: center;
 

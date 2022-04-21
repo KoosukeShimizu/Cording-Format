@@ -17,7 +17,7 @@
   &__item {
     display: flex;
     border-bottom: 1px solid $c-border;
-    padding: $gt20;
+    padding: gt(10,20);
   }
   &__link {
     display: block;
@@ -29,17 +29,17 @@
     width: min(30%,180px);
   }
   &__body{
-    padding: $gt10;
+    padding: gt(5,10);
   }
   &__title{
-    font-size: $fz18;
+    font-size: fz(15,18);
     line-height: 1.4;
   }
   &__text{
-    font-size: $fz16;
+    font-size: fz(14,16);
     line-height: 1.4;
   }
   &__date{
-    font-size: $fz14;
+    font-size: fz(12,14);
   }
 }

@@ -19,16 +19,13 @@ body {
   background-size: 40px 40px;
   background-position: 0 0, 20px 20px;
   font-family: $sans;
-  font-size: $fz16;
+  font-size: fz(14,18);
   letter-spacing: 0.08em;
   line-height: 1.8;
   overflow-x: hidden;
   color: $c-font-primary;
   height: 100%;
-
-  // @include mq_down(md) {
-  //   font-size: vw(13);
-  // }
+  // font-weight: 500;
 }
 
 a {

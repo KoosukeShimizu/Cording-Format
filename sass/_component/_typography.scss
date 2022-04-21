@@ -1,53 +1,46 @@
 .c-h1 {
-  font-size: $fz56;
+  font-size: fz(36);
   font-weight: bold;
-  line-height: 1.47;
-  letter-spacing: .24em;
+  line-height: 1.2;
+  letter-spacing: 0.05em;
+  margin: gt(20,40) 0;
 }
 
 .c-h2 {
-  font-size: $fz36;
+  font-size: fz(24);
   font-weight: bold;
-  line-height: 1.5;
-  letter-spacing: .16em;
-  &-deco{
-    text-align: center;
-    width: 100%;
-    font-size: $fz36;
-    margin-bottom: $gt60;
-    &:before{
-      content: "";
-      width: min(30%,150px);
-      aspect-ratio: 3 / 1;
-      background: url("#{$img_path}common/mark_black.svg") no-repeat center center /contain;
-      display: block;
-      margin: 0 auto $gt40;
-    }
-  }
-  &-sub{
-    text-align: center;
-  }
+  line-height: 1.2;
+  letter-spacing: 0.05em;
+  margin: 0 0 gt(35,70) 0;
+  // &-primary {
+  //   プライマリスタイル
+  // }
+  // &-secontary{
+  //   セカンダリスタイル
+  // }
 }
 
 .c-h3 {
-  font-weight: bold;
-  font-size: $fz24;
-  line-height: 1.17;
-  letter-spacing: .16em;
-  margin: 0 0 $gt40;
-  &-deco {
-    width: 100%;
-    font-size: $fz24;
-    display: inline-block;
-    padding: $gt20 0;
-    border-top: $c-border solid 1px;
-    border-bottom: $c-border solid 1px;
-    margin: $gt60 0 $gt20;
-  }
+  font-weight: 700;
+  font-size: fz(20, 38);
+  line-height: 1.2;
+  letter-spacing: 0.05em;
+  margin: gt(30,60) 0 gt(10,20);
+  // &-primary {
+  //   プライマリスタイル
+  // }
+  // &-secontary{
+  //   セカンダリスタイル
+  // }
 }
 
-.c-lead{
-  font-size: $fz20;
-  margin-bottom: $gt40;
-  text-align: center;
+
+.c-lead {
+  font-size: fz(16,26);
+  margin-bottom: gt(20,40);
+  // text-align: center;
+}
+
+.c-text {
+  margin: 0 0 gt(10,20);
 }
