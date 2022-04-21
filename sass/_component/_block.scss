@@ -3,5 +3,6 @@
 .c-block {
   &-button {
     @include flexbox(flex, null, wrap, center, center, null);
+    margin-top: gt(40);
   }
 }
