@@ -66,55 +66,64 @@ html(lang='ja')
         //- PAGE CONTENTS START
         //-========================
         // PageContents
-        article.p-article
-          .l-container
-            .p-article__head
-              h1.p-article__title ニュースのタイトルが入ります
-              //- .p-article-heading__subtitle news
-              time.p-article__time(datetime="2022.03.07") 2022.03.07	
+        article.c-single.p-news
+          .l-container-sm
+            .c-single__head
+              time.c-single__time(datetime="2022.03.07") 2022.03.07
+              h1.c-single__title あのイーハトーヴォのすきとおった風、夏でも底に冷たさをもつ青いそら、うつくしい森で
+              .c-single__tag
+                a.c-tag(href=root+"article".extention) デフォルトタグ
+                a.c-tag-red(href=root+"article".extention) 赤タグ
+                a.c-tag-blue(href=root+"article".extention) 青タグ
+                a.c-tag-green(href=root+"article".extention) 緑タグ
+                a.c-tag-yellow(href=root+"article".extention) 黄タグ
+                a.c-tag-purple(href=root+"article".extention) 紫タグ
 
-            .p-article__content
+            .c-single__content
               // CMS EDIT CONTENT START
               // ここからはCMSで入力された内容が反映されます。
               //  .p-single-content配下はセレクタにスタイルを設定し、クラス付与無しで見た目が整うようにしてください。
 
               h2 大見出しスタイル（h2）
               p これは通常テキスト（p）です
-            
+              h3 中見出しスタイル（h3）
               p こちらはテキストの見た目だけ変更するタグです#[small これは細目テキスト（small）です]#[br]#[b これは太字テキスト（b）です]#[br]#[i これは斜体テキスト（i）です]#[br]#[u これは下線テキスト（u）です]#[br]#[s これは打ち消しテキスト（u）です]#[br]#[mark これはマーカーテキスト（mark）です]#[br]#[a(href="#") これはリンクテキスト（a）です]
 
+              h2 大見出しスタイル２（h2）
+              h3 中見出しスタイル（h3）
               p こちらはテキストの意味を表すタグです#[strong これは強調テキスト（strong）です]#[br] #[em これは強調テキスト（em）です]#[br] #[small これは細目テキスト（small）です]#[br]#[address これは連絡先や問合せ先を表すテキスト（address）です]#[br]#[del これは文字の削除（del）を表すテキストです]#[br]#[ins これは文字の追加を表すテキスト（ins）です]#[br]#[mark これはマーカーテキスト（mark）です]#[br]#[a(href="#") これはリンクテキスト（a）です]
 
-              code.
-                <h2>codeタグの役割</h2>
-                <p>これはコード記述用（code）です<p>
-                <div>この中にかかれたコードは変換されません</div>
-              
-              pre.
-                これは入力内容を
-                そのまま表示する用（pre）タグです。
-                改行位置などそのまま反映されます。
+                code.
+                  <h2>codeタグの役割</h2>
+                  <p>これはコード記述用（code）です<p>
+                  <div>この中にかかれたコードは変換されません</div>
+                
+                pre.
+                  これは入力内容を
+                  そのまま表示する用（pre）タグです。
+                  改行位置などそのまま反映されます。
 
-              blockquote.
-                p これは引用文（blockquote）です引用文です引用文です引用文です引用文です
-                p 引用元：#[a(href="#" target="_blank") 引用記事タイトル | 引用サイト]
+                blockquote.
+                  p これは引用文（blockquote）です引用文です引用文です引用文です引用文です
+                  p 引用元：#[a(href="#" target="_blank") 引用記事タイトル | 引用サイト]
 
-              img(src=root+imgPath+"article/###.png" loading="lazy" alt="")
+                img(src=root+imgPath+"common/dummy-m.png" loading="lazy" alt="")
 
-              h3 中見出しスタイル（h3）
-              ul
-                li これはリストタグです。これはリストタグです。
-                li これはリストタグです。これはリストタグです。
-                li これはリストタグです。これはリストタグです。
-                li これはリストタグです。これはリストタグです。
+                h3 リストタグ
+                ul
+                  li これはリストタグです。これはリストタグです。
+                  li これはリストタグです。これはリストタグです。
+                  li これはリストタグです。これはリストタグです。
+                  li これはリストタグです。これはリストタグです。
 
-              h4 小見出しスタイル（h4）
-              ol
-                li これは順序タグです。これは順序タグです。
-                li これは順序タグです。これは順序タグです。
-                li これは順序タグです。これは順序タグです。
-                li これは順序タグです。これは順序タグです。
+                h3 順序タグ
+                ol
+                  li これは順序タグです。これは順序タグです。
+                  li これは順序タグです。これは順序タグです。
+                  li これは順序タグです。これは順序タグです。
+                  li これは順序タグです。これは順序タグです。
 
+              h3 テーブルタグ
               table
                 colgroup
                   col(width='30%')
@@ -131,7 +140,7 @@ html(lang='ja')
                     td テーブルコンテンツテーブルコンテンツ
               // CMS EDIT CONTENT END
 
-          include _includes/_module/_pager
+          //- include _includes/_module/_pager
         // /pageContents
         //-========================
         //- PAGE CONTENTS END

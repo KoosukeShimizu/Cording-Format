@@ -13,33 +13,36 @@
   }
 }
 
+
 .c-list {
+  border-top: 1px solid $c-border;
   &__item {
     display: flex;
     border-bottom: 1px solid $c-border;
-    padding: gt(10,20);
+    padding: gt(16,40) 0;
   }
   &__link {
     display: block;
     width: 100%;
     // border: 1px solid #000;
   }
-  &__thumb{
-    aspect-ratio: 4 / 3;
-    width: min(30%,180px);
-  }
   &__body{
-    padding: gt(5,10);
+    padding: 0 gt(10,20) 0 0;
   }
   &__title{
-    font-size: fz(15,18);
+    font-size: fz(13,20);
     line-height: 1.4;
+    font-weight: 700;
+    margin-bottom: gt(8,16);
   }
   &__text{
     font-size: fz(14,16);
     line-height: 1.4;
   }
   &__date{
-    font-size: fz(12,14);
+    font-size: fz(12,16);
+    color: $c-gray70;
+    font-weight: 700;
+    // letter-spacing: .1em;
   }
 }
