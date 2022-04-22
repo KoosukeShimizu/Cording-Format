@@ -3,14 +3,14 @@
 -------------------------------------------------- */
 .c-archive {
   &__head {
-    padding: gt(40) 0 gt(20);
+    padding: gt(60,100) 0 gt(0);
     margin: auto;
   }
   &__title {
-    font-size: fz(48);
-    font-weight: 900;
+    font-size: fz(30,60);
+    font-weight: 700;
     line-height: 1;
-    letter-spacing: 0.05em;
+    letter-spacing: 0em;
     margin-bottom: gt(4);
     text-transform:capitalize;
   }
@@ -18,7 +18,7 @@
     font-size: fz(11);
     font-weight: 700;
     text-transform: uppercase;
-    margin-bottom: gt(20);
+    margin-bottom: gt(10);
   }
   &__intro {
     font-size: fz(14,22);

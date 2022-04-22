@@ -78,11 +78,13 @@
       <!-- /Breadcrumb-->
       <main class="l-main">
         <!-- PageContents-->
-        <article class="p-contact">
-          <div class="c-head-page">
-            <h1 class="c-head-page__title">お問い合わせ</h1>
-            <div class="c-head-page__subtitle">contact</div>
-            <div class="c-head-page__intro">_サイト名_のお問い合わせのページです。ご利用に関する内容の他、取材に関するお問い合わせも受け付けております。<br>お問い合わせいただいた内容につきましては、担当者より後日ご連絡させていただきます。下記にあるお問い合わせに関するご注意事項をご確認の上、下記フォームよりお問い合わせください。</div>
+        <article class="c-page p-contact">
+          <div class="c-page__head"> 
+            <div class="l-container">
+              <h1 class="c-page__title">お問い合わせ</h1>
+              <div class="c-page__subtitle">contact</div>
+              <div class="c-page__intro">_サイト名_のお問い合わせのページです。ご利用に関する内容の他、取材に関するお問い合わせも受け付けております。</div>
+            </div>
           </div>
           <!-- section START-->
           <section class="l-section p-contact-form">
@@ -122,7 +124,7 @@
                   <div class="c-form__item">
                     <div class="c-form__label">電話番号<span class="c-form__require">必須</span></div>
                     <div class="c-form__body">
-                      <input class="c-form__input is-inline" type="tel" id="tel" name="tel" placeholder="例：03-1234-5678" autocomplete="tel" required>
+                      <input class="c-form__input is-inline" type="tel" id="tel" name="tel" placeholder="例：03-1234-5678" autocomplete="tel" maxlength="13" required>
                       <div class="c-form__note">※半角数字</div>
                       <div class="c-form__error">電話番号を入力してください</div>
                     </div>
@@ -419,7 +421,7 @@
               </form>
               <div class="c-panel-contact">
                 <p class="c-panel-contact__text">お電話でのお問い合わせは<br class="u-sp-display">下記番号からお願い致します</p>
-                <address><a href="tel:03-123-456">03-123-456</a></address>
+                <address class="c-panel-contact__phone"><a href="tel:03-1234-5678">03-1234-5678</a></address>
                 <p class="c-note">※受付時間 平日 9:00〜21:00</p>
               </div>
             </div>
@@ -462,7 +464,7 @@
     <!-- SCRIPTS-->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js?ver=1.0.0"></script>
     <script src="./assets/js/main.js?ver=1.0.0"></script>
-    <script src="./assets/lib/yubinbango.js"></script>
+    <script src="https://yubinbango.github.io/yubinbango/yubinbango.js"></script>
     <script src="./assets/lib/jquery.autoKana.js"></script>
     <script src="./assets/js/form.min.js?ver=1.0.0"></script>
     <script type="text/javascript">

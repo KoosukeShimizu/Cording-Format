@@ -13,6 +13,7 @@
   vertical-align: baseline;
   letter-spacing: 0.1em;
   line-height: 1;
+  font-weight: 500;
 }
 
 // （´・ω・`）< button-style-primary
@@ -107,6 +108,7 @@
     background: transparent;
     border: 2px solid $c-primary;
     color: $c-primary;
+    width: 30%;
     @include hover {
       background: lighten($c-primary, 50%);
     }

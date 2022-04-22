@@ -68,26 +68,30 @@ html(lang='ja')
         //-========================
         // PageContents
         article.p-thanks
-          .p-thanks-head
-            h1.p-thanks-head__title お問い合わせを受け付けました
+          .p-thanks__head
+            .l-container
+              h1.p-thanks__title お問い合わせを受け付けました
+              //- .p-thanks__subtitle thank you
 
           // section START
-          section.p-thanks-message
+          section.p-thanks__body
             .l-container-sm
               //- h2.c-h2-deco お問い合わせフォーム
-              p.c-text この度は、お問い合わせいただきありがとうございます。#[br]担当者より後日ご連絡させていただきます。#[br]混雑状況などにより、返信までお時間を要する場合があります。予めご了承ください。#[br]1週間以上経っても返信がない場合や、お急ぎの場合は、恐れ入りますがお電話にてご連絡頂ますよう宜しくお願いいたします。
+              p.c-text この度は、お問い合わせいただきありがとうございます。#[br]担当者より後日ご連絡させていただきます。
+              p.c-text 混雑状況などにより、返信までお時間を要する場合があります。予めご了承ください。#[br]1週間以上経っても返信がない場合や、お急ぎの場合は、恐れ入りますがお電話にてご連絡頂ますよう宜しくお願いいたします。
               
-              .p-thanks-totop
-                a.c-button-primary(href=root+"") トップへ戻る
-
               .c-panel-contact
                 p.c-panel-contact__text
                   | お電話でのお問い合わせは
                   br.u-sp-display
                   | 下記番号からお願い致します
-                address
-                  a(href='tel:03-123-456') 03-123-456
+                address.c-panel-contact__phone
+                  a(href='tel:03-1234-5678') 03-1234-5678
                 p.c-note ※受付時間 平日 9:00〜21:00
+
+              .c-block-button
+                a.c-button-primary(href=root+"") トップへ戻る
+
           // section END
         // /pageContents
 

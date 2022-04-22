@@ -67,40 +67,42 @@ html(lang='ja')
         //- 編集はここから
         //-========================
         // PageContents
-        article.p-privacy
-          .c-head-page
-            h1.c-head-page__title 運営者情報
-            .c-head-page__subtitle company
-            .c-head-page__lead _サイト名_の運営者情報のページです。運営者「_サイト名_」の所在地や代表者について紹介しております。
+        article.c-page.p-privacy
+          .c-page__head
+            .l-container
+              h1.c-page__title 運営者情報
+              .c-page__subtitle company
+              .c-page__lead あのイーハトーヴォのすきとおった風、夏でも底に冷たさをもつ青いそら、うつくしい森で飾られたモリーオ市、郊外のぎらぎらひかる草の波。
 
           // section START
           section.l-section
             .l-container
-              figure.p-company-photo
+              figure.c-image.p-company-photo
                 img(src=root+imgPath+'company/photo-company.png' width="840" height="630" alt='')
               table.c-table
-                tr 
-                  th 法人名
-                  td 株式会社####
-                tr 
-                  th 所在地
-                  td 〒000-0000#[br]東京都〇〇区〇〇 △-△-△ □□□□ビル
-                tr 
-                  th WEBサイト
-                  td
-                    a(href='https://############.com/' target='_blank' rel='noopener') https://############.com/
-                tr 
-                  th 代表電話番号
-                  td 00-0000-0000
-                tr 
-                  th 代表者
-                  td 〇〇 〇〇
-                tr 
-                  th 設立
-                  td 2022年1月1日
-                tr 
-                  th 事業内容
-                  td 〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇
+                tbody
+                  tr 
+                    th( style="width:8em;") 法人名
+                    td 株式会社####
+                  tr 
+                    th 所在地
+                    td 〒000-0000#[br]東京都〇〇区〇〇 △-△-△ □□□□ビル
+                  tr 
+                    th WEB
+                    td
+                      a(href='https://#########.com/' target='_blank' rel='noopener') https://#########.com/
+                  tr 
+                    th 電話番号
+                    td 00-0000-0000
+                  tr 
+                    th 代表者
+                    td 〇〇 〇〇
+                  tr 
+                    th 設立
+                    td 2022年1月1日
+                  tr 
+                    th 事業内容
+                    td 〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇
 
 
           // section END

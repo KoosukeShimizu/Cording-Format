@@ -67,11 +67,12 @@ html(lang='ja')
         //- 編集はここから
         //-========================
         // PageContents
-        article.p-contact
-          .c-head-page
-            h1.c-head-page__title お問い合わせ
-            .c-head-page__subtitle contact
-            .c-head-page__intro _サイト名_のお問い合わせのページです。ご利用に関する内容の他、取材に関するお問い合わせも受け付けております。#[br]お問い合わせいただいた内容につきましては、担当者より後日ご連絡させていただきます。下記にあるお問い合わせに関するご注意事項をご確認の上、下記フォームよりお問い合わせください。
+        article.c-page.p-contact
+          .c-page__head 
+            .l-container
+              h1.c-page__title お問い合わせ
+              .c-page__subtitle contact
+              .c-page__intro _サイト名_のお問い合わせのページです。ご利用に関する内容の他、取材に関するお問い合わせも受け付けております。
 
 
           
@@ -83,7 +84,10 @@ html(lang='ja')
                   li.c-step__item.is-current #[span.c-step__order step1] 情報のご入力
                   li.c-step__item #[span.c-step__order step2] 内容のご確認
                   li.c-step__item #[span.c-step__order step3] 送信完了
-              //- h2.c-h2-deco お問い合わせフォーム
+              
+              //- h2.c-h2 お問い合わせフォーム
+              //- .c-text お問い合わせの内容につきまして、担当者より後日ご連絡させていただきます。#[br]下記にあるお問い合わせに関するご注意事項をご確認の上、下記フォームよりお問い合わせください。
+
               form(method="post" action=root+"confirm"+extention enctype='multipart/form-data')
                 //- h3.c-h3 お客様情報
                 .c-form
@@ -110,7 +114,7 @@ html(lang='ja')
                   .c-form__item
                     .c-form__label 電話番号#[span.c-form__require 必須]
                     .c-form__body
-                      input.c-form__input.is-inline(type="tel" id="tel" name="tel" placeholder="例：03-1234-5678" autocomplete="tel" required)
+                      input.c-form__input.is-inline(type="tel" id="tel" name="tel" placeholder="例：03-1234-5678" autocomplete="tel"  maxlength="13" required)
                       .c-form__note ※半角数字
                       .c-form__error 電話番号を入力してください
                   
@@ -291,8 +295,8 @@ html(lang='ja')
                   | お電話でのお問い合わせは
                   br.u-sp-display
                   | 下記番号からお願い致します
-                address
-                  a(href='tel:03-123-456') 03-123-456
+                address.c-panel-contact__phone
+                  a(href='tel:03-1234-5678') 03-1234-5678
                 p.c-note ※受付時間 平日 9:00〜21:00
           // section END
         // /pageContents
@@ -311,8 +315,8 @@ html(lang='ja')
     //- ページ独自に使用するJS
     //---------------------------------
     block append js
-      //- script(src="https://yubinbango.github.io/yubinbango/yubinbango.js")
-      script(src=root+libPath+"yubinbango.js")
+      script(src="https://yubinbango.github.io/yubinbango/yubinbango.js")
+      //- script(src=root+libPath+"yubinbango.js")
       script(src=root+libPath+"jquery.autoKana.js")
       script(src=root+jsPath+"form.min.js?ver=1.0.0")
       script(type='text/javascript').

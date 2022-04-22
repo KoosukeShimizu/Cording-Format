@@ -7,11 +7,12 @@
 }
 
 .c-h2 {
-  font-size: fz(24);
+  font-size: fz(24,44);
   font-weight: bold;
   line-height: 1.2;
-  letter-spacing: 0.05em;
-  margin: 0 0 gt(35,70) 0;
+  letter-spacing: 0.02em;
+  // margin: 0 0 gt(24,40) 0;
+  margin: 0 0 1em 0;
   // &-primary {
   //   プライマリスタイル
   // }
@@ -24,8 +25,9 @@
   font-weight: 700;
   font-size: fz(20, 38);
   line-height: 1.2;
-  letter-spacing: 0.05em;
-  margin: gt(30,60) 0 gt(10,20);
+  letter-spacing: 0.02em;
+  // margin: gt(30,60) 0 gt(10,20);
+  margin: 0 0 1em;
   // &-primary {
   //   プライマリスタイル
   // }
@@ -42,5 +44,16 @@
 }
 
 .c-text {
+  margin: 0 0 gt(10,20);
+  letter-spacing: 0;
+}
+
+.c-note {
+  font-size: fz(11,14);
+  color: $c-gray50;
+  line-height: 1.5;
+  letter-spacing: 0;
+  padding-left: 1em;
+  text-indent: -1em;
   margin: 0 0 gt(10,20);
 }

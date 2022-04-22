@@ -1,55 +1,39 @@
-/* --------------------------------------------------
-Typography
--------------------------------------------------- */
-
-/**
-* 文字色
-**/
-.u-c-primary {
-  color: $c-primary;
-}
-.u-c-secondary {
-  color: $c-secondary;
-}
-.u-c-tertiary {
-  color: $c-tertiary;
-}
-.u-c-accent {
-  color: $c-accent;
-}
-.u-c-danger {
-  color: $c-danger;
-}
-.u-c-important {
-  color: $c-important;
-}
-.u-c-success {
-  color: $c-success;
-}
-.u-c-disable {
-  color: $c-disable;
-}
-
-
-/**
-* 太字
-**/
-.u-fw-bold {
-  font-weight: bold;
-}
-
-
-/**
-* テキスト配置
-**/
-.u-text-center {
-  text-align: center;
-}
-
-.u-text-right {
-  text-align: right;
-}
-
-.u-text-left {
-  text-align: left;
+.u-text {
+  margin: 0 0 gt(10,20);
+  &-right{
+    text-align: right;
+  }
+  &-center{
+    text-align: center;
+  }
+  &-left{
+    text-align: left;
+  }
+  &-primary{
+    color: $c-primary;
+  }
+  &-secondary{
+    color: $c-secondary;
+  }
+  &-tertiary{
+    color: $c-tertiary;
+  }
+  &-accent{
+    color: $c-accent;
+  }
+  &-danger{
+    color: $c-danger;
+  }
+  &-important{
+    color: $c-important;
+  }
+  &-success{
+    color: $c-success;
+  }
+  &-disable{
+    color: $c-disable;
+  }
+  &-bold{
+    font-weight: bold;
+  }
 }

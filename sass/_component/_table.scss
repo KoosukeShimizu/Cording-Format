@@ -13,17 +13,15 @@
       }
 
       th, td {
-        // display: block;
         text-align: left;
-        // width: 100%;
-        line-height: 1.8;
         padding: gt(15,30) 10px;
       }
 
       th {
         font-weight: bold;
         margin-bottom: 16px;
-        font-size: 1.6rem;
+        font-size: fz(14,16);
+        line-height: 1.4;
       }
     }
   }
