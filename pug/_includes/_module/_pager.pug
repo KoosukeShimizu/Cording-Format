@@ -6,7 +6,7 @@ unless key==='home'
     li.c-pager__count
       ol.c-pager__list
         li.c-pager__item: a.is-current(href="#") 1
-        - for( var n=2; n<= 5; n++) 
+        - for( var n=2; n<= 4; n++) 
           li.c-pager__item: a(href="#") #{n}
         li.c-pager__item: a.is-more(href="#") …
     li.c-pager__next: a(href="#")
