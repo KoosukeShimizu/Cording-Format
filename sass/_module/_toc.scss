@@ -6,10 +6,12 @@
   list-style: none;
   transition:$transition;
   &__title{
+    text-transform: uppercase;
     text-align: center;
     cursor: pointer;
     font-size: fz(18,22);
     position: relative;
+    list-style: none;
     &:after {
       content: "";
       display: block;
@@ -29,8 +31,11 @@
       }
     }
   }
+  &__body{
+    padding: gt(8) gt(16);
+  }
   &__list{
-    margin-top: gt(5,10);
+    // margin-top: gt(5,10);
     counter-reset: h2;
   }
   &__h2{
@@ -39,20 +44,24 @@
     position: relative;
     &:before{
       counter-increment: h2;
-      content: counter(h2);
+      content: counter(h2)"｜";
       position: absolute;
       left: 0;
-      top: calc(gt(10) - 0.25em);
+      // padding: gt(5,10) 0;
+      // top: calc(gt(10) - 0.25em);
       font-weight: 700;
       opacity: .3;
-      font-size: fz(18,20);
+      // font-size: fz(18,20);
       // line-height: 1;
     }
   }
   &__link{
-    display: block;
-    padding: gt(5,10) 0;
-    
+    display: inline-block;
+    // padding: gt(5,10) 0;
+    margin-bottom: gt(8);
+    @include hover{
+      transform:translateX(.5em);
+    }
   }
   &__child{
     counter-reset: h3;
@@ -61,14 +70,15 @@
     padding-left: 2.5em;
     position: relative;
     &:before{
+      // padding: gt(5,10) 0;
       counter-increment: h3;
-      content: counter(h2) "-" counter(h3);
+      content: counter(h2) "-" counter(h3)"｜";
       position: absolute;
       left: 0;
       top: calc(gt(10) - 0.25em);
       font-weight: 700;
       opacity: .3;
-      font-size: fz(18,20);
+      // font-size: fz(18,20);
     }
 
   }

@@ -19,7 +19,7 @@ body {
   background-size: 40px 40px;
   background-position: 0 0, 20px 20px;
   font-family: $sans;
-  font-size: fz(14,18);
+  font-size: fz(14, 18);
   letter-spacing: 0.08em;
   line-height: 1.8;
   overflow-x: hidden;
@@ -51,8 +51,8 @@ a {
       transform: translateY(-50%);
     }
   }
-  @include hover{
-    opacity: .5;
+  @include hover {
+    opacity: 0.5;
   }
 }
 
@@ -71,4 +71,11 @@ img {
 
 li > a {
   display: inline-block;
+}
+
+summary {
+  list-style: none;
+  &::-webkit-details-marker {
+    display: none;
+  }
 }

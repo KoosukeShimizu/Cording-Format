@@ -5,7 +5,7 @@ document.addEventListener('DOMContentLoaded', function () {
   var div = document.createElement('ol'); // 作成する目次のコンテナ要素
   div.classList.add("c-toc__list");
   // .entry-content配下のh2、h3要素を全て取得する
-  var matches = document.querySelectorAll('.p-article__content h2, .p-article__content h3');
+  var matches = document.querySelectorAll('.c-single__content h2, .c-single__content h3');
   // 取得した見出しタグ要素の数だけ以下の操作を繰り返す
   matches.forEach(function (value, i) {
     // 見出しタグ要素のidを取得し空の場合は内容をidにする

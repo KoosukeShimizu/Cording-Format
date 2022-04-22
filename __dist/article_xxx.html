@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta name="robots" content="index,follow">
-    <title>記事タイトルが入ります｜_サイト名_</title>
+    <title>記事タイトルが入ります。１２３４５６７８９０｜_サイト名_</title>
     <meta name="description" content="記事の要約が入ります">
     <meta name="keywords" content="_サイトキーワードA_,_サイトキーワードB_,_サイトキーワードC_,_サイトキーワードD_,_サイトキーワードE_">
     <meta name="format-detection" content="telephone=no">
@@ -73,36 +73,38 @@
         <ol class="c-breadcrumb__list">
           <li class="c-breadcrumb__item"><a href="https://######.com/">ホーム</a></li>
           <li class="c-breadcrumb__item"><a href="https://######.com/article">ブログ記事</a></li>
-          <li class="c-breadcrumb__item"><a href="https://######.com/article_xxx">記事タイトルが入ります</a></li>
+          <li class="c-breadcrumb__item"><a href="https://######.com/article_xxx">記事タイトルが入ります。１２３４５６７８９０</a></li>
         </ol>
       </nav>
       <!-- /Breadcrumb-->
       <main class="l-main">
         <!-- PageContents-->
-        <article class="p-article">
-          <div class="l-container">
-            <div class="p-article__head">
-              <h1 class="p-article__title">ブログのタイトルがここに入ります</h1>
-              <time class="p-article__time" datetime="2022.03.07">2022.03.07</time>
+        <article class="c-single p-article">
+          <div class="l-container-sm">
+            <div class="c-single__head">
+              <time class="c-single__time" datetime="2022.03.07">2022.03.07</time>
+              <h1 class="c-single__title">あのイーハトーヴォのすきとおった風、夏でも底に冷たさをもつ青いそら、うつくしい森で</h1>
+              <div class="c-single__tag"><a class="c-tag" href="./undefined">デフォルトタグ</a><a class="c-tag-red" href="./undefined">赤タグ</a><a class="c-tag-blue" href="./undefined">青タグ</a><a class="c-tag-green" href="./undefined">緑タグ</a><a class="c-tag-yellow" href="./undefined">黄タグ</a><a class="c-tag-purple" href="./undefined">紫タグ</a></div>
+              <figure class="c-single__mv"><img src="./assets/img/common/dummy-l.png" loading="lazy" width="" height="" alt=""></figure>
             </div>
-            <figure class="p-article__mv"><img src="./assets/img/common/dummy-l.png" loading="lazy" width="" height="" alt=""></figure>
             <details class="c-toc" open>
-              <summary class="c-toc__title">目次</summary>
-              <div id="js-toc"></div>
+              <summary class="c-toc__title">index</summary>
+              <div class="c-toc__body" id="js-toc"></div>
             </details>
-            <div class="p-article__content">
+            <div class="c-single__content">
               <!-- CMS EDIT CONTENT START-->
               <!-- ここからはCMSで入力された内容が反映されます。-->
               <!--  .p-single-content配下はセレクタにスタイルを設定し、クラス付与無しで見た目が整うようにしてください。-->
               <h2>大見出しスタイル（h2）</h2>
               <p>これは通常テキスト（p）です</p>
+              <h3>中見出しスタイル（h3）</h3>
               <p>こちらはテキストの見た目だけ変更するタグです<small>これは細目テキスト（small）です</small><br><b>これは太字テキスト（b）です</b><br><i>これは斜体テキスト（i）です</i><br>
                 <u>これは下線テキスト（u）です</u><br>
                 <s>これは打ち消しテキスト（u）です</s><br>
                 <mark>これはマーカーテキスト（mark）です</mark><br><a href="#">これはリンクテキスト（a）です</a>
               </p>
-              <h3>中見出しスタイル（h3）</h3>
               <h2>大見出しスタイル２（h2）</h2>
+              <h3>中見出しスタイル（h3）</h3>
               <p>こちらはテキストの意味を表すタグです<strong>これは強調テキスト（strong）です</strong><br> <em>これは強調テキスト（em）です</em><br> <small>これは細目テキスト（small）です</small><br>
                 <address>これは連絡先や問合せ先を表すテキスト（address）です</address><br>
                 <del>これは文字の削除（del）を表すテキストです</del><br><ins>これは文字の追加を表すテキスト（ins）です</ins><br>
@@ -120,14 +122,14 @@
                   p 引用元：<a href="#" target="_blank">引用記事タイトル | 引用サイト</a>
                   
                 </blockquote><img src="./assets/img/common/dummy-m.png" loading="lazy" alt="">
-                <h3>中見出しスタイル（h3）</h3>
+                <h3>リストタグ</h3>
                 <ul>
                   <li>これはリストタグです。これはリストタグです。</li>
                   <li>これはリストタグです。これはリストタグです。</li>
                   <li>これはリストタグです。これはリストタグです。</li>
                   <li>これはリストタグです。これはリストタグです。</li>
                 </ul>
-                <h3>中見出しスタイル（h3）</h3>
+                <h3>順序タグ</h3>
                 <ol>
                   <li>これは順序タグです。これは順序タグです。</li>
                   <li>これは順序タグです。これは順序タグです。</li>
@@ -135,6 +137,7 @@
                   <li>これは順序タグです。これは順序タグです。</li>
                 </ol>
               </p>
+              <h3>テーブルタグ</h3>
               <table>
                 <colgroup>
                   <col width="30%">
@@ -219,7 +222,7 @@
         "@type": "ListItem",
         "position": 3,
         "item": {
-          "name": "記事タイトルが入ります"
+          "name": "記事タイトルが入ります。１２３４５６７８９０"
           "item": "https://######.com/articlearticle_xxx",
         }
       }]
