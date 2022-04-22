@@ -1,28 +1,113 @@
+// // （´・ω・`）< tag-core
+// // -------------------------------
+// %card-core {
+//   //カード基本構造
+//   @include flexbox(flex,null,wrap,null,null,null);
+//   &__list{
+//     display: flex;
+//   }
+//   &__item {
+//     background: white;
+//     width: calc(100% / 5);
+//   }
+//   &__thumb{
+//     aspect-ratio: 4 / 3;
+//   }
+//   &__body{
+//     padding: gt(5,10);
+//   }
+//   &__title{
+//     font-size: fz(11,14);
+//     line-height: 1.4;
+//   }
+//   &__text{
+//     font-size: fz(11,14);
+//     line-height: 1.4;
+//   }
+//   &__date{
+//     font-size: fz(10,12);
+//   }
+// }
+
 .c-card {
-  display: flex;
-  gap: 20px;
-  &__list{
-    display: flex;
-  }
+  $col: 2;
+  $gt: gt(20, 40);
+  // background: #000;
+  @include flexbox(flex, null, wrap, null, null, null);
+  gap: $gt;
+
   &__item {
     background: white;
-    width: calc(100% / 5);
+    border: 1px solid $c-gray90;
+    width: calc((100% - #{$gt} * (#{$col} - 1)) / #{$col});
+    border-radius: 8px;
+    overflow: hidden;
+    position: relative;
+    transition: $transition;
+    @include hover{
+      transform: scale(1.05);
+      box-shadow: 0 0 20px rgba(black,.1) ;
+    }
   }
-  &__thumb{
+  &__thumb {
     aspect-ratio: 4 / 3;
+    width: 100%;
   }
-  &__body{
-    padding: gt(5,10);
+  &__body {
+    padding: gt(8, 16);
   }
-  &__title{
-    font-size: fz(11,14);
+  &__title {
+    font-size: fz(13, 16);
+    line-height: 1.4;
+    font-weight: 700;
+    letter-spacing: 0;
+    margin-bottom: gt(8, 16);
+    @include lineclump(3);
+  }
+  &__text {
+    font-size: fz(14, 16);
     line-height: 1.4;
   }
-  &__text{
-    font-size: fz(11,14);
-    line-height: 1.4;
+  &__date {
+    font-size: fz(12, 16);
+    line-height: 1;
+    color: $c-gray70;
+    font-weight: 700;
   }
-  &__date{
-    font-size: fz(10,12);
+  &__link {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1;
+    pointer-events: auto;
+    content: "";
+    background-color: transparent;
+  }
+  @include mq(sp, min) {
+    $col: 2;
+    // $gt: gt(10, 20);
+    &__item {
+      background: white;
+      width: calc((100% - #{$gt} * (#{$col} - 1)) / #{$col});
+    }
+  }
+
+  @include mq(tab, min) {
+    $col: 3;
+    // $gt: gt(10, 20);
+    &__item {
+      background: white;
+      width: calc((100% - #{$gt} * (#{$col} - 1)) / #{$col});
+    }
+  }
+  @include mq(pc, min) {
+    $col: 4;
+    // $gt: gt(10, 20);
+    &__item {
+      background: white;
+      width: calc((100% - #{$gt} * (#{$col} - 1)) / #{$col});
+    }
   }
 }

@@ -37,6 +37,7 @@
 
 // （´・ω・`）< Ellipsis
 // 使い方：.hoge{@include ellipsis();}
+// 1行で三点リーダー
 // -------------------------------
 @mixin ellipsis($width: 100%) {
   display: inline-block;
@@ -45,6 +46,17 @@
   text-overflow: ellipsis;
   white-space: nowrap;
   word-wrap: normal;
+}
+
+// （´・ω・`）< line clump
+// 使い方：.hoge{@include lineclump(3);}
+// 複数行で三点リーダ
+// -------------------------------
+@mixin lineclump($row: 2) {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: $row;
+  overflow: hidden;
 }
 
 
