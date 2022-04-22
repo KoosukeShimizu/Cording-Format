@@ -1,5 +1,6 @@
 .c-toc {
-  width: 100%;
+  width: min(100%,500px);
+  margin: auto;
   border: 1px solid $c-border;
   border-radius: 3px;
   padding: gt(5,30);
@@ -58,7 +59,7 @@
   &__link{
     display: inline-block;
     // padding: gt(5,10) 0;
-    margin-bottom: gt(8);
+    margin-bottom: gt(4);
     @include hover{
       transform:translateX(.5em);
     }
