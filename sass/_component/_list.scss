@@ -13,34 +13,61 @@
   }
 }
 
-
 .c-list {
   border-top: 1px solid $c-border;
   &__item {
-    display: flex;
+    // display: flex;
     border-bottom: 1px solid $c-border;
-    padding: gt(16,40) 0;
+    padding: gt(16, 40) 2.5em gt(16, 40) 0;
+    position: relative;
+    transition: $transition;
+    &:after {
+      content: "";
+      @include position(absolute, 50% .5em null null);
+      display: block;
+      width: 1.5em;
+      height: 1.5em;
+      background: url("#{$img_path}common/icons/arrow/angle-right.svg") no-repeat center center / contain;
+      transform: translateY(-50%);
+      opacity: .2;
+    }
+    @include hover {
+      transform: scale(1.05);
+    }
   }
+  // &__link {
+  //   display: block;
+  //   width: 100%;
+  //   // border: 1px solid #000;
+  // }
   &__link {
-    display: block;
-    width: 100%;
-    // border: 1px solid #000;
+    // &:after{
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1;
+    pointer-events: auto;
+    content: "";
+    background-color: transparent;
+    // }
   }
-  &__body{
-    padding: 0 gt(10,20) 0 0;
+  &__body {
+    padding: 0 gt(10, 20) 0 0;
   }
-  &__title{
-    font-size: fz(13,20);
+  &__title {
+    font-size: fz(13, 20);
     line-height: 1.4;
     font-weight: 700;
-    margin-bottom: gt(8,16);
+    margin-bottom: gt(8, 16);
   }
-  &__text{
-    font-size: fz(14,16);
+  &__text {
+    font-size: fz(14, 16);
     line-height: 1.4;
   }
-  &__date{
-    font-size: fz(12,16);
+  &__date {
+    font-size: fz(12, 16);
     color: $c-gray70;
     font-weight: 700;
     // letter-spacing: .1em;
