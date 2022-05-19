@@ -61,5 +61,5 @@ document.addEventListener('DOMContentLoaded', function () {
   });
 
   // 最後に画面にレンダリング
-  contentsList.appendChild(div);
+  // contentsList.appendChild(div);
 });

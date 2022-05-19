@@ -1,18 +1,5 @@
-// // ユーザーエージェントHTML振り分け
-// var $ua = navigator.userAgent;
-// $(function(){
-//   // if($ua.indexOf('iPhone') > 0 || $ua.indexOf('iPad') > 0 || $ua.indexOf('iPod') > 0 || $ua.indexOf('android') > 0 || $ua.indexOf('BlackBerry') > 0 || $ua.indexOf('windows Phone') > 0 || $ua.indexOf('NOKIA') > 0 || /Mobile.*Firefox/.test($ua)){
-//   if ($ua.indexOf('iPhone') > 0 || $ua.indexOf('iPod') > 0 || $ua.indexOf('Android') > 0) {
-//     $('.ua-pc').hide();
-//     $('.ua-sp').show();
-//     $('body').addClass('sp_access');
-//   } else {
-//     $('.ua-sp').hide();
-//     $('.ua-pc').show();
-//     $('body').addClass('pc_access');
-//   }
-// });
-//
+//ユーザーエージェント
+//======================
 
 // 変数
 var ua = navigator.userAgent; // ユーザーエージェント
@@ -26,10 +13,10 @@ if (ua.search("Windows") != -1) {
   htmlElement.className += ' ua-win ua-pc';
   if ((ua.search("Trident") != -1) || ((ua.search("MSIE") != -1))) {
     htmlElement.className += ' ua-ie ua-pc';
-    // if(ua.search("Trident") != -1) { htmlElement.className += ' gte_ie8 ua-pc'; }
-    // if(ua.search("Trident") == -1) { htmlElement.className += ' lte_ie8 ua-pc'; }
-    // if(ua.search("MSIE 7") != -1){ htmlElement.className += ' ie7 ua-pc'; }
-    // if(ua.search("MSIE 8") != -1){ htmlElement.className += ' ie8 ua-pc'; }
+    if(ua.search("Trident") != -1) { htmlElement.className += ' gte_ie8 ua-pc'; }
+    if(ua.search("Trident") == -1) { htmlElement.className += ' lte_ie8 ua-pc'; }
+    if(ua.search("MSIE 7") != -1){ htmlElement.className += ' ie7 ua-pc'; }
+    if(ua.search("MSIE 8") != -1){ htmlElement.className += ' ie8 ua-pc'; }
     if (ua.search("MSIE 9") != -1) {
       htmlElement.className += ' ua-ie9 ua-pc';
     }
@@ -101,65 +88,3 @@ $(window).on('load resize', function () {
     $("html").removeClass("ua-portrait");
   }
 });
-// // ユーザーのブラウザ情報の取得
-// var ua = navigator.userAgent.toLowerCase();
-// var brwsrName = navigator.appName.toLowerCase();
-//
-// var cndtnOs;
-// var cndtnBrwsr;
-// var cndtnVrsn;
-//
-// // OS Check
-// if(ua.indexOf('win') > 0) {	cndtnOs = 'win';}
-// else if(ua.indexOf('mac') > 0) { cndtnOs = 'mac';}
-// else { cndtnOs = 'other';}
-//
-// // Browser Check
-// if(ua.indexOf('msie') > 0) { cndtnBrwsr = 'ie';}
-// else if((ua.indexOf('safari') > 0) && (ua.indexOf('chrome') < 0)) { cndtnBrwsr = 'safari';}
-// else { cndtnBrwsr = 'other';}
-//
-// // Version Check
-// if(ua.indexOf('msie') > 0) { cndtnVrsn = ua.substr(ua.indexOf('msie') + 5, 3);}
-// else { cndtnVrsn = 'unknown';}
-//
-// window.onload = function () {
-//
-// 	var bodyObj = document.getElementsByTagName("body");
-// 	var defaultClass;
-//
-//  if(bodyObj[0].getAttribute("class")) {
-// 		defaultClass = bodyObj[0].getAttribute("class");
-// 	}
-// 	else {
-// 		defaultClass = bodyObj[0].getAttribute("className");
-// 	}
-//
-// 	var classStr = cndtnOs;
-//
-// 	if(cndtnBrwsr != "other") {
-// 		classStr += " ";
-// 		classStr += cndtnBrwsr;
-// 	}
-//
-// 	if(cndtnOs == "win" && cndtnBrwsr == "ie") {
-// 		classStr += " v";
-// 		classStr += cndtnVrsn.replace(/\./,"_");
-// 	}
-//
-// 	if(!(cndtnOs == "win" && cndtnBrwsr == "ie")) {
-// 		classStr += " notWinIe";
-// 	}
-//
-// 	if(defaultClass != null) {
-// 		classStr += " ";
-// 		classStr += defaultClass;
-// 	}
-//
-// 	if(bodyObj[0].getAttribute("class")) {
-// 		bodyObj[0].setAttribute("class",classStr);
-// 	}
-// 	else {
-// 		bodyObj[0].setAttribute("className",classStr);
-// 	}
-// }
