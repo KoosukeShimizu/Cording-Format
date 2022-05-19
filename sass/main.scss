@@ -37,28 +37,26 @@
 @import "./_component/block";
 @import "./_component/tag";
 
-
 // ==================================================
 // object - module
 // 再利用可能な中規模パーツ用
 // 接頭語： .c-
 // ==================================================
-@import "./_module/page";
-@import "./_module/single";
-@import "./_module/toc";
-@import "./_module/archive";
+
+@import "./_module/page"; //固定ページ
+@import "./_module/single"; //投稿ページ
+@import "./_module/archive"; //アーカイブページ
 @import "./_module/form";
-@import "./_module/step";
-
-@import "./_module/breadcrumb";
-@import "./_module/pager";
-@import "./_module/accordion";
-@import "./_module/dropdown";
-
+@import "./_module/step"; //ステップ
+@import "./_module/toc"; //目次
+@import "./_module/breadcrumb"; //パンくず
+@import "./_module/pagination"; //ページネーション
+@import "./_module/accordion"; //アコーディオン
+@import "./_module/dropdown"; //ドロップダウン
 @import "./_module/panel";
 
 // ==================================================
-// Project
+// Project（page）
 // 再利用不可なページコンテンツ用
 // 場合によっては別cssとして切り分け可能
 // 接頭語： .p-
@@ -72,19 +70,19 @@
 // Library
 // 外部ライブラリ調整用
 // ==================================================
-@import "./_library/mfp";
-@import "./_library/slick";
-@import "./_library/swiper";
-
+// @import "./_library/mfp";
+// @import "./_library/slick";
+// @import "./_library/swiper";
 
 // ==================================================
 // Utility
 // 微調整用
 // 接頭語： .u-
 // ==================================================
-@import "./_utility/display";
-@import "./_utility/image";
+// @import "./_utility/display";
+// @import "./_utility/image";
 @import "./_utility/typography";
-@import "./_utility/zindex";
-@import "./_utility/br";
-@import "./_utility/js";
+@import "./_utility/list";
+// @import "./_utility/zindex";
+// @import "./_utility/br";
+// @import "./_utility/js";
