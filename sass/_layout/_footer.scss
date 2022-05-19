@@ -96,9 +96,12 @@
   @include flexbox(flex,null,wrap,center,center,null);
   font-weight: 500;
   font-size: fz(10, 12);
-  &__mark {
+  &:before{
+    content: "";
+    display: inline-block;
     width: min(3vw, 14px);
-    line-height: 1;
-    margin-right: 8px;
+    aspect-ratio: 1 / 1;
+    background: url("#{$img_path}common/icons/copyright.svg") no-repeat center center /contain;
+    margin-right: gt(4);
   }
 }
