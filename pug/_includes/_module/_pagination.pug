@@ -1,0 +1,14 @@
+//- home以外のときに設置
+unless key==='home'
+  // Pagination
+  .c-pagination
+    .c-pagination__prev: a(href="#") 
+    .c-pagination__count
+      ol.c-pagination__list
+        li.c-pagination__item: a.is-current(href="#") 1
+        - for( var n=2; n<= 4; n++) 
+          li.c-pagination__item: a(href="#") #{n}
+        li.c-pagination__item: a.is-more(href="#") …
+    .c-pagination__next: a(href="#") 
+  // /Pagination
+
