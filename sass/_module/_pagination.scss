@@ -1,9 +1,9 @@
-//  pager
+//  pagination
 // -------------------------------
-.c-pager {
-  $pager-btn-size: 35px;
-  $pager-btn-gutter: 1.5px;
-  $pager-btn-color: white;
+.c-pagination {
+  $pagination-btn-size: 35px;
+  $pagination-btn-gutter: 1.5px;
+  $pagination-btn-color: white;
   //========================
   margin: 0 auto;
   text-align: center;
@@ -53,9 +53,9 @@ width: min(80%,400px);
       margin-right: 10px;
     }
     a {
-      width: $pager-btn-size;
-      height: $pager-btn-size;
-      // line-height: $pager-btn-size;
+      width: $pagination-btn-size;
+      height: $pagination-btn-size;
+      // line-height: $pagination-btn-size;
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
@@ -64,7 +64,7 @@ width: min(80%,400px);
       border: 1px solid transparent;
       border-radius: 50%;
       // line-height: 1;
-      background: $pager-btn-color;
+      background: $pagination-btn-color;
       font-weight: 500;
       &.is-hover {
         border: 1px solid $c-secondary;
