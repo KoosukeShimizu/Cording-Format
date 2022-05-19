@@ -1,0 +1,14 @@
+.u-list {
+  &-disc {
+    padding-left: 2em;
+    list-style: disc;
+  }
+  &-decimal {
+    padding-left: 2em;
+    list-style: decimal;
+  }
+  &-circle {
+    padding-left: 2em;
+    list-style: circle;
+  }
+}
