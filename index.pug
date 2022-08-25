@@ -29,29 +29,12 @@ html(lang="ja")
         mixin整理
         スタイルチェック作成
         用語集作成
-        scriptのモジュール化
         animation js
         glidを入れるか検討
         ライブラリのカスタム
         カードのcolカウント対応
         フォームに下記を追加する
-            <input type="color">：色を選択
-            <input type="date">：年月日を選択
-            <input type="datetime-local">：年月日と時刻を選択
-            <input type="email">：メールアドレス入力欄
-            <input type="hidden">：隠しデータ
-            <input type="month">：年月を選択
-            <input type="number">：数値の入力欄
-            <input type="password">：パスワード入力欄
-            <input type="range">：スライダーで数値を選択
-            <input type="search">：検索キーワードの入力欄
-            <input type="tel">：電話番号の入力欄
-            <input type="text">：テキスト入力欄
-            <input type="time">：時刻を選択
-            <input type="url">：URLの入力欄
-            <input type="week">：年と週を選択
-            <input type="file">：ファイルアップロード
-            <input type="search">：検索
+            color：色 / date：年月日 / datetime-local：年月日と時刻 / email：メールアドレス / hidden：隠しデータ / month：年月 / number：数値の / password：パスワード / range：スライダーで数値 / search：検索キーワードの / tel：電話番号の / text：テキスト / time：時刻 / url：URLの / week：年と週 / file：ファイルアップロード / search：検索
 
 
       h3 頻出ページ
@@ -60,129 +43,115 @@ html(lang="ja")
           a(href="__dist/index.html") トップページ
           small └ index
           pre.
-            フォーマット：frontpage
-            第一階層
+            ページタイプ：frontpage（トップページ）
         li
           a(href="__dist/gallery.html") ギャラリー
           small └ gallery
           pre.
-            フォーマット：page
+            ページタイプ：page（固定ページ）
         li
           a(href="__dist/faq.html") よくある質問
           small └ faq
           pre.
-            フォーマット：page
+            ページタイプ：page（固定ページ）
         li
           a(href="__dist/privacy.html") プライバシーポリシー
           small └ privacy
           pre.
-            フォーマット：page
+            ページタイプ：page（固定ページ）
         li
           a(href="__dist/company.html") 会社概要
           small └ company
           pre.
-            フォーマット：page
+            ページタイプ：page（固定ページ）
         li
           a(href="__dist/terms.html") 利用規約
           small └ terms
           pre.
-            フォーマット：page
+            ページタイプ：page（固定ページ）
         li
           a(href="__dist/contact.html") お問い合わせ
           small └ contact
           pre.
-            フォーマット：page
+            ページタイプ：page（固定ページ）
         li
           a(href="__dist/confirm.html") お問い合わせ｜確認ページ
           small └ confirm
           pre.
-            フォーマット：page
+            ページタイプ：page（固定ページ）
             離脱防止、ナビゲーション削除
         li
           a(href="__dist/thanks.html") お問い合わせ｜サンクスページ
           small └ thanks
           pre.
-            フォーマット：page
+            ページタイプ：page（固定ページ）
         li
           a(href="__dist/news.html") お知らせ一覧ページ
           small └ news
           pre.
-            フォーマット：archive
+            ページタイプ：archive（一覧ページ）
             第二階層
         li
           a(href="__dist/news_xxx.html") お知らせ詳細ページ
           small └ news_xxx
           pre.
-            フォーマット：single
+            ページタイプ：single（投稿ページ）
             第三階層
         li
           a(href="__dist/article.html") 記事一覧ページ
           small └ article
           pre.
-            フォーマット：archive
+            フォーマット：archive（一覧ページ）
             第二階層
         li
           a(href="__dist/article_xxx.html") 記事詳細ページ
           small └ article_xxx
           pre.
-            フォーマット：single
+            フォーマット：single（投稿ページ）
             第三階層
 
 
 
-      h3 コンポーネント
-      ul
+      //- h3 コンポーネント
+      //- ul
         li
           a(href="__dist/component/form.html") フォーム
           small └ component/form
           pre.
-            
-        //- li
-          a(href="__dist/page.html") 固定ページ（2階層目）
-          small └ page
-          pre.
-            フォーマット：page
-            第二階層
-        //- li
-          a(href="__dist/page.html") 固定ページ（3階層目）
-          small └ page
-          pre.
-            フォーマット：page
-            第三階層
 
 
+      details
+        summary ページタイプ概要
+        ul
+          li
+            p frontpage（フロントページ）
+            ul
+              li いわゆるトップページ
+              li 第１階層目
+              li サイト全体の主要コンテンツのまとめ（index）的な役割
+              li サイト内で単独のレイアウトになりやすい
+          li
+            p page（固定ページ）
+            ul
+              li ◯◯とは？/会社概要/プライバシーポリシーなど
+              li 第２階層目になることがほとんど
+              li サイト全体の主要コンテンツのまとめ（index）的な役割
+              li （コンテンツによっては第３階層目にな）
+          li
+            p frontpage（フロントページ）
+            ul
+              li いわゆるトップページ
+              li 一階層
+              li サイト全体の主要コンテンツのまとめ（index）的な役割
+              li サイト内で単独のレイアウトになりやすい
+          li
+            p frontpage（フロントページ）
+            ul
+              li いわゆるトップページ
+              li 一階層
+              li サイト全体の主要コンテンツのまとめ（index）的な役割
+              li サイト内で単独のレイアウトになりやすい
 
-
-        //- li
-          a(href="__dist/service.html") サービス
-          small └ service
-          pre.
-            ロゴ、動画差し替え
-
-        //- li
-          a(href="__dist/recruit.html") 採用情報
-          small └ recruit
-          pre.
-
-        //- li
-          a(href="__dist/recruit-cd.html") 採用情報-コンテンツディレクター
-          small └ recruit-cd
-          pre.
-
-        //- li
-          a(href="__dist/recruit-wd.html") 採用情報-ウェブディレクター
-          small └ recruit-wd
-          pre.
-
-        //- li
-          a(href="__dist/recruit-ap.html") 採用情報-アカウントプランナー
-          small └ recruit-ap
-          pre.
-
-        //- li
-          a(href="__dist/inquiry.html") お問い合わせ
-          small └ inquiry
-          pre.
 
 
       details

@@ -2,6 +2,7 @@
 //======================
 import './_includes/_function/_smoothScroll.js?v1';// スムーススクロール
 import './_includes/_function/_fillHeight.js?v1'; // 100vhからブラウザUIを削除
+// import './_includes/_function/_validate.js?v1'; // フォームバリデーション
 
 
 
