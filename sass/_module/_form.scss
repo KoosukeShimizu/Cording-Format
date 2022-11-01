@@ -62,6 +62,12 @@
 //  セレクター
 // -------------------------------
 .c-form {
+  transition: $transition;
+  &:focus-within{ //フォーカス時の全体スタイル変更
+    // background: rgba(white,.3);
+    box-shadow: 0 0 50vmax rgba(black,.3);
+    transform: scale(1.005) translateY(-5px);
+  }
   &__input {
     @extend %form-core;
     @extend %form-style-a;
