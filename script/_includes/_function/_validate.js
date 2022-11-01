@@ -75,7 +75,7 @@ $(function(){
         }, "※ひらがなで入力してください。"
     );
     jQuery.validator.addMethod("js-valid-email",  function(value,  element) {
-        return this.optional(element) || /^[-a-z0-9~!$%^&*_=+}{\'?]+(\.[-a-z0-9~!$%^&*_=+}{\'?]+)*@([a-z0-9_][-a-z0-9_]*(\.[-a-z0-9_]+)*\.(aero|arpa|biz|com|coop|edu|gov|info|int|mil|museum|name|net|org|pro|travel|mobi|[a-z][a-z])|([0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}))(:[0-9]{1,5})?$/i.test(value);
+        return this.optional(element) || /^[A-Za-z0-9]{1}[A-Za-z0-9_.-]*@{1}[A-Za-z0-9_.-]+.[A-Za-z0-9]+$/i.test(value);
         }, "※メールアドレス形式で入力してください。"
     );
     jQuery.validator.addMethod("js-valid-url",  function(value,  element) {
