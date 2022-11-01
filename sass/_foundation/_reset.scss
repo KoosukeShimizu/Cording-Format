@@ -67,7 +67,8 @@
 }
  
 :where(button) {
-	border-style: solid; // ボタンのボーダーのスタイルを設定しやすくする 
+	// border-style: solid; // ボタンのボーダーのスタイルを設定しやすくする 
+	border-style: none; // ボタンのボーダーのスタイルを設定しやすくする 
 }
  
 :where(a) {
