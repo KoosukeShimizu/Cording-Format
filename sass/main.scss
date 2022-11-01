@@ -6,21 +6,21 @@
 @import "./_foundation/breakpoint"; // ブレイクポイント
 @import "./_foundation/function"; // px→vw変換
 @import "./_foundation/mixin"; // 関数
-// @import "./_foundation/reset"; // リセット
+@import "./_foundation/reset"; // リセット
 @import "./_foundation/config"; // 変数管理
 // @import "./_foundation/color";        // カラー管理
 // @import "./_foundation/gutter";        // 隙間管理
 // @import "./_foundation/variable";        // その他変数管理
 @import "./_foundation/typography"; // フォント管理
-// @import "./_foundation/base"; // ベース設定
+@import "./_foundation/base"; // ベース設定
 
 // ==================================================
 // Layout
 // 接頭語： .l-
 // ==================================================
-// @import "./_layout/header";
-// @import "./_layout/main";
-// @import "./_layout/footer";
+@import "./_layout/header";
+@import "./_layout/main";
+@import "./_layout/footer";
 // @import "./_layout/sidebar";
 
 // ==================================================
@@ -28,14 +28,14 @@
 // 再利用可能な最小パーツ
 // 接頭語： .c-
 // ==================================================
-// @import "./_component/typography";
+@import "./_component/typography";
 @import "./_component/button";
-// @import "./_component/table";
-// @import "./_component/list";
-// @import "./_component/media";
-// @import "./_component/card";
-// @import "./_component/block";
-// @import "./_component/tag";
+@import "./_component/table";
+@import "./_component/list";
+@import "./_component/media";
+@import "./_component/card";
+@import "./_component/block";
+@import "./_component/tag";
 
 // ==================================================
 // object - module
@@ -43,17 +43,17 @@
 // 接頭語： .c-
 // ==================================================
 
-// @import "./_module/page"; //固定ページ
-// @import "./_module/single"; //投稿ページ
-// @import "./_module/archive"; //アーカイブページ
-// @import "./_module/form";
-// @import "./_module/step"; //ステップ
-// @import "./_module/toc"; //目次
-// @import "./_module/breadcrumb"; //パンくず
-// @import "./_module/pagination"; //ページネーション
-// @import "./_module/accordion"; //アコーディオン
-// @import "./_module/dropdown"; //ドロップダウン
-// @import "./_module/panel";
+@import "./_module/page"; //固定ページ
+@import "./_module/single"; //投稿ページ
+@import "./_module/archive"; //アーカイブページ
+@import "./_module/form";
+@import "./_module/step"; //ステップ
+@import "./_module/toc"; //目次
+@import "./_module/breadcrumb"; //パンくず
+@import "./_module/pagination"; //ページネーション
+@import "./_module/accordion"; //アコーディオン
+@import "./_module/dropdown"; //ドロップダウン
+@import "./_module/panel";
 
 // ==================================================
 // Project（page）
@@ -70,19 +70,19 @@
 // Library
 // 外部ライブラリ調整用
 // ==================================================
-// @import "./_library/mfp";
-// @import "./_library/slick";
-// @import "./_library/swiper";
+@import "./_library/mfp";
+@import "./_library/slick";
+@import "./_library/swiper";
 
 // ==================================================
 // Utility
 // 微調整用
 // 接頭語： .u-
 // ==================================================
-// @import "./_utility/display";
-// @import "./_utility/image";
-// @import "./_utility/typography";
-// @import "./_utility/list";
-// @import "./_utility/zindex";
-// @import "./_utility/br";
-// @import "./_utility/js";
+@import "./_utility/display";
+@import "./_utility/image";
+@import "./_utility/typography";
+@import "./_utility/list";
+@import "./_utility/zindex";
+@import "./_utility/br";
+@import "./_utility/js";
