@@ -3,7 +3,7 @@
 .l-header {
   margin: 0 auto;
   width: 100%;
-  border-bottom: 1px solid $c-border;
+  border-bottom: 1px solid var(--borderPrimary);
   // position: fixed;
   // top: 0;
   // left: 0;
@@ -24,9 +24,16 @@
     background: url("#{$img_path}common/siteLogo.svg") no-repeat center center / contain;
     overflow: hidden;
     text-indent: -100vw;
-    margin: gt(16,20) gt(4,20);
+    margin: gt(16, 20) gt(4, 20);
   }
+  // background: red;
+  // container: layout inline-size;
 }
+// @container (min-width: 400px) {
+//   .l-header{
+//     background: #000;
+//   }
+// }
 
 //  header-subnavi
 // -------------------------------
@@ -40,8 +47,9 @@
     width: auto;
     margin: 0 10px;
   }
-  @include mq(tab,max){
-    display:none;
+
+  @media (width <= $tab) {
+    display: none;
   }
 }
 
@@ -49,7 +57,7 @@
 // -------------------------------
 .l-header-cta {
   width: min(30%, 260px);
-  margin-right: gt(10,20);
+  margin-right: gt(10, 20);
   &__button {
     width: auto;
     background: #000;
@@ -58,8 +66,8 @@
     display: block;
     text-align: center;
   }
-  @include mq(tab,max){
-    margin:0 gt(10,20) 0 auto;
+  @media (width <= $tab) {
+    margin: 0 gt(10, 20) 0 auto;
   }
 }
 
@@ -69,7 +77,7 @@
   transition: $transition;
   width: 100%;
   position: relative;
-  // @include mq(tab, max) {
+  // @media (width <= $tab){
   //   backdrop-filter: blur(6px);
   //   background: rgba(white, 0.95);
   //   z-index: 200;
@@ -82,16 +90,15 @@
   //     right: 0px;
   //   }
   // }
-  @include mq(tab, min) {
-    // margin-top: gt(10,20);
-    border-top: 1px solid $c-border;
+  @media ($tab <= width) {
+    border-top: 1px solid var(--borderPrimary);
   }
 
   &__toggle {
     position: relative;
     // top: -50px;
     // right: gt(10,20);
-    margin-right:gt(10,20);
+    margin-right: gt(10, 20);
     transition: $transition;
     height: 30px;
     width: 40px;
@@ -102,7 +109,7 @@
     text-align: center;
     z-index: 9999;
     span {
-      border-top: 2px solid $c-font-primary;
+      border-top: 2px solid var(--textPrimary);
       display: block;
       position: absolute;
       left: 0;
@@ -131,11 +138,11 @@
         }
       }
     }
-    @include mq(tab, min) {
+    @media ($tab <= width) {
       display: none;
     }
   }
-  &__inner{
+  &__inner {
     width: 100%;
     max-height: calc(100% - 0px);
     overflow-y: auto;
@@ -146,7 +153,7 @@
     overflow-x: hidden;
     height: 100%;
     transition: $transition;
-    @include mq(tab, max) {
+    @media (width <= $tab) {
       backdrop-filter: blur(6px);
       background: rgba(white, 0.95);
       z-index: 200;
@@ -161,7 +168,7 @@
     }
   }
   &__list {
-    @include mq(tab, min) {
+    @media ($tab <= width) {
       display: flex;
       flex-wrap: wrap;
       justify-content: space-between;
@@ -173,15 +180,15 @@
     text-transform: uppercase;
     list-style: none;
     text-align: center;
-    padding: gt(10,20) gt(10);
-    @include mq(tab, min) {
+    padding: gt(10, 20) gt(10);
+    @media ($tab <= width) {
       width: calc(100% / 5);
       text-align: center;
-      padding: gt(10,20) gt(10);
+      padding: gt(10, 20) gt(10);
     }
   }
 }
 //スクロールOFF
-.is-scroll-off{
+.is-scroll-off {
   overflow: hidden;
 }

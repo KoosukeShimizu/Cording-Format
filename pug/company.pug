@@ -59,7 +59,7 @@ html(lang='ja')
     include _includes/_tag_body
     .l-wrapper
       include _includes/_header
-      include _includes/_module/_breadcrumb
+      include _includes/_breadcrumb
       main.l-main
         //-========================
         //-========================
@@ -67,19 +67,19 @@ html(lang='ja')
         //- 編集はここから
         //-========================
         // PageContents
-        article.c-page.p-privacy
-          .c-page__head
+        article.p-page
+          .p-page__head
             .l-container
-              h1.c-page__title 運営者情報
-              .c-page__subtitle company
-              .c-page__lead あのイーハトーヴォのすきとおった風、夏でも底に冷たさをもつ青いそら、うつくしい森で飾られたモリーオ市、郊外のぎらぎらひかる草の波。
+              h1.p-page__title 運営者情報
+              .p-page__subtitle company
+              .p-page__lead あのイーハトーヴォのすきとおった風、夏でも底に冷たさをもつ青いそら、うつくしい森で飾られたモリーオ市、郊外のぎらぎらひかる草の波。
 
           // section START
           section.l-section
             .l-container
-              figure.c-image.p-company-photo
+              figure.c-figure
                 img(src=root+imgPath+'company/photo-company.png' width="840" height="630" alt='')
-              table.c-table
+              table.c-table-primary
                 tbody
                   tr 
                     th( style="width:8em;") 法人名

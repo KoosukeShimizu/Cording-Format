@@ -70,81 +70,81 @@
       </header>
       <!-- Breadcrumb-->
       <nav class="c-breadcrumb">
-        <ol class="c-breadcrumb__list">
-          <li class="c-breadcrumb__item"><a href="https://######.com/">ホーム</a></li>
-          <li class="c-breadcrumb__item"><a href="https://######.com/contact">お問い合わせ確認</a></li>
+        <ol>
+          <li><a href="https://######.com/">ホーム</a></li>
+          <li><a href="https://######.com/contact">お問い合わせ確認</a></li>
         </ol>
       </nav>
       <!-- /Breadcrumb-->
       <main class="l-main">
         <!-- PageContents-->
-        <article class="c-page p-contact">
-          <div class="c-page__head"> 
+        <article class="p-page p-contact">
+          <div class="p-page__head"> 
             <div class="l-container">
-              <h1 class="c-page__title">お問い合わせ</h1>
-              <div class="c-page__subtitle">contact</div>
-              <div class="c-page__intro">_サイト名_のお問い合わせのページです。ご利用に関する内容の他、取材に関するお問い合わせも受け付けております。</div>
+              <h1 class="p-page__title">お問い合わせ</h1>
+              <div class="p-page__subtitle">contact</div>
+              <div class="p-page__intro">_サイト名_のお問い合わせのページです。ご利用に関する内容の他、取材に関するお問い合わせも受け付けております。</div>
             </div>
           </div>
           <!-- section START-->
           <section class="l-section p-contact-form">
             <div class="l-container">
-              <div class="c-step"> 
-                <ul class="c-step__list"> 
-                  <li class="c-step__item is-current"><span class="c-step__order">step1</span> 情報のご入力</li>
-                  <li class="c-step__item"><span class="c-step__order">step2</span> 内容のご確認</li>
-                  <li class="c-step__item"><span class="c-step__order">step3</span> 送信完了</li>
+              <div class="p-step"> 
+                <ul class="p-step__list"> 
+                  <li class="p-step__item is-current"><span class="p-step__order">step1</span> 情報のご入力</li>
+                  <li class="p-step__item"><span class="p-step__order">step2</span> 内容のご確認</li>
+                  <li class="p-step__item"><span class="p-step__order">step3</span> 送信完了</li>
                 </ul>
               </div>
               <form method="post" action="./confirm.html" enctype="multipart/form-data">
-                <div class="c-form">
-                  <div class="c-form__item">
-                    <div class="c-form__label">お名前<span class="c-form__require">必須</span></div>
-                    <div class="c-form__body">
-                      <input class="c-form__input" type="text" id="name" name="name" placeholder="例：山田 花子" autocomplete="name" required>
-                      <div class="c-form__error">お名前を入力してください</div>
+                <div class="p-form">
+                  <div class="p-form__item">
+                    <div class="p-form__label">お名前<span class="p-form__require">必須</span></div>
+                    <div class="p-form__body">
+                      <input class="c-input" type="text" id="name" name="name" placeholder="例：山田 花子" autocomplete="name" required>
+                      <div class="p-form__error">お名前を入力してください</div>
                     </div>
                   </div>
-                  <div class="c-form__item">
-                    <div class="c-form__label">ふりがな<span class="c-form__require">必須</span></div>
-                    <div class="c-form__body">
-                      <input class="c-form__input" type="text" id="name_kana" name="name_kana" placeholder="例：やまだ はなこ" required>
-                      <div class="c-form__note">※全角ひらがな</div>
-                      <div class="c-form__error">ふりがなを入力してください</div>
+                  <div class="p-form__item">
+                    <div class="p-form__label">ふりがな<span class="p-form__require">必須</span></div>
+                    <div class="p-form__body">
+                      <input class="c-input" type="text" id="name_kana" name="name_kana" placeholder="例：やまだ はなこ" required>
+                      <div class="p-form__note">※全角ひらがな</div>
+                      <div class="p-form__error">ふりがなを入力してください</div>
                     </div>
                   </div>
-                  <div class="c-form__item">
-                    <div class="c-form__label">メールアドレス<span class="c-form__require">必須</span></div>
-                    <div class="c-form__body">
-                      <input class="c-form__input" type="email" id="email" name="email" placeholder="例：example@mail.com" autocomplete="email" required>
-                      <div class="c-form__note">※半角英数</div>
-                      <div class="c-form__error">メールアドレスを入力してください</div>
+                  <div class="p-form__item">
+                    <div class="p-form__label">メールアドレス<span class="p-form__require">必須</span></div>
+                    <div class="p-form__body">
+                      <input class="c-input" type="email" id="email" name="email" placeholder="例：example@mail.com" autocomplete="email" required>
+                      <div class="p-form__note">※半角英数</div>
+                      <div class="p-form__error">メールアドレスを入力してください</div>
                     </div>
                   </div>
-                  <div class="c-form__item">
-                    <div class="c-form__label">電話番号<span class="c-form__require">必須</span></div>
-                    <div class="c-form__body">
-                      <input class="c-form__input is-inline" type="tel" id="tel" name="tel" placeholder="例：03-1234-5678" autocomplete="tel" maxlength="13" required>
-                      <div class="c-form__note">※半角数字</div>
-                      <div class="c-form__error">電話番号を入力してください</div>
+                  <div class="p-form__item">
+                    <div class="p-form__label">電話番号<span class="p-form__require">必須</span></div>
+                    <div class="p-form__body">
+                      <input class="c-input is-inline" type="tel" id="tel" name="tel" placeholder="例：03-1234-5678" autocomplete="tel" maxlength="13" required>
+                      <div class="p-form__note">※半角数字</div>
+                      <div class="p-form__error">電話番号を入力してください</div>
                     </div>
                   </div>
-                  <div class="c-form__item">
-                    <div class="c-form__label">性別<span class="c-form__require">必須</span></div>
-                    <div class="c-form__body">
-                      <label class="c-form__radio">
+                  <div class="p-form__item">
+                    <div class="p-form__label">性別<span class="p-form__require">必須</span></div>
+                    <div class="p-form__body">
+                      <label class="c-radio">
                         <input type="radio" name="gender" id="" value="男性" required><span>男性</span>
                       </label>
-                      <label class="c-form__radio">
+                      <label class="c-radio">
                         <input type="radio" name="gender" id="" value="女性"><span>女性</span>
                       </label>
-                      <div class="c-form__error">性別を選択してください</div>
+                      <div class="p-form__error">性別を選択してください</div>
                     </div>
                   </div>
-                  <div class="c-form__item">
-                    <div class="c-form__label">生年月日<span class="c-form__require">必須</span></div>
-                    <div class="c-form__body">
-                      <select class="c-form__select is-inline" name="bd-year" autocomplete="bd-year" required>
+                  <div class="p-form__item">
+                    <div class="p-form__label">生年月日<span class="p-form__require">必須</span></div>
+                    <div class="p-form__body">
+                      <select class="c-select is-inline" name="bd-year" autocomplete="bd-year" required>
                         <option value="">----</option>
                         <option value="1960">1960</option>
                         <option value="1961">1961</option>
@@ -210,7 +210,7 @@
                         <option value="2021">2021</option>
                         <option value="2022">2022</option>
                       </select><span>年</span>
-                      <select class="c-form__select is-inline" name="bday-month" autocomplete="bday-month" required>
+                      <select class="c-select is-inline" name="bday-month" autocomplete="bday-month" required>
                         <option value="">--</option>
                         <option value="1">1</option>
                         <option value="2">2</option>
@@ -225,7 +225,7 @@
                         <option value="11">11</option>
                         <option value="12">12</option>
                       </select><span>月</span>
-                      <select class="c-form__select is-inline" name="bday-day" autocomplete="bday-day" required>
+                      <select class="c-select is-inline" name="bday-day" autocomplete="bday-day" required>
                         <option value="">--</option>
                         <option value="1">1</option>
                         <option value="2">2</option>
@@ -259,23 +259,23 @@
                         <option value="30">30</option>
                         <option value="31">31</option>
                       </select><span>日</span>
-                      <div class="c-form__error">生年月日を選択してください</div>
+                      <div class="p-form__error">生年月日を選択してください</div>
                     </div>
                   </div>
                   <div class="h-adr">
                     <input class="p-country-name" type="hidden" value="Japan">
-                    <div class="c-form__item">
-                      <div class="c-form__label">郵便番号<span class="c-form__require">必須</span></div>
-                      <div class="c-form__body"><span>〒</span>
-                        <input class="c-form__input p-postal-code is-inline" type="text" id="postal-code" name="postal-code" placeholder="例：123-4567" autocomplete="postal-code" size="8" maxlength="8" required>
-                        <div class="c-form__note">※半角数字</div>
-                        <div class="c-form__error">郵便番号を入力してください</div>
+                    <div class="p-form__item">
+                      <div class="p-form__label">郵便番号<span class="p-form__require">必須</span></div>
+                      <div class="p-form__body"><span>〒</span>
+                        <input class="c-input p-postal-code is-inline" type="text" id="postal-code" name="postal-code" placeholder="例：123-4567" autocomplete="postal-code" size="8" maxlength="8" required>
+                        <div class="p-form__note">※半角数字</div>
+                        <div class="p-form__error">郵便番号を入力してください</div>
                       </div>
                     </div>
-                    <div class="c-form__item">
-                      <div class="c-form__label">都道府県<span class="c-form__require">必須</span></div>
-                      <div class="c-form__body">
-                        <select class="c-form__select p-region-id is-inline" id="address-level1" name="address-level1" autocomplete="address-level1" required>
+                    <div class="p-form__item">
+                      <div class="p-form__label">都道府県<span class="p-form__require">必須</span></div>
+                      <div class="p-form__body">
+                        <select class="c-select p-region-id is-inline" id="address-level1" name="address-level1" autocomplete="address-level1" required>
                           <option value="">選択してください</option>
                           <optgroup label="北海道・東北地方">
                             <option value="1">北海道</option>
@@ -339,89 +339,89 @@
                             <option value="47">沖縄県</option>
                           </optgroup>
                         </select>
-                        <div class="c-form__error">都道府県を選択してください</div>
+                        <div class="p-form__error">都道府県を選択してください</div>
                       </div>
                     </div>
-                    <div class="c-form__item">
-                      <div class="c-form__label">市区町村<span class="c-form__require">必須</span></div>
-                      <div class="c-form__body">
-                        <input class="c-form__input p-locality" type="text" id="address-level2" name="address-level2" placeholder="" autocomplete="address-level2" required>
-                        <div class="c-form__error">市区町村を入力してください</div>
+                    <div class="p-form__item">
+                      <div class="p-form__label">市区町村<span class="p-form__require">必須</span></div>
+                      <div class="p-form__body">
+                        <input class="c-input p-locality" type="text" id="address-level2" name="address-level2" placeholder="" autocomplete="address-level2" required>
+                        <div class="p-form__error">市区町村を入力してください</div>
                       </div>
                     </div>
-                    <div class="c-form__item">
-                      <div class="c-form__label">市区町村以降<span class="c-form__require">必須</span></div>
-                      <div class="c-form__body">
-                        <input class="c-form__input p-street-address p-extended-address" type="text" id="address-level3" name="address-level3" placeholder="" autocomplete="address-level3" required>
-                        <div class="c-form__error">市区町村以降を入力してください</div>
+                    <div class="p-form__item">
+                      <div class="p-form__label">市区町村以降<span class="p-form__require">必須</span></div>
+                      <div class="p-form__body">
+                        <input class="c-input p-street-address p-extended-address" type="text" id="address-level3" name="address-level3" placeholder="" autocomplete="address-level3" required>
+                        <div class="p-form__error">市区町村以降を入力してください</div>
                       </div>
                     </div>
-                    <div class="c-form__item">
-                      <div class="c-form__label">建物名など</div>
-                      <div class="c-form__body">
-                        <input class="c-form__input" type="text" id="address-level4" name="address-level4" placeholder="" autocomplete="address-level4">
+                    <div class="p-form__item">
+                      <div class="p-form__label">建物名など</div>
+                      <div class="p-form__body">
+                        <input class="c-input" type="text" id="address-level4" name="address-level4" placeholder="" autocomplete="address-level4">
                       </div>
                     </div>
                   </div>
-                  <div class="c-form__item">
-                    <div class="c-form__label">お問い合わせ種別<span class="c-form__require">必須</span></div>
-                    <div class="c-form__body">
-                      <select class="c-form__select" id="" name="" required>
+                  <div class="p-form__item">
+                    <div class="p-form__label">お問い合わせ種別<span class="p-form__require">必須</span></div>
+                    <div class="p-form__body">
+                      <select class="c-select" id="" name="" required>
                         <option value="">選択してください</option>
                         <option value="item">ご意見・ご要望</option>
                         <option value="item">ご予約について</option>
                         <option value="item">取材について</option>
                       </select>
-                      <div class="c-form__error">お問い合わせ種別を入力してください</div>
+                      <div class="p-form__error">お問い合わせ種別を入力してください</div>
                     </div>
                   </div>
-                  <div class="c-form__item">
-                    <div class="c-form__label">ご連絡可能時間<span class="c-form__require">必須</span></div>
-                    <div class="c-form__body">
-                      <label class="c-form__checkbox">
+                  <div class="p-form__item">
+                    <div class="p-form__label">ご連絡可能時間<span class="p-form__require">必須</span></div>
+                    <div class="p-form__body">
+                      <label class="c-checkbox">
                         <input type="checkbox" name="period" id="" value="午前中" required><span>午前中（10時〜12時）</span>
                       </label>
-                      <label class="c-form__checkbox">
+                      <label class="c-checkbox">
                         <input type="checkbox" name="period" id="" value="午後"><span>午後（13時〜15時）</span>
                       </label>
-                      <label class="c-form__checkbox">
+                      <label class="c-checkbox">
                         <input type="checkbox" name="period" id="" value="夕方"><span>夕方（16時時〜18時）</span>
                       </label>
-                      <label class="c-form__checkbox">
+                      <label class="c-checkbox">
                         <input type="checkbox" name="period" id="" value="夜"><span>夜（19時〜21時）</span>
                       </label>
-                      <div class="c-form__note">※複数選択可</div>
-                      <div class="c-form__error">ご連絡可能時間を選択してください</div>
+                      <div class="p-form__note">※複数選択可</div>
+                      <div class="p-form__error">ご連絡可能時間を選択してください</div>
                     </div>
                   </div>
-                  <div class="c-form__item">
-                    <div class="c-form__label">お問い合わせ内容<span class="c-form__require">必須</span></div>
-                    <div class="c-form__body">
-                      <textarea class="c-form__textarea js-autoresize" id="comment" name="comment" placeholder="お問い合わせ内容を具体的にお知らせください。"></textarea>
-                      <div class="c-form__error">お問い合わせ内容を入力してください</div>
+                  <div class="p-form__item">
+                    <div class="p-form__label">お問い合わせ内容<span class="p-form__require">必須</span></div>
+                    <div class="p-form__body">
+                      <textarea class="c-textarea js-autoresize" id="comment" name="comment" placeholder="お問い合わせ内容を具体的にお知らせください。"></textarea>
+                      <div class="p-form__error">お問い合わせ内容を入力してください</div>
                     </div>
                   </div>
-                  <div class="c-form-agree">
-                    <div class="c-form-agree__title">同意事項</div>
-                    <div class="c-form-agree__text">当フォームのご利用には、下記事項のご確認とご同意が必要です。</div>
-                    <div class="c-form-agree__body">
+                  <div class="p-form-agree">
+                    <div class="p-form-agree__title">同意事項</div>
+                    <div class="p-form-agree__text">当フォームのご利用には、下記事項のご確認とご同意が必要です。</div>
+                    <div class="p-form-agree__body">
                       <ul class="c-list-disc u-text-left">
                         <li>ご連絡までお時間がかかることがございます。</li>
                         <li>プライバシーポリシーに同意してください。</li>
                       </ul>
                     </div>
-                    <label class="c-form__checkbox">
+                    <label class="c-checkbox">
                       <input class="js-agree" type="checkbox" name="" id="agree" value="" required><span>上記に同意します</span>
                     </label>
                   </div>
-                  <div class="c-form__submit">
+                  <div class="p-form__submit">
                     <button class="c-button-submit js-agree-target" type="submit" id="submit">入力内容を確認する</button>
                   </div>
                 </div>
               </form>
-              <div class="c-panel-contact">
-                <p class="c-panel-contact__text">お電話でのお問い合わせは<br class="u-sp-display">下記番号からお願い致します</p>
-                <address class="c-panel-contact__phone"><a href="tel:03-1234-5678">03-1234-5678</a></address>
+              <div class="p-panel-contact">
+                <p class="p-panel-contact__text">お電話でのお問い合わせは<br class="u-sp-display">下記番号からお願い致します</p>
+                <address class="p-panel-contact__phone"><a href="tel:03-1234-5678">03-1234-5678</a></address>
                 <p class="c-note">※受付時間 平日 9:00〜21:00</p>
               </div>
             </div>
@@ -466,7 +466,6 @@
     <script src="./assets/js/main.js?ver=1.0.0"></script>
     <script src="https://yubinbango.github.io/yubinbango/yubinbango.js"></script>
     <script src="./assets/lib/jquery.autoKana.js"></script>
-    <script src="./assets/js/form.min.js?ver=1.0.0"></script>
     <script type="text/javascript">
       $(function() {
         $.fn.autoKana("#name", "#name_kana", {

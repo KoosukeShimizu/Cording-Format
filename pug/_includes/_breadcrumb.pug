@@ -1,0 +1,12 @@
+//- home以外のときに設置
+unless key==='home'
+  // Breadcrumb
+  nav.c-breadcrumb
+    ol
+      li: a(href=siteUrl) ホーム
+      unless parentSlug
+        li: a(href=siteUrl+pageSlug) #{pageTitle}
+      else
+        li: a(href=siteUrl+parentSlug) #{parentTitle}
+        li: a(href=siteUrl+pageSlug) #{pageTitle}
+  // /Breadcrumb

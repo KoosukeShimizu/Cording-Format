@@ -59,7 +59,7 @@ html(lang='ja')
     include _includes/_tag_body
     .l-wrapper
       include _includes/_header
-      include _includes/_module/_breadcrumb
+      include _includes/_breadcrumb
       main.l-main
         //-========================
         //-========================
@@ -67,87 +67,87 @@ html(lang='ja')
         //- 編集はここから
         //-========================
         // PageContents
-        article.c-page.p-contact
-          .c-page__head 
+        article.p-page.p-contact
+          .p-page__head 
             .l-container
-              h1.c-page__title お問い合わせ
-              .c-page__subtitle contact
-              .c-page__intro _サイト名_のお問い合わせのページです。ご利用に関する内容の他、取材に関するお問い合わせも受け付けております。
+              h1.p-page__title お問い合わせ
+              .p-page__subtitle contact
+              .p-page__intro _サイト名_のお問い合わせのページです。ご利用に関する内容の他、取材に関するお問い合わせも受け付けております。
 
 
           
           // section START
           section.l-section.p-contact-form
             .l-container
-              .c-step 
-                ul.c-step__list 
-                  li.c-step__item.is-current #[span.c-step__order step1] 情報のご入力
-                  li.c-step__item #[span.c-step__order step2] 内容のご確認
-                  li.c-step__item #[span.c-step__order step3] 送信完了
+              .p-step 
+                ul.p-step__list 
+                  li.p-step__item.is-current #[span.p-step__order step1] 情報のご入力
+                  li.p-step__item #[span.p-step__order step2] 内容のご確認
+                  li.p-step__item #[span.p-step__order step3] 送信完了
               
               //- h2.c-h2 お問い合わせフォーム
               //- .c-text お問い合わせの内容につきまして、担当者より後日ご連絡させていただきます。#[br]下記にあるお問い合わせに関するご注意事項をご確認の上、下記フォームよりお問い合わせください。
 
               form(method="post" action=root+"confirm"+extention enctype='multipart/form-data')
                 //- h3.c-h3 お客様情報
-                .c-form
-                  .c-form__item
-                    .c-form__label お名前#[span.c-form__require 必須]
-                    .c-form__body
-                      input.c-form__input(type="text" id="name" name="name" placeholder="例：山田 花子" autocomplete="name" required)
-                      .c-form__error お名前を入力してください
+                .p-form
+                  .p-form__item
+                    .p-form__label お名前#[span.p-form__require 必須]
+                    .p-form__body
+                      input.c-input(type="text" id="name" name="name" placeholder="例：山田 花子" autocomplete="name" required)
+                      .p-form__error お名前を入力してください
 
-                  .c-form__item
-                    .c-form__label ふりがな#[span.c-form__require 必須]
-                    .c-form__body
-                      input.c-form__input(type="text" id="name_kana" name="name_kana" placeholder="例：やまだ はなこ" required)
-                      .c-form__note ※全角ひらがな
-                      .c-form__error ふりがなを入力してください
+                  .p-form__item
+                    .p-form__label ふりがな#[span.p-form__require 必須]
+                    .p-form__body
+                      input.c-input(type="text" id="name_kana" name="name_kana" placeholder="例：やまだ はなこ" required)
+                      .p-form__note ※全角ひらがな
+                      .p-form__error ふりがなを入力してください
 
-                  .c-form__item
-                    .c-form__label メールアドレス#[span.c-form__require 必須]
-                    .c-form__body
-                      input.c-form__input(type="email" id="email" name="email" placeholder="例：example@mail.com" autocomplete="email" required)
-                      .c-form__note ※半角英数
-                      .c-form__error メールアドレスを入力してください
+                  .p-form__item
+                    .p-form__label メールアドレス#[span.p-form__require 必須]
+                    .p-form__body
+                      input.c-input(type="email" id="email" name="email" placeholder="例：example@mail.com" autocomplete="email" required)
+                      .p-form__note ※半角英数
+                      .p-form__error メールアドレスを入力してください
 
-                  .c-form__item
-                    .c-form__label 電話番号#[span.c-form__require 必須]
-                    .c-form__body
-                      input.c-form__input.is-inline(type="tel" id="tel" name="tel" placeholder="例：03-1234-5678" autocomplete="tel"  maxlength="13" required)
-                      .c-form__note ※半角数字
-                      .c-form__error 電話番号を入力してください
+                  .p-form__item
+                    .p-form__label 電話番号#[span.p-form__require 必須]
+                    .p-form__body
+                      input.c-input.is-inline(type="tel" id="tel" name="tel" placeholder="例：03-1234-5678" autocomplete="tel"  maxlength="13" required)
+                      .p-form__note ※半角数字
+                      .p-form__error 電話番号を入力してください
                   
-                  .c-form__item
-                    .c-form__label 性別#[span.c-form__require 必須]
-                    .c-form__body
-                      label.c-form__radio
+                  .p-form__item
+                    .p-form__label 性別#[span.p-form__require 必須]
+                    .p-form__body
+                      label.c-radio
                         input(type="radio" name="gender" id="" value="男性" required)
                         span 男性
-                      label.c-form__radio
+                      label.c-radio
                         input(type="radio" name="gender" id="" value="女性")
                         span 女性
-                      .c-form__error 性別を選択してください
+                      .p-form__error 性別を選択してください
                   
-                  .c-form__item
-                    .c-form__label 生年月日#[span.c-form__require 必須]
-                    .c-form__body
-                      select.c-form__select.is-inline(name="bd-year" autocomplete="bd-year" required)
+                  .p-form__item
+                    .p-form__label 生年月日#[span.p-form__require 必須]
+                    .p-form__body
+                      select.c-select.is-inline(name="bd-year" autocomplete="bd-year" required)
                         option(value="") ----
                         - for( var n=1960; n<= 2022; n++)
                           option(value=n + "") #{n}
                       span 年
-                      select.c-form__select.is-inline(name="bday-month" autocomplete="bday-month" required)
+                      select.c-select.is-inline(name="bday-month" autocomplete="bday-month" required)
                         option(value="") --
                         - for( var n=1; n<= 12; n++)
                           option(value=n + "") #{n}
                       span 月
-                      select.c-form__select.is-inline(name="bday-day" autocomplete="bday-day" required)
+                      select.c-select.is-inline(name="bday-day" autocomplete="bday-day" required)
                         option(value="") --
                         - for( var n=1; n<= 31; n++)
                           option(value=n + "") #{n}
                       span 日
-                      .c-form__error 生年月日を選択してください
+                      .p-form__error 生年月日を選択してください
 
 
 
@@ -155,19 +155,19 @@ html(lang='ja')
                   .h-adr
                     //- 自動入力用で必須
                     input.p-country-name(type="hidden" value="Japan")
-                    .c-form__item
-                      .c-form__label 郵便番号#[span.c-form__require 必須]
-                      .c-form__body
+                    .p-form__item
+                      .p-form__label 郵便番号#[span.p-form__require 必須]
+                      .p-form__body
                         span 〒
-                        input.c-form__input.p-postal-code.is-inline(type="text" id="postal-code" name="postal-code" placeholder="例：123-4567" autocomplete="postal-code" size="8" maxlength="8" required)
-                        .c-form__note ※半角数字
-                        .c-form__error 郵便番号を入力してください
+                        input.c-input.p-postal-code.is-inline(type="text" id="postal-code" name="postal-code" placeholder="例：123-4567" autocomplete="postal-code" size="8" maxlength="8" required)
+                        .p-form__note ※半角数字
+                        .p-form__error 郵便番号を入力してください
 
                     
-                    .c-form__item
-                      .c-form__label 都道府県#[span.c-form__require 必須]
-                      .c-form__body
-                        select.c-form__select.p-region-id.is-inline(id="address-level1" name="address-level1" autocomplete="address-level1" required)
+                    .p-form__item
+                      .p-form__label 都道府県#[span.p-form__require 必須]
+                      .p-form__body
+                        select.c-select.p-region-id.is-inline(id="address-level1" name="address-level1" autocomplete="address-level1" required)
                           option(value="") 選択してください
                           optgroup(label='北海道・東北地方')
                             option(value='1') 北海道
@@ -223,79 +223,79 @@ html(lang='ja')
                             option(value='45') 宮崎県
                             option(value='46') 鹿児島県
                             option(value='47') 沖縄県
-                        .c-form__error 都道府県を選択してください
+                        .p-form__error 都道府県を選択してください
 
-                    .c-form__item
-                      .c-form__label 市区町村#[span.c-form__require 必須]
-                      .c-form__body
-                        input.c-form__input.p-locality(type="text" id="address-level2" name="address-level2" placeholder="" autocomplete="address-level2" required)
-                        .c-form__error 市区町村を入力してください
-                    .c-form__item
-                      .c-form__label 市区町村以降#[span.c-form__require 必須]
-                      .c-form__body
-                        input.c-form__input.p-street-address.p-extended-address(type="text" id="address-level3" name="address-level3" placeholder="" autocomplete="address-level3" required)
-                        .c-form__error 市区町村以降を入力してください
-                    .c-form__item
-                      .c-form__label 建物名など
-                      .c-form__body
-                        input.c-form__input(type="text" id="address-level4" name="address-level4" placeholder="" autocomplete="address-level4")
+                    .p-form__item
+                      .p-form__label 市区町村#[span.p-form__require 必須]
+                      .p-form__body
+                        input.c-input.p-locality(type="text" id="address-level2" name="address-level2" placeholder="" autocomplete="address-level2" required)
+                        .p-form__error 市区町村を入力してください
+                    .p-form__item
+                      .p-form__label 市区町村以降#[span.p-form__require 必須]
+                      .p-form__body
+                        input.c-input.p-street-address.p-extended-address(type="text" id="address-level3" name="address-level3" placeholder="" autocomplete="address-level3" required)
+                        .p-form__error 市区町村以降を入力してください
+                    .p-form__item
+                      .p-form__label 建物名など
+                      .p-form__body
+                        input.c-input(type="text" id="address-level4" name="address-level4" placeholder="" autocomplete="address-level4")
 
 
-                  .c-form__item
-                    .c-form__label お問い合わせ種別#[span.c-form__require 必須]
-                    .c-form__body
-                      select.c-form__select(id="" name="" required)
+                  .p-form__item
+                    .p-form__label お問い合わせ種別#[span.p-form__require 必須]
+                    .p-form__body
+                      select.c-select(id="" name="" required)
                           option(value="") 選択してください
                           - var list = ["ご意見・ご要望", "ご予約について", "取材について"]
                             each item in list
                               option(value="item") #{item}
-                      .c-form__error お問い合わせ種別を入力してください
+                      .p-form__error お問い合わせ種別を入力してください
                   
-                  .c-form__item
-                    .c-form__label ご連絡可能時間#[span.c-form__require 必須]
-                    .c-form__body
-                      label.c-form__checkbox
+                  .p-form__item
+                    .p-form__label ご連絡可能時間#[span.p-form__require 必須]
+                    .p-form__body
+                      label.c-checkbox
                         input(type="checkbox" name="period" id="" value="午前中" required)
                         span 午前中（10時〜12時）
-                      label.c-form__checkbox
+                      label.c-checkbox
                         input(type="checkbox" name="period" id="" value="午後")
                         span 午後（13時〜15時）
-                      label.c-form__checkbox
+                      label.c-checkbox
                         input(type="checkbox" name="period" id="" value="夕方")
                         span 夕方（16時時〜18時）
-                      label.c-form__checkbox
+                      label.c-checkbox
                         input(type="checkbox" name="period" id="" value="夜")
                         span 夜（19時〜21時）
-                      .c-form__note ※複数選択可
-                      .c-form__error ご連絡可能時間を選択してください
+                      .p-form__note ※複数選択可
+                      .p-form__error ご連絡可能時間を選択してください
 
-                  .c-form__item
-                    .c-form__label お問い合わせ内容#[span.c-form__require 必須]
-                    .c-form__body
-                      textarea.c-form__textarea.js-autoresize(id ="comment" name='comment'  placeholder='お問い合わせ内容を具体的にお知らせください。')
-                      .c-form__error お問い合わせ内容を入力してください
+                  .p-form__item
+                    .p-form__label お問い合わせ内容#[span.p-form__require 必須]
+                    .p-form__body
+                      textarea.c-textarea.js-autoresize(id ="comment" name='comment'  placeholder='お問い合わせ内容を具体的にお知らせください。')
+                      .p-form__error お問い合わせ内容を入力してください
 
-                  .c-form-agree
-                    .c-form-agree__title 同意事項
-                    .c-form-agree__text 当フォームのご利用には、下記事項のご確認とご同意が必要です。
-                    .c-form-agree__body
+                  .p-form-agree
+                    .p-form-agree__title 同意事項
+                    .p-form-agree__text 当フォームのご利用には、下記事項のご確認とご同意が必要です。
+                    .p-form-agree__body
                       ul.c-list-disc.u-text-left
                         li ご連絡までお時間がかかることがございます。
                         li プライバシーポリシーに同意してください。
-                    label.c-form__checkbox
+                    label.c-checkbox
                       input.js-agree(type="checkbox" name="" id="agree" value="" required)
                       span 上記に同意します
                   
 
-                  .c-form__submit
+                  .p-form__submit
                     button.c-button-submit.js-agree-target(type="submit" id="submit") 入力内容を確認する
 
-              .c-panel-contact
-                p.c-panel-contact__text
+              .p-panel-contact
+                p.p-panel-contact__text
                   | お電話でのお問い合わせは
                   br.u-sp-display
                   | 下記番号からお願い致します
-                address.c-panel-contact__phone
+                address.p-panel-contact__phone
                   a(href='tel:03-1234-5678') 03-1234-5678
                 p.c-note ※受付時間 平日 9:00〜21:00
           // section END
@@ -318,7 +318,7 @@ html(lang='ja')
       script(src="https://yubinbango.github.io/yubinbango/yubinbango.js")
       //- script(src=root+libPath+"yubinbango.js")
       script(src=root+libPath+"jquery.autoKana.js")
-      script(src=root+jsPath+"form.min.js?ver=1.0.0")
+      //- script(src=root+jsPath+"form.min.js?ver=1.0.0")
       script(type='text/javascript').
         $(function() {
           $.fn.autoKana("#name", "#name_kana", {

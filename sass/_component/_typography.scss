@@ -3,11 +3,11 @@
   font-weight: bold;
   line-height: 1.2;
   letter-spacing: 0.05em;
-  margin: gt(20,40) 0;
+  margin: gt(20, 40) 0;
 }
 
 .c-h2 {
-  font-size: fz(24,44);
+  font-size: fz(24, 44);
   font-weight: bold;
   line-height: 1.2;
   letter-spacing: 0.02em;
@@ -36,24 +36,41 @@
   // }
 }
 
-
 .c-lead {
-  font-size: fz(16,26);
-  margin-bottom: gt(20,40);
+  font-size: fz(16, 26);
+  margin-bottom: gt(20, 40);
   // text-align: center;
+  // &-primary {
+  //   プライマリスタイル
+  // }
+  // &-secontary{
+  //   セカンダリスタイル
+  // }
 }
 
 .c-text {
-  margin: 0 0 gt(10,20);
+  margin: 0 0 gt(10, 20);
   letter-spacing: 0;
+  // &-primary {
+  //   プライマリスタイル
+  // }
+  // &-secontary{
+  //   セカンダリスタイル
+  // }
 }
 
 .c-note {
-  font-size: fz(11,14);
-  color: $c-gray50;
+  font-size: fz(11, 14);
+  color: var(--mute);
   line-height: 1.5;
   letter-spacing: 0;
   padding-left: 1em;
   text-indent: -1em;
-  margin: 0 0 gt(10,20);
+  margin: 0 0 gt(10, 20);
+  // &-primary {
+  //   プライマリスタイル
+  // }
+  // &-secontary{
+  //   セカンダリスタイル
+  // }
 }

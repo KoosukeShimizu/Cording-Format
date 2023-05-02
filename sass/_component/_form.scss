@@ -1,0 +1,196 @@
+//  基本設定
+// -------------------------------
+%form-core {
+  outline: none;
+  cursor: pointer;
+  // &:valid{
+  //   outline: 2px solid var(--success);
+  // }
+  // &:invalid{
+  //   outline: 2px solid var(--accent);
+  // }
+  &:focus {
+    outline: solid 2px var(--accent);
+  }
+  &[disabled] {
+    cursor: not-allowed;
+    pointer-events: none;
+  }
+  &[readonly] {
+    cursor: default;
+    pointer-events: none;
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid var(--borderPrimary);
+    font-size: fz(18, 24);
+    padding-top: 0;
+  }
+  @media ($tab <= width) {
+    &[readonly] {
+      border-bottom: none;
+      padding: 0;
+    }
+  }
+}
+
+%form-style-input {
+  border-radius: 5px;
+  border: 1px solid var(--borderPrimary);
+  background-color: white;
+  padding: gt(10, 20);
+}
+
+%form-style-check {
+  span {
+    display: inline-block;
+    line-height: 1;
+    vertical-align: middle;
+    // border: 1px solid #000;
+    margin-bottom: gt(10, 20);
+    &:before {
+      width: 24px;
+      height: 24px;
+      display: inline-block;
+      content: "";
+      line-height: 1;
+      vertical-align: middle;
+      transform: translateY(-10%);
+    }
+  }
+}
+
+//  セレクター
+// -------------------------------
+.c-input {
+  @extend %form-core;
+  @extend %form-style-input;
+  width: 100%;
+}
+
+.c-select {
+  @extend %form-core;
+  @extend %form-style-input;
+  background: url("#{$img_path}common/icons/form/caret-down.svg") no-repeat right gt(10, 20) center / 10px, #fff;
+  padding-right: gt(25, 50);
+  width: 100%;
+  // position: relative;
+  // &:after{
+  //   background: url("#{$img_path}common/icons/form/circle.svg") no-repeat center center / contain;
+  // }
+  // width: 100%;
+}
+.c-textarea {
+  @extend %form-core;
+  @extend %form-style-input;
+  width: 100%;
+  min-height: 10em;
+}
+.c-radio {
+  @extend %form-core;
+  @extend %form-style-check;
+  span {
+    margin-right: 1em;
+    &:before {
+      background: url("#{$img_path}common/icons/form/circle.svg") no-repeat center center / contain;
+      margin-right: 0.5em;
+    }
+  }
+  input[type="radio"] {
+    &:checked {
+      + span {
+        &:before {
+          background: url("#{$img_path}common/icons/form/circle-dot.svg") no-repeat center center / contain;
+        }
+      }
+    }
+  }
+}
+
+.c-checkbox {
+  @extend %form-core;
+  @extend %form-style-check;
+  span {
+    margin-right: 1em;
+    &:before {
+      background: url("#{$img_path}common/icons/form/square.svg") no-repeat center center / contain;
+      margin-right: 0.5em;
+    }
+  }
+  input[type="checkbox"] {
+    &:checked {
+      + span {
+        &:before {
+          background: url("#{$img_path}common/icons/form/square-check.svg") no-repeat center center / contain;
+        }
+      }
+    }
+  }
+}
+
+//  その他パーツ
+// -------------------------------
+.c-form {
+  &-require {
+    background: var(--accent);
+    color: white;
+    font-size: fz(10, 12);
+    margin-left: gt(5, 10);
+    width: 3.5em;
+    text-align: center;
+    display: inline-block;
+    border-radius: 3px;
+  }
+  &-text {
+    display: inline-block;
+    padding: 0;
+    margin: 0 auto gt(10, 20);
+    text-align: left;
+  }
+  &-note {
+    color: var(--mute);
+  }
+  &-error {
+    display: block;
+    padding: 0 0 0 2.5em;
+    margin: 0;
+    margin-top: gt(5, 10);
+    font-size: fz(12, 14);
+    color: var(--accent);
+    background: url("#{$img_path}common/icons/circle-exclamation.svg") no-repeat left gt(5, 10) center / 16px;
+    text-align: left;
+  }
+}
+
+/* --------------------------------------------------
+フォーム：placeholder
+-------------------------------------------------- */
+
+/* 各ベンダープレフィックスが取れた標準版！！(http://caniuse.com/#search=placeholder-shown) */
+:placeholder-shown {
+  color: rgba(var(--mute), 0.5);
+  opacity: 1;
+}
+
+/* Google Chrome, Safari, Opera 15+, Android, iOS */
+::-webkit-input-placeholder {
+  color: rgba(var(--borderPrimary), 0.5);
+  opacity: 1;
+}
+
+/* Firefox 18- */
+:-moz-placeholder {
+  color: rgba(var(--borderPrimary), 0.5);
+  opacity: 1;
+}
+
+/* Firefox 19+ */
+::-moz-placeholder {
+  color: rgba(var(--borderPrimary), 0.5);
+  opacity: 1;
+}
+
+/* IE 10+ */
+:-ms-input-placeholder {
+  color: rgba(var(--borderPrimary), 0.5);
+  opacity: 1;
+}

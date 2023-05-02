@@ -1,39 +1,39 @@
 .u-text {
-  margin: 0 0 gt(10,20);
-  &-right{
+  margin: 0 0 gt(10, 20);
+  &-right {
     text-align: right;
   }
-  &-center{
+  &-center {
     text-align: center;
   }
-  &-left{
+  &-left {
     text-align: left;
   }
-  &-primary{
-    color: $c-primary;
+  &-primary {
+    color: var(--primary);
   }
-  &-secondary{
-    color: $c-secondary;
+  &-secondary {
+    color: var(--secondary);
   }
-  &-tertiary{
-    color: $c-tertiary;
+  &-tertiary {
+    color: var(--tertiary);
   }
-  &-accent{
-    color: $c-accent;
+  &-accent {
+    color: var(--accent);
   }
-  &-danger{
-    color: $c-danger;
+  &-danger {
+    color: var(--accent);
   }
-  &-important{
-    color: $c-important;
+  &-important {
+    color: var(--accent);
   }
-  &-success{
-    color: $c-success;
+  &-success {
+    color: var(--success);
   }
-  &-disable{
-    color: $c-disable;
+  &-disable {
+    color: var(--disable);
   }
-  &-bold{
+  &-bold {
     font-weight: bold;
   }
 }

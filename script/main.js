@@ -20,7 +20,6 @@ import './_includes/_module/_toc.js?v1';//目次
 
 // Form
 //======================
-// import './_includes/_form/_form-agree.js?v1';
 // import './_includes/_form/_form-branch.js?v1';
 // import './_includes/_form/_form-error.js?v1';
 // import './_includes/_form/_form-file.js?v1';

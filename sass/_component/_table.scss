@@ -1,28 +1,22 @@
-.c-table {
+%table-core {
+  border-collapse: collapse;
+  margin: 0 auto gt(20, 40);
   width: 100%;
-  tbody {
+  th,
+  td {
+    padding: gt(8, 16);
+  }
+  th {
+    color: #b9b9b9;
+  }
+}
+
+
+.c-table {
+  &-primary {
+    @extend %table-core;
     tr {
-      &:not(:last-child){
-        border-bottom: 1px solid $c-border;
-      }
-
-      &:last-child {
-        margin-bottom: 0;
-        padding-bottom: 0;
-        border: none;
-      }
-
-      th, td {
-        text-align: left;
-        padding: gt(15,30) 10px;
-      }
-
-      th {
-        font-weight: bold;
-        margin-bottom: 16px;
-        font-size: fz(14,16);
-        line-height: 1.4;
-      }
+      border-bottom: 1px solid var(--borderPrimary);
     }
   }
 }

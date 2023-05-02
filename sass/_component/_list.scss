@@ -14,22 +14,22 @@
 }
 
 .c-list {
-  border-top: 1px solid $c-border;
+  border-top: 1px solid var(--borderPrimary);
   &__item {
     // display: flex;
-    border-bottom: 1px solid $c-border;
+    border-bottom: 1px solid var(--borderPrimary);
     padding: gt(16, 40) 2.5em gt(16, 40) 0;
     position: relative;
     transition: $transition;
     &:after {
       content: "";
-      @include position(absolute, 50% .5em null null);
+      @include position(absolute, 50% 0.5em null null);
       display: block;
       width: 1.5em;
       height: 1.5em;
       background: url("#{$img_path}common/icons/arrow/angle-right.svg") no-repeat center center / contain;
       transform: translateY(-50%);
-      opacity: .2;
+      opacity: 0.2;
     }
     @include hover {
       transform: scale(1.05);
@@ -68,7 +68,7 @@
   }
   &__date {
     font-size: fz(12, 16);
-    color: $c-gray70;
+    color: var(--mute);
     font-weight: 700;
     // letter-spacing: .1em;
   }

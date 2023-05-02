@@ -38,15 +38,15 @@
 
   &__item {
     background: white;
-    border: 1px solid $c-gray90;
+    border: 1px solid var(--mute);
     width: calc((100% - #{$gt} * (#{$col} - 1)) / #{$col});
     border-radius: 8px;
     overflow: hidden;
     position: relative;
     transition: $transition;
-    @include hover{
+    @include hover {
       transform: scale(1.05);
-      box-shadow: 0 0 20px rgba(black,.1) ;
+      box-shadow: 0 0 20px rgba(black, 0.1);
     }
   }
   &__thumb {
@@ -71,23 +71,23 @@
   &__date {
     font-size: fz(12, 16);
     line-height: 1;
-    color: $c-gray70;
+    color: var(--mute);
     font-weight: 700;
   }
   &__link {
     // &:after{
-      position: absolute;
-      top: 0;
-      right: 0;
-      bottom: 0;
-      left: 0;
-      z-index: 1;
-      pointer-events: auto;
-      content: "";
-      background-color: transparent;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1;
+    pointer-events: auto;
+    content: "";
+    background-color: transparent;
     // }
   }
-  @include mq(sp, min) {
+  @media ($sp <= width) {
     $col: 2;
     // $gt: gt(10, 20);
     &__item {
@@ -96,7 +96,7 @@
     }
   }
 
-  @include mq(tab, min) {
+  @media ($tab <= width) {
     $col: 3;
     // $gt: gt(10, 20);
     &__item {
@@ -104,7 +104,7 @@
       width: calc((100% - #{$gt} * (#{$col} - 1)) / #{$col});
     }
   }
-  @include mq(pc, min) {
+  @media ($pc <= width) {
     $col: 4;
     // $gt: gt(10, 20);
     &__item {

@@ -59,7 +59,7 @@ html(lang='ja')
     include _includes/_tag_body
     .l-wrapper
       include _includes/_header
-      include _includes/_module/_breadcrumb
+      include _includes/_breadcrumb
       main.l-main
         //-========================
         //-========================
@@ -93,8 +93,8 @@ html(lang='ja')
               
                 .c-text あのイーハトーヴォのすきとおった風、夏でも底に冷たさをもつ青いそら、うつくしい森で飾られたモリーオ市、郊外のぎらぎらひかる草の波。
 
-                button.js-dropdown.c-dropdown(type="button") ドロップダウンスイッチ
-                .js-dropdown-target.c-dropdown-target
+                button.js-dropdown.m-dropdown(type="button") ドロップダウンスイッチ
+                .js-dropdown-target.m-dropdown__target
                   p ドロップダウンコンテンツ１#[br]ドロップダウンを発火させるボタンには.js-dropdownを付与#[br]表示させるコンテンツは.js-dropdown-targetに記載してください。#[br]ボタンスタイルにしたいなどの場合は、他のコンポーネント/プロジェクトスタイルと組み合わせてください。
                 .c-block-button
                   a.c-button-secondary(href=root+"#"+extention) セカンダリ ボタン
@@ -116,12 +116,12 @@ html(lang='ja')
           // section c START
           section.l-section.p-home-c
             .l-container
-              .c-panel-contact
-                p.c-panel-contact__text
+              .p-panel-contact
+                p.p-panel-contact__text
                   | お電話でのお問い合わせは
                   br.u-sp-display
                   | 下記番号からお願い致します
-                address.c-panel-contact__phone
+                address.p-panel-contact__phone
                   a(href='tel:03-1234-5678') 03-1234-5678
                 p.c-note ※受付時間 平日 9:00〜21:00
           // section c END

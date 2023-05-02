@@ -1,7 +1,7 @@
 /* --------------------------------------------------
 記事ページ
 -------------------------------------------------- */
-.c-single {
+.p-single {
   &__head {
     padding: gt(20, 60) 0 gt(0);
     margin: auto;
@@ -18,7 +18,7 @@
     font-size: fz(32, 60);
     font-weight: 700;
     margin-bottom: gt(16);
-    color: $c-gray80;
+    color: var(--mute);
   }
   &__tag {
     margin-bottom: gt(20, 40);
@@ -39,9 +39,9 @@
       // color: red;
       font-weight: 700;
       // background: #eee;
-      // border-top: 6px double $c-border;
-      // border-bottom: 6px double $c-border;
-      // border-bottom: 4px solid $c-border;
+      // border-top: 6px double var(--borderPrimary);
+      // border-bottom: 6px double var(--borderPrimary);
+      // border-bottom: 4px solid var(--borderPrimary);
       margin: gt(40, 80) 0 gt(20, 40);
       padding: gt(12, 20) 0;
       font-size: fz(22, 36);
@@ -52,14 +52,14 @@
       //   @include position(absolute, 100% null null 0);
       //   width: 20%;
       //   height: 4px;
-      //   background: $c-primary;
+      //   background: var(--primary);
       //   content: "";
       // }
       &:before {
         @include position(absolute, 100% null null 0);
         width: 100%;
         height: 4px;
-        content: '';
+        content: "";
         background-image: repeating-linear-gradient(-45deg, #000, #000 1px, transparent 2px, transparent 5px);
         background-size: 7px 7px;
         -webkit-backface-visibility: hidden;
@@ -69,21 +69,21 @@
         @include position(absolute, 100% null null 0);
         width: 20%;
         height: 4px;
-        content: '';
+        content: "";
         background: #000;
-        // background-image: repeating-linear-gradient(-45deg, $c-primary, $c-primary 1px, transparent 2px, transparent 5px);
+        // background-image: repeating-linear-gradient(-45deg, var(--primary), var(--primary) 1px, transparent 2px, transparent 5px);
         background-size: 7px 7px;
         -webkit-backface-visibility: hidden;
         backface-visibility: hidden;
       }
     }
     h3 {
-      // border-left: 3px solid $c-border;
+      // border-left: 3px solid var(--borderPrimary);
       border-bottom: 1px solid #000;
-      margin: gt(20, 40) 0 gt(10, 20) ;
+      margin: gt(20, 40) 0 gt(10, 20);
       padding: gt(8, 12) 0;
       font-weight: 700;
-      font-size: fz(18,24);
+      font-size: fz(18, 24);
     }
     h4 {
       font-weight: 700;
@@ -106,7 +106,7 @@
     }
     a {
       text-decoration: underline;
-      color: $c-font-link;
+      color: var(--linkPrimary);
       // padding: 0 0.25em;
     }
     strong {
@@ -164,10 +164,10 @@
     table {
       border-collapse: collapse;
       border-spacing: 0;
-      border-top: 1px solid $c-border;
+      border-top: 1px solid var(--borderPrimary);
       margin-bottom: gt(20, 40);
       tr {
-        border-bottom: 1px solid $c-border !important;
+        border-bottom: 1px solid var(--borderPrimary) !important;
         // background: rgba(black,.2);
       }
       th {

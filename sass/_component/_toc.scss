@@ -1,16 +1,16 @@
 .c-toc {
-  width: min(100%,500px);
+  width: min(100%, 500px);
   margin: auto;
-  border: 1px solid $c-border;
+  border: 1px solid var(--borderPrimary);
   border-radius: 3px;
-  padding: gt(5,30);
+  padding: gt(5, 30);
   list-style: none;
-  transition:$transition;
-  &__title{
+  transition: $transition;
+  &__title {
     text-transform: uppercase;
     text-align: center;
     cursor: pointer;
-    font-size: fz(18,22);
+    font-size: fz(18, 22);
     position: relative;
     list-style: none;
     &:after {
@@ -18,80 +18,78 @@
       display: block;
       width: 16px;
       height: 16px;
-      background: url("#{$img_path}common/icons/plus.svg") no-repeat center center /contain;
+      background: url("#{$img_path}common/icons/plus.svg") no-repeat center center / contain;
       position: absolute;
-      right: gt(5,10);
+      right: gt(5, 10);
       top: 50%;
       transform: translate(-50%, -50%);
     }
   }
-  &[open]{
-    .c-toc__title{
+  &[open] {
+    .c-toc__title {
       &:after {
-        background: url("#{$img_path}common/icons/minus.svg") no-repeat center center /contain;
+        background: url("#{$img_path}common/icons/minus.svg") no-repeat center center / contain;
       }
     }
   }
-  &__body{
+  &__body {
     padding: gt(8) gt(16);
   }
-  &__list{
+  &__list {
     // margin-top: gt(5,10);
     counter-reset: h2;
   }
-  &__h2{
+  &__h2 {
     // border-bottom: 1px solid #000;
     padding-left: 1.5em;
     position: relative;
-    &:before{
+    &:before {
       counter-increment: h2;
-      content: counter(h2)"｜";
+      content: counter(h2) "｜";
       position: absolute;
       left: 0;
       // padding: gt(5,10) 0;
       // top: calc(gt(10) - 0.25em);
       font-weight: 700;
-      opacity: .3;
+      opacity: 0.3;
       // font-size: fz(18,20);
       // line-height: 1;
     }
   }
-  &__link{
+  &__link {
     display: inline-block;
     // padding: gt(5,10) 0;
     margin-bottom: gt(4);
-    @include hover{
-      transform:translateX(.5em);
+    @include hover {
+      transform: translateX(0.5em);
     }
   }
-  &__child{
+  &__child {
     counter-reset: h3;
   }
-  &__h3{
+  &__h3 {
     padding-left: 2.5em;
     position: relative;
-    &:before{
+    &:before {
       // padding: gt(5,10) 0;
       counter-increment: h3;
-      content: counter(h2) "-" counter(h3)"｜";
+      content: counter(h2) "-" counter(h3) "｜";
       position: absolute;
       left: 0;
       top: calc(gt(10) - 0.25em);
       font-weight: 700;
-      opacity: .3;
+      opacity: 0.3;
       // font-size: fz(18,20);
     }
-
   }
   // &__item{
   //   margin: 0;
   // }
 }
 
-
 .c-toc-child {
   margin: 0;
-  &__item{
+  &__item {
     margin: 0;
   }
 }

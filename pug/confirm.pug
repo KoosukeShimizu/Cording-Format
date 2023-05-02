@@ -59,7 +59,7 @@ html(lang='ja')
     include _includes/_tag_body
     .l-wrapper
       include _includes/_header
-      include _includes/_module/_breadcrumb
+      include _includes/_breadcrumb
       main.l-main
         //-========================
         //-========================
@@ -67,81 +67,81 @@ html(lang='ja')
         //- 編集はここから
         //-========================
         // PageContents
-        article.c-page.p-confirm
-          .c-page__head 
+        article.p-page.p-confirm
+          .p-page__head 
             .l-container
-              h1.c-page__title 内容の確認
-              .c-page__subtitle confirm
-              .c-page__intro _下記の内容でお間違いない事をご確認の上『この内容で送信する』ボタンより、ご予約内容を送信してください。
+              h1.p-page__title 内容の確認
+              .p-page__subtitle confirm
+              .p-page__intro _下記の内容でお間違いない事をご確認の上『この内容で送信する』ボタンより、ご予約内容を送信してください。
 
           // section START
           section.l-section.p-confirm
             .l-container
-              .c-step 
-                ul.c-step__list 
-                  li.c-step__item #[span.c-step__order step1] 情報のご入力
-                  li.c-step__item.is-current #[span.c-step__order step2] 内容のご確認
-                  li.c-step__item #[span.c-step__order step3] 送信完了
+              .p-step 
+                ul.p-step__list 
+                  li.p-step__item #[span.p-step__order step1] 情報のご入力
+                  li.p-step__item.is-current #[span.p-step__order step2] 内容のご確認
+                  li.p-step__item #[span.p-step__order step3] 送信完了
               //- h2.c-h2-deco ご入力内容
               form(method="post" action=root+"thanks"+extention enctype='multipart/form-data')
-                .c-form
-                  .c-form__item
-                    .c-form__label お名前#[span.c-form__require 必須]
-                    .c-form__body
-                      input.c-form__input(type="text" id="name" name="name" value="山田 花子" readonly)
+                .p-form
+                  .p-form__item
+                    .p-form__label お名前
+                    .p-form__body
+                      input.c-input(type="text" id="name" name="name" value="山田 花子" readonly)
 
-                  .c-form__item
-                    .c-form__label ふりがな#[span.c-form__require 必須]
-                    .c-form__body
-                      input.c-form__input(type="text" id="name_kana" name="name_kana" value="やまだ はなこ" readonly)
+                  .p-form__item
+                    .p-form__label ふりがな
+                    .p-form__body
+                      input.c-input(type="text" id="name_kana" name="name_kana" value="やまだ はなこ" readonly)
 
-                  .c-form__item
-                    .c-form__label メールアドレス#[span.c-form__require 必須]
-                    .c-form__body
-                      input.c-form__input(type="text" id="email" name="email" value="example@mail.com" readonly)
+                  .p-form__item
+                    .p-form__label メールアドレス
+                    .p-form__body
+                      input.c-input(type="text" id="email" name="email" value="example@mail.com" readonly)
 
-                  .c-form__item
-                    .c-form__label 電話番号#[span.c-form__require 必須]
-                    .c-form__body
-                      input.c-form__input(type="text" id="tel" name="tel" value="09012345678" readonly)
+                  .p-form__item
+                    .p-form__label 電話番号
+                    .p-form__body
+                      input.c-input(type="text" id="tel" name="tel" value="09012345678" readonly)
                   
-                  .c-form__item
-                    .c-form__label 性別#[span.c-form__require 必須]
-                    .c-form__body
-                      input.c-form__input(type="text" id="gender" name="gender" value="女性" readonly)
+                  .p-form__item
+                    .p-form__label 性別
+                    .p-form__body
+                      input.c-input(type="text" id="gender" name="gender" value="女性" readonly)
                   
-                  .c-form__item
-                    .c-form__label 生年月日#[span.c-form__require 必須]
-                    .c-form__body
-                      input.c-form__input(type="text" id="birthday" name="birthday" value="2000年1月1日" readonly)
-                  .c-form__item
-                    .c-form__label 郵便番号#[span.c-form__require 必須]
-                    .c-form__body
-                      input.c-form__input(type="text" id="postal-code" name="postal-code" value="1234567" readonly)
+                  .p-form__item
+                    .p-form__label 生年月日
+                    .p-form__body
+                      input.c-input(type="text" id="birthday" name="birthday" value="2000年1月1日" readonly)
+                  .p-form__item
+                    .p-form__label 郵便番号
+                    .p-form__body
+                      input.c-input(type="text" id="postal-code" name="postal-code" value="1234567" readonly)
                      
-                  .c-form__item
-                    .c-form__label 都道府県#[span.c-form__require 必須]
-                    .c-form__body
-                      input.c-form__input(type="text" id="addres" name="addres" value="東京都渋谷区恵比寿◎-△-□" readonly)
+                  .p-form__item
+                    .p-form__label 都道府県
+                    .p-form__body
+                      input.c-input(type="text" id="addres" name="addres" value="東京都渋谷区恵比寿◎-△-□" readonly)
 
-                  .c-form__item
-                    .c-form__label お問い合わせ種別#[span.c-form__require 必須]
-                    .c-form__body
-                      input.c-form__input(type="text" id="type" name="type" value="" readonly)
+                  .p-form__item
+                    .p-form__label お問い合わせ種別
+                    .p-form__body
+                      input.c-input(type="text" id="type" name="type" value="" readonly)
                   
-                  .c-form__item
-                    .c-form__label ご連絡可能時間#[span.c-form__require 必須]
-                    .c-form__body
-                      input.c-form__input(type="text" id="period" name="period" value="午前中, 夕方" readonly)
+                  .p-form__item
+                    .p-form__label ご連絡可能時間
+                    .p-form__body
+                      input.c-input(type="text" id="period" name="period" value="午前中, 夕方" readonly)
 
-                  .c-form__item
-                    .c-form__label お問い合わせ内容#[span.c-form__require 必須]
-                    .c-form__body
-                      textarea.c-form__textarea.js-autoresize(id ="comment" name='comment' readonly) 料金について教えて下さい
+                  .p-form__item
+                    .p-form__label お問い合わせ内容
+                    .p-form__body
+                      textarea.c-textarea.js-autoresize(id ="comment" name='comment' readonly) 料金について教えて下さい
 
-                  .c-form__submit
-                    button.c-button-back(type="button" onclick="history.back()") 戻る
-                    button.c-button-submit(type="submit" id="submit") 上記内容で送信する
+                  .p-form__submit
+                    button.c-button-cancel(type="button" onclick="history.back()") 戻る
+                    button.c-button-primary(type="submit" id="submit") 上記内容で送信する
 
 
           // section END
@@ -161,7 +161,7 @@ html(lang='ja')
     //- ページ独自に使用するJS
     //---------------------------------
     block append js
-      script(src="https://yubinbango.github.io/yubinbango/yubinbango.js")
+      //- script(src="https://yubinbango.github.io/yubinbango/yubinbango.js")
       //- script(type='text/javascript').
         $(function () {
           %scripts%

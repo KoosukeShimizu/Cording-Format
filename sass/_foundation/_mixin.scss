@@ -8,10 +8,10 @@
   }
   // $coordinates: unpack($coordinates);
   $offsets: (
-    top:    nth($coordinates, 1),
-    right:  nth($coordinates, 2),
+    top: nth($coordinates, 1),
+    right: nth($coordinates, 2),
     bottom: nth($coordinates, 3),
-    left:   nth($coordinates, 4)
+    left: nth($coordinates, 4),
   );
   position: $position;
   @each $offset, $value in $offsets {
@@ -21,19 +21,16 @@
   }
 }
 
-
-
 // （´・ω・`）< Flexbox（タイプ、方向、子要素折返し、水平揃え、垂直揃え、複数行揃え）
 // 使い方：.hoge{@include flexbox(flex,null,wrap,center,center,null);}
 // -------------------------------
-@mixin flexbox($display:flex, $direction:null, $wrap:wrap, $justify:null, $items:null, $content:null, $prefix:null) {
+@mixin flexbox($display: flex, $direction: null, $wrap: wrap, $justify: null, $items: null, $content: null, $prefix: null) {
   display: $display;
   flex-flow: $direction $wrap;
   justify-content: $justify;
   align-items: $items;
   align-content: $content;
 }
-
 
 // （´・ω・`）< Ellipsis
 // 使い方：.hoge{@include ellipsis();}
@@ -59,8 +56,6 @@
   overflow: hidden;
 }
 
-
-
 // （´・ω・`）<  PCのみホバー
 // 使い方：.hoge {@include hover {color: red;}}
 //=====================
@@ -75,7 +70,6 @@
   }
 }
 
-
 // （´・ω・`）< ホバーアンダーライン（タイプ、方向、太さ、カラー）
 // 使い方：
 // .fade-top{@include hover-underline('fade', 'top', 4px, #aaa);}
@@ -89,9 +83,9 @@
 @mixin hover-underline($type: fade, $dir: null, $weight: 2px, $color: #000) {
   @if $dir == null {
     @if $type == fade {
-      $dir: 'top';
+      $dir: "top";
     } @else if $type == slide {
-      $dir: 'center';
+      $dir: "center";
     }
   }
   opacity: 1;
@@ -101,12 +95,12 @@
   &::after {
     position: absolute;
     left: 0;
-    content: '';
+    content: "";
     width: 100%;
     height: $weight;
     background: $color;
     @if $type == fade {
-      transition: .3s;
+      transition: 0.3s;
       opacity: 0;
       visibility: hidden;
       @if $dir == bottom {
@@ -117,7 +111,7 @@
     } @else if $type == slide {
       bottom: $weight * -1;
       transform: scale(0, 1);
-      transition: transform .3s;
+      transition: transform 0.3s;
       @if $dir == left-right or $dir == right-in-left {
         transform-origin: left top;
       } @else if $dir == right-left or $dir == left-in-right {
@@ -143,17 +137,12 @@
   }
 }
 
-
-
-
-
 // // （´・ω・`）< アニメーション指定(キーフレーム、時間、ループ回数、動き)
 // //=====================
 // @mixin anime($anitype){
 //   animation: $anitype;
 //   -webkit-animation: $anitype;
 // }
-
 
 // // （´・ω・`）< アニメーションキーフレーム
 // //=====================
@@ -165,7 +154,6 @@
 //     @content;
 //   }
 // }
-
 
 // // 上揃え
 // // @include flex-start;
@@ -196,8 +184,6 @@
 //   justify-content: center;
 // }
 
-
-
 // /**
 // // // * ポジション指定トップ＆左
 // // **/
@@ -207,7 +193,6 @@
 //   left: $left + px;
 // }
 
-
 // /**
 // // * ポジション指定
 // // **/
@@ -216,7 +201,6 @@
 //   top: $top + px;
 //   right: $right + px;
 // }
-
 
 // /**
 // // * フレックボックス
@@ -228,7 +212,6 @@
 //   flex-wrap: wrap;
 // }
 
-
 // /**
 // // * 両端そろえ
 // // **/
@@ -236,7 +219,6 @@
 //   -webkit-justify-content: space-between;
 //   justify-content: space-between;
 // }
-
 
 // /**
 // // * 均等そろえ
@@ -246,7 +228,6 @@
 //   justify-content: space-around;
 // }
 
-
 // /**
 // // * 真ん中寄せ
 // // **/
@@ -255,14 +236,12 @@
 //   justify-content: center;
 // }
 
-
 // /**
 // // * 上そろえ
 // // **/
 // @mixin flexstart {
 //   align-items: flex-start;
 // }
-
 
 // /**
 // // * 中央そろえ
@@ -271,14 +250,12 @@
 //   align-items: center;
 // }
 
-
 // /**
 // // * 下そろえ
 // // **/
 // @mixin flexend {
 //   align-items: flex-end;
 // }
-
 
 // /**
 // // * インボックス設定
@@ -288,24 +265,6 @@
 //   max-width:1000px;
 //   margin: 0 auto;
 // }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 // // （´・ω・`）< DebugMode
 // // -------------------------------
@@ -319,7 +278,7 @@
 
 // // （´・ω・`）< Links
 // // -------------------------------
-// @mixin link($type:inline, $bg:$c-primary, $color:$c-font-primary, $hover:$c-accent) {
+// @mixin link($type:inline, $bg:var(--primary), $color:var(--textPrimary), $hover:var(--accent)) {
 //   @if $type==inline {
 //     color: $color;
 //     display: inline-block;
@@ -361,7 +320,6 @@
 //   }
 // }
 
-
 // @mixin bg-gradient($angle: 180deg, $color: #0bd, $amount: 20%) {
 //   background: linear-gradient($angle, $color, adjust-hue($color, $amount)) fixed;
 // }
@@ -374,7 +332,7 @@
 //   display: inline-block;
 // }
 
-// @mixin arrow($size:1em, $c-border-width:1px, $c-border-style:solid, $c-border:$c-font-primary, $direction:right) {
+// @mixin arrow($size:1em, var(--borderPrimary)-width:1px, var(--borderPrimary)-style:solid, var(--borderPrimary):var(--textPrimary), $direction:right) {
 //   content: "";
 //   display: inline-block;
 //   position: absolute;
@@ -382,7 +340,7 @@
 //   width: $size;
 //   height: $size;
 //   margin-top: - ($size / 2);
-//   border: $c-border-width $c-border-style $c-border;
+//   border: var(--borderPrimary)-width var(--borderPrimary)-style var(--borderPrimary);
 
 //   @if $direction==up {
 //     @include transform(rotate(-135deg));
@@ -404,10 +362,6 @@
 //     @include transform(rotate(#{$direction}deg));
 //   }
 // }
-
-
-
-
 
 // // （´・ω・`）< FlexContents
 // // -------------------------------
@@ -431,16 +385,14 @@
 //   }
 // }
 
-
 // // （´・ω・`）< border
 // // -------------------------------
-// @mixin border($direction:null, $px:1px, $type:solid, $color:$c-border) {
+// @mixin border($direction:null, $px:1px, $type:solid, $color:var(--borderPrimary)) {
 //   @if $direction==null {
 //     border: $px $type $color;
 //   }
 //   // border: 1px solid #000;
 // }
-
 
 // @mixin fontawesome($family:'Font Awesome 5 Free', $weight:$reguler, $cont:f078) {
 //   $solid:900;$reguler:400;$light:300;$brand:400;
@@ -448,9 +400,6 @@
 //   font-weight: $weight;
 //   content: '\f078';
 // }
-
-
-
 
 // // https: //web-guided.com/376/
 // @mixin background-image($fileName) {
@@ -524,7 +473,6 @@
 //   }
 // }
 
-
 // @mixin triangle($direction, $width, $height, $color) {
 //   width: 0;
 //   height: 0;
@@ -558,14 +506,12 @@
 //   display: inline;
 // }
 
-
 // // https: //kaminarimagazine.com/web/2017/12/12/sass%E3%81%A7%E3%82%88%E3%81%8F%E4%BD%BF%E3%81%A3%E3%81%A6%E3%81%84%E3%82%8Bmixin%E3%82%92%E7%B4%B9%E4%BB%8B%E3%81%97%E3%81%BE%E3%81%99/
 
 // @mixin justify() {
 //   text-align: justify;
 //   text-justify: inter-ideograph;
 // }
-
 
 // @mixin lines-truncate($lines: 2) {
 //   overflow: hidden;

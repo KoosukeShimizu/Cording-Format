@@ -59,19 +59,19 @@ html(lang='ja')
     include _includes/_tag_body
     .l-wrapper
       include _includes/_header
-      include _includes/_module/_breadcrumb
+      include _includes/_breadcrumb
       main.l-main
         //-========================
         //-========================
         //- PAGE CONTENTS START
         //-========================
         // PageContents
-        article.c-single.p-article
+        article.p-single.p-article
           .l-container-sm
-            .c-single__head
-              time.c-single__time(datetime="2022.03.07") 2022.03.07
-              h1.c-single__title あのイーハトーヴォのすきとおった風、夏でも底に冷たさをもつ青いそら、うつくしい森で
-              .c-single__tag
+            .p-single__head
+              time.p-single__time(datetime="2022.03.07") 2022.03.07
+              h1.p-single__title あのイーハトーヴォのすきとおった風、夏でも底に冷たさをもつ青いそら、うつくしい森で
+              .p-single__tag
                 a.c-tag(href=root+"article".extention) デフォルトタグ
                 a.c-tag-red(href=root+"article".extention) 赤タグ
                 a.c-tag-blue(href=root+"article".extention) 青タグ
@@ -79,15 +79,15 @@ html(lang='ja')
                 a.c-tag-yellow(href=root+"article".extention) 黄タグ
                 a.c-tag-purple(href=root+"article".extention) 紫タグ
 
-              figure.c-single__mv
+              figure.p-single__mv
                 img(src=root+imgPath+"common/dummy-l.png" loading="lazy"  width="" height="" alt="")
 
-            details.c-toc(open)
-              summary.c-toc__title index
-              #js-toc.c-toc__body
+            details.m-toc(open)
+              summary.m-toc__title index
+              #js-toc.m-toc__body
 
 
-            .c-single__content
+            .p-single__content
               // CMS EDIT CONTENT START
               // ここからはCMSで入力された内容が反映されます。
               //  .p-single-content配下はセレクタにスタイルを設定し、クラス付与無しで見た目が整うようにしてください。

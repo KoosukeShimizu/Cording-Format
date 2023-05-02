@@ -2,18 +2,25 @@
 PC/SP表示切り替え
 -------------------------------------------------- */
 
-.u-display-sp {
-  display: block;
-
-  @include mq(sp,max) {
+.u-display {
+  &-sp,
+  &-tab,
+  &-pc {
     display: none;
   }
-}
-
-.u-display-pc {
-  display: none;
-
-  @include mq(sp,min) {
-    display: block;
+  &-sp {
+    @media (width <= $sp) {
+      display: block;
+    }
+  }
+  &-tab {
+    @media ($sp <= width <= $tab) {
+      display: block;
+    }
+  }
+  &-pc {
+    @media ($tab <= width) {
+      display: block;
+    }
   }
 }

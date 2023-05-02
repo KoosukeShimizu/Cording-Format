@@ -1,19 +1,25 @@
 /* --------------------------------------------------
 PC/SP折り返し切り替え
 -------------------------------------------------- */
-
-.u-br-sp {
-  display: block;
-
-  @include mq(sp,max) {
-    display: inline;
+.u-br {
+  &-sp,
+  &-tab,
+  &-pc {
+    display: none;
   }
-}
-
-.u-br-pc {
-  display: inline;
-
-  @include mq(sp,min) {
-    display: block;
+  &-sp {
+    @media (width <= $sp) {
+      display: inline-block;
+    }
+  }
+  &-tab {
+    @media ($sp <= width <= $tab) {
+      display: inline-block;
+    }
+  }
+  &-pc {
+    @media ($tab <= width) {
+      display: inline-block;
+    }
   }
 }

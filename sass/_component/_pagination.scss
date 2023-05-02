@@ -10,11 +10,12 @@
   display: inline-block;
   padding: 0;
   line-height: 1;
-width: min(80%,400px);
+  width: min(80%, 400px);
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
+
   &__prev {
     cursor: pointer;
     margin-right: 10px;
@@ -23,6 +24,7 @@ width: min(80%,400px);
     display: block;
     background: url("#{$img_path}common/icons/arrow/angle-left.svg") no-repeat center center / contain;
     transition: $transition;
+    opacity: .3;
     @include hover {
       transform: translateX(-20%);
     }
@@ -36,48 +38,48 @@ width: min(80%,400px);
     display: block;
     background: url("#{$img_path}common/icons/arrow/angle-right.svg") no-repeat center center / contain;
     transition: $transition;
+    opacity: .3;
     @include hover {
       transform: translateX(20%);
     }
   }
 
-  &__list {
+  &__count {
     flex-grow: 2;
     display: flex;
     justify-content: center;
     align-items: center;
-  }
-  &__item {
-    
-    &:not(:last-child) {
-      margin-right: 10px;
-    }
-    a {
-      width: $pagination-btn-size;
-      height: $pagination-btn-size;
-      // line-height: $pagination-btn-size;
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      align-items: center;
-      text-align: center;
-      border: 1px solid transparent;
-      border-radius: 50%;
-      // line-height: 1;
-      background: $pagination-btn-color;
-      font-weight: 500;
-      &.is-hover {
-        border: 1px solid $c-secondary;
+    li {
+      &:not(:last-child) {
+        margin-right: 10px;
       }
-      &.is-current {
-        opacity: 1;
-        background: $c-primary;
-        color: #fff;
-        pointer-events: none;
-      }
-      @include hover{
-        border:2px solid $c-primary;
-        opacity: 1;
+      a {
+        width: $pagination-btn-size;
+        height: $pagination-btn-size;
+        // line-height: $pagination-btn-size;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        border: 1px solid transparent;
+        border-radius: 50%;
+        // line-height: 1;
+        background: $pagination-btn-color;
+        font-weight: 500;
+        &.is-hover {
+          border: 1px solid var(--secondary);
+        }
+        &.is-current {
+          opacity: 1;
+          background: var(--primary);
+          color: #fff;
+          pointer-events: none;
+        }
+        @include hover {
+          border: 2px solid var(--primary);
+          opacity: 1;
+        }
       }
     }
   }

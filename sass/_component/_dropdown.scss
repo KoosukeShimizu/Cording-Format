@@ -21,10 +21,9 @@
       background: url("#{$img_path}common/icons/minus.svg") no-repeat center center / contain;
     }
   }
-}
-
-.c-dropdown-target {
-  // display: none;
-  border: 2px solid white;
-  padding: gt(16);
+  &__target {
+    // display: none;
+    border: 2px solid white;
+    padding: gt(16);
+  }
 }

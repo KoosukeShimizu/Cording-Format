@@ -3,7 +3,7 @@
 // Foundation
 // ==================================================
 
-@import "./_foundation/breakpoint"; // ブレイクポイント
+// @import "./_foundation/breakpoint"; // ブレイクポイント
 @import "./_foundation/function"; // px→vw変換
 @import "./_foundation/mixin"; // 関数
 @import "./_foundation/reset"; // リセット
@@ -11,7 +11,7 @@
 // @import "./_foundation/color";        // カラー管理
 // @import "./_foundation/gutter";        // 隙間管理
 // @import "./_foundation/variable";        // その他変数管理
-@import "./_foundation/typography"; // フォント管理
+@import "./_foundation/font"; // フォント管理
 @import "./_foundation/base"; // ベース設定
 
 // ==================================================
@@ -19,7 +19,7 @@
 // 接頭語： .l-
 // ==================================================
 @import "./_layout/header";
-@import "./_layout/main";
+@import "./_layout/contents";
 @import "./_layout/footer";
 // @import "./_layout/sidebar";
 
@@ -31,29 +31,18 @@
 @import "./_component/typography";
 @import "./_component/button";
 @import "./_component/table";
+@import "./_component/figure";
 @import "./_component/list";
 @import "./_component/media";
 @import "./_component/card";
 @import "./_component/block";
 @import "./_component/tag";
-
-// ==================================================
-// object - module
-// 再利用可能な中規模パーツ用
-// 接頭語： .c-
-// ==================================================
-
-@import "./_module/page"; //固定ページ
-@import "./_module/single"; //投稿ページ
-@import "./_module/archive"; //アーカイブページ
-@import "./_module/form";
-@import "./_module/step"; //ステップ
-@import "./_module/toc"; //目次
-@import "./_module/breadcrumb"; //パンくず
-@import "./_module/pagination"; //ページネーション
-@import "./_module/accordion"; //アコーディオン
-@import "./_module/dropdown"; //ドロップダウン
-@import "./_module/panel";
+@import "./_component/form";
+@import "./_component/accordion"; //アコーディオン
+@import "./_component/breadcrumb"; //パンくず
+@import "./_component/toc"; //目次
+@import "./_component/pagination"; //ページネーション
+@import "./_component/dropdown"; //ドロップダウン
 
 // ==================================================
 // Project（page）
@@ -61,11 +50,10 @@
 // 場合によっては別cssとして切り分け可能
 // 接頭語： .p-
 // ==================================================
-// @import "./_project/frontpage";
-// @import "./_project/contact";
-// @import "./_project/confirm";
-// @import "./_project/thanks";
-
+@import "./_project/project";
+@import "./_project/page"; //固定ページ
+@import "./_project/single"; //投稿ページ
+@import "./_project/form";
 // ==================================================
 // Library
 // 外部ライブラリ調整用
@@ -86,3 +74,4 @@
 @import "./_utility/zindex";
 @import "./_utility/br";
 @import "./_utility/js";
+

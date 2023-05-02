@@ -1,0 +1,214 @@
+// （´・ω・`）< TOP / Global
+// -------------------------------
+.p-home {
+  &__title {
+    font-size: fz(22);
+    line-height: 1.2;
+    font-weight: 700;
+    text-align: center;
+  }
+  &__subtitle {
+    font-size: fz(12, 20);
+    font-weight: 700;
+    text-transform: uppercase;
+    text-align: center;
+    margin-bottom: gt(20);
+  }
+  &__image {
+    margin: 0 auto gt(20);
+    display: block;
+    text-align: center;
+  }
+}
+
+// （´・ω・`）< TOP / Hero
+// -------------------------------
+.p-home-hero {
+  // width: min(100%, 815px);
+  margin: 0 auto;
+  text-align: center;
+  background: #ccc;
+  min-height: min(120vw, 600px);
+  @include flexbox(flex, null, wrap, center, center, null);
+  &__inner {
+    width: min(95%, 1024px);
+    margin: auto;
+  }
+  &__mainCopy {
+    width: min(90%);
+    font-size: fz(30);
+    font-weight: 900;
+    line-height: 1.2;
+    margin: 0 auto gt(20, 40);
+  }
+  // &__mainVidual {
+  //   display: block;
+  //   max-width: 300px;
+  //   margin: 0 auto gt(20, 40);
+  //   // img{
+  //   //   max-width: 100%;
+  //   // }
+  // }
+  &__text {
+    font-size: fz(16, 24);
+    margin: 0 auto gt(20, 40);
+  }
+}
+
+// （´・ω・`）< TOP / Aセクション
+// -------------------------------
+.p-home-a {
+  background: #f5f5f5;
+}
+
+// （´・ω・`）< TOP / Bセクション
+// -------------------------------
+.p-home-b {
+  background: white;
+}
+
+.p-entry {
+  &-intro {
+    margin: 120px 0;
+
+    p {
+      margin-bottom: 24px;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+}
+
+.p-entry-form {
+  padding: 0;
+  margin: 0 auto;
+  margin-bottom: 120px;
+  max-width: 815px;
+  position: relative;
+
+  &__title {
+    margin-bottom: 72px;
+  }
+}
+
+.p-form-confirm {
+  display: block;
+  padding: 0;
+  margin: 0;
+  margin-bottom: gt(40, 80);
+}
+
+//  panel
+// -------------------------------
+.p-panel-contact {
+  text-align: center;
+  padding: gt(20, 40);
+  background: white;
+  border-radius: 10px;
+  width: min(95%, 600px);
+  margin: gt(20, 40) auto;
+  &__phone {
+    font-size: fz(32, 48);
+    font-weight: 700;
+    position: relative;
+    @include flexbox(flex, null, null, center, center, null);
+    transform: translateX(-0.25em);
+    &:before {
+      content: "";
+      display: block;
+      width: 1em;
+      height: 1em;
+      background: url("#{$img_path}common/icons/form/phone.svg") no-repeat center center / 70%;
+      margin-right: gt(8, 16);
+      // border: 1px solid #000;
+
+      // @include position(absolute, 50% null null null);
+    }
+  }
+}
+
+.p-step {
+  $stepHeight: 60px;
+  $stepHeightPc: 90px;
+  $baseColor: var(--mute);
+  $activeColor: var(--primary);
+  // width: min(95%, 1024px);
+  margin: 0 auto gt(20, 40);
+  border: 1px solid var(--borderPrimary);
+  &__list {
+    @include flexbox(flex, null, wrap, null, null, null);
+  }
+  &__item {
+    width: calc(100% / 3);
+    height: $stepHeight;
+    text-align: center;
+    @include flexbox(flex, column, null, center, center, null);
+    // padding: gt(4) 0;
+    background: $baseColor;
+    position: relative;
+    letter-spacing: 0.05em;
+    font-size: fz(12, 18);
+    &:not(:last-child) {
+      // border-right: 1px solid var(--borderPrimary);
+      &:after,
+      &:before {
+        content: "";
+        @include position(absolute, 0 null null 100%);
+        display: block;
+        width: 0;
+        height: 0;
+        border: calc(#{$stepHeight} / 2) solid transparent;
+        z-index: 10;
+      }
+      &:before {
+        @include position(absolute, 0 null null 0);
+      }
+    }
+  }
+  &__order {
+    text-transform: uppercase;
+    display: inline-block;
+    border: 1px solid var(--borderPrimary);
+    font-size: fz(11, 14);
+    font-weight: 700;
+    border-radius: 20px;
+    padding: 0.4em 1em;
+    line-height: 1;
+    margin-bottom: 0.2em;
+    background: white;
+    color: var(--mute);
+  }
+  .is-current {
+    background: $activeColor;
+    color: white;
+    .c-step__order {
+      background: white;
+      color: $activeColor;
+      border: transparent;
+    }
+    &:not(:last-child) {
+      &:after {
+        border-left: calc(#{$stepHeight} / 5) solid $activeColor;
+      }
+    }
+    &:not(:first-child) {
+      padding-left: 3%;
+      &:before {
+        border-left: calc(#{$stepHeight} / 5) solid $baseColor;
+      }
+    }
+  }
+  @media ($sp <= width) {
+    &__item {
+      height: calc(#{$stepHeight} * 1.5);
+      &:not(:last-child) {
+        &:after,
+        &:before {
+          border: calc(#{$stepHeight} * 1.5 / 2) solid transparent;
+        }
+      }
+    }
+  }
+}
